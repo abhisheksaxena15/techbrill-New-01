@@ -224,7 +224,7 @@ export const Vortex = (props: VortexProps) => {
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();
   };
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setup();
     window.addEventListener("resize", () => {

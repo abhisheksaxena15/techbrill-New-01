@@ -238,7 +238,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                In today's data-rich environment, the ability to effectively analyze and interpret data is a key differentiator for businesses aiming for success. Data analytics empowers organizations to move from reactive decision-making to proactive strategies based on empirical evidence. It supports various functions, including sales, marketing, finance, and operations, by providing the insights needed for optimization and innovation.
+                In today&apos;s data-rich environment, the ability to effectively analyze and interpret data is a key differentiator for businesses aiming for success. Data analytics empowers organizations to move from reactive decision-making to proactive strategies based on empirical evidence. It supports various functions, including sales, marketing, finance, and operations, by providing the insights needed for optimization and innovation.
               </motion.p>
               <motion.p
                 className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
