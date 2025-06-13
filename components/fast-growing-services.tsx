@@ -1,111 +1,133 @@
 "use client"
 
+import React, { useRef, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { motion } from "framer-motion"
-import AnimatedSection from "./animated-section"
+import { motion, useAnimation } from "framer-motion"
 
 export default function FastGrowingServices() {
   const services = [
     {
-      title: "Digital Marketing",
-      description:
-        "Grow your brand with SEO, social media, PPC, and content strategies.",
-      icon: "megaphone",
-      image: "/images/services/digital-marketing-hero.jpg",
-      link: "/services#digital-marketing",
-      highlight: true,
+      title: "Search Engine Optimization",
+      description: "Boost your online visibility and drive organic traffic with our data-driven SEO strategies.",
+      icon: "/icons/search.svg",
+      image: "/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg",
+      link: "/services#seo",
     },
     {
-      title: "Web Design & Development",
-      description:
-        "Responsive, user-first websites with seamless functionality and performance.",
-      icon: "monitor",
-      image: "/images/services/web-design-hero.jpg",
-      link: "/services#web",
+      title: "Social Media Marketing",
+      description: "We offer Social Media Optimization services to boost visibility, engagement, and reach.",
+      icon: "/icons/share-2.svg",
+      image: "/images/services/social-media-marketing-hero.avif",
+      link: "/services#social-media-marketing",
     },
     {
-      title: "Mobile App Development",
-      description:
-        "Native and cross-platform apps with intuitive interfaces and robust features.",
-      icon: "smartphone",
-      image: "/images/services/mobile-app-hero.jpg",
-      link: "/services#mobile",
+      title: "Content Marketing",
+      description: "Create compelling content that resonates with your audience and drives conversions.",
+      icon: "/icons/file-text.svg",
+      image: "/images/services/myriam-jessier-eveI7MOcSmw-unsplash.jpg",
+      link: "/services#content",
     },
     {
-      title: "AI & ML Development",
-      description:
-        "Intelligent AI/ML solutions to automate, analyze, and innovate your business.",
-      icon: "brain",
-      image: "/images/services/ai-ml-hero.jpg",
-      link: "/services#ai-ml",
+      title: "Paid Advertising",
+      description: "Maximize your ROI with targeted paid advertising campaigns across multiple platforms.",
+      icon: "/icons/trending-up.svg",
+      image: "/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg",
+      link: "/services#paid-advertising",
     },
-    
-  ]
+    {
+      title: "Web Analytics",
+      description: "Gain valuable insights into your website performance and user behavior.",
+      icon: "/icons/bar-chart.svg",
+      image: "/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg",
+      link: "/services#web-analytics",
+    },
+    {
+      title: "Design & Print Media",
+      description: "We offer graphic design and print solutions to create impactful visuals for brand identity.",
+      icon: "/icons/pen-tool.svg",
+      image: "/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg",
+      link: "/services#design-print-media",
+    },
+  ];
+
+  const duplicatedServices = [...services, ...services];
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const containerControls = useAnimation();
+  const cardControls = useAnimation();
+
+  useEffect(() => {
+    containerControls.start({
+      x: ["0%", "-100%"],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 30,
+          ease: "linear",
+        },
+      },
+    });
+  }, [containerControls]);
+
+  const handleMouseEnter = () => {
+    containerControls.stop();
+    cardControls.start({
+      scale: 1.03,
+      transition: { duration: 0.2 }
+    });
+  };
+
+  const handleMouseLeave = () => {
+    cardControls.start({ scale: 1, transition: { duration: 0.2 } });
+    containerControls.start({
+      x: "-100%",
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 30,
+          ease: "linear",
+        },
+      },
+    });
+  };
 
   return (
     <section className="py-16 px-4 bg-[#f8fafc] dark:bg-gray-900">
       <div className="container mx-auto">
-        <AnimatedSection animation="fade" delay={0.1}>
-          <div className="text-center mb-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            >
-              <span className="text-blue-700 font-medium uppercase tracking-wide text-sm block mb-2">
-                Fast Growing Services
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-                Accelerate Your Digital Growth
-              </h2>
-              <div className="w-20 h-1 bg-blue-700 mx-auto mb-6"></div>
-              <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                Discover our most in-demand services that help businesses scale rapidly and stay ahead in the digital era.
-              </p>
-            </motion.div>
-          </div>
-        </AnimatedSection>
+        <div className="text-center mb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
+            <span className="text-blue-700 font-medium uppercase tracking-wide text-sm block mb-2">
+              Fast Growing Services
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
+              Accelerate Your Digital Growth
+            </h2>
+            <div className="w-20 h-1 bg-blue-700 mx-auto mb-6"></div>
+            <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+              Discover our most in-demand services that help businesses scale rapidly and stay ahead in the digital era.
+            </p>
+          </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-          {services.map((service, index) => (
-            <AnimatedSection key={index} animation="slide">
+        <div className="overflow-hidden" ref={containerRef}>
+          <motion.div
+            className="flex flex-row gap-8 py-4"
+            animate={containerControls}
+          >
+            {duplicatedServices.map((service, index) => (
               <motion.div
-                className={`group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all h-full flex flex-col
-                  ${service.highlight ? "ring-2 ring-blue-600 border-blue-600 shadow-lg scale-105" : ""}
-                `}
-                initial={{
-                  opacity: 0,
-                  y: 100,
-                  scale: 0.95
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  transition: {
-                    type: "spring",
-                    stiffness: 70,
-                    damping: 15,
-                    mass: 0.8,
-                    delay: index * 0.15
-                  }
-                }}
-                viewport={{
-                  once: true,
-                  margin: "-100px",
-                  amount: 0.3
-                }}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  transition: {
-                    type: "spring",
-                    stiffness: 400,
-                    damping: 17
-                  }
-                }}
+                key={index}
+                className="flex-shrink-0 w-80 bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all h-full flex flex-col border border-blue-600 dark:border-blue-400"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                animate={cardControls}
               >
                 <div className="relative h-48 md:h-56 w-full overflow-hidden">
                   <Image
@@ -115,59 +137,30 @@ export default function FastGrowingServices() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  {service.highlight && (
-                    <span className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-                      Featured
-                    </span>
-                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <motion.h3
-                    className="text-lg md:text-xl font-semibold mb-2 md:mb-3"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        delay: index * 0.15 + 0.2,
-                        duration: 0.5
-                      }
-                    }}
-                    viewport={{ once: true }}
-                  >
+                  <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
                     <span className="text-gray-700 dark:text-gray-200">{service.title}</span>
-                  </motion.h3>
-                  <motion.p
-                    className="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base flex-grow"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        delay: index * 0.15 + 0.3,
-                        duration: 0.5
-                      }
-                    }}
-                    viewport={{ once: true }}
-                  >
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base flex-grow">
                     {service.description}
-                  </motion.p>
+                  </p>
                   <Link href={service.link} className="text-blue-700 dark:text-blue-400 font-medium flex items-center group mt-auto">
                     Read More
                     <motion.div
                       className="ml-2"
                       animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+                      transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
                     >
                       <ArrowRight className="h-4 w-4" />
                     </motion.div>
                   </Link>
                 </div>
               </motion.div>
-            </AnimatedSection>
-          ))}
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
