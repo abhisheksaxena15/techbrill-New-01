@@ -51,7 +51,7 @@ export default function AboutPreview() {
 
             <AnimatedSection animation="fade" delay={0.5}>
               <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                Founded in 2017 in Noida, India, TechBrill Solutions has rapidly grown into a leading IT service
+                Founded in 2017 in Noida, India, Techbrill Solutions has rapidly grown into a leading IT service
                 provider and brand communication company. Our team of passionate designers, developers, and digital
                 strategists share one goal: delivering high-performance digital solutions that drive real business
                 growth.
@@ -63,7 +63,7 @@ export default function AboutPreview() {
                 goals.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">
-                At TechBrill, we stand for brilliance, diligence, and commitment to core values of collaboration. We
+                At Techbrill, we stand for brilliance, diligence, and commitment to core values of collaboration. We
                 tackle every challenge with determination and creativity, ensuring we reach our common goal no matter
                 the impediment.
               </p>

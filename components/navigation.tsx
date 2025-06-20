@@ -26,7 +26,7 @@ export default function Navigation() {
               <div className="relative h-12 w-40">
                 <Image
                   src="/logo.png"
-                  alt="TechBrill Logo"
+                  alt="Techbrill Logo"
                   fill
                   className="object-contain"
                 />

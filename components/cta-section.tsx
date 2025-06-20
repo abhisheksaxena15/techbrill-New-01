@@ -9,7 +9,7 @@ import AnimatedText from "./animated-text"
 
 export default function CTASection() {
   return (
-    <section className="py-12 md:py-16 bg-primary text-white px-4">
+    <section className="py-12 md:py-16 bg-primary dark:bg-gray-900 text-white px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-center lg:text-left">
@@ -24,7 +24,11 @@ export default function CTASection() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/contact">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90 group">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="bg-white text-primary hover:text-primary hover:bg-white/90 dark:bg-blue-200 dark:text-gray-900 dark:hover:bg-blue-100 group"
+                    >
                       Get in Touch{" "}
                       <motion.div
                         className="ml-2"
@@ -38,7 +42,12 @@ export default function CTASection() {
                 </Link>
                 <Link href="/services">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button variant="outline" size="lg" className="text-primary border-primary hover:bg-primary/10">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="text-primary border-white hover:bg-white/10 hover:text-white 
+                dark:text-blue-100 dark:border-blue-300 dark:hover:bg-blue-900/30 dark:hover:border-blue-200"
+                    >
                       Our Services
                     </Button>
                   </motion.div>
@@ -56,7 +65,7 @@ export default function CTASection() {
             ].map((stat, index) => (
               <AnimatedSection key={index} animation="scale" delay={0.2 + index * 0.1}>
                 <motion.div
-                  className="bg-white/10 p-4 md:p-6 rounded-xl text-center"
+                  className="bg-white/10 dark:bg-blue-900/30 p-4 md:p-6 rounded-xl text-center backdrop-blur-sm"
                   whileHover={{
                     scale: 1.05,
                     backgroundColor: "rgba(255, 255, 255, 0.2)",
@@ -71,7 +80,7 @@ export default function CTASection() {
                   >
                     {stat.number}
                   </motion.h3>
-                  <p className="text-white/80 text-sm md:text-base">{stat.label}</p>
+                  <p className="text-white/80 dark:text-blue-100/90 text-sm md:text-base">{stat.label}</p>
                 </motion.div>
               </AnimatedSection>
             ))}

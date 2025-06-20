@@ -69,7 +69,7 @@ export default function ITConsultancyPage() {
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">What We Do in IT Consultancy</h2>
                 <p className="text-base md:text-lg text-gray-200 mb-4">
-                  At TechBrill Solutions, we provide expert IT consultancy services to help businesses navigate the complex world of technology. Our team of experienced consultants works closely with you to understand your unique challenges and develop strategic solutions that drive growth and innovation.
+                  At Techbrill Solutions, we provide expert IT consultancy services to help businesses navigate the complex world of technology. Our team of experienced consultants works closely with you to understand your unique challenges and develop strategic solutions that drive growth and innovation.
                 </p>
                 <p className="text-base md:text-lg text-gray-200">
                   From digital transformation to technology strategy and implementation, we guide you through every step of your technology journey, ensuring you make informed decisions that align with your business objectives.

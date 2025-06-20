@@ -69,7 +69,7 @@ export default function AIMLDevelopmentPage() {
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">What We Do in AI & ML Development</h2>
                 <p className="text-base md:text-lg text-gray-200 mb-4">
-                  Artificial Intelligence and Machine Learning are revolutionizing how businesses operate. At TechBrill Solutions, we develop cutting-edge AI and ML solutions that help businesses automate processes, gain insights from data, and make smarter decisions.
+                  Artificial Intelligence and Machine Learning are revolutionizing how businesses operate. At Techbrill Solutions, we develop cutting-edge AI and ML solutions that help businesses automate processes, gain insights from data, and make smarter decisions.
                 </p>
                 <p className="text-base md:text-lg text-gray-200">
                   Our team of AI experts and data scientists work together to create custom solutions that address your specific business challenges, from predictive analytics to natural language processing and computer vision.

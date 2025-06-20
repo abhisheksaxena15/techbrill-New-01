@@ -58,7 +58,7 @@ const navItems = [
       },
       {
         category: "Digital Content Solutions",
-        services: [ /* Add specific services here if available */ ],
+        services: [ /* Add specific services here if available */],
       }
     ],
   },
@@ -73,12 +73,17 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [hoveredCategoryIndex, setHoveredCategoryIndex] = useState<number | null>(null);
+  
+  // Add these new state variables for mobile menu dropdowns
+  const [mobileDropdowns, setMobileDropdowns] = useState<Record<string, boolean>>({});
+  const [mobileCategories, setMobileCategories] = useState<Record<string, boolean>>({});
+  
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
-    
+
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true)
@@ -122,20 +127,22 @@ export default function Header() {
           </div>
           <div className="flex items-center space-x-4">
             {[
-              { icon: <Facebook className="h-4 w-4" />, href: "#", label: "Facebook" },
-              { icon: <Twitter className="h-4 w-4" />, href: "#", label: "Twitter" },
-              { icon: <Instagram className="h-4 w-4" />, href: "#", label: "Instagram" },
-              { icon: <Linkedin className="h-4 w-4" />, href: "#", label: "LinkedIn" },
+              { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
+              { icon: <Twitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "Twitter" },
+              { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
+              { icon: <Linkedin className="h-4 w-4" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
+
             ].map((social, index) => (
-              <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
-                <Link
-                  href={social.href}
-                  className="text-white hover:text-gray-200 transition-colors"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </Link>
-              </motion.div>
+            <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
+              <Link
+                href={social.href}
+                className="text-white hover:text-gray-200 transition-colors"
+                aria-label={social.label}
+                target="_blank"
+              >
+                {social.icon}
+              </Link>
+            </motion.div>
             ))}
             {mounted && (
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -169,9 +176,9 @@ export default function Header() {
                     )}
                     {theme !== "dark" && (
                       <div className="absolute inset-0 overflow-hidden rounded-full flex items-center justify-around">
-                         <div className="w-5 h-3 bg-white rounded-full shadow-md"></div>
-                         <div className="w-7 h-4 bg-white rounded-full shadow-md"></div>
-                         <div className="w-6 h-3 bg-white rounded-full shadow-md"></div>
+                        <div className="w-5 h-3 bg-white rounded-full shadow-md"></div>
+                        <div className="w-7 h-4 bg-white rounded-full shadow-md"></div>
+                        <div className="w-6 h-3 bg-white rounded-full shadow-md"></div>
                       </div>
                     )}
                   </div>
@@ -213,7 +220,7 @@ export default function Header() {
             <motion.div className="relative h-8 sm:h-10 w-32 sm:w-40" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Image
                 src="/logo.png"
-                alt="TechBrill Logo"
+                alt="Techbrill Logo"
                 fill
                 className="object-contain"
               />
@@ -246,36 +253,36 @@ export default function Header() {
                   )}
                   {item.dropdown && (
                     <NavigationMenuContent className="flex bg-gray-800 text-gray-200 border border-gray-700 rounded-md shadow-lg p-0 w-[300px] lg:w-[600px]">
-                       {/* Categories Column */}
+                      {/* Categories Column */}
                       <div className="flex flex-col p-4 w-full lg:w-[300px] border-r border-gray-700 pr-0">
-                          <h4 className="font-semibold text-gray-200 mb-2">Categories</h4>
-                          <ul className="space-y-1">
-                              {item.dropdown.map((category, catIdx) => (
-                                <li key={catIdx}>
-                                    <NavigationMenuLink
-                                        asChild
-                                        onMouseEnter={() => setHoveredCategoryIndex(catIdx)}
-                                    >
-                                      <Link 
-                                          href="#" 
-                                          className={cn(
-                                              "block px-3 py-2 rounded-md text-sm font-medium transition-colors flex justify-between items-center",
-                                              catIdx === hoveredCategoryIndex
-                                                  ? "bg-gray-700 text-blue-500"
-                                                  : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
-                                          )}
-                                      >
-                                          {category.category}
-                                          <ChevronRight className="h-4 w-4 ml-2 text-gray-400" /> 
-                                      </Link>
-                                    </NavigationMenuLink>
-                                </li>
-                            ))}
+                        <h4 className="font-semibold text-gray-200 mb-2">Categories</h4>
+                        <ul className="space-y-1">
+                          {item.dropdown.map((category, catIdx) => (
+                            <li key={catIdx}>
+                              <NavigationMenuLink
+                                asChild
+                                onMouseEnter={() => setHoveredCategoryIndex(catIdx)}
+                              >
+                                <Link
+                                  href="#"
+                                  className={cn(
+                                    "block px-3 py-2 rounded-md text-sm font-medium transition-colors flex justify-between items-center",
+                                    catIdx === hoveredCategoryIndex
+                                      ? "bg-gray-700 text-blue-500"
+                                      : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
+                                  )}
+                                >
+                                  {category.category}
+                                  <ChevronRight className="h-4 w-4 ml-2 text-gray-400" />
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
                         </ul>
                       </div>
 
                       {/* Services Sub-Dropdown (appears next to categories) */}
-                      { hoveredCategoryIndex !== null && item.dropdown && item.dropdown[hoveredCategoryIndex]?.services && item.dropdown[hoveredCategoryIndex].services.length > 0 && (
+                      {hoveredCategoryIndex !== null && item.dropdown && item.dropdown[hoveredCategoryIndex]?.services && item.dropdown[hoveredCategoryIndex].services.length > 0 && (
                         <motion.div
                           className="p-4 space-y-2 w-full lg:w-[300px]"
                           initial={{ opacity: 0, x: 10 }}
@@ -285,13 +292,13 @@ export default function Header() {
                         >
                           <h4 className="font-semibold text-gray-200 mb-2">Services</h4>
                           <ul className="space-y-1">
-                             {item.dropdown[hoveredCategoryIndex].services.map((service, srvIdx) => (
-                                  <li key={srvIdx}>
-                                      <Link href={service.href} className="block px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-700 hover:text-blue-500 transition-colors">
-                                        {service.name}
-                                      </Link>
-                                  </li>
-                              ))}
+                            {item.dropdown[hoveredCategoryIndex].services.map((service, srvIdx) => (
+                              <li key={srvIdx}>
+                                <Link href={service.href} className="block px-3 py-2 rounded-md text-sm text-gray-200 hover:bg-gray-700 hover:text-blue-500 transition-colors">
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
                           </ul>
                         </motion.div>
                       )}
@@ -345,9 +352,9 @@ export default function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="md:hidden bg-white dark:bg-gray-900 border-b shadow-lg w-full"
+            className="md:hidden fixed top-[72px] left-0 right-0 bg-white dark:bg-gray-900 border-b shadow-lg w-full overflow-y-auto max-h-[80vh]"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: "80vh" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -360,20 +367,80 @@ export default function Header() {
                   transition={{ duration: 0.2 }}
                   className="w-full"
                 >
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "block px-3 py-2 rounded-md text-base font-medium w-full",
-                      pathname === item.href
-                        ? "text-primary"
-                        : "text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary",
-                    )}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                  {item.dropdown ? (
+                    <div>
+                      <div 
+                        className="px-3 py-2 rounded-md text-base font-medium w-full text-gray-700 dark:text-gray-200 flex justify-between items-center cursor-pointer"
+                        onClick={() => {
+                          // Toggle visibility of this specific dropdown
+                          setMobileDropdowns(prev => ({
+                            ...prev,
+                            [item.name]: !prev[item.name]
+                          }));
+                        }}
+                      >
+                        {item.name}
+                        <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdowns[item.name] ? 'rotate-90' : ''}`} />
+                      </div>
+                      
+                      {/* Only display categories when dropdown is active */}
+                      {mobileDropdowns[item.name] && (
+                        <div className="pl-6 mt-1 space-y-1 border-l-2 border-gray-200 dark:border-gray-700">
+                          {item.dropdown.map((category, catIdx) => (
+                            <div key={catIdx}>
+                              <div 
+                                className="px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 flex justify-between items-center cursor-pointer"
+                                onClick={() => {
+                                  // Toggle visibility of this specific category
+                                  setMobileCategories(prev => ({
+                                    ...prev,
+                                    [`${item.name}-${catIdx}`]: !prev[`${item.name}-${catIdx}`]
+                                  }));
+                                }}
+                              >
+                                {category.category}
+                                {category.services?.length > 0 && (
+                                  <ChevronRight className={`h-3 w-3 transition-transform ${mobileCategories[`${item.name}-${catIdx}`] ? 'rotate-90' : ''}`} />
+                                )}
+                              </div>
+                              
+                              {/* Display services under each category only when category is expanded */}
+                              {mobileCategories[`${item.name}-${catIdx}`] && category.services && category.services.length > 0 && (
+                                <div className="pl-4 space-y-1">
+                                  {category.services.map((service, srvIdx) => (
+                                    <Link
+                                      key={srvIdx}
+                                      href={service.href}
+                                      className="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
+                                      onClick={() => setIsMenuOpen(false)}
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "block px-3 py-2 rounded-md text-base font-medium w-full",
+                        pathname === item.href
+                          ? "text-primary"
+                          : "text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary",
+                      )}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
+              
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -406,16 +473,17 @@ export default function Header() {
               </div>
               <div className="flex space-x-4 mt-4">
                 {[
-                  { icon: <Facebook className="h-5 w-5" />, href: "#", label: "Facebook" },
-                  { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" },
-                  { icon: <Instagram className="h-5 w-5" />, href: "#", label: "Instagram" },
-                  { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
+                  { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
+              { icon: <Twitter className="h-5 w-5" />, href: "https://x.com/TechbrillS", label: "Twitter" },
+              { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
+              { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
                 ].map((social, index) => (
                   <Link
                     key={index}
                     href={social.href}
                     className="text-gray-700 dark:text-gray-200"
                     aria-label={social.label}
+                    target="_blank"
                   >
                     {social.icon}
                   </Link>

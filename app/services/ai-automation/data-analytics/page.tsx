@@ -247,7 +247,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                At TechBrill Solutions, we empower businesses to leverage the full potential of their data, providing comprehensive data analytics services that drive strategic growth, improve operational efficiency, and enhance customer understanding. Our team of data experts utilizes cutting-edge tools and techniques to transform your raw data into actionable insights, helping you make smarter decisions and achieve better business outcomes.
+                At Techbrill Solutions, we empower businesses to leverage the full potential of their data, providing comprehensive data analytics services that drive strategic growth, improve operational efficiency, and enhance customer understanding. Our team of data experts utilizes cutting-edge tools and techniques to transform your raw data into actionable insights, helping you make smarter decisions and achieve better business outcomes.
               </motion.p>
             </div>
             <motion.div

@@ -33,28 +33,28 @@ export default function ServicesOverview() {
       link: "/services#ai-ml",
     },
     {
-      title: "Digital Transformation",
+      title: "Software QA & Testing",
       description:
-        "Guiding your business through comprehensive digital transformation with modern technologies that enhance agility, efficiency, innovation, and sustainable growth in a competitive market.",
+        "Ensuring quality and reliability in every line of code through comprehensive testing strategies that identify and resolve issues before they impact users.",
       icon: "refresh-cw",
-      image: "/images/services/web-design-hero.jpg",
-      link: "/services#digital-transformation",
-    },
-    {
-      title: "Digital Content Solutions",
-      description:
-        "Creating smart content solutions for eLearning platforms, LMS development, conversion optimization, and interactive digital experiences that engage users and drive meaningful results.",
-      icon: "file-text",
-      image: "/images/services/web-design-hero.jpg",
-      link: "/services#content-solutions",
+      image: "/images/services/qa-testing-hero.jpg",
+      link: "/services#software-qa-testing",
     },
     {
       title: "Digital Marketing",
       description:
-        "Implementing comprehensive digital marketing strategies including SEO, social media, content marketing, and paid advertising to boost your online presence and drive sustainable business growth.",
+         "Driving brand growth through strategic digital campaigns, SEO optimization, social media management, and data-driven marketing strategies that increase visibility, engagement, and conversion rates across digital channels.",
+      icon: "file-text",
+      image: "/images/services/digital-marketing-hero.jpg",
+      link: "/services#digital-marketing",
+    },
+    {
+      title: "IT Consultancy",
+      description:
+        "Providing expert guidance and support to help businesses navigate the complex IT landscape, optimize their technology investments, and achieve their strategic goals.",
       icon: "trending-up",
       image: "/images/services/it-consultancy-hero.jpg",
-      link: "/services#digital-marketing",
+      link: "/services#it-consultancy",
     },
   ]
 

@@ -72,7 +72,7 @@ export default function MobileAppDevelopmentPage() {
                   Mobile app development involves creating software applications that run on mobile devices like smartphones and tablets. With billions of smartphone users worldwide, a well-designed mobile app is a powerful tool for businesses to connect with their audience, enhance brand visibility, and deliver valuable services.
                 </p>
                 <p className="text-base md:text-lg text-gray-200">
-                  At TechBrill Solutions, we specialize in creating native and cross-platform mobile applications that deliver exceptional user experiences. Our team combines technical expertise with creative design to build apps that are not only visually appealing but also perform flawlessly across all devices.
+                  At Techbrill Solutions, we specialize in creating native and cross-platform mobile applications that deliver exceptional user experiences. Our team combines technical expertise with creative design to build apps that are not only visually appealing but also perform flawlessly across all devices.
                 </p>
               </div>
             </div>

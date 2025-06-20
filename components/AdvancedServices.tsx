@@ -17,8 +17,8 @@ interface CardProps {
 
 const cards: CardProps[] = [
   {
-    title: 'Digital Content Solutions',
-    description: 'Smart content solutions for eLearning– LMS platforms, conversion, and interactive digital experiences.',
+    title: 'Digital Transformation',
+    description: 'Reimagine your business through comprehensive digital strategies, innovative technologies, and process optimization that drive efficiency, competitiveness, and sustainable growth.',
     icon: '/icons/digital-content.svg',
     href: '#',
     image: '/images/digital-content.jpg',
@@ -29,13 +29,6 @@ const cards: CardProps[] = [
     icon: '/icons/generative-ai.svg',
     href: '#',
     image: '/images/generative-ai.jpg',
-  },
-  {
-    title: 'Blockchain',
-    description: 'Secure, transparent, and decentralized blockchain solutions to streamline operations and build digital trust.',
-    icon: '/icons/blockchain.svg',
-    href: '#',
-    image: '/images/blockchain.jpg',
   },
   {
     title: 'Data Analytics',
@@ -50,6 +43,13 @@ const cards: CardProps[] = [
     icon: '/icons/cloud-devops.svg',
     href: '#',
     image: '/images/cloud-devops.jpg',
+  },
+  {
+    title: 'Blockchain',
+    description: 'Secure, transparent, and decentralized blockchain solutions to streamline operations and build digital trust.',
+    icon: '/icons/blockchain.svg',
+    href: '#',
+    image: '/images/blockchain.jpg',
   },
 ];
 
