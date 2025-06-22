@@ -264,7 +264,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                At TechBrill Solutions, we help you leverage the full potential of the cloud through DevOps methodologies, enabling you to build, deploy, and manage applications seamlessly and at scale. Our expertise in cloud architecture, automation tools, and DevOps practices ensures your business can achieve greater agility, cost savings, and resilience.
+                At Techbrill Solutions, we help you leverage the full potential of the cloud through DevOps methodologies, enabling you to build, deploy, and manage applications seamlessly and at scale. Our expertise in cloud architecture, automation tools, and DevOps practices ensures your business can achieve greater agility, cost savings, and resilience.
               </motion.p>
             </div>
             <motion.div

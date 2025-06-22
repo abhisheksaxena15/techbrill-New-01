@@ -260,7 +260,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                At TechBrill Solutions, we harness the power of Generative AI to help businesses automate content creation, enhance creativity, and develop innovative applications that drive engagement and efficiency. Our expertise spans across various Generative AI models and techniques, allowing us to build tailored solutions that address your specific business needs and unlock new levels of innovation.
+                At Techbrill Solutions, we harness the power of Generative AI to help businesses automate content creation, enhance creativity, and develop innovative applications that drive engagement and efficiency. Our expertise spans across various Generative AI models and techniques, allowing us to build tailored solutions that address your specific business needs and unlock new levels of innovation.
               </motion.p>
             </div>
             <motion.div

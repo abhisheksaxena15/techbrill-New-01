@@ -37,14 +37,14 @@ export default function Footer() {
               <div className="relative h-10 w-40">
                 <Image
                   src="/logo.png"
-                  alt="TechBrill Logo"
+                  alt="Techbrill Logo"
                   fill
                   className="object-contain brightness-200"
                 />
               </div>
             </div>
             <p className="text-gray-400 mb-4 md:mb-6 text-sm">
-              TechBrill Solutions is an IT service provider and brand communication company, delivering high-performance
+              Techbrill Solutions is an IT service provider and brand communication company, delivering high-performance
               digital solutions that drive real business growth through innovation and technical excellence.
             </p>
             <div className="space-y-2 md:space-y-3">
@@ -180,7 +180,7 @@ export default function Footer() {
       <div className="border-t border-gray-800 px-4">
         <div className="container mx-auto py-6">
           <p className="text-center text-gray-400">
-            © {new Date().getFullYear()} TechBrill Solutions. All rights reserved.
+            © {new Date().getFullYear()} Techbrill Solutions. All rights reserved.
           </p>
         </div>
       </div>

@@ -69,7 +69,7 @@ export default function SoftwareQATestingPage() {
               <div className="w-full md:w-1/2">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">What We Do in Software QA & Testing</h2>
                 <p className="text-base md:text-lg text-gray-200 mb-4">
-                  In today&apos;s fast-paced digital world, software quality is non-negotiable. At TechBrill Solutions, we understand that even the smallest bug can have significant consequences for your business. Our comprehensive software QA and testing services ensure that your applications are reliable, secure, and deliver an exceptional user experience.
+                  In today&apos;s fast-paced digital world, software quality is non-negotiable. At Techbrill Solutions, we understand that even the smallest bug can have significant consequences for your business. Our comprehensive software QA and testing services ensure that your applications are reliable, secure, and deliver an exceptional user experience.
                 </p>
                 <p className="text-base md:text-lg text-gray-200">
                   We employ a rigorous testing methodology that covers every aspect of your software, from functionality and performance to security and user experience. Our team of experienced QA engineers uses both manual and automated testing techniques to identify and resolve issues before they impact your users.

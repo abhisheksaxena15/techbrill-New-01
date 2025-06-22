@@ -37,11 +37,11 @@ export default function ProjectsPreview() {
   ]
 
   return (
-    <section className="py-16 relative bg-gradient-to-r from-primary/5 to-primary/10 from-primary/5 to-primary/10">
+    <section className="py-16 relative bg-gray-50 dark:bg-gray-900">
       <div className="container">
         <AnimatedSection animation="fade">
           <div className="text-center mb-12">
-            <AnimatedText text="Explore Recent Projects" className="text-3xl font-bold mb-4" />
+            <AnimatedText text="Explore Recent Projects" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white" />
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
               Discover our portfolio of successful projects that showcase our expertise, creativity, and commitment to

@@ -168,7 +168,7 @@ export default function SeoPage() {
                 Search Engine Optimization (SEO) is the process of improving the visibility and ranking of your website in search engine results pages (SERPs) like Google, Bing, and Yahoo. A strong SEO strategy involves optimizing your website&apos;s technical setup, content, and off-page factors to attract relevant organic traffic.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                At TechBrill Solutions, we help businesses achieve higher search engine rankings, increase their online visibility, and drive more qualified leads through comprehensive and ethical SEO services.
+                At Techbrill Solutions, we help businesses achieve higher search engine rankings, increase their online visibility, and drive more qualified leads through comprehensive and ethical SEO services.
               </p>
             </motion.div>
 

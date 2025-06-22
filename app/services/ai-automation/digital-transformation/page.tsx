@@ -247,7 +247,7 @@ export default function ContentMarketingPage() {
                                 transition={{ duration: 0.5, delay: 0.3 }}
                                 viewport={{ once: true }}
                             >
-                                At TechBrill Solutions, we partner with you to identify opportunities, develop a roadmap, and implement the necessary changes to thrive in the digital age. Our approach focuses on integrating technology across all areas of your business to enhance efficiency, improve customer experience, and unlock new revenue streams. We guide you through every step, ensuring a smooth and successful transformation journey.
+                                At Techbrill Solutions, we partner with you to identify opportunities, develop a roadmap, and implement the necessary changes to thrive in the digital age. Our approach focuses on integrating technology across all areas of your business to enhance efficiency, improve customer experience, and unlock new revenue streams. We guide you through every step, ensuring a smooth and successful transformation journey.
                             </motion.p>
                         </div>
                         <motion.div

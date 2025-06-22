@@ -270,7 +270,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                At TechBrill Solutions, we help businesses leverage the power of blockchain to build trust, improve efficiency, and create innovative solutions across various industries, including finance, supply chain, healthcare, and more. Our expertise enables organizations to explore and implement blockchain technology for secure transactions, transparent supply chains, and decentralized applications.
+                At Techbrill Solutions, we help businesses leverage the power of blockchain to build trust, improve efficiency, and create innovative solutions across various industries, including finance, supply chain, healthcare, and more. Our expertise enables organizations to explore and implement blockchain technology for secure transactions, transparent supply chains, and decentralized applications.
               </motion.p>
             </div>
             <motion.div

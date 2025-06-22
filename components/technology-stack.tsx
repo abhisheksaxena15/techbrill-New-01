@@ -42,7 +42,7 @@ export default function TechnologyStack() {
     },
     {
       name: "Joomla",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/joomla/joomla-original.svg",
+      icon: "/images/joomla-icon.svg", 
     },
     {
       name: "React",
