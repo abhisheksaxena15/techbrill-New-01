@@ -1,327 +1,433 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Code, Layout, Smartphone, Shield, Zap, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Code, Layout, Smartphone, Shield, Zap, Mail, Phone, Globe, Briefcase, Layers, Database, Monitor, TrendingUp, ChevronDown, Clock, Gift, Shuffle, Headphones, Lightbulb, Palette, Target, Handshake, BadgeDollarSign, PhoneCall } from 'lucide-react';
 import { ErrorBoundary } from '@/components/error-boundary';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
+import { SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiFigma, SiAmazon, SiMongodb, SiTypescript } from 'react-icons/si';
 
+import { TextRevealCard } from '@/components/ui/text-reveal-card';
+import { FocusCards } from '@/components/ui/focus-cards';
+import TechToolsSection from '@/components/ui/tech-tools-section';
+import ServicesSection from '@/components/ui/services-section';
+import WorkProcess from '@/components/ui/work-process';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
+import { cn } from '@/lib/utils';
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+};
 const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+const stagger = {
+  visible: { transition: { staggerChildren: 0.15 } },
 };
 
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
+const techStack = [
+  { name: 'React', icon: '/images/tech/react.svg' },
+  { name: 'Next.js', icon: '/images/tech/nextjs.svg' },
+  { name: 'Node.js', icon: '/images/tech/nodejs.svg' },
+  { name: 'Tailwind', icon: '/images/tech/tailwind.svg' },
+  { name: 'Figma', icon: '/images/tech/figma.svg' },
+  { name: 'AWS', icon: '/images/tech/aws.svg' },
+  { name: 'MongoDB', icon: '/images/tech/mongodb.svg' },
+  { name: 'TypeScript', icon: '/images/tech/typescript.svg' },
+];
+
+const industries = [
+  { name: 'E-Commerce', icon: <Globe className="w-8 h-8 text-blue-500" /> },
+  { name: 'Healthcare', icon: <Shield className="w-8 h-8 text-green-500" /> },
+  { name: 'Finance', icon: <TrendingUp className="w-8 h-8 text-yellow-500" /> },
+  { name: 'Education', icon: <Users className="w-8 h-8 text-purple-500" /> },
+  { name: 'Real Estate', icon: <Briefcase className="w-8 h-8 text-pink-500" /> },
+  { name: 'SaaS', icon: <Layers className="w-8 h-8 text-indigo-500" /> },
+];
+
+const services = [
+  { title: 'UI/UX Design', icon: <Layout className="w-10 h-10 text-blue-500" />, desc: 'Modern, user-centric interfaces for web and mobile.' },
+  { title: 'Web Development', icon: <Code className="w-10 h-10 text-green-500" />, desc: 'Robust, scalable, and high-performing websites.' },
+  { title: 'E-Commerce', icon: <Briefcase className="w-10 h-10 text-yellow-500" />, desc: 'Custom online stores with seamless shopping experiences.' },
+  { title: 'Mobile Apps', icon: <Smartphone className="w-10 h-10 text-purple-500" />, desc: 'Cross-platform mobile app development.' },
+  { title: 'CMS Solutions', icon: <Database className="w-10 h-10 text-pink-500" />, desc: 'Flexible content management for your business.' },
+  { title: 'SEO & Marketing', icon: <TrendingUp className="w-10 h-10 text-indigo-500" />, desc: 'Grow your reach with smart SEO and digital marketing.' },
+];
+
+const devSteps = [
+  { title: 'Strategy', icon: '/images/process/strategy.svg', desc: 'We understand your vision and goals to craft a clear, actionable plan.' },
+  { title: 'Design', icon: '/images/process/design.svg', desc: 'Wireframes and UI/UX design to ensure a delightful user experience.' },
+  { title: 'Development', icon: '/images/process/development.svg', desc: 'Robust coding and integration using modern tech.' },
+  { title: 'Testing', icon: '/images/process/testing.svg', desc: 'Thorough QA to ensure quality and performance.' },
+  { title: 'Launch', icon: '/images/process/launch.svg', desc: 'Go live with confidence and post-launch support.' },
+];
+
+const commitments = [
+  { icon: <CheckCircle className="w-8 h-8 text-blue-500" />, title: '100% Transparency' },
+  { icon: <Shield className="w-8 h-8 text-green-500" />, title: 'Secure & Reliable' },
+  { icon: <Zap className="w-8 h-8 text-yellow-500" />, title: 'Fast Delivery' },
+  { icon: <Users className="w-8 h-8 text-purple-500" />, title: 'Expert Team' },
+  { icon: <Phone className="w-8 h-8 text-pink-500" />, title: '24/7 Support' },
+  { icon: <TrendingUp className="w-8 h-8 text-indigo-500" />, title: 'Result Driven' },
+];
+
+const TechStackCard: React.FC<{ tech: { name: string; icon: any; img: string }; idx: number }> = ({ tech, idx }) => {
+  const [imgError, setImgError] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: idx * 0.12 }}
+      whileHover={{ scale: 1.08 }}
+      className="relative flex flex-col items-center group cursor-pointer"
+    >
+      <div className="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center mb-2 transition-transform">
+        {!imgError ? (
+          <Image src={tech.img} alt={tech.name} width={48} height={48} onError={() => setImgError(true)} />
+        ) : (
+          React.createElement(tech.icon, { size: 48, color: '#3b82f6' })
+        )}
+      </div>
+      <span className="text-base font-medium mt-1 text-center">{tech.name}</span>
+    </motion.div>
+  );
 };
 
 export default function WebDesignDevelopmentPage() {
   return (
     <ErrorBoundary>
-      <div>
-        {/* Hero Section with Background Image */}
-        <section className="relative h-[350px] md:h-[400px] flex items-center justify-center overflow-hidden group">
-          <Image
-            src="/images/services/web-design-hero.jpg"
-            alt="Web Design & Development Hero"
-            fill
-            className="object-cover object-center transition-transform duration-700 group-hover:scale-105 z-0"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60 z-10 transition-opacity duration-300 group-hover:bg-black/70" />
-          <div className="relative z-20 flex flex-col items-center justify-center w-full text-center px-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Web Design & Development</h1>
-            <p className="text-lg md:text-2xl text-white/90">Crafting elegant, user-first web experiences</p>
-          </div>
-        </section>
-
-        {/* Service Explanation Section - Redesigned as 3 alternating cards with carousels */}
-        <section className="py-16 bg-gray-900">
-          <div className="container space-y-12">
-            {/* Card 1: Image Left, Text Right */}
-            <div className="flex flex-col md:flex-row items-center p-6 md:p-12 gap-8">
-              {/* Carousel Left */}
-              <div className="w-full md:w-1/2">
-                <Carousel opts={{ align: 'start', loop: true }} plugins={[Autoplay({ delay: 2500 })]}>
-                  <CarouselContent>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Web Design Slide 1" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/web-design-hero.jpg" alt="Web Design Slide 2" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg" alt="Web Design Slide 3" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                </Carousel>
-              </div>
-              {/* Text Right */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">What We Do in Web Design & Development</h2>
-                <p className="text-base md:text-lg text-gray-200 mb-4">
-                  Web design and development is the process of creating visually appealing, functional, and user-friendly websites. In today&apos;s digital landscape, a professional online presence is crucial for building credibility, reaching customers, and achieving business goals.
-                </p>
-                <p className="text-base md:text-lg text-gray-200">
-                  At TechBrill Solutions, we combine cutting-edge technology with creative design to deliver websites that not only look stunning but also drive results. Our team of expert developers and designers work together to create seamless, responsive, and high-performing web solutions.
-                </p>
-              </div>
-            </div>
-            {/* Card 2: Text Left, Image Right */}
-            <div className="flex flex-col md:flex-row-reverse p-6 md:p-12 gap-8">
-              {/* Carousel Right */}
-              <div className="w-full md:w-1/2">
-                <Carousel opts={{ align: 'start', loop: true }} plugins={[Autoplay({ delay: 2500 })]}>
-                  <CarouselContent>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg" alt="Web Design Slide 1" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Web Design Slide 2" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt="Web Design Slide 3" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                </Carousel>
-              </div>
-              {/* Text Left */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">UI/UX Services</h2>
-                <p className="text-base md:text-lg text-gray-200 mb-4">
-                  Elevate your digital products with user-centric design that balances form, function, and delightful interactions. Our end-to-end Product Design & UI/UX offerings ensure every touchpoint resonates with your audience and drives business goals.
-                </p>
-                <ul className="list-disc list-inside text-gray-200 space-y-2">
-                  <li>User research & persona development</li>
-                  <li>Wireframing & interactive prototyping</li>
-                  <li>UI design for web and mobile apps</li>
-                  <li>UX audits & usability testing</li>
-                  <li>Responsive & accessibility-focused design</li>
-                </ul>
-              </div>
-            </div>
-            {/* Card 3: Image Left, Text Right */}
-            <div className="flex flex-col md:flex-row p-6 md:p-12 gap-8">
-              {/* Carousel Left */}
-              <div className="w-full md:w-1/2">
-                <Carousel opts={{ align: 'start', loop: true }} plugins={[Autoplay({ delay: 2500 })]}>
-                  <CarouselContent>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg"
-                          alt="E-Commerce Slide 1" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem className="h-64 md:h-80">
-                      <div className="relative w-full h-full rounded-lg overflow-hidden shadow-md">
-                        <Image src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
-                          alt="E-Commerce Slide 2" fill className="object-cover object-center" />
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                </Carousel>
-              </div>
-              {/* Text Right */}
-              <div className="w-full md:w-1/2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">E-Commerce Development & Solutions</h2>
-                <p className="text-base md:text-lg text-gray-200 mb-4">
-                  Our eCommerce development and solutions services empower businesses to sell online with secure, scalable, and user-friendly platforms. We build custom online stores that drive sales, enhance customer experience, and streamline operations.
-                </p>
-                <ul className="list-disc list-inside text-gray-200 space-y-2">
-                  <li>Custom eCommerce website development</li>
-                  <li>Payment gateway and third-party integrations</li>
-                  <li>Mobile-optimized shopping experiences</li>
-                  <li>Multi-channel sales solutions</li>
-                  <li>Custom optimized website design</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits Section */}
-        <section className="py-16">
-          <div className="container">
-            <motion.h2
-              className="text-3xl font-bold mb-8"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
+      <main className="bg-white text-gray-900">
+        {/* 1. Hero Banner */}
+        <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <Image src="/images/services/web-design-hero.jpg" alt="Web Design Hero" fill className="object-cover object-center z-0" priority />
+          {/* Dark Linear Gradient Overlay with Blur */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
+          {/* Centered Content */}
+          <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
+            <motion.h1
+              className="font-bold text-4xl sm:text-5xl text-white mb-4"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Benefits of Professional Web Design & Development
-            </motion.h2>
-
+              Web Design & Development
+            </motion.h1>
+            <motion.p
+              className="text-lg text-gray-300 mb-8 max-w-xl text-center"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              Modern, high-performance websites for your business growth.
+            </motion.p>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row gap-4 w-full justify-center"
+              initial="hidden"
+              animate="visible"
+              variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
             >
               <motion.div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-shadow"
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <Users className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Increase Trust and Credibility</h3>
-                <p className="text-gray-700 dark:text-gray-300">A professional website builds confidence with visitors and establishes your brand&apos;s authority.</p>
+                <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
               </motion.div>
-
               <motion.div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-shadow"
-                variants={fadeInUp}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <Code className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Improve Search Engine Ranking</h3>
-                <p className="text-gray-700 dark:text-gray-300">Well-structured and optimized websites perform better in search results, driving organic traffic.</p>
-              </motion.div>
-
-              <motion.div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-shadow"
-                variants={fadeInUp}
-              >
-                <Zap className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Boost Conversion Rates</h3>
-                <p className="text-gray-700 dark:text-gray-300">Strategic design guides users through your site, encouraging them to take desired actions.</p>
-              </motion.div>
-
-              <motion.div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-shadow"
-                variants={fadeInUp}
-              >
-                <Layout className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Create a Strong First Impression</h3>
-                <p className="text-gray-700 dark:text-gray-300">Your website is often the first interaction a potential customer has with your brand.</p>
-              </motion.div>
-
-              <motion.div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-shadow"
-                variants={fadeInUp}
-              >
-                <Smartphone className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Gain a Competitive Edge</h3>
-                <p className="text-gray-700 dark:text-gray-300">Stand out from competitors with a unique, modern, and high-performing website.</p>
-              </motion.div>
-
-              <motion.div
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition-shadow"
-                variants={fadeInUp}
-              >
-                <Shield className="w-12 h-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Enhance Website Security</h3>
-                <p className="text-gray-700 dark:text-gray-300">Professional developers implement robust security measures to protect your website.</p>
+                <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
               </motion.div>
             </motion.div>
           </div>
-        </section>
-
-        {/* Customer Pain Points Section */}
-        <section className="py-16 bg-gray-50 dark:bg-gray-900">
-          <div className="container">
-            <motion.div
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <h2 className="text-3xl font-bold mb-8">Addressing Common Web Development Challenges</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Building and maintaining a successful website can be challenging. Businesses often face issues like:
-              </p>
-              <ul className="list-disc list-inside text-lg text-gray-700 dark:text-gray-300 space-y-4">
-                <li>Keeping up with technology: The web evolves rapidly. We stay updated on the latest trends, technologies, and best practices so you don&apos;t have to.</li>
-                <li>Achieving a unique and effective design: Avoiding generic templates and creating a design that truly represents your brand and converts visitors.</li>
-                <li>Ensuring functionality and security: Developing a site that works flawlessly on all devices and is protected against cyber threats.</li>
-                <li>Saving time and resources: The complexity of web development can be overwhelming. Outsourcing saves you valuable time and allows you to focus on your core business.</li>
-              </ul>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Case Studies/Success Stories Section */}
-        <section className="py-16 bg-gradient-to-br from-blue-50/60 via-white/80 to-blue-100/60 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-primary">Our Web Development Success Stories</h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-              Discover how TechBrill Solutions has helped businesses like yours succeed with professional web design and development. Our case studies highlight the challenges clients faced and the tangible results we delivered.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* Case Study 1 */}
-              <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative h-56 w-full overflow-hidden">
-                  <Image
-                    src='/images/case-studies/web-case-1.jpg'
-                    alt='E-Commerce Redesign Success'
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">E-Commerce Redesign Success</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">We transformed an outdated online store into a modern, high-converting e-commerce platform, resulting in a 40% increase in sales and improved customer satisfaction.</p>
-                  <a href="#" className="text-blue-600 dark:text-blue-400 font-medium flex items-center group-hover:underline mt-auto">Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></a>
-                </div>
-              </div>
-              {/* Case Study 2 */}
-              <div className="group bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-2 hover:shadow-2xl">
-                <div className="relative h-56 w-full overflow-hidden">
-                  <Image
-                    src='/images/case-studies/web-case-2.jpg'
-                    alt='Corporate Website Revamp'
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
-                </div>
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-2 text-primary">Corporate Website Revamp</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 flex-1">A leading consulting firm partnered with us to overhaul their digital presence, resulting in a sleek, mobile-friendly site and a 3x boost in lead generation.</p>
-                  <a href="#" className="text-blue-600 dark:text-blue-400 font-medium flex items-center group-hover:underline mt-auto">Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action Section */}
-        <section className="py-16 bg-primary text-white text-center">
+          {/* Scroll Down Indicator (if space allows) */}
           <motion.div
-            className="container"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
           >
-            <h2 className="text-3xl font-bold mb-6">Ready for a Stunning Website?</h2>
-            <p className="text-lg mb-8">Contact us today to discuss your web design and development needs.</p>
-            <Button variant="secondary" size="lg" className="group">
-              Get a Free Quote <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <ChevronDown className="w-7 h-7 text-white opacity-80" />
           </motion.div>
         </section>
-      </div>
+
+        {/* 2. Intro Section */}
+        <section className="py-20 px-6 md:px-16">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+            {/* Left: TextRevealCard + Intro */}
+            <div className="flex-1 flex flex-col justify-center max-w-2xl">
+              {/*
+              <TextRevealCard
+                text="You know the business"
+                revealText="we know how to build the website"
+                className="mb-6 bg-white border border-gray-200 shadow-lg text-neutral-900"
+              />
+              */}
+              <motion.h2
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl md:text-4xl font-bold text-blue-700 mb-6"
+              >
+                You know the business, we know how to build the website.
+              </motion.h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-6">
+                Partner with us to turn your business vision into a powerful online presence. Our team combines industry insight with technical expertise to deliver websites that drive results and growth.
+              </p>
+            </div>
+            {/* Right: Image with fade-in from right */}
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="flex-1 flex justify-center items-center"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center">
+                <Image
+                  src="/images/services/web-design-hero.jpg"
+                  alt="Web Design Collaboration"
+                  width={500}
+                  height={360}
+                  className="object-cover w-[500px] h-[360px]"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 3. Services Section */}
+        <ServicesSection />
+
+        {/* 4. Tech Stack Section */}
+        <section className="py-16">
+          <div className="container mx-auto">
+            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-3xl md:text-4xl font-bold mb-10 text-center">Our Tech Stack</motion.h2>
+            <TechToolsSection />
+          </div>
+        </section>
+
+        {/* 5. Industries Section */}
+        <section className="py-20 px-6 md:px-16 bg-slate-100">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            {/* Left Column: Text */}
+            <motion.div
+              className="flex-1"
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-left">
+                <span className="text-blue-800">DIGITAL SOLUTIONS FOR </span>
+                <span className="text-blue-900">EVERY INDUSTRY </span>
+                <span className="text-red-600">AND BUSINESS </span>
+                <span className="text-blue-800">CHALLENGE.</span>
+              </h2>
+              <p className="text-gray-600 max-w-lg mt-4">
+                We help companies in all sectors embrace technology, streamline operations, and unlock new growth. Our expert team delivers custom web solutions that solve real business problems and drive measurable results.
+              </p>
+              <button className="mt-6 px-6 py-3 bg-blue-800 text-white uppercase rounded shadow-md font-bold hover:bg-blue-900 transition">
+                Consult Our Experts
+              </button>
+            </motion.div>
+            {/* Right Column: Image */}
+            <motion.div
+              className="flex-1 flex justify-center items-center"
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7 }}
+            >
+              <img
+                src="/images/services/web-design-hero.jpg"
+                alt="Web Design Analytics Dashboard"
+                className="object-contain max-w-[500px] w-full h-auto rounded-xl shadow-md"
+              />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 6. Dev Process Section */}
+        <WorkProcess />
+
+        {/* 7. Commitment & Why Choose Section */}
+        <section className="py-20 px-6 md:px-16 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-blue-900">Our Commitment & Guarantee</h2>
+              <div className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
+              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
+                We deliver robust, scalable, and high-performance digital solutions. Our team is dedicated to transparency, timely delivery, and ongoing support—empowering your business to thrive in a digital world.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
+              {[
+                {
+                  icon: <CheckCircle className="w-10 h-10 text-blue-600" />,
+                  title: '100% Transparency',
+                  desc: 'Clear, honest communication and full project visibility from start to finish.'
+                },
+                {
+                  icon: <Clock className="w-10 h-10 text-blue-600" />,
+                  title: 'On-Time Delivery',
+                  desc: '95%+ of our projects launch on schedule, so you can plan with confidence.'
+                },
+                {
+                  icon: <Gift className="w-10 h-10 text-blue-600" />,
+                  title: '30 Days Free Support',
+                  desc: 'Enjoy complimentary post-launch support for a smooth transition.'
+                },
+                {
+                  icon: <Shuffle className="w-10 h-10 text-blue-600" />,
+                  title: 'Flexible Engagements',
+                  desc: 'Choose a partnership model that fits your business and budget.'
+                },
+                {
+                  icon: <Headphones className="w-10 h-10 text-blue-600" />,
+                  title: '24/7 Expert Help',
+                  desc: 'Our team is always available to assist you, day or night.'
+                }
+              ].map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: idx * 0.08 }}
+                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(59,130,246,0.10)', borderColor: '#2563eb', backgroundColor: 'rgba(59,130,246,0.04)' }}
+                  className={cn(
+                    "flex flex-col items-center justify-center text-center gap-4 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg px-6 py-8 min-w-0 border border-blue-100 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-500 hover:shadow-xl",
+                    "sm:gap-3 md:gap-4"
+                  )}
+                >
+                  <div className="flex items-center justify-center mb-0">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1 uppercase tracking-wide">{item.title}</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xs">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-20 px-6 md:px-16 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-blue-900">Why Choose Us</h2>
+              <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
+              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
+                We deliver more than just code — we bring vision, precision, and a results-driven process to every project.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <CheckCircle className="w-9 h-9 text-blue-600" />,
+                  title: 'Unique, Purposeful & Accessibility Standards Design',
+                  desc: 'We craft digital experiences that are not only beautiful but also accessible and purposeful for every user.'
+                },
+                {
+                  icon: <Lightbulb className="w-9 h-9 text-blue-600" />,
+                  title: 'Strong Technology Capability',
+                  desc: 'Our team leverages the latest tech to build robust, scalable, and future-ready solutions.'
+                },
+                {
+                  icon: <Palette className="w-9 h-9 text-blue-600" />,
+                  title: 'Highly Creative & Motivated Teams',
+                  desc: 'Our passionate experts bring creativity and energy to every project, driving innovation and results.'
+                },
+                {
+                  icon: <Target className="w-9 h-9 text-blue-600" />,
+                  title: 'Result-Driven Approach and Process',
+                  desc: 'We focus on outcomes, using proven processes to deliver measurable business value.'
+                },
+                {
+                  icon: <Handshake className="w-9 h-9 text-blue-600" />,
+                  title: 'Flexible Engagement Models',
+                  desc: 'Choose from a range of engagement options tailored to your needs and goals.'
+                },
+                {
+                  icon: <PhoneCall className="w-9 h-9 text-blue-600" />,
+                  title: 'Seamless Communication',
+                  desc: 'We keep you in the loop with clear, proactive, and responsive communication.'
+                }
+              ].map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: idx * 0.08 }}
+                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(59,130,246,0.10)', borderColor: '#2563eb', backgroundColor: 'rgba(59,130,246,0.04)' }}
+                  className="flex flex-col items-center text-center gap-3 bg-white/80 rounded-2xl border border-blue-100 shadow-md px-7 py-8 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-500 hover:shadow-lg"
+                >
+                  <div className="flex items-center justify-center mb-2">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1">{item.title}</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Contact CTA Section */}
+        <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
+            <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
+          </motion.div>
+        </section>
+
+        {/* 9. Contact Form Section */}
+        <section className="py-16">
+          <div className="container mx-auto flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="md:w-1/2 flex items-center justify-center bg-blue-50 p-8">
+              <img
+                src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
+                alt="Contact Team"
+                className="rounded-xl object-cover w-full max-w-[320px] h-[320px] border border-blue-100 shadow-md"
+              />
+            </div>
+            <div className="md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold mb-6 text-blue-700">Let&apos;s Connect...</h3>
+              <form className="space-y-4">
+                <div className="flex gap-4">
+                  <input type="text" placeholder="Name" className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                  <input type="email" placeholder="Email" className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div className="flex gap-4">
+                  <input type="text" placeholder="Phone No" className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                  <select className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <option>Web Design & Development</option>
+                    <option>Mobile App Development</option>
+                    <option>UI/UX Design</option>
+                    <option>Digital Marketing</option>
+                  </select>
+                </div>
+                <textarea placeholder="Message" className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" rows={4}></textarea>
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">Send Message</Button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
     </ErrorBoundary>
   );
-} 
+}
+
+
+
