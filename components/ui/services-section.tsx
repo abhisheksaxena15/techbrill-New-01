@@ -137,7 +137,7 @@ export default function ServicesSection() {
 	return (
 		<>
 		{/* 2. What We Do Section - matches the image layout */ }
-		< section className = "py-16 bg-gray-950 " >
+		< section className = "py-16 bg-white dark:bg-gray-950 " >
 			<div className="container mx-auto px-4 max-w-6xl">
 				<div className="flex flex-col md:flex-row items-start gap-10">
 					{/* Left: Code image */}
@@ -167,17 +167,18 @@ export default function ServicesSection() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.7 }}
 					>
-						<h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-400">
+
+						<h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-700">
 							What We Do in Web Design & Development
 						</h2>
-						<p className="text-gray-300 mb-4">
+						<p className="text-gray-600 dark:text-white mb-4">
 							Web design and development is the process of creating
 							visually appealing, functional, and user-friendly websites.
 							In today&apos;s digital landscape, a professional online presence
 							is crucial for building credibility, reaching customers, and
 							achieving business goals.
 						</p>
-						<p className="text-gray-300 mb-4">
+						<p className="text-gray-600 dark:text-white mb-4">
 							At TechBrill Solutions, we combine cutting-edge technology
 							with creative design to deliver websites that not only look
 							stunning but also drive results. Our team of expert developers
@@ -190,10 +191,10 @@ export default function ServicesSection() {
 				</section >
 
 		{/* 3. Services Section - Using the custom dark theme from the image */ }
-		< section className = "py-16 bg-gray-950" >
+		< section className = "py-16 bg-white dark:bg-gray-950" >
 			<div className="container mx-auto px-4 max-w-6xl">
 				<div className="text-center mb-8 md:mb-12">
-					<h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
+					<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
 						Our Expertise
 					</h2>
 					<div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-10"></div>
@@ -202,17 +203,17 @@ export default function ServicesSection() {
 				{/* UI/UX Services with carousel */}
 				<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
 					<div className="w-full md:w-1/2">
-						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">
+						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
 							UI/UX Services
 						</h3>
-						<p className="text-gray-300 mb-4">
+						<p className="text-gray-600 dark:text-white mb-4">
 							Elevate your digital products with user-centric design that
 							balances form, function, and delightful interactions. Our
 							end-to-end Product Design & UI/UX offerings ensure every
 							touchpoint resonates with your audience and drives business
 							goals.
 						</p>
-						<ul className="list-disc list-inside text-gray-400 space-y-2 ml-2">
+						<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
 							<li>User research & persona development</li>
 							<li>Wireframing & interactive prototyping</li>
 							<li>UI design for web and mobile apps</li>
@@ -253,16 +254,16 @@ export default function ServicesSection() {
 				{/* Web Development with carousel */}
 				<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
 					<div className="w-full md:w-1/2">
-						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">
+					<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
 							Web Development
 						</h3>
-						<p className="text-gray-300 mb-4">
+						<p className="text-gray-600 dark:text-white mb-4">
 							From simple digital presence websites to complex web apps, we
 							build robust, scalable, and effective solutions. Our expert team
 							creates customized experiences that deliver unique, maintainable
 							solutions.
 						</p>
-						<ul className="list-disc list-inside text-gray-400 space-y-2 ml-2">
+						<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
 							<li>Custom website & web app development</li>
 							<li>Frontend & backend development</li>
 							<li>API integration & feature testing</li>
@@ -303,16 +304,16 @@ export default function ServicesSection() {
 				{/* E-Commerce Solutions with carousel */}
 				<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
 					<div className="w-full md:w-1/2">
-						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-white">
+					<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
 							E-Commerce Development & Solutions
 						</h3>
-						<p className="text-gray-300 mb-4">
+						<p className="text-gray-600 dark:text-white mb-4">
 							Our eCommerce development and solutions services empower
 							businesses to sell online with secure, scalable, and user-friendly
 							platforms. We build custom online stores that drive sales,
 							enhance customer experience, and streamline operations.
 						</p>
-						<ul className="list-disc list-inside text-gray-400 space-y-2 ml-2">
+						<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
 							<li>Custom eCommerce website development</li>
 							<li>Payment gateway and third-party integrations</li>
 							<li>Mobile-optimized shopping experiences</li>
@@ -349,6 +350,159 @@ export default function ServicesSection() {
 						</Carousel>
 					</div>
 				</div>
+				
+
+				{/* Mobile App Development with carousel */}
+				<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+					<div className="w-full md:w-1/2">
+						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+							Mobile App Development
+						</h3>
+						<p className="text-gray-600 dark:text-white mb-4">
+							Reach your audience on any device with our comprehensive mobile
+							app development services. We design and develop cross-platform
+							mobile applications that are fast, reliable, and perfectly
+							tailored to your business goals and user needs.
+						</p>
+						<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+							<li>iOS & Android native app development</li>
+							<li>Cross-platform solutions (React Native, Flutter)</li>
+							<li>App store deployment & optimization</li>
+							<li>Push notifications & in-app analytics</li>
+							<li>Ongoing updates, maintenance & support</li>
+						</ul>
+					</div>
+					<div className="w-full md:w-1/2">
+						<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
+							<CarouselContent>
+								<CarouselItem>
+									<div className="rounded-md overflow-hidden">
+										<Image
+											src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
+											alt="Mobile App Development"
+											width={600}
+											height={400}
+											className="object-cover w-full h-[300px]"
+										/>
+									</div>
+								</CarouselItem>
+								<CarouselItem>
+									<div className="rounded-md overflow-hidden">
+										<Image
+											src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
+											alt="Mobile App Design Process"
+											width={600}
+											height={400}
+											className="object-cover w-full h-[300px]"
+										/>
+									</div>
+								</CarouselItem>
+							</CarouselContent>
+						</Carousel>
+					</div>
+				</div>
+
+				{/* CMS & Content Solutions with carousel */}
+				<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
+					<div className="w-full md:w-1/2">
+						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+							CMS & Content Solutions
+						</h3>
+						<p className="text-gray-600 dark:text-white mb-4">
+							Manage your content with ease using our flexible CMS platforms.
+							We implement powerful content management systems that empower
+							your team to update, organize, and publish content effortlessly
+							while maintaining full control over your digital presence.
+						</p>
+						<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+							<li>Custom CMS development & implementation</li>
+							<li>WordPress, Strapi, Contentful & headless CMS</li>
+							<li>Content migration & team training</li>
+							<li>Role-based access control & workflows</li>
+							<li>SEO-friendly architecture & optimization</li>
+						</ul>
+					</div>
+					<div className="w-full md:w-1/2">
+						<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4200 })]}>
+							<CarouselContent>
+								<CarouselItem>
+									<div className="rounded-md overflow-hidden">
+										<Image
+											src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+											alt="CMS Content Management"
+											width={600}
+											height={400}
+											className="object-cover w-full h-[300px]"
+										/>
+									</div>
+								</CarouselItem>
+								<CarouselItem>
+									<div className="rounded-md overflow-hidden">
+										<Image
+											src="/images/services/web-design-hero.jpg"
+											alt="Content Strategy Planning"
+											width={600}
+											height={400}
+											className="object-cover w-full h-[300px]"
+										/>
+									</div>
+								</CarouselItem>
+							</CarouselContent>
+						</Carousel>
+					</div>
+				</div>
+
+				{/* SEO & Digital Marketing with carousel */}
+				<div className="flex flex-col md:flex-row-reverse items-start gap-10">
+					<div className="w-full md:w-1/2">
+						<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+							SEO & Digital Marketing
+						</h3>
+						<p className="text-gray-600 dark:text-white mb-4">
+							Grow your online reach and drive measurable results with our
+							comprehensive digital marketing expertise. We combine strategic
+							SEO, compelling content creation, and data-driven analytics to
+							help your business stand out in the competitive digital landscape.
+						</p>
+						<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+							<li>On-page & technical SEO optimization</li>
+							<li>Content strategy & high-quality creation</li>
+							<li>Analytics setup & performance reporting</li>
+							<li>Social media integration & management</li>
+							<li>Conversion rate optimization & A/B testing</li>
+						</ul>
+					</div>
+					<div className="w-full md:w-1/2">
+						<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3600 })]}>
+							<CarouselContent>
+								<CarouselItem>
+									<div className="rounded-md overflow-hidden">
+										<Image
+											src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
+											alt="SEO & Digital Marketing"
+											width={600}
+											height={400}
+											className="object-cover w-full h-[300px]"
+										/>
+									</div>
+								</CarouselItem>
+								<CarouselItem>
+									<div className="rounded-md overflow-hidden">
+										<Image
+											src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+											alt="Digital Marketing Strategy"
+											width={600}
+											height={400}
+											className="object-cover w-full h-[300px]"
+										/>
+									</div>
+								</CarouselItem>
+							</CarouselContent>
+						</Carousel>
+					</div>
+				</div>
+
+
 				
 				{/* Continue adding the rest of your services with carousels... */}
 				{/* Mobile App Development, CMS & Content Solutions, SEO & Digital Marketing */}
