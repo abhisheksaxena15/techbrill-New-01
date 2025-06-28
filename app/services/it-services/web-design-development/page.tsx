@@ -158,59 +158,21 @@ export default function WebDesignDevelopmentPage() {
           </motion.div>
         </section>
 
-        {/* 2. Intro Section */}
-        <section className="py-20 px-6 md:px-16">
-          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* Left: TextRevealCard + Intro */}
-            <div className="flex-1 flex flex-col justify-center max-w-2xl">
-              {/*
-              <TextRevealCard
-                text="You know the business"
-                revealText="we know how to build the website"
-                className="mb-6 bg-white border border-gray-200 shadow-lg text-neutral-900"
-              />
-              */}
-              <motion.h2
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="text-3xl md:text-4xl font-bold text-blue-700 mb-6"
-              >
-                You know the business, we know how to build the website.
-              </motion.h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-6">
-                Partner with us to turn your business vision into a powerful online presence. Our team combines industry insight with technical expertise to deliver websites that drive results and growth.
-              </p>
-            </div>
-            {/* Right: Image with fade-in from right */}
-            <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="flex-1 flex justify-center items-center"
-            >
-              <div className="rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center">
-                <Image
-                  src="/images/services/web-design-hero.jpg"
-                  alt="Web Design Collaboration"
-                  width={500}
-                  height={360}
-                  className="object-cover w-[500px] h-[360px]"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* 3. Services Section */}
         <ServicesSection />
 
         {/* 4. Tech Stack Section */}
         <section className="py-16">
           <div className="container mx-auto">
-            <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-3xl md:text-4xl font-bold mb-10 text-center">Our Tech Stack</motion.h2>
+            <div className="text-center mb-8 md:mb-12">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+                Technologies We Use
+              </h3>
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                Our Tech Stack
+              </h2>
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+            </div>
             <TechToolsSection />
           </div>
         </section>
