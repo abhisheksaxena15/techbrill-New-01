@@ -13,6 +13,7 @@ import { FocusCards } from '@/components/ui/focus-cards';
 import TechToolsSection from '@/components/ui/tech-tools-section';
 import ServicesSection from '@/components/ui/services-section';
 import WorkProcess from '@/components/ui/work-process';
+import ConsultationSection from '@/components/ConsultationSection';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
 
@@ -355,7 +356,7 @@ export default function WebDesignDevelopmentPage() {
         </section>
 
         {/* 9. Contact Form Section */}
-        <section className="py-16">
+        {/* <section className="py-16">
           <div className="container mx-auto flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="md:w-1/2 flex items-center justify-center bg-blue-50 p-8">
               <img
@@ -385,7 +386,9 @@ export default function WebDesignDevelopmentPage() {
               </form>
             </div>
           </div>
-        </section>
+        </section> */}
+        <ConsultationSection />
+
       </main>
     </ErrorBoundary>
   );
