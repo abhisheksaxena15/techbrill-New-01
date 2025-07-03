@@ -208,7 +208,15 @@ export default function WebDesignDevelopmentPage() {
                   >
                     View Our Industries
                   </button>
+                  <br />
+                  <button
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/'}
+                  >
+                    Consult Our Experts
+                  </button>
                 </div>
+                
               </motion.div>
 
               {/* Right Column: Image */}
