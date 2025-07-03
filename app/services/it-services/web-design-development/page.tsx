@@ -180,105 +180,60 @@ export default function WebDesignDevelopmentPage() {
 
         {/* 5. Industries Section */}
         <section className="py-20 px-6 md:px-16 bg-slate-100">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            {/* Left Column: Text */}
-            <motion.div
-              className="flex-1"
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-left">
-                <span className="text-blue-800">DIGITAL SOLUTIONS FOR </span>
-                <span className="text-blue-900">EVERY INDUSTRY </span>
-                <span className="text-red-600">AND BUSINESS </span>
-                <span className="text-blue-800">CHALLENGE.</span>
-              </h2>
-              <p className="text-gray-600 max-w-lg mt-4">
-                We help companies in all sectors embrace technology, streamline operations, and unlock new growth. Our expert team delivers custom web solutions that solve real business problems and drive measurable results.
-              </p>
-              <button className="mt-6 px-6 py-3 bg-blue-800 text-white uppercase rounded shadow-md font-bold hover:bg-blue-900 transition">
-                Consult Our Experts
-              </button>
-            </motion.div>
-            {/* Right Column: Image */}
-            <motion.div
-              className="flex-1 flex justify-center items-center"
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7 }}
-            >
-              <img
-                src="/images/services/web-design-hero.jpg"
-                alt="Web Design Analytics Dashboard"
-                className="object-contain max-w-[500px] w-full h-auto rounded-xl shadow-md"
-              />
-            </motion.div>
-          </div>
-        </section>
+          <div className="container mx-auto">
+            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
+              {/* Left Column: Text */}
+              <motion.div
+                className="flex-1 w-full lg:w-1/2"
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="text-center mb-6 lg:mb-8">
+                  <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
+                    Business Challenge
+                  </h3>
+                  <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl text-center">
+                    Digital solutions for every industry
+                  </h2>
+                  <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                </div>
+                <p className="text-gray-600 text-left max-w-lg lg:mx-0 mt-4 text-justify leading-relaxed">
+                  Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation. With a focus on tangible outcomes, we help organizations accelerate growth, improve customer experience, and stay ahead in a dynamic digital landscape. Our team delivers custom web solutions that solve real business problems and drive measurable results.
+                </p>
+                <div className="text-left">
+                  <button
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/industries'}
+                  >
+                    View Our Industries
+                  </button>
+                  <br />
+                  <button
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/'}
+                  >
+                    Consult Our Experts
+                  </button>
+                </div>
+                
+              </motion.div>
 
-        {/* 6. Dev Process Section */}
-        <WorkProcess />
-
-        {/* 7. Commitment & Why Choose Section */}
-        <section className="py-20 px-6 md:px-16 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-blue-900">Our Commitment & Guarantee</h2>
-              <div className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
-              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver robust, scalable, and high-performance digital solutions. Our team is dedicated to transparency, timely delivery, and ongoing support—empowering your business to thrive in a digital world.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
-              {[
-                {
-                  icon: <CheckCircle className="w-10 h-10 text-blue-600" />,
-                  title: '100% Transparency',
-                  desc: 'Clear, honest communication and full project visibility from start to finish.'
-                },
-                {
-                  icon: <Clock className="w-10 h-10 text-blue-600" />,
-                  title: 'On-Time Delivery',
-                  desc: '95%+ of our projects launch on schedule, so you can plan with confidence.'
-                },
-                {
-                  icon: <Gift className="w-10 h-10 text-blue-600" />,
-                  title: '30 Days Free Support',
-                  desc: 'Enjoy complimentary post-launch support for a smooth transition.'
-                },
-                {
-                  icon: <Shuffle className="w-10 h-10 text-blue-600" />,
-                  title: 'Flexible Engagements',
-                  desc: 'Choose a partnership model that fits your business and budget.'
-                },
-                {
-                  icon: <Headphones className="w-10 h-10 text-blue-600" />,
-                  title: '24/7 Expert Help',
-                  desc: 'Our team is always available to assist you, day or night.'
-                }
-              ].map((item, idx) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: idx * 0.08 }}
-                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(59,130,246,0.10)', borderColor: '#2563eb', backgroundColor: 'rgba(59,130,246,0.04)' }}
-                  className={cn(
-                    "flex flex-col items-center justify-center text-center gap-4 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg px-6 py-8 min-w-0 border border-blue-100 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-500 hover:shadow-xl",
-                    "sm:gap-3 md:gap-4"
-                  )}
-                >
-                  <div className="flex items-center justify-center mb-0">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1 uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xs">{item.desc}</p>
-                </motion.div>
-              ))}
+              {/* Right Column: Image */}
+              <motion.div
+                className="flex-1 w-full lg:w-1/2 flex justify-center items-center"
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7 }}
+              >
+                <img
+                  src="/images/services/web-design-hero.jpg"
+                  alt="Web Design Analytics Dashboard"
+                  className="object-cover w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-xl shadow-md"
+                />
+              </motion.div>
             </div>
           </div>
         </section>
