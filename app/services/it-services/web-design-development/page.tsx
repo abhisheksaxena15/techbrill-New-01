@@ -327,7 +327,7 @@ export default function WebDesignDevelopmentPage() {
               </h3>
 
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Our <span className = "text-blue-600">Commitment </span>Commitment and Guarantee
+                Our <span className = "text-blue-600">Commitment</span> and Guarantee
               </h2>
 
               <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
