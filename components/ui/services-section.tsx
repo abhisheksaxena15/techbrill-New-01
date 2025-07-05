@@ -2,6 +2,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AnimatedSection from "@/components/animated-section";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -154,7 +158,7 @@ export default function ServicesSection() {
 									alt="Code editor with web development code"
 									width={600}
 									height={400}
-									className="object-cover w-full h-[340px]"
+									className="object-cover w-full h-[440px]"
 									priority
 								/>
 							</div>
@@ -169,25 +173,38 @@ export default function ServicesSection() {
 							transition={{ duration: 0.7 }}
 						>
 							{/* Section label with blue underline */}
-							<h3 className="text-xl md:text-2xl font-semibold mb-2 text-black">What We Do</h3>
-							<div className="h-1 w-16 bg-blue-600 mb-6" />
+							<h3 className="text-xl md:text-2xl font-semibold mb-2 text-black  dark:text-white">We Create More Than Code</h3>
+							<div className="h-1 w-28 bg-blue-500 mb-6 " />
 							{/* Main heading */}
-							<h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">Web Development</h2>
+							<h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">We are your trusted Partner in <span className="text-blue-700">Web Design, Development</span> and Beyond</h2>
 							<p className="text-gray-600 dark:text-white mb-4">
-								Web design and development is the process of creating
-								visually appealing, functional, and user-friendly websites.
-								In today&apos;s digital landscape, a professional online presence
-								is crucial for building credibility, reaching customers, and
-								achieving business goals.
+								Your digital presence is more than just a website; its your brands identity,
+								functionality, and customer experience rolled into one. At TechBrill,
+								we specialize in crafting stunning websites, powerful web applications,
+								and intelligent portals that not only look great but work seamlessly.
+								We focus on design that captivates, development that performs, and user journeys that convert.
 							</p>
 
 							<p className="text-gray-600 dark:text-white mb-5">
-								At TechBrill Solutions, we combine cutting-edge technology
-								with creative design to deliver websites that not only look
-								stunning but also drive results. Our team of expert developers
-								and designers work together to build custom web solutions
-								tailored to your specific needs and solutions.
+								Backed by creativity and deep technical expertise, our team builds scalable,
+								responsive, and secure solutions tailored to your audience. Whether you need a business website,
+								a custom web app, or a complex portal, we ensure it communicates your vision clearly and
+								delivers real value—across every screen and interaction.
 							</p>
+							
+							<AnimatedSection animation="fade" delay={0.6}>
+								<Link href="/contact">
+									<Button className="group">
+										Consult with us{" "}
+										<motion.div
+											animate={{ x: [0, 5, 0] }}
+											transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+										>
+											<ArrowRight className="ml-2 h-4 w-4" />
+										</motion.div>
+									</Button>
+								</Link>
+							</AnimatedSection>
 						</motion.div>
 					</div>
 				</div>
@@ -197,10 +214,12 @@ export default function ServicesSection() {
 			<section className="py-16 bg-white dark:bg-gray-950">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-							Our Expertise
+						<h2 className="text-lg font-semibold uppercase tracking-wide text-black dark:text-white">
+							What We Do
 						</h2>
+						<h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Transforming ideas into seamless web experiences is <span className="text-blue-700 font-bold">Our Expertise</span></h2>
 						<div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-10"></div>
+						{/*<p className="text-lg text-gray-600 dark:text-white mb-4">We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today’s fast-paced digital world</p> */}
 					</div>
 
 					{/* UI/UX Services with carousel */}
@@ -360,7 +379,7 @@ export default function ServicesSection() {
 					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
 						<div className="w-full md:w-1/2">
 							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Progressive Web Apps (PWAs) 
+								Progressive Web Apps (PWAs)
 							</h3>
 							<p className="text-gray-600 dark:text-white mb-4">
 								Deliver fast, reliable, and engaging experiences with Progressive

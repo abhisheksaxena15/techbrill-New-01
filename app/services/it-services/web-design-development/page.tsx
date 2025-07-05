@@ -167,13 +167,14 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+              <h3 className="text-lg font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
                 Technologies We Use
               </h3>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Our Tech Stack
+              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                Driven by bold ideas, delivered through robust <span className="text-blue-700">Tech Stacks</span>
               </h2>
               <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              {/* <h1>We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.</h1> */}
             </div>
             <TechToolsSection />
           </div>
