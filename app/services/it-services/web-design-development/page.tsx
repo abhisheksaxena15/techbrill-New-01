@@ -327,7 +327,7 @@ export default function WebDesignDevelopmentPage() {
               </h3>
 
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Our <span className = "text-blue-600">Commitment</span> and Guarantee
+                Our <span className="text-blue-600">Commitment</span> and Guarantee
               </h2>
 
               <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
@@ -335,6 +335,7 @@ export default function WebDesignDevelopmentPage() {
               <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
                 Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation.
               </p>
+
 
               {/* Commitment Items */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
@@ -394,10 +395,12 @@ export default function WebDesignDevelopmentPage() {
           </div>
         </section>
 
-
-
-
-
+        {/*Work process section */}
+          <section className="py-20 px-6 md:px-16 bg-white">
+              {/* WorkProcess Component */}
+              <WorkProcess />
+          </section>
+       
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
