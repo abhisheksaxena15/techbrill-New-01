@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Users, Code, Layout, Smartphone, Shield, Zap, Mail, Phone, Globe, Briefcase, Layers, Database, Monitor, TrendingUp, ChevronDown, Clock, Gift, Shuffle, Headphones, Lightbulb, Palette, Target, Handshake, BadgeDollarSign, PhoneCall } from 'lucide-react';
+import { Eye, Clock, Shield, Users, CheckCircle, Code, Layout, Smartphone, Zap, Phone, Globe, Briefcase, Layers, Database, TrendingUp, ChevronDown, Lightbulb, Palette, Target, Handshake, PhoneCall } from 'lucide-react';
+
 import { ErrorBoundary } from '@/components/error-boundary';
 import { SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiFigma, SiAmazon, SiMongodb, SiTypescript } from 'react-icons/si';
 
@@ -192,7 +193,7 @@ export default function WebDesignDevelopmentPage() {
               >
                 <div className="text-center mb-6 lg:mb-8">
                   <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
-                    Business Challenge
+                    BUSSINESS CHALLENGE
                   </h3>
                   <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl text-center">
                     Digital solutions for every industry
@@ -214,10 +215,10 @@ export default function WebDesignDevelopmentPage() {
                     className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
                     onClick={() => window.location.href = '/'}
                   >
-                    Consult Our Experts
+                    Consult Our Expert
                   </button>
                 </div>
-                
+
               </motion.div>
 
               {/* Right Column: Image */}
@@ -237,6 +238,165 @@ export default function WebDesignDevelopmentPage() {
             </div>
           </div>
         </section>
+
+
+        {/*7 Our commitment section*/}
+        <section className="py-20 px-6 md:px-16 bg-white">
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
+                ASSURANCE TO YOU
+              </h3>
+
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                Our <span className="text-blue-600">Commitment</span> and Guarantee
+              </h2>
+
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+
+              <p className="text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
+                Techbrill Solutions delivers, robust, scalable and high performance software, web and mobile app development services to help you harness the power of technology, consulting and maximize your online bussiness insvestments.
+              </p>
+
+              {/* Commitment Items */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+                {/* 100% Transparency */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Eye className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    100% Transparency
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
+                  </p>
+                </div>
+
+                {/* 95% On Time Delivery */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <Clock className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    95% On Time Delivery
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
+                  </p>
+                </div>
+
+                {/* Free 30 days support */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <Shield className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Free 30 Days Support
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
+                  </p>
+                </div>
+
+                {/* Flexible Engagement */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                    <Users className="w-8 h-8 text-orange-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Flexible Engagement
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Adaptable working models to suit your project needs, timeline, and budget requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/*Commitments section blue tone version*/}
+
+        <section className="py-20 px-6 md:px-16 bg-blue-100">
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
+                ASSURANCE TO YOU
+              </h3>
+
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                Our <span className = "text-blue-600">Commitment</span> and Guarantee
+              </h2>
+
+              <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
+
+              <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
+                Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation.
+              </p>
+
+              {/* Commitment Items */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+                {/* 100% Transparency */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Eye className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    100% Transparency
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
+                  </p>
+                </div>
+
+                {/* 95% On Time Delivery */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Clock className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    95% On Time Delivery
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
+                  </p>
+                </div>
+
+                {/* Free 30 days support */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Shield className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Free 30 Days Support
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
+                  </p>
+                </div>
+
+                {/* Flexible Engagement */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Users className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Flexible Engagement
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Adaptable working models to suit your project needs, timeline, and budget requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
 
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
