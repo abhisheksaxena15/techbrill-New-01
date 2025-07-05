@@ -64,7 +64,7 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          Our Process to Build Digital Success
+          Our Work Process to Build Digital Success
         </motion.h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto mb-4 rounded-full" />
         <motion.p
@@ -74,7 +74,7 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          From idea to execution, here&apos;s how we help you succeed.
+          We follow a simple yet effective step-by-step process to help you bring your ideas to life—faster and better.
         </motion.p>
       </div>
       {/* Tabs */}
