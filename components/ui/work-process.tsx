@@ -78,11 +78,11 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
         </motion.p>
       </div>
       {/* Tabs */}
-      <div className="flex gap-4 md:gap-6 justify-center border-b pb-4 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-4 md:gap-6 border-b pb-4 overflow-x-auto scrollbar-hide pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory justify-start md:justify-center">
         {steps.map((step, idx) => (
           <button
             key={step.key}
-            className={`flex flex-col items-center px-2 md:px-4 pb-2 focus:outline-none transition relative group ${
+            className={`flex flex-col items-center px-2 md:px-4 pb-2 focus:outline-none transition relative group snap-center min-w-[72px] ${
               active === idx
                 ? "text-blue-600 font-semibold"
                 : "text-gray-500 hover:text-blue-500"
