@@ -103,6 +103,19 @@ const techTabs = [
       { name: 'Cucumber', icon: <Icon icon="logos:cucumber" className="w-7 h-7" /> },
     ],
   },
+  {
+    label: "QA & Testing",
+    value: "qa",
+    skills: [
+      { name: "Jest", icon: <Icon icon="logos:jest" className="w-7 h-7" /> },
+      { name: "Mocha", icon: <Icon icon="logos:mocha" className="w-7 h-7" /> },
+      { name: "Cypress", icon: <Icon icon="logos:cypress" className="w-7 h-7" /> },
+      { name: "Selenium", icon: <Icon icon="logos:selenium" className="w-7 h-7" /> },
+      { name: "Postman", icon: <Icon icon="logos:postman-icon" className="w-7 h-7" /> },
+      { name: "Playwright", icon: <Icon icon="logos:playwright" className="w-7 h-7" /> },
+      { name: "Cucumber", icon: <Icon icon="logos:cucumber" className="w-7 h-7" /> },
+    ],
+  },
 ];
 
 export default function TechToolsSection() {

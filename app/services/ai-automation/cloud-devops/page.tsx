@@ -589,12 +589,13 @@ export default function ContentMarketingPage() {
               </Button>
 
               <Button
-                variant="outline"
+                variant="secondary"
                 size="lg"
-                className="group border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105"
+                className="group bg-white hover:bg-gray-100 text-blue-600 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 View Our Portfolio
               </Button>
+              
             </motion.div>
             <motion.div
               className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"

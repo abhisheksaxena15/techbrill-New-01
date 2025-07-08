@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Users, Code, Layout, Smartphone, Shield, Zap, Mail, Phone, Globe, Briefcase, Layers, Database, Monitor, TrendingUp, ChevronDown, Clock, Gift, Shuffle, Headphones, Lightbulb, Palette, Target, Handshake, BadgeDollarSign, PhoneCall } from 'lucide-react';
+import { Eye, Clock, Shield, Users, CheckCircle, Code, Layout, Smartphone, Zap, Phone, Globe, Briefcase, Layers, Database, TrendingUp, ChevronDown, Lightbulb, Palette, Target, Handshake, PhoneCall } from 'lucide-react';
+
 import { ErrorBoundary } from '@/components/error-boundary';
 import { SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiFigma, SiAmazon, SiMongodb, SiTypescript } from 'react-icons/si';
 
@@ -13,6 +14,7 @@ import { FocusCards } from '@/components/ui/focus-cards';
 import WebTechToolsSection from '@/components/ui/web-tech-tools-section';
 import ServicesSection from '@/components/ui/services-section';
 import WorkProcess from '@/components/ui/work-process';
+import ConsultationSection from '@/components/ConsultationSection';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
 import ConsultationSection from '@/components/ConsultationSection';
@@ -181,44 +183,64 @@ export default function WebDesignDevelopmentPage() {
 
         {/* 5. Industries Section */}
         <section className="py-20 px-6 md:px-16 bg-slate-100">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            {/* Left Column: Text */}
-            <motion.div
-              className="flex-1"
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight text-left">
-                <span className="text-blue-800">DIGITAL SOLUTIONS FOR </span>
-                <span className="text-blue-900">EVERY INDUSTRY </span>
-                <span className="text-red-600">AND BUSINESS </span>
-                <span className="text-blue-800">CHALLENGE.</span>
-              </h2>
-              <p className="text-gray-600 max-w-lg mt-4">
-                We help companies in all sectors embrace technology, streamline operations, and unlock new growth. Our expert team delivers custom web solutions that solve real business problems and drive measurable results.
-              </p>
-              <button className="mt-6 px-6 py-3 bg-blue-800 text-white uppercase rounded shadow-md font-bold hover:bg-blue-900 transition">
-                Consult Our Experts
-              </button>
-            </motion.div>
-            {/* Right Column: Image */}
-            <motion.div
-              className="flex-1 flex justify-center items-center"
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7 }}
-            >
-              <img
-                src="/images/services/web-design-hero.jpg"
-                alt="Web Design Analytics Dashboard"
-                className="object-contain max-w-[500px] w-full h-auto rounded-xl shadow-md"
-              />
-            </motion.div>
+          <div className="container mx-auto">
+            <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
+              {/* Left Column: Text */}
+              <motion.div
+                className="flex-1 w-full lg:w-1/2"
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="text-center mb-6 lg:mb-8">
+                  <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
+                    BUSSINESS CHALLENGE
+                  </h3>
+                  <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl text-center">
+                    Digital solutions for every industry
+                  </h2>
+                  <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                </div>
+                <p className="text-gray-600 text-left max-w-lg lg:mx-0 mt-4 text-justify leading-relaxed">
+                  Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation. With a focus on tangible outcomes, we help organizations accelerate growth, improve customer experience, and stay ahead in a dynamic digital landscape. Our team delivers custom web solutions that solve real business problems and drive measurable results.
+                </p>
+                <div className="text-left">
+                  <button
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/industries'}
+                  >
+                    View Our Industries
+                  </button>
+                  <br />
+                  <button
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/'}
+                  >
+                    Consult Our Expert
+                  </button>
+                </div>
+
+              </motion.div>
+
+              {/* Right Column: Image */}
+              <motion.div
+                className="flex-1 w-full lg:w-1/2 flex justify-center items-center"
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.7 }}
+              >
+                <img
+                  src="/images/services/web-design-hero.jpg"
+                  alt="Web Design Analytics Dashboard"
+                  className="object-cover w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] rounded-xl shadow-md"
+                />
+              </motion.div>
+            </div>
           </div>
         </section>
+
 
         {/* Industries Section (custom, above Commitment & Guarantee)
         <section className="relative py-0 px-0 w-full min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover" style={{ backgroundImage: 'url(/images/services/web-design-hero.jpg)' }}>
@@ -260,67 +282,167 @@ export default function WebDesignDevelopmentPage() {
         {/* 6. Dev Process Section */}
         <WorkProcess />
 
-        {/* 7. Commitment & Why Choose Section */}
+        {/*7 Our commitment section*/}
         <section className="py-20 px-6 md:px-16 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-blue-900">Our Commitment & Guarantee</h2>
-              <div className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
-              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver robust, scalable, and high-performance digital solutions. Our team is dedicated to transparency, timely delivery, and ongoing support—empowering your business to thrive in a digital world.
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
+                ASSURANCE TO YOU
+              </h3>
+
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                Our <span className="text-blue-600">Commitment</span> and Guarantee
+              </h2>
+
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+
+              <p className="text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
+                Techbrill Solutions delivers, robust, scalable and high performance software, web and mobile app development services to help you harness the power of technology, consulting and maximize your online bussiness insvestments.
               </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
-              {[
-                {
-                  icon: <CheckCircle className="w-10 h-10 text-blue-600" />,
-                  title: '100% Transparency',
-                  desc: 'Clear, honest communication and full project visibility from start to finish.'
-                },
-                {
-                  icon: <Clock className="w-10 h-10 text-blue-600" />,
-                  title: 'On-Time Delivery',
-                  desc: '95%+ of our projects launch on schedule, so you can plan with confidence.'
-                },
-                {
-                  icon: <Gift className="w-10 h-10 text-blue-600" />,
-                  title: '30 Days Free Support',
-                  desc: 'Enjoy complimentary post-launch support for a smooth transition.'
-                },
-                {
-                  icon: <Shuffle className="w-10 h-10 text-blue-600" />,
-                  title: 'Flexible Engagements',
-                  desc: 'Choose a partnership model that fits your business and budget.'
-                },
-                {
-                  icon: <Headphones className="w-10 h-10 text-blue-600" />,
-                  title: '24/7 Expert Help',
-                  desc: 'Our team is always available to assist you, day or night.'
-                }
-              ].map((item, idx) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: idx * 0.08 }}
-                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(59,130,246,0.10)', borderColor: '#2563eb', backgroundColor: 'rgba(59,130,246,0.04)' }}
-                  className={cn(
-                    "flex flex-col items-center justify-center text-center gap-4 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg px-6 py-8 min-w-0 border border-blue-100 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-500 hover:shadow-xl",
-                    "sm:gap-3 md:gap-4"
-                  )}
-                >
-                  <div className="flex items-center justify-center mb-0">
-                    {item.icon}
+
+              {/* Commitment Items */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+                {/* 100% Transparency */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Eye className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1 uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xs">{item.desc}</p>
-                </motion.div>
-              ))}
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    100% Transparency
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
+                  </p>
+                </div>
+
+                {/* 95% On Time Delivery */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <Clock className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    95% On Time Delivery
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
+                  </p>
+                </div>
+
+                {/* Free 30 days support */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <Shield className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Free 30 Days Support
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
+                  </p>
+                </div>
+
+                {/* Flexible Engagement */}
+                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                    <Users className="w-8 h-8 text-orange-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Flexible Engagement
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Adaptable working models to suit your project needs, timeline, and budget requirements.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
+
+        {/*Commitments section blue tone version*/}
+
+        <section className="py-20 px-6 md:px-16 bg-blue-100">
+          <div className="container mx-auto">
+            <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
+                ASSURANCE TO YOU
+              </h3>
+
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                Our <span className="text-blue-600">Commitment</span> and Guarantee
+              </h2>
+
+              <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
+
+              <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
+                Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation.
+              </p>
+
+
+              {/* Commitment Items */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+                {/* 100% Transparency */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Eye className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    100% Transparency
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
+                  </p>
+                </div>
+
+                {/* 95% On Time Delivery */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Clock className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    95% On Time Delivery
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
+                  </p>
+                </div>
+
+                {/* Free 30 days support */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Shield className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Free 30 Days Support
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
+                  </p>
+                </div>
+
+                {/* Flexible Engagement */}
+                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Users className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Flexible Engagement
+                  </h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Adaptable working models to suit your project needs, timeline, and budget requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/*Work process section */}
+          <section className="py-20 px-6 md:px-16 bg-white">
+              {/* WorkProcess Component */}
+              <WorkProcess />
+          </section>
+       
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -384,7 +506,52 @@ export default function WebDesignDevelopmentPage() {
           </div>
         </section>
 
+
         <ConsultationSection bgImage="/images/services/web-design-hero.jpg" />
+
+        {/* 8. Contact CTA Section */}
+        <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
+            <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
+          </motion.div>
+        </section>
+
+        {/* 9. Contact Form Section */}
+        {/* <section className="py-16">
+          <div className="container mx-auto flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="md:w-1/2 flex items-center justify-center bg-blue-50 p-8">
+              <img
+                src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
+                alt="Contact Team"
+                className="rounded-xl object-cover w-full max-w-[320px] h-[320px] border border-blue-100 shadow-md"
+              />
+            </div>
+            <div className="md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="text-2xl font-bold mb-6 text-blue-700">Let&apos;s Connect...</h3>
+              <form className="space-y-4">
+                <div className="flex gap-4">
+                  <input type="text" placeholder="Name" className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                  <input type="email" placeholder="Email" className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div className="flex gap-4">
+                  <input type="text" placeholder="Phone No" className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                  <select className="w-1/2 border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <option>Web Design & Development</option>
+                    <option>Mobile App Development</option>
+                    <option>UI/UX Design</option>
+                    <option>Digital Marketing</option>
+                  </select>
+                </div>
+                <textarea placeholder="Message" className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" rows={4}></textarea>
+                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">Send Message</Button>
+              </form>
+            </div>
+          </div>
+        </section> */}
+        <ConsultationSection />
+
       </main>
     </ErrorBoundary>
   );
