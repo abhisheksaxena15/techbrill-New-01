@@ -17,7 +17,7 @@ import WorkProcess from '@/components/ui/work-process';
 import ConsultationSection from '@/components/ConsultationSection';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
-import ConsultationSection from '@/components/ConsultationSection';
+
 
 // Animation variants
 const fadeIn = {
