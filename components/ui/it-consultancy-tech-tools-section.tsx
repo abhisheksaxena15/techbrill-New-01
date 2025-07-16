@@ -190,7 +190,7 @@ export default function ITConsultancyTechToolsSection() {
 								{activeSkills.map((skill) => (
 									<div
 										key={skill.name}
-										className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm px-3 py-2 min-w-[110px] max-w-[130px] snap-center hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition text-neutral-800"
+										className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm px-3 py-2 mb-4 min-w-[110px] max-w-[130px] snap-center hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition text-neutral-800"
 										style={{ flex: '0 0 60%' }}
 									>
 										<div className="w-8 h-8 flex items-center justify-center mb-1">
