@@ -18,7 +18,6 @@ import ConsultationSection from '@/components/ConsultationSection';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
 
-
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 40 },
@@ -506,8 +505,6 @@ export default function WebDesignDevelopmentPage() {
           </div>
         </section>
 
-
-        <ConsultationSection bgImage="/images/services/web-design-hero.jpg" />
 
         {/* 8. Contact CTA Section */}
         <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
