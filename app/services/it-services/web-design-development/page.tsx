@@ -446,7 +446,7 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-blue-900">Why Choose Us</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Why Choose Us</h2>
               <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
               <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
                 We deliver more than just code — we bring vision, precision, and a results-driven process to every project.

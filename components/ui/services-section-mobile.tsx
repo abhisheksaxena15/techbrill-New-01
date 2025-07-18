@@ -589,7 +589,7 @@ export default function ServicesSection() {
 				<div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
 					{/* Left: Sticky Heading & CTA */}
 					<div className="w-full md:w-1/2 flex flex-col justify-center md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0">
-						<h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-8">
+						<h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
 							Built to Scale, Tested to Perform, Smart Systems Engineered with End-to-End Qualitys
 						</h2>
 						<p className="text-gray-600 dark:text-white mb-2 ">
