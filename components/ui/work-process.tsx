@@ -55,10 +55,10 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-20 px-6 md:px-16">
+    <section className="py-20 px-6 md:px-16 bg-white">
       <div className="text-center mb-10">
         <motion.h2
-          className="text-3xl md:text-4xl font-extrabold mb-2"
+          className="text-3xl md:text-4xl font-extrabold mb-2 text-gray-900"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
