@@ -10,7 +10,7 @@ import { Icon } from '@iconify/react';
 import ServicesSection from '@/components/ui/services-section-AI&ML';
 import { cn } from '@/lib/utils';
 import ConsultationSection from '@/components/ConsultationSection';
-import TechStackSection from '@/components/ui/tempeffect';
+import TechStackSection from '@/components/ui/TechStack-AI';
 import { ExpandableCardDemo } from '@/components/ui/AI-development-roadmap';
 
 // Animation variants
