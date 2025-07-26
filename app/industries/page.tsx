@@ -1,196 +1,146 @@
 "use client"
 
-import React from "react"
-import PageHeader from "@/components/page-header"
-import AnimatedSection from "@/components/animated-section"
-import AnimatedText from "@/components/animated-text"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import Image from "next/image"
-import CTASection from "@/components/cta-section"
-import Footer from "@/components/footer"
-import Link from "next/link"
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
+import IndustriesSection from "@/components/industries-section";
+import WorkProcess from "@/components/ui/work-process";
+import ConsultationSection from "@/components/ConsultationSection";
+import AnimatedText from "@/components/animated-text";
+import AnimatedSection from "@/components/animated-section";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
-interface Industry {
-  title: string
-  slug: string
-  description: string
-  image: string
-}
+const bannerImage = "/images/hero-background.jpg";
+const infoImage = "/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg";
 
-const industries: Industry[] = [
+const benefits = [
   {
-    title: "Healthcare",
-    slug: "healthcare",
-    description: "Innovative digital solutions for hospitals, clinics, and health tech startups, focusing on patient engagement, data security, and telemedicine.",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
+    title: "Industry Expertise",
+    description: "Deep experience across healthcare, finance, education, retail, and more.",
+    icon: "💡",
   },
   {
-    title: "Finance & Banking",
-    slug: "finance-banking",
-    description: "Secure, scalable fintech platforms and banking solutions that streamline operations, enhance customer experience, and ensure regulatory compliance.",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?q=80&w=800",
+    title: "Tailored Solutions",
+    description: "Custom strategies and technology for every business challenge.",
+    icon: "🛠️",
   },
   {
-    title: "Education",
-    slug: "education",
-    description: "E-learning platforms, LMS, and interactive content for schools, universities, and edtech companies to empower digital learning.",
-    image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=800",
+    title: "End-to-End Support",
+    description: "From ideation to launch and beyond, we’re with you at every step.",
+    icon: "🤝",
   },
   {
-    title: "Retail & E-Commerce",
-    slug: "retail-ecommerce",
-    description: "Custom e-commerce solutions, omnichannel experiences, and digital transformation for retailers and online businesses.",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800",
+    title: "Proven Results",
+    description: "A track record of successful digital transformation for diverse clients.",
+    icon: "🏆",
   },
-  {
-    title: "Manufacturing",
-    slug: "manufacturing",
-    description: "Smart factory solutions, IoT integration, and process automation to drive efficiency and innovation in manufacturing.",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
-  },
-  {
-    title: "Travel & Hospitality",
-    slug: "travel-hospitality",
-    description: "Digital booking systems, customer engagement platforms, and mobile apps for travel agencies, hotels, and tourism businesses.",
-    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=800",
-  },
-  {
-    title: "Logistics & Transportation",
-    slug: "logistics-transportation",
-    description: "End-to-end logistics management, fleet tracking, and supply chain optimization for logistics and transport companies.",
-    image: "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=800",
-  },
-  {
-    title: "Real Estate",
-    slug: "real-estate",
-    description: "Property management platforms, virtual tours, and CRM solutions for real estate agencies and property developers.",
-    image: "https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=800",
-  },
-  {
-    title: "Energy & Utilities",
-    slug: "energy-utilities",
-    description: "Smart grid solutions, renewable energy management, and digital transformation for energy and utility companies.",
-    image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800",
-  },
-]
+];
 
 export default function IndustriesPage() {
   return (
-    <React.Fragment>
-      <PageHeader
-        title="Industries We Serve"
-        description="Empowering diverse sectors with tailored digital solutions, innovative technology, and industry expertise."
-      />
-      <section className="py-16 bg-gradient-to-r from-primary/5 to-primary/10">
-        <div className="container">
-          <AnimatedSection animation="fade">
-            <div className="text-center mb-12">
-              <AnimatedText
-                text="Driving Digital Transformation Across Industries"
-                className="text-3xl font-bold mb-4"
-              />
-              <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-              <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
-                We deliver innovative, scalable, and secure technology solutions for organizations across a wide range of industries, helping them achieve operational excellence and business growth.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <Carousel opts={{ align: "start", slidesToScroll: 1, loop: true, dragFree: true }}>
-            <CarouselContent>
-              {industries.map((industry) => (
-                <CarouselItem key={industry.title} className="basis-1/2.2 max-w-[45%] flex justify-center">
-                  <div className="w-[300px] h-[370px] flex flex-col">
-                    <AnimatedSection animation="scale" delay={0.05} className="h-full">
-                      <Link href={`/industries/${industry.slug}`} className="block h-full">
-                        <Card className="group h-full flex flex-col cursor-pointer hover:shadow-md transition-shadow bg-white border border-gray-200">
-                          <div className="relative h-40 w-full overflow-hidden rounded-t-lg">
-                            <Image
-                              src={industry.image}
-                              alt={industry.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-80 transition-opacity"></div>
-                          </div>
-                          <CardHeader className="pb-2">
-                            <CardTitle className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
-                              {industry.title}
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent className="flex-1">
-                            <p className="text-gray-700 text-sm">
-                              {industry.description}
-                            </p>
-                          </CardContent>
-                        </Card>
-                      </Link>
-                    </AnimatedSection>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </section>
-      <CTASection />
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-[#101c36]">
-        <div className="container">
-          <AnimatedSection animation="fade">
-            <div className="text-center mb-12">
-              <span className="uppercase text-primary font-semibold tracking-wider text-sm">Why Techbrill</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 mt-2">
-                Few Good Reason to <span className="text-primary italic">Choose Us</span>
-              </h2>
-              <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            </div>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection animation="slide" delay={0.1}>
-              <div>
-                <p className="text-gray-100 mb-6">
-                  Web designing in a powerful way of just not only professions, however, in a passion for our Company. We have a tendency to believe the idea that smart looking of any website is the first impression on visitors. And the smart design of any website is the starting point.
-                </p>
-                <p className="text-gray-100 mb-8">
-                  We have a special team for website style who has been involved in designing professional websites of all categories.
-                </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                  {[
-                    "24/7 Hours Support Flexible Price",
-                    "Web And Mobile Application",
-                    "New Domain Registration",
-                    "Data Text Synchronization",
-                    "Quick To Respond Flexible Price",
-                    "Improving Our Website Design",
-                    "Web & Email Hosting Services",
-                    "Artificial Intelligence Web App",
-                  ].map((reason) => (
-                    <li key={reason} className="flex items-center text-white">
-                      <span className="inline-block w-5 h-5 mr-2 bg-primary/20 rounded-full flex items-center justify-center">
-                        <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                      </span>
-                      <span className="text-sm font-medium">{reason}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="italic text-primary/80 text-sm">We believe that our growth depends on our clients&apos; growth</p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection animation="scale" delay={0.2}>
-              <div className="relative h-64 w-full rounded-xl overflow-hidden shadow-xl">
-                <Image src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800" alt="Why Choose Us" fill className="object-cover w-full h-full" />
-                <div className="absolute inset-0 bg-primary/20 rounded-xl"></div>
-              </div>
-            </AnimatedSection>
+    <>
+      {/* Hero Banner */}
+      <section className="relative w-full h-[380px] md:h-[420px] flex items-center justify-center overflow-hidden">
+        <Image
+          src={bannerImage}
+          alt="Industries Banner Background"
+          fill
+          className="absolute inset-0 w-full h-full object-cover object-center scale-105 blur-sm"
+          style={{ zIndex: 1 }}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" style={{ zIndex: 2 }} />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+            Industries We Empower
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
+            Digital transformation and tailored technology for every sector.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
+              Get Started
+            </Button>
+            <Button size="lg" variant="outline" className="bg-white/90 text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-white">
+              Explore Industries
+            </Button>
           </div>
         </div>
       </section>
-      <Footer />
-    </React.Fragment>
-  )
+
+      {/* Industries Grid */}
+      <IndustriesSection />
+
+      {/* Light Info Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Left: Text Content */}
+          <div className="flex-1 max-w-xl">
+            <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+              Industry Solutions
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900">
+              Digital Innovation for Every Sector
+            </h2>
+            <div className="w-20 h-1 bg-primary mb-6"></div>
+            <p className="mb-8 text-gray-700 text-base">
+              We deliver innovative, scalable, and secure technology solutions for organizations across a wide range of industries, helping them achieve operational excellence and business growth. Our team crafts custom strategies and digital products to solve your unique business challenges.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
+                View All Industries
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-gray-100">
+                Consult Our Expert
+              </Button>
+            </div>
+          </div>
+          {/* Right: Image */}
+          <div className="flex-1 flex justify-center">
+            <Image
+              src={infoImage}
+              alt="Industry Solutions"
+              width={400}
+              height={340}
+              className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+              style={{ minHeight: 240, maxHeight: 340 }}
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Work Process Section */}
+      <WorkProcess />
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <AnimatedText
+              text="Why Choose Techbrill?"
+              className="text-2xl sm:text-3xl font-bold mb-2 md:mb-4 leading-tight text-gray-900"
+            />
+            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="max-w-xl mx-auto text-gray-700 text-base">
+              We believe our growth depends on our clients&apos; growth. Here are a few reasons to partner with us for your next project.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {benefits.map((item, idx) => (
+              <AnimatedSection key={idx} animation="scale" delay={0.05 * idx}>
+                <div className="bg-white p-8 rounded-xl shadow-sm flex flex-col items-center text-center border border-gray-100 h-full">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="text-lg font-semibold mb-2 text-gray-900">{item.title}</h3>
+                  <p className="text-gray-700 text-sm">{item.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation/CTA Section */}
+      <ConsultationSection />
+    </>
+  );
 } 
