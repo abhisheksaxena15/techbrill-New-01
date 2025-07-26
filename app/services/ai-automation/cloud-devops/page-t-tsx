@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Vortex } from '@/components/ui/vortex';
-import { ArrowRight, Blocks, Cloud, UserCheck, Shield, TrendingUpDownIcon, LucideScale, Minus, Activity, GitBranch, Settings, Zap, Bitcoin, Tag, DollarSignIcon, BanknoteIcon, Wallet, Scale, User, DollarSign } from 'lucide-react';
+import { ArrowRight, Blocks, Cloud, UserCheck, Shield, AlertTriangle,TrendingUpDownIcon, LucideScale, Minus, Workflow, Check, ListChecks, Rocket, Activity, Archive, GitBranch, Settings, Zap, Server, Globe } from 'lucide-react';
 
 import { InfoTabs } from '@/components/ui/info-tab';
 import CaseStudiesCarousel from '@/components/ui/casestudies-carousel';
@@ -11,48 +11,42 @@ import { motion } from 'framer-motion';
 import { Global } from 'recharts';
 
 const items = [
-  {
-    title: 'Scalability and Network Congestion',
-    description: 'Blockchain networks struggle with transaction throughput and latency, especially during high demand periods. Limited block sizes and consensus mechanisms lead to congestion, increased fees, and slower processing times.',
-    icon: <Activity />,
-  },
-  {
-    title: 'Security and Smart Contract Vulnerabilities',
-    description: 'While blockchain is inherently secure, smart contracts are prone to exploits like reentrancy attacks and logic flaws. Poorly audited contracts can lead to irreversible financial losses and security breaches.',
-    icon: <Shield />,
-  },
-  {
-    title: 'Regulatory Uncertainty and Compliance',
-    description: 'Governments and financial institutions impose evolving regulations on blockchain and cryptocurrencies, creating uncertainty for businesses. Compliance with AML, KYC, and tax laws remains a challenge for decentralized applications.',
-    icon: <Scale />,
-  },
-  {
-    title: 'Interoperability and Fragmentation',
-    description: 'Different blockchain networks operate in silos, making cross-chain communication difficult. Lack of standardized protocols hinders seamless asset transfers and data sharing between ecosystems.',
-    icon: <GitBranch />,
-  },
-  {
-    title: 'Energy Consumption and Sustainability',
-    description: 'Proof-of-Work (PoW) blockchains consume excessive energy, raising concerns about environmental impact. Transitioning to energy-efficient consensus mechanisms like Proof-of-Stake (PoS) remains a challenge for adoption.',
-    icon: <Zap />,
-  },
-  {
-    title: 'User Experience and Adoption Barriers',
-    description: 'Complex wallet setups, private key management, and gas fees create friction for mainstream users. Poor UX design and lack of intuitive onboarding hinder blockchain adoption beyond tech-savvy audiences.',
-    icon: <User />,
-  },
-  {
-    title: 'Cost and Transaction Fees',
-    description: 'High gas fees on networks like Ethereum make microtransactions and DeFi interactions expensive. Businesses struggle to optimize costs while ensuring fast and reliable transactions.',
-    icon: <DollarSign />,
-  },
-  {
-    title: 'Decentralization vs. Governance Challenges',
-    description: 'Balancing decentralization with effective governance is difficult. DAOs and blockchain projects face decision-making inefficiencies, voter apathy, and governance attacks that impact protocol evolution.',
-    icon: <Settings />,
-  },
-];
-
+    {
+      title: 'Multi-Cloud Complexity and Vendor Lock-in',
+      description: 'Organizations struggle with managing workloads across multiple cloud providers, dealing with different APIs, pricing models, and service limitations while facing the risk of vendor dependency that restricts flexibility and increases long-term costs.',
+      icon: <Cloud />,
+    },
+    {
+      title: 'Security and Compliance Challenges',
+      description: 'Maintaining consistent security posture across dynamic cloud environments becomes complex with shared responsibility models, while ensuring compliance with regulations like GDPR, SOX, and industry standards requires continuous monitoring and governance.',
+      icon: <Shield />,
+    },
+    {
+      title: 'CI/CD Pipeline Bottlenecks and Release Management',
+      description: 'Development teams face slow deployment cycles, fragile build processes, and lack of automated testing integration, while manual approval workflows and poor release coordination lead to delayed feature delivery and increased deployment risks.',
+      icon: <GitBranch />,
+    },
+    {
+      title: 'Infrastructure Drift and Configuration Management',
+      description: 'Environments gradually diverge from their intended state due to manual changes and poor version control, creating inconsistencies between development, staging, and production that lead to deployment failures and difficult troubleshooting.',
+      icon: <Settings />,
+    },
+    {
+      title: 'Monitoring and Observability Gaps',
+      description: 'Teams lack comprehensive visibility into distributed systems performance, with fragmented monitoring tools providing incomplete insights into application health, making it difficult to identify root causes of issues and optimize system performance.',
+      icon: <AlertTriangle />,
+    },
+    {
+      title: 'Cost Management and Resource Optimization',
+      description: 'Cloud spending spirals out of control due to over-provisioned resources, unused services, and lack of cost visibility, while teams struggle to rightsize instances and implement effective resource governance without impacting performance.',
+      icon: <Zap />,
+    },
+    {
+      title: 'Skills Gap and Cultural Resistance',
+      description: 'Organizations face shortages of DevOps engineers and cloud architects, while traditional IT teams resist adopting new practices and tools, creating friction between development and operations that slows digital transformation initiatives.',
+      icon: <Server />,
+    },
+]
 
 const caseStudies = [
   {
@@ -189,7 +183,7 @@ export default function ContentMarketingPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7 }}
                 >
-                  Blockchain
+                  Cloud & DevOps
                 </motion.h1>
                 <motion.p
                   className="text-gray-400 mx-auto my-2 text-xl text-center relative z-10"
@@ -197,7 +191,7 @@ export default function ContentMarketingPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  Building secure and transparent solutions with Blockchain technology
+                  Accelerating innovation and efficiency with cloud-native solutions
                 </motion.p>
               </div>
               <motion.div
@@ -230,7 +224,7 @@ export default function ContentMarketingPage() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-
+        
         <div className="container mx-auto px-6">
           <div className="mb-16">
             <motion.h2
@@ -240,7 +234,7 @@ export default function ContentMarketingPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              What is Blockchain?
+              What is Cloud & DevOps?
             </motion.h2>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -252,7 +246,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Blockchain is a decentralized, distributed ledger technology that records transactions across many computers. This structure makes it virtually impossible to alter previous records, creating a secure, transparent, and tamper-evident system. It&apos;s the foundation for cryptocurrencies like Bitcoin, but its applications extend far beyond digital currency, impacting various sectors through its ability to establish trust and efficiency in peer-to-peer transactions.
+                Cloud and DevOps represent a powerful synergy that transforms software development and IT operations. By combining cloud infrastructure with DevOps practices, organizations can achieve faster release cycles, improved collaboration, and increased operational efficiency. Cloud computing provides the on-demand infrastructure and services, while DevOps provides the culture, automation, measurement, and sharing practices to leverage the cloud effectively.
               </motion.p>
               <motion.p
                 className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
@@ -261,7 +255,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                At its core, blockchain operates as a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a network. Assets can be tangible (a house, a car, cash, land) or intangible (intellectual property, patents, copyrights, branding). Virtually anything of value can be tracked and traded on a blockchain network, reducing risk and cutting costs for all involved.
+               Implementing Cloud and DevOps is crucial for businesses seeking to innovate rapidly and scale their operations efficiently. This approach breaks down silos between development and operations teams, enabling continuous integration and continuous delivery (CI/CD) pipelines that automate the software release process. The result is higher quality software, delivered faster and more reliably.
               </motion.p>
               <motion.p
                 className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
@@ -270,7 +264,7 @@ export default function ContentMarketingPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                At Techbrill Solutions, we help businesses leverage the power of blockchain to build trust, improve efficiency, and create innovative solutions across various industries, including finance, supply chain, healthcare, and more. Our expertise enables organizations to explore and implement blockchain technology for secure transactions, transparent supply chains, and decentralized applications.
+                At Techbrill Solutions, we help you leverage the full potential of the cloud through DevOps methodologies, enabling you to build, deploy, and manage applications seamlessly and at scale. Our expertise in cloud architecture, automation tools, and DevOps practices ensures your business can achieve greater agility, cost savings, and resilience.
               </motion.p>
             </div>
             <motion.div
@@ -285,41 +279,41 @@ export default function ContentMarketingPage() {
                 <div className="grid grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Tag className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <Workflow className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                     </div>
                     <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                      NFTs
+                    Continuous Integration 
                     </p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Bitcoin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                      <ListChecks className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                     </div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Cryptocurrencies</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Automation Testing</p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <DollarSignIcon className="w-6 h-6 text-green-600 dark:text-green-400" />
+                      <Rocket className="w-6 h-6 text-green-600 dark:text-green-400" />
                     </div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Financial Services</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Release Management</p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <UserCheck className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                      <Globe className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                     </div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Digital Identity</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Global Infrastucture</p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <BanknoteIcon className="w-6 h-6 text-red-600 dark:text-red-400" />
+                      <Activity className="w-6 h-6 text-red-600 dark:text-red-400" />
                     </div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Banking</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">System Monitoring</p>
                   </div>
                   <div className="text-center">
                     <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                      <Wallet className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                      <Archive className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                     </div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Decentralized Finance</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Data Archiving</p>
                   </div>
                 </div>
               </div>
@@ -345,7 +339,7 @@ export default function ContentMarketingPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Benefits of Blockchain
+              Benefits of Cloud & DevOps
             </motion.h2>
             <motion.p
               className="text-xl text-gray-600 dark:text-gray-400"
@@ -354,7 +348,7 @@ export default function ContentMarketingPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Revolutionize your blockchain ecosystem with decentralized security, automated smart contracts, and seamless interoperability.
+              Transform your infrastructure with automated insights and seamless cloud operations.
             </motion.p>
           </div>
           <motion.div
@@ -374,10 +368,10 @@ export default function ContentMarketingPage() {
                   <Blocks className="w-7 h-7 text-blue-600 dark:text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Enhanced Security
+                Faster Time to Market
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Cryptographic security and distributed nature make blockchain highly resistant to tampering and fraud.
+                  Accelerate your development cycles and deploy new features rapidly with streamlined CI/CD pipelines.
                 </p>
               </div>
             </motion.div>
@@ -391,10 +385,10 @@ export default function ContentMarketingPage() {
                   <Cloud className="w-7 h-7 text-green-600 dark:text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Greater Transparency
+                Improved Scalability & Reliability
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  All participants in the network can access the same real-time information, fostering trust and accountability.
+                Build resilient and scalable applications leveraging the flexible infrastructure of the cloud.
                 </p>
               </div>
             </motion.div>
@@ -408,10 +402,10 @@ export default function ContentMarketingPage() {
                   <UserCheck className="w-7 h-7 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Increased Efficiency
+                Enhanced Collaboration
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Streamline processes and eliminate intermediaries, leading to faster and more cost-effective transactions.
+                Foster a culture of collaboration between development and operations teams for seamless workflows.
                 </p>
               </div>
             </motion.div>
@@ -425,14 +419,14 @@ export default function ContentMarketingPage() {
                   <TrendingUpDownIcon className="w-7 h-7 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Immutability
+                Robust Security & Compliance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Once a transaction is recorded on the blockchain, it cannot be altered or deleted, providing a permanent audit trail.
+                Implement strong security measures and ensure compliance with industry standards in the cloud.
                 </p>
               </div>
             </motion.div>
-
+           
             <motion.div
               className="group relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg dark:shadow-gray-900/50 border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:scale-105 transition-all duration-300"
               variants={fadeInUp}
@@ -443,10 +437,10 @@ export default function ContentMarketingPage() {
                   <Minus className="w-7 h-7 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Faster Transactions
+                Automated Operations
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Blockchain enables near-instantaneous transactions and settlements, especially for cross-border payments.
+                Automate repetitive tasks and infrastructure management for increased efficiency and reduced errors.
                 </p>
               </div>
             </motion.div>
@@ -460,10 +454,10 @@ export default function ContentMarketingPage() {
                   <LucideScale className="w-7 h-7 text-purple-600 dark:text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                  Improved Traceability
+                Continuous Monitoring & Feedback
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Easily track the origin and history of assets and transactions on the blockchain.
+                Gain real-time insights into application performance and infrastructure health for proactive optimization.
                 </p>
               </div>
             </motion.div>
@@ -489,7 +483,7 @@ export default function ContentMarketingPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Addressing Your Blockchain Challenges
+              Addressing Your Cloud & DevOps Challenges
             </motion.h2>
             <motion.p
               className="text-xl text-gray-600 dark:text-gray-400"
@@ -601,6 +595,7 @@ export default function ContentMarketingPage() {
               >
                 View Our Portfolio
               </Button>
+              
             </motion.div>
             <motion.div
               className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"

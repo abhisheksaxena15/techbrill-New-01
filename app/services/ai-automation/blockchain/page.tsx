@@ -386,9 +386,7 @@ export default function AIMlDevelopmentPage() {
             </div>
           </div>
         </section>
-       TechStack-DataAnalytics.tsx
-       TechStack-DigitalTransformation.tsx
-       TechStack-Cloud&Devops.tsx
+
        
 
          {/* Contact CTA Section */}
