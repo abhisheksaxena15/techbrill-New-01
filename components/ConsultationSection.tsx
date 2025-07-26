@@ -3,20 +3,22 @@ import Image from "next/image";
 
 export default function ConsultationSection({ bgImage = "/images/services/web-design-hero.jpg" }) {
   return (
-    <section className="relative min-h-[70vh] w-full md:py-16 overflow-hidden">
-      {/* Background Image + Gradient Overlay */}
-      <Image
-        src={bgImage}
-        alt="Consultation Background"
-        fill
-        className="object-cover object-center z-0"
-        priority
+    <section className="relative min-h-[70vh] w-full md:py-16">
+      {/* Background Image */}
+      <Image 
+        src={bgImage} 
+        alt="Consultation Background" 
+        fill 
+        className="object-cover object-center z-0" 
+        priority 
       />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#4c1d95] via-[#120624] to-[#0891b2] opacity-30 backdrop-blur-sm" />
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 z-10 bg-black/60 backdrop-blur-sm" />
       
       {/* Container with unified styling */}
       <div className="relative z-20 container mx-auto flex flex-col md:flex-row">
-        {/* Left Side: Text - adjusted spacing */}
+        {/* Left Side: Text */}
         <div className="flex-1 flex flex-col justify-center items-center px-8 py-12 text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Our Experts Are Here to<br />Ignite Your Digital Journey
@@ -27,7 +29,7 @@ export default function ConsultationSection({ bgImage = "/images/services/web-de
           <div className="hidden md:block rounded-md h-1 w-40 bg-blue-600 mx-auto mb-6"></div>
         </div>
 
-        {/* Right Side: Form - adjusted to match left side styling */}
+        {/* Right Side: Form */}
         <div className="flex-1 flex items-center justify-center px-4 py-12 md:pl-0">
           <form className="bg-white/95 dark:bg-[#181828]/95 rounded-xl shadow-lg p-8 w-full max-w-xl space-y-5">
             {/* Name and Email in same row */}
