@@ -58,7 +58,8 @@ const navItems = [
       },
       {
         category: "Digital Content Solutions",
-        services: [ /* Add specific services here if available */],
+        href: "/services/digital-content-solutions",
+        services: [],
       }
     ],
   },
@@ -262,18 +263,32 @@ export default function Header() {
                                 asChild
                                 onMouseEnter={() => setHoveredCategoryIndex(catIdx)}
                               >
-                                <Link
-                                  href="#"
-                                  className={cn(
-                                    "block px-3 py-2 rounded-md text-sm font-medium transition-colors flex justify-between items-center",
-                                    catIdx === hoveredCategoryIndex
-                                      ? "bg-gray-700 text-blue-500"
-                                      : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
-                                  )}
-                                >
-                                  {category.category}
-                                  <ChevronRight className="h-4 w-4 ml-2 text-gray-400" />
-                                </Link>
+                                {category.href ? (
+                                  <Link
+                                    href={category.href}
+                                    className={cn(
+                                      "flex px-3 py-2 rounded-md text-sm font-medium transition-colors justify-between items-center",
+                                      catIdx === hoveredCategoryIndex
+                                        ? "bg-gray-700 text-blue-500"
+                                        : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
+                                    )}
+                                  >
+                                    {category.category}
+                                  </Link>
+                                ) : (
+                                  <Link
+                                    href="#"
+                                    className={cn(
+                                      "flex px-3 py-2 rounded-md text-sm font-medium transition-colors justify-between items-center",
+                                      catIdx === hoveredCategoryIndex
+                                        ? "bg-gray-700 text-blue-500"
+                                        : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
+                                    )}
+                                  >
+                                    {category.category}
+                                    <ChevronRight className="h-4 w-4 ml-2 text-gray-400" />
+                                  </Link>
+                                )}
                               </NavigationMenuLink>
                             </li>
                           ))}
@@ -387,35 +402,47 @@ export default function Header() {
                         <div className="pl-6 mt-1 space-y-1 border-l-2 border-gray-200 dark:border-gray-700">
                           {item.dropdown.map((category, catIdx) => (
                             <div key={catIdx}>
-                              <div 
-                                className="px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 flex justify-between items-center cursor-pointer"
-                                onClick={() => {
-                                  // Toggle visibility of this specific category
-                                  setMobileCategories(prev => ({
-                                    ...prev,
-                                    [`${item.name}-${catIdx}`]: !prev[`${item.name}-${catIdx}`]
-                                  }));
-                                }}
-                              >
-                                {category.category}
-                                {category.services?.length > 0 && (
-                                  <ChevronRight className={`h-3 w-3 transition-transform ${mobileCategories[`${item.name}-${catIdx}`] ? 'rotate-90' : ''}`} />
-                                )}
-                              </div>
-                              
-                              {/* Display services under each category only when category is expanded */}
-                              {mobileCategories[`${item.name}-${catIdx}`] && category.services && category.services.length > 0 && (
-                                <div className="pl-4 space-y-1">
-                                  {category.services.map((service, srvIdx) => (
-                                    <Link
-                                      key={srvIdx}
-                                      href={service.href}
-                                      className="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
-                                      onClick={() => setIsMenuOpen(false)}
-                                    >
-                                      {service.name}
-                                    </Link>
-                                  ))}
+                              {category.href ? (
+                                <Link
+                                  href={category.href}
+                                  className="block px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {category.category}
+                                </Link>
+                              ) : (
+                                <div>
+                                  <div 
+                                    className="px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 flex justify-between items-center cursor-pointer"
+                                    onClick={() => {
+                                      // Toggle visibility of this specific category
+                                      setMobileCategories(prev => ({
+                                        ...prev,
+                                        [`${item.name}-${catIdx}`]: !prev[`${item.name}-${catIdx}`]
+                                      }));
+                                    }}
+                                  >
+                                    {category.category}
+                                    {category.services?.length > 0 && (
+                                      <ChevronRight className={`h-3 w-3 transition-transform ${mobileCategories[`${item.name}-${catIdx}`] ? 'rotate-90' : ''}`} />
+                                    )}
+                                  </div>
+                                  
+                                  {/* Display services under each category only when category is expanded */}
+                                  {mobileCategories[`${item.name}-${catIdx}`] && category.services && category.services.length > 0 && (
+                                    <div className="pl-4 space-y-1">
+                                      {category.services.map((service, srvIdx) => (
+                                        <Link
+                                          key={srvIdx}
+                                          href={service.href}
+                                          className="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          {service.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
                                 </div>
                               )}
                             </div>
