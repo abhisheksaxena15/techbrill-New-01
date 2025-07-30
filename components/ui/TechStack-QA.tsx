@@ -22,10 +22,10 @@ const techTabs = [
         name: "WebDriverIO",
         icon: <img src="https://webdriver.io/assets/images/robot-3677788dd63849c56aa5cb3f332b12d5.svg" alt="WebDriverIO logo" className="w-7 h-7 object-contain" />
       },
-      {
-        name: "TestComplete",
-        icon: <img src="https://smartbear.com/globalassets/smartbear/product-icons/testcomplete-icon.svg" alt="TestComplete logo" className="w-7 h-7 object-contain" />
-      },
+      // {
+      //   name: "TestComplete",
+      //   icon: <img src="https://smartbear.com/globalassets/smartbear/product-icons/testcomplete-icon.svg" alt="TestComplete logo" className="w-7 h-7 object-contain" />
+      // },
       {
         name: "Appium",
         icon: <img src="https://appium.io/docs/en/2.1/assets/images/appium-logo-horiz.png" alt="Appium logo" className="w-7 h-7 object-contain" />
@@ -41,23 +41,23 @@ const techTabs = [
       },
       {
         name: "LoadRunner",
-        icon: <img src="https://www.microfocus.com/media/brochure/loadrunner_brochure.png" alt="LoadRunner logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://upload.wikimedia.org/wikipedia/en/6/61/HPE_LoadRunner_logo.png" alt="LoadRunner logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "Gatling",
-        icon: <img src="https://gatling.io/wp-content/uploads/2019/08/gatling-logo-1.png" alt="Gatling logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Gatling-Logo.png/500px-Gatling-Logo.png" alt="Gatling logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "K6",
-        icon: <img src="https://k6.io/docs/static/img/k6-logo.svg" alt="K6 logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/K6_software_logo.svg/375px-K6_software_logo.svg.png" alt="K6 logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "BlazeMeter",
-        icon: <img src="https://www.blazemeter.com/themes/custom/blazemeter/logo.svg" alt="BlazeMeter logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://www.blazemeter.com/sites/default/files/logo-blazemeter-reg.svg" alt="BlazeMeter logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "Artillery",
-        icon: <img src="https://artillery.io/img/artillery-logo.svg" alt="Artillery logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://avatars.githubusercontent.com/u/12608521?v=4" alt="Artillery logo" className="w-7 h-7 object-contain" />
       },
     ],
   },
@@ -66,7 +66,7 @@ const techTabs = [
     skills: [
       {
         name: "Postman",
-        icon: <img src="https://www.postman.com/assets/logos/postman-logo-stacked.svg" alt="Postman logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg" alt="Postman logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "REST Assured",
@@ -74,20 +74,20 @@ const techTabs = [
       },
       {
         name: "Insomnia",
-        icon: <img src="https://insomnia.rest/images/logos/logo-mark.svg" alt="Insomnia logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://images.seeklogo.com/logo-png/39/1/insomnia-logo-png_seeklogo-398689.png" alt="Insomnia logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "SoapUI",
-        icon: <img src="https://www.soapui.org/soapui/media/images/soapui_logo_270x90.png" alt="SoapUI logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://static1.smartbear.co/smartbearbrand/media/images/home/soapui-icon.svg" alt="SoapUI logo" className="w-7 h-7 object-contain" />
       },
       {
-        name: "Newman",
-        icon: <img src="https://www.postman.com/assets/logos/postman-logo-stacked.svg" alt="Newman logo" className="w-7 h-7 object-contain" />
+        name: "Newman CLI",
+        icon: <img src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg" alt="Newman logo" className="w-7 h-7 object-contain" />
       },
-      {
-        name: "Karate DSL",
-        icon: <img src="https://github.com/karatelabs/karate/raw/master/karate-logo.svg" alt="Karate DSL logo" className="w-7 h-7 object-contain" />
-      },
+      // {
+      //   name: "Karate DSL",
+      //   icon: <img src="https://github.com/karatelabs/karate/raw/master/karate-logo.svg" alt="Karate DSL logo" className="w-7 h-7 object-contain" />
+      // },
     ],
   },
   {
@@ -95,12 +95,12 @@ const techTabs = [
     skills: [
       {
         name: "TestRail",
-        icon: <img src="https://www.gurock.com/images/testrail/testrail-logo.svg" alt="TestRail logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://cdn.brandfetch.io/idTk1PqkG8/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1747754183650" alt="TestRail logo" className="w-7 h-7 object-contain" />
       },
-      {
-        name: "Zephyr",
-        icon: <img src="https://smartbear.com/globalassets/smartbear/product-icons/zephyr-scale-icon.svg" alt="Zephyr logo" className="w-7 h-7 object-contain" />
-      },
+      // {
+      //   name: "Zephyr",
+      //   icon: <img src="https://smartbear.com/globalassets/smartbear/product-icons/zephyr-scale-icon.svg" alt="Zephyr logo" className="w-7 h-7 object-contain" />
+      // },
       {
         name: "Jenkins",
         icon: <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins logo" className="w-7 h-7 object-contain" />
@@ -111,7 +111,7 @@ const techTabs = [
       },
       {
         name: "Azure DevOps",
-        icon: <img src="https://cdn.worldvectorlogo.com/logos/azure-devops.svg" alt="Azure DevOps logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://images.seeklogo.com/logo-png/43/1/azure-devops-logo-png_seeklogo-434055.png" alt="Azure DevOps logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "Allure Report",
@@ -128,52 +128,49 @@ const techTabs = [
       },
       {
         name: "Espresso",
-        icon: <img src="https://developer.android.com/static/images/testing/espresso.png" alt="Espresso logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://developer.android.com/static/images/training/testing/espresso.png" alt="Espresso logo" className="w-7 h-7 object-contain" />
       },
-      {
-        name: "XCUITest",
-        icon: <img src="https://developer.apple.com/assets/elements/icons/xcode/xcode-96x96_2x.png" alt="XCUITest logo" className="w-7 h-7 object-contain" />
-      },
-      {
-        name: "Detox",
-        icon: <img src="https://raw.githubusercontent.com/wix/Detox/master/docs/img/detox-logo.png" alt="Detox logo" className="w-7 h-7 object-contain" />
-      },
+      
+      // {
+      //   name: "Detox",
+      //   icon: <img src="https://raw.githubusercontent.com/wix/Detox/master/docs/img/detox-logo.png" alt="Detox logo" className="w-7 h-7 object-contain" />
+      // },
       {
         name: "BrowserStack",
         icon: <img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" alt="BrowserStack logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "Sauce Labs",
-        icon: <img src="https://saucelabs.com/images/logo-saucelabs.svg" alt="Sauce Labs logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://saucelabs.com/images/logo-white.svg" alt="Sauce Labs logo" className="w-7 h-7 object-contain" />
       },
     ],
   },
   {
     label: "Security Testing Tools",
     skills: [
-      {
-        name: "OWASP ZAP",
-        icon: <img src="https://www.zaproxy.org/img/zap256x256.png" alt="OWASP ZAP logo" className="w-7 h-7 object-contain" />
-      },
+      // {
+      //   name: "OWASP ZAP",
+      //   icon: <img src="https://www.zaproxy.org/img/zap256x256.png" alt="OWASP ZAP logo" className="w-7 h-7 object-contain" />
+      // },
       {
         name: "Burp Suite",
-        icon: <img src="https://portswigger.net/content/images/logos/burp-suite-logo.svg" alt="Burp Suite logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/BurpSuite_Comunity_Edition.svg/330px-BurpSuite_Comunity_Edition.svg.png" alt="Burp Suite logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "Nessus",
-        icon: <img src="https://www.tenable.com/sites/drupal.dmz.tenablesecurity.com/files/images/logos/Nessus.png" alt="Nessus logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://www.pngfind.com/pngs/m/415-4154792_today-i-will-write-to-you-about-nessus.png" alt="Nessus logo" className="w-7 h-7 object-contain" />
       },
-      {
-        name: "SonarQube",
-        icon: <img src="https://www.sonarqube.org/images/downloads/picto.svg" alt="SonarQube logo" className="w-7 h-7 object-contain" />
-      },
+      // {
+      //   name: "SonarQube",
+      //   icon: <img src="https://www.sonarqube.org/images/downloads/picto.svg" alt="SonarQube logo" className="w-7 h-7 object-contain" />
+      // },
       {
         name: "Veracode",
-        icon: <img src="https://www.veracode.com/sites/default/files/styles/logo/public/2021-03/veracode-logo.png" alt="Veracode logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://mms.businesswire.com/media/20241202337994/en/811922/4/veracode-black-hires.jpg" alt="Veracode logo" className="w-7 h-7 object-contain" />
       },
       {
         name: "Checkmarx",
-        icon: <img src="https://checkmarx.com/wp-content/uploads/2021/02/checkmarx-logo.svg" alt="Checkmarx logo" className="w-7 h-7 object-contain" />
+        icon: <img src="https://virtuoso-media.govexec.com/media/events/551/event/logo-lg-20230901230647-checkmarx_logo_large_v2.png" alt="Checkmarx logo" className="w-7 h-7 object-contain" />
       },
     ],
   },
