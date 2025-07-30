@@ -1,0 +1,309 @@
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const techTabs = [
+  {
+    label: "Test Automation Frameworks",
+    skills: [
+      {
+        name: "Selenium",
+        icon: <img src="https://selenium.dev/images/selenium_logo_square_green.png" alt="Selenium logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Cypress",
+        icon: <img src="https://asset.brandfetch.io/idIq_kF0rb/idv3zwmSiY.jpeg" alt="Cypress logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Playwright",
+        icon: <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "WebDriverIO",
+        icon: <img src="https://webdriver.io/assets/images/robot-3677788dd63849c56aa5cb3f332b12d5.svg" alt="WebDriverIO logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "TestComplete",
+        icon: <img src="https://smartbear.com/globalassets/smartbear/product-icons/testcomplete-icon.svg" alt="TestComplete logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Appium",
+        icon: <img src="https://appium.io/docs/en/2.1/assets/images/appium-logo-horiz.png" alt="Appium logo" className="w-7 h-7 object-contain" />
+      },
+    ]
+  },
+  {
+    label: "Performance Testing Tools",
+    skills: [
+      {
+        name: "JMeter",
+        icon: <img src="https://jmeter.apache.org/images/jmeter.png" alt="JMeter logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "LoadRunner",
+        icon: <img src="https://www.microfocus.com/media/brochure/loadrunner_brochure.png" alt="LoadRunner logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Gatling",
+        icon: <img src="https://gatling.io/wp-content/uploads/2019/08/gatling-logo-1.png" alt="Gatling logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "K6",
+        icon: <img src="https://k6.io/docs/static/img/k6-logo.svg" alt="K6 logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "BlazeMeter",
+        icon: <img src="https://www.blazemeter.com/themes/custom/blazemeter/logo.svg" alt="BlazeMeter logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Artillery",
+        icon: <img src="https://artillery.io/img/artillery-logo.svg" alt="Artillery logo" className="w-7 h-7 object-contain" />
+      },
+    ],
+  },
+  {
+    label: "API Testing Tools",
+    skills: [
+      {
+        name: "Postman",
+        icon: <img src="https://www.postman.com/assets/logos/postman-logo-stacked.svg" alt="Postman logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "REST Assured",
+        icon: <img src="https://rest-assured.io/img/logo-transparent.png" alt="REST Assured logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Insomnia",
+        icon: <img src="https://insomnia.rest/images/logos/logo-mark.svg" alt="Insomnia logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "SoapUI",
+        icon: <img src="https://www.soapui.org/soapui/media/images/soapui_logo_270x90.png" alt="SoapUI logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Newman",
+        icon: <img src="https://www.postman.com/assets/logos/postman-logo-stacked.svg" alt="Newman logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Karate DSL",
+        icon: <img src="https://github.com/karatelabs/karate/raw/master/karate-logo.svg" alt="Karate DSL logo" className="w-7 h-7 object-contain" />
+      },
+    ],
+  },
+  {
+    label: "Test Management & CI/CD",
+    skills: [
+      {
+        name: "TestRail",
+        icon: <img src="https://www.gurock.com/images/testrail/testrail-logo.svg" alt="TestRail logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Zephyr",
+        icon: <img src="https://smartbear.com/globalassets/smartbear/product-icons/zephyr-scale-icon.svg" alt="Zephyr logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Jenkins",
+        icon: <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.svg" alt="Jenkins logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "GitHub Actions",
+        icon: <img src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" alt="GitHub Actions logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Azure DevOps",
+        icon: <img src="https://cdn.worldvectorlogo.com/logos/azure-devops.svg" alt="Azure DevOps logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Allure Report",
+        icon: <img src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="Allure Report logo" className="w-7 h-7 object-contain" />
+      },
+    ],
+  },
+  {
+    label: "Mobile Testing Tools",
+    skills: [
+      {
+        name: "Appium",
+        icon: <img src="https://appium.io/docs/en/2.1/assets/images/appium-logo-horiz.png" alt="Appium logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Espresso",
+        icon: <img src="https://developer.android.com/static/images/testing/espresso.png" alt="Espresso logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "XCUITest",
+        icon: <img src="https://developer.apple.com/assets/elements/icons/xcode/xcode-96x96_2x.png" alt="XCUITest logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Detox",
+        icon: <img src="https://raw.githubusercontent.com/wix/Detox/master/docs/img/detox-logo.png" alt="Detox logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "BrowserStack",
+        icon: <img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" alt="BrowserStack logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Sauce Labs",
+        icon: <img src="https://saucelabs.com/images/logo-saucelabs.svg" alt="Sauce Labs logo" className="w-7 h-7 object-contain" />
+      },
+    ],
+  },
+  {
+    label: "Security Testing Tools",
+    skills: [
+      {
+        name: "OWASP ZAP",
+        icon: <img src="https://www.zaproxy.org/img/zap256x256.png" alt="OWASP ZAP logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Burp Suite",
+        icon: <img src="https://portswigger.net/content/images/logos/burp-suite-logo.svg" alt="Burp Suite logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Nessus",
+        icon: <img src="https://www.tenable.com/sites/drupal.dmz.tenablesecurity.com/files/images/logos/Nessus.png" alt="Nessus logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "SonarQube",
+        icon: <img src="https://www.sonarqube.org/images/downloads/picto.svg" alt="SonarQube logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Veracode",
+        icon: <img src="https://www.veracode.com/sites/default/files/styles/logo/public/2021-03/veracode-logo.png" alt="Veracode logo" className="w-7 h-7 object-contain" />
+      },
+      {
+        name: "Checkmarx",
+        icon: <img src="https://checkmarx.com/wp-content/uploads/2021/02/checkmarx-logo.svg" alt="Checkmarx logo" className="w-7 h-7 object-contain" />
+      },
+    ],
+  },
+];
+
+export default function ITConsultancyTechToolsSection() {
+  const [activeTab, setActiveTab] = useState(0);
+  const activeSkills = techTabs[activeTab].skills;
+
+  return (
+    <>
+      {/* Add custom scrollbar styles */}
+      <style jsx global>{`
+				.custom-scrollbar::-webkit-scrollbar {
+					width: 8px;
+					height: 8px;
+				}
+				.custom-scrollbar::-webkit-scrollbar-track {
+					background: rgba(59, 130, 246, 0.1);
+					border-radius: 4px;
+				}
+				.custom-scrollbar::-webkit-scrollbar-thumb {
+					background: rgba(59, 130, 246, 0.5);
+					border-radius: 4px;
+				}
+				.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+					background: rgba(59, 130, 246, 0.7);
+				}
+
+				.mobile-scrollbar::-webkit-scrollbar {
+					width: 4px;
+					height: 4px;
+				}
+				.mobile-scrollbar::-webkit-scrollbar-track {
+					background: rgba(59, 130, 246, 0.1);
+					border-radius: 2px;
+				}
+				.mobile-scrollbar::-webkit-scrollbar-thumb {
+					background: rgba(59, 130, 246, 0.4);
+					border-radius: 2px;
+				}
+				.mobile-scrollbar::-webkit-scrollbar-thumb:hover {
+					background: rgba(59, 130, 246, 0.6);
+				}
+			`}</style>
+
+      <motion.div
+        className="mt-20 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="mx-auto w-full max-w-[1100px]">
+          <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
+            {/* Tab Selector - Desktop Vertical */}
+            <div className="bg-blue-900 text-white p-6 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] custom-scrollbar hidden md:flex">
+              {techTabs.map((tab, idx) => (
+                <button
+                  key={tab.label}
+                  className={`flex justify-between items-center px-4 py-3 rounded-xl text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
+                    ? "bg-blue-800 shadow-lg text-white"
+                    : "hover:bg-blue-800/80 opacity-80 text-gray-200"
+                    }`}
+                  onClick={() => setActiveTab(idx)}
+                >
+                  <span className="flex items-center">
+                    <span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}>{`0${idx + 1}.`}</span>
+                    {tab.label}
+                  </span>
+                  {activeTab === idx && <span className="ml-2 text-lg">→</span>}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab Selector - Mobile Horizontal */}
+            <div className="bg-blue-900 text-white p-4 flex md:hidden flex-row gap-3 overflow-x-auto mobile-scrollbar snap-x snap-mandatory w-full">
+              {techTabs.map((tab, idx) => (
+                <button
+                  key={tab.label}
+                  className={`flex items-center px-5 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-all snap-center min-w-[180px] max-w-[220px] flex-shrink-0 overflow-hidden ${activeTab === idx
+                    ? "bg-blue-800 shadow text-white"
+                    : "bg-blue-700/70 text-gray-200 hover:bg-blue-800/80"
+                    }`}
+                  onClick={() => setActiveTab(idx)}
+                  style={{ textOverflow: 'ellipsis' }}
+                >
+                  <span className="mr-2 font-bold">{`0${idx + 1}.`}</span>
+                  <span className="truncate block w-full">{tab.label}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Right: Skills Grid - Desktop */}
+            <div className="w-full bg-[#efefef] dark:bg-white p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex overflow-y-auto custom-scrollbar">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%] sm:max-w-[90%] transition-all duration-300">
+                {activeSkills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
+                  >
+                    <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                      {skill.icon}
+                    </div>
+                    <span className="text-base font-medium text-black">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Carousel */}
+            <div className="w-full bg-[#efefef] dark:bg-white p-4 min-h-[110px] flex md:hidden items-center">
+              <div className="flex flex-row gap-4 overflow-x-auto mobile-scrollbar snap-x snap-mandatory w-full">
+                {activeSkills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm px-3 py-2 mb-4 min-w-[110px] max-w-[130px] snap-center hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition text-neutral-800"
+                    style={{ flex: '0 0 60%' }}
+                  >
+                    <div className="w-8 h-8 flex items-center justify-center mb-1">
+                      {skill.icon}
+                    </div>
+                    <span className="text-sm font-semibold text-blue-900 text-center">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </>
+  );
+}
