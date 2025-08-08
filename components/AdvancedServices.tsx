@@ -18,31 +18,45 @@ interface CardProps {
 const cards: CardProps[] = [
   {
     title: 'Digital Transformation',
-    description: 'Reimagine your business through comprehensive digital strategies, innovative technologies, and process optimization that drive efficiency, competitiveness, and sustainable growth.',
+    description: 'We help businesses evolve through digital transformation—leveraging the latest technologies, data-driven strategies, and streamlined processes to boost efficiency, enhance customer experience, and achieve long-term growth.',
+    icon: '/icons/digital-content.svg',
+    href: '#',
+    image: '/images/digital-content.jpg',
+  },
+  {
+    title: 'Artificial Intelligence',
+    description: 'By leveraging Artificial Intelligence, we integrate AI capabilities such as chatbots, predictive analytics, and intelligent automation to streamline operations, enhance user experiences, and drive smarter, faster business decisions across your organization',
     icon: '/icons/digital-content.svg',
     href: '#',
     image: '/images/digital-content.jpg',
   },
   {
     title: 'Generative AI',
-    description: 'We build and optimize Generative AI solutions to unlock business potential and drive intelligent automation.',
+    description: 'We use Generative AI to create intelligent, creative solutions—automating content generation, enhancing customer experiences, and driving innovation with advanced models that understand, generate, and adapt in real time.',
     icon: '/icons/generative-ai.svg',
     href: '#',
     image: '/images/generative-ai.jpg',
   },
   {
-    title: 'Data Analytics',
-    description: 'Unlock business value through our data analytics services that transform raw data into actionable insights.',
-    icon: '/icons/data-analytics.svg',
+    title: 'Machine Learning',
+    description: 'We use machine learning to build intelligent systems that automate processes, predict outcomes, and uncover hidden insights—helping your business innovate faster and make smarter, data-driven decisions.',
+    icon: '/icons/generative-ai.svg',
     href: '#',
-    image: '/images/data-analytics.jpg',
+    image: '/images/generative-ai.jpg',
   },
   {
     title: 'Cloud & DevOps',
-    description: 'Drive innovation with cloud infrastructure and DevOps practices that optimize performance and streamline workflows.',
+    description: 'Accelerate your digital journey with our Cloud and DevOps solutions—enabling faster deployments, scalable infrastructure, and continuous delivery through automation, collaboration, and modern cloud-native technologies.',
     icon: '/icons/cloud-devops.svg',
     href: '#',
     image: '/images/cloud-devops.jpg',
+  },  
+  {
+    title: 'Data Analytics',
+    description: 'Unlock actionable insights with our data science and analytics services—leveraging advanced tools, machine learning, and real-time data to drive smarter decisions, optimize performance, and accelerate business growth.',
+    icon: '/icons/data-analytics.svg',
+    href: '#',
+    image: '/images/data-analytics.jpg',
   },
   {
     title: 'Blockchain',
@@ -89,6 +103,9 @@ const AdvancedServices = () => {
             Transforming business with latest <span className="italic text-blue-800 dark:text-blue-200">Trends & Technologies</span>
           </h2>
           <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+          <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+            We leverage the latest technologies to build new solutions and modernize existing ones, helping you overcome market challenges and stay ahead in the digital race.
+          </p>
         </div>
         <div className="relative max-w-xl md:max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Animated Image */}
@@ -160,8 +177,8 @@ const AdvancedServices = () => {
                   </motion.span>
                 ))}
               </motion.p>
-              <Link 
-                href={cards[active].href} 
+              <Link
+                href={cards[active].href}
                 className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-base md:text-lg font-medium mt-6"
               >
                 Read More <span className="ml-2">&#x2192;</span>

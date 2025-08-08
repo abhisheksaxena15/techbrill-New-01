@@ -176,7 +176,17 @@ export default function TechnologyStack() {
     <section className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900 px-4">
       <div className="container">
         <AnimatedSection animation="fade">
+
           <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Technologies We Use</h3>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+              Driven by innovation, powered by the right <span className="italic text-blue-800 dark:text-blue-200">Technology Stack</span>
+            </h2>
+            <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+            
+          </div>
+
+          {/* <div className="text-center mb-8 md:mb-12">
             <AnimatedText
               text="Driven by innovation, powered by the right Technology Stack"
               className="text-2xl sm:text-3xl font-bold mb-2 md:mb-4 leading-tight text-gray-800 dark:text-white"
@@ -186,7 +196,7 @@ export default function TechnologyStack() {
               We leverage the latest technologies to build robust, scalable, and future-proof solutions that give your
               business a competitive edge in today&apos;s digital landscape.
             </p>
-          </div>
+          </div> */}
         </AnimatedSection>
 
         {/* Stack Navigation */}
@@ -198,7 +208,7 @@ export default function TechnologyStack() {
           >
             <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
           </button>
-          
+
           <div className="text-center">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
               {currentStack.title}
@@ -219,7 +229,7 @@ export default function TechnologyStack() {
               ))}
             </div>
           </div>
-          
+
           <button
             onClick={nextStack}
             className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
@@ -255,11 +265,11 @@ export default function TechnologyStack() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <div className="relative w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4 flex-shrink-0">
-                    <Image 
-                      src={tech.icon || "/placeholder.svg"} 
-                      alt={tech.name} 
-                      fill 
-                      className="object-contain drop-shadow-sm" 
+                    <Image
+                      src={tech.icon || "/placeholder.svg"}
+                      alt={tech.name}
+                      fill
+                      className="object-contain drop-shadow-sm"
                       sizes="(max-width: 768px) 48px, 64px"
                     />
                   </div>
@@ -270,7 +280,7 @@ export default function TechnologyStack() {
               </AnimatedSection>
             ))}
           </div>
-          
+
           {/* Second Row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
             {currentStack.technologies.slice(4, 8).map((tech, index) => (
@@ -288,11 +298,11 @@ export default function TechnologyStack() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <div className="relative w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4 flex-shrink-0">
-                    <Image 
-                      src={tech.icon || "/placeholder.svg"} 
-                      alt={tech.name} 
-                      fill 
-                      className="object-contain drop-shadow-sm" 
+                    <Image
+                      src={tech.icon || "/placeholder.svg"}
+                      alt={tech.name}
+                      fill
+                      className="object-contain drop-shadow-sm"
                       sizes="(max-width: 768px) 48px, 64px"
                     />
                   </div>

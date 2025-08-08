@@ -180,11 +180,11 @@ export default function FastGrowingServices() {
               Fast Growing Services
             </span>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-              Providing High-performance Solution Of Digital Marketing
+              Providing High-performance Solution Of <span className="italic text-blue-800 dark:text-blue-200">Digital Marketing</span>
             </h2>
             <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
             <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
-              Discover our most in-demand services that help businesses scale rapidly and stay ahead in the digital era.
+            Explore our result-driven digital marketing services designed to boost brand visibility, attract customers, and accelerate business growth in today’s fast-paced digital world.
             </p>
           </motion.div>
         </div>
