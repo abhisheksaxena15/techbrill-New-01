@@ -27,7 +27,7 @@ export default function ServicesOverview() {
     {
       title: "AI & ML Development",
       description:
-        "Empowering businesses with intelligent, scalable AI and ML technologies that transform data into actionable insights, automate processes, and drive innovation across operations.",
+        "Empowering businesses with intelligent, scalable AI and ML technologies that transform data into actionable insights, automate processes, and drive innovation.",
       icon: "brain",
       image: "/images/services/ai-ml-hero.jpg",
       link: "/services#ai-ml",
@@ -43,7 +43,7 @@ export default function ServicesOverview() {
     {
       title: "Digital Marketing",
       description:
-         "Driving brand growth through strategic digital campaigns, SEO optimization, social media management, and data-driven marketing strategies that increase visibility, engagement, and conversion rates across digital channels.",
+        "Driving brand growth through strategic digital campaigns, SEO, social media, and data-driven marketing to boost visibility, engagement, and conversions.",
       icon: "file-text",
       image: "/images/services/digital-marketing-hero.jpg",
       link: "/services#digital-marketing",
@@ -68,12 +68,18 @@ export default function ServicesOverview() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h2 className="text-2xl sm:text-3xl font-bold mb-2 md:mb-4 text-gray-800 dark:text-white">Our Services</h2>
-              <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-              <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                We offer a comprehensive range of IT services designed to help businesses transform, innovate, and thrive
-                in today&apos;s rapidly evolving digital landscape.
-              </p>
+
+              <div className="text-center mb-8 md:mb-12">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">What We Offer</h3>
+                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                  We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
+                </h2>
+                <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                  We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today's rapidly evolving digital landscape.
+                </p>
+              </div>
+
             </motion.div>
           </div>
         </AnimatedSection>
@@ -83,13 +89,13 @@ export default function ServicesOverview() {
             <AnimatedSection key={index} animation="slide">
               <motion.div
                 className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all h-full flex flex-col border border-blue-600 dark:border-blue-400"
-                initial={{ 
-                  opacity: 0, 
+                initial={{
+                  opacity: 0,
                   y: 100,
                   scale: 0.95
                 }}
-                whileInView={{ 
-                  opacity: 1, 
+                whileInView={{
+                  opacity: 1,
                   y: 0,
                   scale: 1,
                   transition: {
@@ -100,18 +106,18 @@ export default function ServicesOverview() {
                     delay: index * 0.15
                   }
                 }}
-                viewport={{ 
-                  once: true, 
+                viewport={{
+                  once: true,
                   margin: "-100px",
                   amount: 0.3
                 }}
-                whileHover={{ 
+                whileHover={{
                   y: -8,
                   scale: 1.02,
-                  transition: { 
-                    type: "spring", 
-                    stiffness: 400, 
-                    damping: 17 
+                  transition: {
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17
                   }
                 }}
               >
@@ -125,11 +131,11 @@ export default function ServicesOverview() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <motion.h3 
+                  <motion.h3
                     className="text-lg md:text-xl font-semibold mb-2 md:mb-3"
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ 
-                      opacity: 1, 
+                    whileInView={{
+                      opacity: 1,
                       y: 0,
                       transition: {
                         delay: index * 0.15 + 0.2,
@@ -140,11 +146,11 @@ export default function ServicesOverview() {
                   >
                     <span className="text-gray-700 dark:text-gray-200">{service.title}</span>
                   </motion.h3>
-                  <motion.p 
+                  <motion.p
                     className="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base flex-grow"
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ 
-                      opacity: 1, 
+                    whileInView={{
+                      opacity: 1,
                       y: 0,
                       transition: {
                         delay: index * 0.15 + 0.3,

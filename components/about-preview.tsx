@@ -38,8 +38,14 @@ export default function AboutPreview() {
           </AnimatedSection>
 
           <div>
-            <AnimatedSection animation="fade" delay={0.3}>
-              <h2 className="text-xl md:text-2xl font-semibold mb-2 text-gray-900 dark:text-white">Who We Are</h2>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">WHO WE ARE</h3>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+              Your Trusted Partner Delivering IT Excellence and Innovation
+            </h2>
+            <br />
+            <div className="w-20 h-1 bg-primary mb-6"></div>
+            {/* <AnimatedSection animation="fade" delay={0.3}>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-blue-700 dark:text-white">WHO WE ARE</h2>
               <div className="w-20 h-1 bg-primary mb-6"></div>
             </AnimatedSection>
 
@@ -47,7 +53,7 @@ export default function AboutPreview() {
               text="We deal with the aspects of professional IT Services"
               className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 leading-tight text-gray-900 dark:text-white"
               delay={0.4}
-            />
+            /> */}
 
             <AnimatedSection animation="fade" delay={0.5}>
               <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
