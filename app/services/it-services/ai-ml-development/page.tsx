@@ -159,7 +159,10 @@ export default function AIMlDevelopmentPage() {
         <ServicesSection />
      
         {/* 6. AI DEV Process Section */}
+        <section className = "py-20 px-6 md:px-16 bg-white dark:bg-gray-950">
         {<ExpandableCardDemo/>}
+        </section>
+        
 
         {/*7. AI tech stack section */}
         <TechStackSection/>
