@@ -26,7 +26,7 @@ export default function Hero() {
 
               <div className="mt-8 flex gap-4">
                 <a
-                  href="#"
+                  href="/contact"
                   className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition"
                 >
                   Get Started
@@ -43,15 +43,19 @@ export default function Hero() {
               {/* Stats */}
               <div className="mt-12 flex flex-wrap gap-8 text-center sm:text-left">
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
-                  <p className="text-2xl font-bold text-blue-600">20+</p>
+                  <p className="text-2xl font-bold text-blue-600">8+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
-                  <p className="text-2xl font-bold text-blue-600">500+</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
+                  <p className="text-2xl font-bold text-blue-600">20+</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Team Members</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
                   <p className="text-2xl font-bold text-blue-600">100+</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+                  <p className="text-2xl font-bold text-blue-600">50+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Happy Clients</p>
                 </div>
               </div>

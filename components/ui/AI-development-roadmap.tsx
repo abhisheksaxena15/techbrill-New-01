@@ -71,7 +71,7 @@ export function ExpandableCardDemo() {
                             className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white sm:rounded-3xl overflow-hidden"
                         >
                             <div>
-                                <div className="flex justify-between items-start p-4">
+                                <div className="flex justify-between items-start p-4 dark:bg-black">
                                     <div className="">
                                         <motion.h3
                                             layoutId={`title-${active.title}-${id}`}
@@ -116,9 +116,9 @@ export function ExpandableCardDemo() {
             </AnimatePresence>
             
             <ul className="max-w-2xl mx-auto w-full gap-4 py-16">
-                <h2 className="text-3xl md:text-4xl text-center font-extrabold mb-2 text-black">Our robust roadmap to your AI solution</h2>
+                <h2 className="text-3xl md:text-4xl text-center font-extrabold mb-2 text-black dark:text-white">Our robust roadmap to your AI solution</h2>
                 <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800 rounded-full mb-4" />
-                <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
+                <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium dark:text-white">
                     More than just AI, we deliver clarity, accuracy, and a process built for real-world impact.
                 </p>
                 <br />
@@ -134,13 +134,13 @@ export function ExpandableCardDemo() {
                             <div className="">
                                 <motion.h3
                                     layoutId={`title-${card.title}-${id}`}
-                                    className="font-medium text-gray-800 text-center md:text-left"
+                                    className="font-medium text-gray-800 dark:text-blue-600 text-center md:text-left"
                                 >
                                     {card.title}
                                 </motion.h3>
                                 <motion.p
                                     layoutId={`description-${card.description}-${id}`}
-                                    className="text-neutral-600 text-center md:text-left"
+                                    className="text-neutral-600 text-center dark:text-white md:text-left"
                                 >
                                     {card.description}
                                 </motion.p>
