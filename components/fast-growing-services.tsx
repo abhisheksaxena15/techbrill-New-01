@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useState, useCallback } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
@@ -96,10 +96,10 @@ export default function FastGrowingServices() {
     
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [calculateConstraints]);
 
   // Calculate drag constraints
-  const calculateConstraints = () => {
+  const calculateConstraints = useCallback(() => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
       const totalContentWidth = (services.length * cardWidth) + ((services.length - 1) * gapWidth);
@@ -119,11 +119,11 @@ export default function FastGrowingServices() {
         });
       }
     }
-  };
+  }, [services.length, cardWidth, gapWidth, containerControls, currentOffset]);
 
   useEffect(() => {
     calculateConstraints();
-  }, [services.length, cardWidth, gapWidth, containerRef.current]);
+  }, [calculateConstraints]);
 
   const handleMouseEnter = () => {
     cardControls.start({

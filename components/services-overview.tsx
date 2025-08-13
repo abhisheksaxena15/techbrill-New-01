@@ -76,7 +76,7 @@ export default function ServicesOverview() {
                 </h2>
                 <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
                 <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                  We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today's rapidly evolving digital landscape.
+                  We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
                 </p>
               </div>
 
