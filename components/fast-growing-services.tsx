@@ -62,6 +62,29 @@ export default function FastGrowingServices() {
   const [visibleCards, setVisibleCards] = useState(3); // Default visible cards
   const gapWidth = 32; // Gap between cards (8 * 4 = 32px for gap-8)
 
+  // Calculate drag constraints
+  const calculateConstraints = useCallback(() => {
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const totalContentWidth = (services.length * cardWidth) + ((services.length - 1) * gapWidth);
+      const maxScroll = Math.max(0, totalContentWidth - containerWidth);
+      
+      setDragConstraints({
+        left: -maxScroll,
+        right: 0
+      });
+      
+      // Reset current offset if it's out of bounds after resize
+      if (currentOffset < -maxScroll) {
+        setCurrentOffset(-maxScroll);
+        containerControls.start({
+          x: -maxScroll,
+          transition: { duration: 0.3 }
+        });
+      }
+    }
+  }, [services.length, cardWidth, gapWidth, containerControls, currentOffset]);
+
   // Calculate card width and visible cards based on screen size
   useEffect(() => {
     const handleResize = () => {
@@ -97,29 +120,6 @@ export default function FastGrowingServices() {
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, [calculateConstraints]);
-
-  // Calculate drag constraints
-  const calculateConstraints = useCallback(() => {
-    if (containerRef.current) {
-      const containerWidth = containerRef.current.offsetWidth;
-      const totalContentWidth = (services.length * cardWidth) + ((services.length - 1) * gapWidth);
-      const maxScroll = Math.max(0, totalContentWidth - containerWidth);
-      
-      setDragConstraints({
-        left: -maxScroll,
-        right: 0
-      });
-      
-      // Reset current offset if it's out of bounds after resize
-      if (currentOffset < -maxScroll) {
-        setCurrentOffset(-maxScroll);
-        containerControls.start({
-          x: -maxScroll,
-          transition: { duration: 0.3 }
-        });
-      }
-    }
-  }, [services.length, cardWidth, gapWidth, containerControls, currentOffset]);
 
   useEffect(() => {
     calculateConstraints();
