@@ -5,6 +5,16 @@ import { Icon } from "@iconify/react";
 
 const techTabs = [
   {
+    label: "UI/UX & Styling",
+    skills: [
+      { name: "Figma", icon: <Icon icon="logos:figma" className="w-7 h-7" /> },
+      { name: "Adobe XD", icon: <Icon icon="logos:adobe-xd" className="w-7 h-7" /> },
+      { name: "Sketch", icon: <Icon icon="logos:sketch" className="w-7 h-7" /> },
+      { name: "Framer", icon: <Icon icon="logos:framer" className="w-7 h-7" /> },
+      { name: "Zeplin", icon: <Icon icon="logos:zeplin" className="w-7 h-7" /> },
+    ],
+  },
+  {
     label: "Frontend Development",
     skills: [
       { name: "React", icon: <Icon icon="logos:react" className="w-7 h-7" /> },
@@ -14,16 +24,6 @@ const techTabs = [
       { name: "Redux", icon: <Icon icon="logos:redux" className="w-7 h-7" /> },
       { name: "Tailwind CSS", icon: <Icon icon="logos:tailwindcss-icon" className="w-7 h-7" /> },
       { name: "Sass", icon: <Icon icon="logos:sass" className="w-7 h-7" /> },
-    ],
-  },
-  {
-    label: "UI/UX & Styling",
-    skills: [
-      { name: "Figma", icon: <Icon icon="logos:figma" className="w-7 h-7" /> },
-      { name: "Adobe XD", icon: <Icon icon="logos:adobe-xd" className="w-7 h-7" /> },
-      { name: "Sketch", icon: <Icon icon="logos:sketch" className="w-7 h-7" /> },
-      { name: "Framer", icon: <Icon icon="logos:framer" className="w-7 h-7" /> },
-      { name: "Zeplin", icon: <Icon icon="logos:zeplin" className="w-7 h-7" /> },
     ],
   },
   {
@@ -39,18 +39,6 @@ const techTabs = [
     ],
   },
   {
-    label: "DevOps & Deployment",
-    skills: [
-      { name: "Docker", icon: <Icon icon="logos:docker-icon" className="w-7 h-7" /> },
-      { name: "Kubernetes", icon: <Icon icon="logos:kubernetes" className="w-7 h-7" /> },
-      { name: "AWS", icon: <Icon icon="logos:aws" className="w-7 h-7" /> },
-      { name: "Vercel", icon: <Icon icon="logos:vercel-icon" className="w-7 h-7" /> },
-      { name: "Netlify", icon: <Icon icon="logos:netlify" className="w-7 h-7" /> },
-      { name: "GitHub Actions", icon: <Icon icon="logos:github-actions" className="w-7 h-7" /> },
-      { name: "Jenkins", icon: <Icon icon="logos:jenkins" className="w-7 h-7" /> },
-    ],
-  },
-  {
     label: "QA & Testing",
     skills: [
       { name: "Jest", icon: <Icon icon="logos:jest" className="w-7 h-7" /> },
@@ -60,6 +48,18 @@ const techTabs = [
       { name: "Postman", icon: <Icon icon="logos:postman-icon" className="w-7 h-7" /> },
       { name: "Playwright", icon: <Icon icon="logos:playwright" className="w-7 h-7" /> },
       { name: "Cucumber", icon: <Icon icon="logos:cucumber" className="w-7 h-7" /> },
+    ],
+  },
+  {
+    label: "DevOps & Deployment",
+    skills: [
+      { name: "Docker", icon: <Icon icon="logos:docker-icon" className="w-7 h-7" /> },
+      { name: "Kubernetes", icon: <Icon icon="logos:kubernetes" className="w-7 h-7" /> },
+      { name: "AWS", icon: <Icon icon="logos:aws" className="w-7 h-7" /> },
+      { name: "Vercel", icon: <Icon icon="logos:vercel-icon" className="w-7 h-7" /> },
+      { name: "Netlify", icon: <Icon icon="logos:netlify" className="w-7 h-7" /> },
+      { name: "GitHub Actions", icon: <Icon icon="logos:github-actions" className="w-7 h-7" /> },
+      { name: "Jenkins", icon: <Icon icon="logos:jenkins" className="w-7 h-7" /> },
     ],
   },
 ];
