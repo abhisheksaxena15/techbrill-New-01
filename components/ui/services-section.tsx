@@ -217,7 +217,7 @@ export default function ServicesSection() {
 						<h2 className="text-lg font-semibold uppercase tracking-wide text-black dark:text-white">
 							What We Do
 						</h2>
-						<h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Transforming ideas into seamless web experiences is <span className="text-blue-700 font-bold">Our Expertise</span></h2>
+						<h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Transforming ideas into flawless <span className="text-blue-700 font-bold italic">web experiences solutions</span>  is our expertise </h2>
 						<div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-10"></div>
 						{/*<p className="text-lg text-gray-600 dark:text-white mb-4">We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today’s fast-paced digital world</p> */}
 					</div>

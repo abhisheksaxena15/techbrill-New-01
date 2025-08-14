@@ -170,14 +170,23 @@ export default function WebDesignDevelopmentPage() {
               <h3 className="text-lg font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
                 Technologies We Use
               </h3>
-              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+              <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
                 Driven by bold ideas, delivered through robust <span className="text-blue-700">Tech Stacks</span>
               </h2>
               <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-              {/* <h1>We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.</h1> */}
+              {/* Change: Wrapped the h3 tag in a new flex container to control its width
+      and ensure it stays centered while having a maximum width.
+    */}
+              <div className="flex justify-center mt-4">
+                {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
+                <h3 className=" text-xs text-gray-600  md:text-lg  max-w-3xl mx-auto mt-1 leading-relaxed">
+                  We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.
+                </h3>
+              </div>
             </div>
             <WebTechToolsSection />
           </div>
+
         </section>
 
         {/* 5. Industries Section */}
@@ -194,24 +203,24 @@ export default function WebDesignDevelopmentPage() {
               >
                 <div className="text-center mb-6 lg:mb-8">
                   <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
-                    BUSSINESS CHALLENGE
+                    Industry Expertise
                   </h3>
                   <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl text-center">
-                    Digital solutions for every industry
+                    We transform all <span className="text-blue-700 italic">Industires</span> and business processes
                   </h2>
                   <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
                 </div>
                 <p className="text-gray-600 text-left max-w-lg lg:mx-0 mt-4 text-justify leading-relaxed">
                   Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation. With a focus on tangible outcomes, we help organizations accelerate growth, improve customer experience, and stay ahead in a dynamic digital landscape. Our team delivers custom web solutions that solve real business problems and drive measurable results.
                 </p>
-                <div className="text-left">
+                <div className="flex space-x-4">
                   <button
                     className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
                     onClick={() => window.location.href = '/industries'}
                   >
-                    View Our Industries
+                    Explore Industries
                   </button>
-                  <br />
+
                   <button
                     className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
                     onClick={() => window.location.href = '/'}
@@ -219,6 +228,20 @@ export default function WebDesignDevelopmentPage() {
                     Consult Our Expert
                   </button>
                 </div>
+                {/* <div className="flex space-x-4">
+                  <button
+                    className="px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/industries'}
+                  >
+                    View Our Industries
+                  </button>
+                  <button
+                    className="px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    onClick={() => window.location.href = '/'}
+                  >
+                    Consult Our Expert
+                  </button>
+                </div> */}
 
               </motion.div>
 
@@ -247,18 +270,18 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
-              <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-700 dark:text-blue-400">
                 ASSURANCE TO YOU
               </h3>
 
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Our <span className="text-blue-600">Commitment</span> and Guarantee
+                Our <span className="text-blue-700 italic">Commitment and Guarantee</span>
               </h2>
 
               <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
 
-              <p className="text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-                Techbrill Solutions delivers, robust, scalable and high performance software, web and mobile app development services to help you harness the power of technology, consulting and maximize your online bussiness insvestments.
+              <p className= " text-xs text-gray-600  md:text-lg  max-w-3xl mx-auto mt-6 leading-relaxed">
+                We stand behind our work with a promise of quality, transparency, and reliability.  From first consultation to post-launch support, we ensure your website meets expectations, delivers results, and drives your success
               </p>
 
               {/* Commitment Items */}
@@ -320,98 +343,25 @@ export default function WebDesignDevelopmentPage() {
         </section>
 
 
-        {/*Commitments section blue tone version*/}
+        
 
-        <section className="py-20 px-6 md:px-16 bg-blue-100">
-          <div className="container mx-auto">
-            <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
-              <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
-                ASSURANCE TO YOU
-              </h3>
+        {/* Work process section
+        <section className="py-20 px-6 md:px-16 bg-white">
+          {/* WorkProcess Component */}
+          {/* <WorkProcess />
+        </section> */} 
 
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Our <span className="text-blue-600">Commitment</span> and Guarantee
-              </h2>
-
-              <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
-
-              <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
-                Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation.
-              </p>
-
-
-              {/* Commitment Items */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
-                {/* 100% Transparency */}
-                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Eye className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    100% Transparency
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
-                  </p>
-                </div>
-
-                {/* 95% On Time Delivery */}
-                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Clock className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    95% On Time Delivery
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
-                  </p>
-                </div>
-
-                {/* Free 30 days support */}
-                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Shield className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    Free 30 Days Support
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
-                  </p>
-                </div>
-
-                {/* Flexible Engagement */}
-                <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Users className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    Flexible Engagement
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Adaptable working models to suit your project needs, timeline, and budget requirements.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/*Work process section */}
-          <section className="py-20 px-6 md:px-16 bg-white">
-              {/* WorkProcess Component */}
-              <WorkProcess />
-          </section>
-       
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Why Choose Us</h2>
+              <h3 className="text-sm font-semibold tracking-wide text-blue-700 dark:text-blue-400">
+                WHY TECHBRILL
+              </h3>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Few Good Reason to <span className="text-blue-700 italic">Choose Us</span></h2>
               <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
-              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver more than just code — we bring vision, precision, and a results-driven process to every project.
+              <p className="text-gray-600 max-w-5xl mx-auto text-base md:text-lg font-medium">
+                Customer satisfaction is our top priority, backed by consistent quality, ongoing innovation, and continuous improvement. We value fairness, transparency, and integrity in everything we do. What sets us apart in the digital landscape includes.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
