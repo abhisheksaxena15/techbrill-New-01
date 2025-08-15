@@ -1,11 +1,12 @@
 "use client"
 
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import PageHeader from "@/components/page-header"
 import ServiceCard from "@/components/service-card"
 import { motion, useAnimation } from "framer-motion"
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 export default function ServicesPage() {
   const services = [
@@ -118,7 +119,65 @@ export default function ServicesPage() {
 
   return (
     <>
-      <PageHeader title="Our Services" description="Comprehensive IT solutions tailored to your business needs" />
+      <main className='bg-white text-gray-900'>
+
+        {/* Hero Section with Background Image */}
+
+        <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <Image src="/images/services/it-consultancy-hero.jpg" alt="Web Design Hero" fill className="object-cover object-center z-0" priority />
+          {/* Dark Linear Gradient Overlay with Blur */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
+          {/* Centered Content */}
+          <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
+            <motion.h1
+              className="font-bold text-4xl sm:text-5xl text-white mb-4"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              Our Services
+            </motion.h1>
+            <motion.p
+              className="text-lg text-gray-300 mb-8 max-w-xl text-center"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              The solutions you look for are right here
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 w-full justify-center"
+              initial="hidden"
+              animate="visible"
+              variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
+              </motion.div>
+            </motion.div>
+          </div>
+          {/* Scroll Down Indicator (if space allows) */}
+          <motion.div
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+          >
+            <ChevronDown className="w-7 h-7 text-white opacity-80" />
+          </motion.div>
+        </section>
+      </main>
 
       <section className="py-16">
         <div className="container">
@@ -148,16 +207,30 @@ export default function ServicesPage() {
         </div>
       </section>
 
+
+
       <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container">
+          <div className="text-center mb-8 sm:mb-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+                Our sevices at a Glance
+              </span>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
+                Our Service <span className="italic text-blue-800 dark:text-blue-200">Process</span>
+              </h2>
+              <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
+              <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                We follow a structured approach to ensure that every project is delivered with the highest quality standards and meets your business objectives.
+              </p>
+            </motion.div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Service Process</h2>
-              <p className="text-gray-700 dark:text-gray-300 mb-8">
-                We follow a structured approach to ensure that every project is delivered with the highest quality
-                standards and meets your business objectives.
-              </p>
-
               <div className="space-y-6">
                 {[
                   {
@@ -183,11 +256,11 @@ export default function ServicesPage() {
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex">
-                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white font-bold">
+                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white dark:text-white font-bold">
                       {item.step}
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                      <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">{item.title}</h3>
                       <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
                     </div>
                   </div>
@@ -200,22 +273,20 @@ export default function ServicesPage() {
                 </Button>
               </div>
             </div>
-
-            <div className="relative h-[500px] w-full rounded-xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 z-10 rounded-xl"></div>
+            <div className="relative h-[500px] w-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <div className="absolute inset-0 z-10 rounded-xl bg-gradient-to-r from-blue-600/20 to-blue-600/5"></div>
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
-                  <p className="mb-6 max-w-md mx-auto">
+                <div className="text-center p-8 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 mx-4">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                    Need a Custom Solution?
+                  </h3>
+                  <p className="mb-6 max-w-sm mx-auto text-gray-700 dark:text-gray-300">
                     We specialize in creating tailored solutions to address your unique business challenges.
                   </p>
-                  <Button variant="outline" className="bg-white hover:bg-white/90">
-                    Contact Our Team
+                  <Button variant="outline" className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:text-white group">
+                    Contact Our Team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>
-              </div>
-              <div className="absolute inset-0 z-0">
-                <div className="h-full w-full bg-gradient-to-r from-primary/10 to-primary/5"></div>
               </div>
             </div>
           </div>
