@@ -3,11 +3,17 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Vortex } from '@/components/ui/vortex';
-import { ArrowRight, TrendingUp, Users, Target, Heart, Rocket, Lightbulb, Search, MessageCircle, Award, Calendar, BarChart3, ThumbsUp, DollarSign, Headphones, Truck, Shield, Settings, Palette, Zap, Blocks, Cloud, UserCheck } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Target, Heart, Rocket, Lightbulb, Search, MessageCircle, Award, Calendar, BarChart3, ThumbsUp, DollarSign, Headphones, Truck, Shield, Settings, Palette, Zap, Blocks, Cloud, UserCheck, ChevronDown, LineChart, Briefcase, BrainCircuit, Brain, Eye, Clock } from 'lucide-react';
 
 import { InfoTabs } from '@/components/ui/info-tab';
 import CaseStudiesCarousel from '@/components/ui/casestudies-carousel';
 import { motion } from 'framer-motion';
+import { ErrorBoundary } from '@/components/error-boundary';
+import ConsultationSection from '@/components/ConsultationSection';
+import Image from 'next/image';
+import ServicesSection from '@/components/ui/services-section-digital-transformations';
+import DigitalTransformationsTechToolsSection from '@/components/ui/digital-transformations-tech-tools-section';
+import WorkProcess from '@/components/work-process';
 
 const items = [
     {
@@ -146,407 +152,591 @@ const staggerContainer = {
 
 export default function ContentMarketingPage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
-            {/* Hero Section */}
-            <div className="w-[calc(100%-4rem)] mx-auto rounded-md  h-[30rem] overflow-hidden">
-                <Vortex
-                    backgroundColor="black"
-                    className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
-                >
-                    <motion.section
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, ease: [0.4, 0.0, 0.2, 1] }}
-                        viewport={{ once: true }}
+        <ErrorBoundary>
+              <main className='bg-white text-gray-900'>
+                {/* Hero Section with Background Image */}
+        
+                <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
+                  {/* Background Image */}
+                  <Image src="/images/services/it-consultancy-hero.jpg" alt="Web Design Hero" fill className="object-cover object-center z-0" priority />
+                  {/* Dark Linear Gradient Overlay with Blur */}
+                  <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
+                  {/* Centered Content */}
+                  <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
+                    <motion.h1
+                      className="font-bold text-4xl sm:text-5xl text-white mb-4"
+                      initial={{ opacity: 0, y: 32 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.7, delay: 0.2 }}
                     >
-                        <div className="h-[40rem] w-full rounded-md relative bg-transparent dark:bg-transparent flex flex-col items-center justify-center antialiased">
-                            <div className="max-w-2xl mx-auto p-4 mb-5">
-                                <motion.h1
-                                    className="relative z-10 text-lg md:text-6xl bg-clip-text text-center font-sans font-bold"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.7 }}
-                                >
-                                    Digital Transformation
-                                </motion.h1>
-                                <motion.p
-                                    className="text-gray-400 mx-auto my-2 text-xl text-center relative z-10"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
-                                >
-                                    Leading your business through impactful digital change
-                                </motion.p>
-                            </div>
-                            <motion.div
-                                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: 0.3 }}
-                            >
-                                <button className="group relative px-8 py-4 border-2 border-gray-300 dark:border-gray-600 hover:bg-blue-700 hover:border-none text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 focus:outline-none shadow-lg hover:shadow-2xl">
-                                    <span className="relative z-10 flex items-center justify-center">
-                                        Get Started Today
-                                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                    </span>
-                                </button>
-                            </motion.div>
-                        </div>
-                    </motion.section>
-
-                </Vortex>
-            </div>
-
-
-
-
-            {/* Service Explanation Section */}
-            <motion.section
-                className="py-20 bg-gray-50 dark:bg-black"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <div className="container mx-auto px-6">
-                    <div className="mb-16">
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                        >
-                            What is Digital Transformation?
-                        </motion.h2>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6">
-                            <motion.p
-                                className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.1 }}
-                                viewport={{ once: true }}
-                            >
-                                Digital Transformation is the strategic adoption of digital technologies to fundamentally change how a business operates and delivers value to its customers. It goes beyond simply using technology; it involves a cultural shift that requires organizations to continuously challenge the status quo, experiment, and adapt to changing market demands. This transformation impacts all aspects of a business, from customer interactions and internal processes to business models and company culture.
-                            </motion.p>
-                            <motion.p
-                                className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                                viewport={{ once: true }}
-                            >
-                                In today&apos;s fast-paced digital economy, embracing digital transformation is no longer optional but essential for survival and growth. Businesses that successfully navigate this transition can achieve significant advantages, including increased agility, improved operational efficiency, enhanced customer experiences, and the ability to innovate rapidly.
-                            </motion.p>
-                            <motion.p
-                                className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.3 }}
-                                viewport={{ once: true }}
-                            >
-                                At Techbrill Solutions, we partner with you to identify opportunities, develop a roadmap, and implement the necessary changes to thrive in the digital age. Our approach focuses on integrating technology across all areas of your business to enhance efficiency, improve customer experience, and unlock new revenue streams. We guide you through every step, ensuring a smooth and successful transformation journey.
-                            </motion.p>
-                        </div>
-                        <motion.div
-                            className="relative"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.7, delay: 0.2 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
-                            <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-xl">
-                                <div className="grid grid-cols-3 gap-6">
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                                            <Zap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Enhanced Efficiency</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                                            <Heart className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Improved Customer Experience</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                                            <Rocket className="w-6 h-6 text-green-600 dark:text-green-400" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Increased Agility</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                                            <BarChart3 className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Data-Driven Decision-Making</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                                            <Lightbulb className="w-6 h-6 text-red-600 dark:text-red-400" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Innovation Opportunities</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center mx-auto mb-3">
-                                            <TrendingUp className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-                                        </div>
-                                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Scalability and Growth</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </motion.section>
-
-            {/* Key Benefits Section */}
-            <motion.section
-                className="py-20 bg-gray-50 dark:bg-black"
-                variants={staggerContainer}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-            >
-                <div className="container mx-auto px-6">
-                    <div className="mb-16">
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                        >
-                            Benefits of Digital Transformation
-                        </motion.h2>
-                        <motion.p
-                            className="text-xl text-gray-600 dark:text-gray-400"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
-                        >
-                            Transform your business with strategic content that drives results
-                        </motion.p>
-                    </div>
+                      Digital Transformation 
+                    </motion.h1>
+                    <motion.p
+                      className="text-lg text-gray-300 mb-8 max-w-xl text-center"
+                      initial={{ opacity: 0, y: 32 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.7, delay: 0.4 }}
+                    >
+                        Empowering Businesses with Innovative Solutions
+                    </motion.p>
                     <motion.div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
-                        variants={staggerContainer}
-                        initial="initial"
-                        whileInView="animate"
-                        viewport={{ once: true }}
+                      className="flex flex-col sm:flex-row gap-4 w-full justify-center"
+                      initial="hidden"
+                      animate="visible"
+                      variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
                     >
-                        <motion.div
-                            className="group relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg dark:shadow-gray-900/50 border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-                            variants={fadeInUp}
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="relative">
-                                <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Blocks className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-                                </div>
-                                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                    Low-Code No-Code Development Platforms
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Empowering teams to build applications without writing complex code, LCNC platforms accelerate app delivery, reduce dependency on IT, and democratize innovation.
-                                </p>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            className="group relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg dark:shadow-gray-900/50 border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-                            variants={fadeInUp}
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="relative">
-                                <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <Cloud className="w-7 h-7 text-green-600 dark:text-green-400" />
-                                </div>
-                                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                    Cloud Computing Services
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Cloud platforms offer the flexibility, scalability, and cost-efficiency organizations need to support remote work, data storage, and real-time collaboration.
-                                </p>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            className="group relative bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg dark:shadow-gray-900/50 border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-                            variants={fadeInUp}
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="relative">
-                                <div className="w-14 h-14 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <UserCheck className="w-7 h-7 text-purple-600 dark:text-purple-400" />
-                                </div>
-                                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                    Customer Relationship Management (CRM) Platforms
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    CRMs support sales, marketing, and service teams with 360-degree customer views, enabling personalized communication and stronger customer engagement.
-                                </p>
-                            </div>
-                        </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                      >
+                        <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
+                      >
+                        <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
+                      </motion.div>
                     </motion.div>
-                </div>
-            </motion.section>
-
-            {/* Customer Pain Points Section */}
-            <motion.section
-                className="py-20 bg-gray-50 dark:bg-black"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <div className="container mx-auto px-6">
-                    <div className="mb-16">
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                        >
-                            Addressing Your Digital Transformation Challenges
-                        </motion.h2>
-                        <motion.p
-                            className="text-xl text-gray-600 dark:text-gray-400"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
-                        >
-                            We understand the obstacles you face and have solutions ready
-                        </motion.p>
+                  </div>
+                  {/* Scroll Down Indicator (if space allows) */}
+                  <motion.div
+                    className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
+                  >
+                    <ChevronDown className="w-7 h-7 text-white opacity-80" />
+                  </motion.div>
+                </section>
+        
+                {/* Service Explanation Section - Minimal alternating layout with working images */}
+                <ServicesSection />
+        
+                <section className="py-16">
+                  <div className="container mx-auto">
+                    <div className="text-center mb-8 md:mb-12">
+                      <h3 className="text-lg font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
+                        Technologies We Use
+                      </h3>
+                      <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                        Driven by bold ideas, delivered through robust <span className="text-blue-700">Tech Stacks</span>
+                      </h2>
+                      <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                      {/* <h1>We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.</h1> */}
                     </div>
-                    <InfoTabs items={items} />
-                </div>
-            </motion.section>
-
-            {/* Case Studies Section */}
-            <motion.section
-                className="py-20 bg-gray-50 dark:bg-black"
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <div className="container mx-auto px-6">
-                    <div className="mb-16">
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                        >
-                            Success Stories
-                        </motion.h2>
-                        <motion.p
-                            className="text-xl text-gray-600 dark:text-gray-400"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
-                        >
-                            Real results from real clients who trusted us with their content marketing
-                        </motion.p>
-                    </div>
-                    <CaseStudiesCarousel caseStudies={caseStudies} />
-                </div>
-            </motion.section>
-
-            {/* Call to Action Section */}
-            <motion.section
-                className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 dark:from-blue-700 dark:to-purple-800 relative overflow-hidden"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: [0.4, 0.0, 0.2, 1] }}
-                viewport={{ once: true }}
-            >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-                <div className="absolute top-0 left-0 w-full h-full">
-                    <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-                    <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
-                </div>
-                <div className="container mx-auto px-6 relative z-10">
+                    <DigitalTransformationsTechToolsSection />
+                  </div>
+                </section>
+        
+                {/* Key Benefits Section */}
+                <section className="py-16 bg-slate-100">
+                  <div className="container mx-auto px-4">
                     <motion.div
-                        className="text-center max-w-4xl mx-auto"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        viewport={{ once: true }}
+                      className="text-center mb-12"
+                      initial="initial"
+                      whileInView="animate"
+                      viewport={{ once: true }}
+                      variants={fadeInUp}
                     >
-                        <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-white mb-6"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                            viewport={{ once: true }}
-                        >
-                            Ready to Enhance Your Content Strategy?
-                        </motion.h2>
-                        <motion.p
-                            className="text-xl text-blue-100 mb-10 leading-relaxed"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            viewport={{ once: true }}
-                        >
-                            Contact us today to discuss your content marketing needs and discover how we can transform your digital
-                            presence.
-                        </motion.p>
-                        <motion.div
-                            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
-                            viewport={{ once: true }}
-                        >
-                            <Button
-                                variant="secondary"
-                                size="lg"
-                                className="group bg-white hover:bg-gray-100 text-blue-600 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                            >
-                                Get a Free Consultation
-                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                            </Button>
-
-                            <Button
-                                variant="secondary"
-                                size="lg"
-                                className="group bg-white hover:bg-gray-100 text-blue-600 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                            >
-                                View Our Portfolio
-                            </Button>
-                        </motion.div>
-                        <motion.div
-                            className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="text-white/90">
-                                <div className="text-3xl font-bold mb-2">500+</div>
-                                <div className="text-blue-100">Content Pieces Created</div>
-                            </div>
-                            <div className="text-white/90">
-                                <div className="text-3xl font-bold mb-2">98%</div>
-                                <div className="text-blue-100">Client Satisfaction</div>
-                            </div>
-                            <div className="text-white/90">
-                                <div className="text-3xl font-bold mb-2">150%</div>
-                                <div className="text-blue-100">Average Traffic Growth</div>
-                            </div>
-                        </motion.div>
+                      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                        Key Benefits of Digital Transformation
+                      </h2>
+                      <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                      <p className="text-gray-600 max-w-3xl mx-auto text-lg mt-2">
+                        Transform your business operations and unlock new opportunities with comprehensive digital transformation solutions that drive efficiency, innovation, and sustainable growth.
+                      </p>
                     </motion.div>
-                </div>
-            </motion.section>
-        </div>
+        
+                    <motion.div
+                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+                      variants={staggerContainer}
+                      initial="initial"
+                      whileInView="animate"
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                        variants={fadeInUp}
+                      >
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Lightbulb className="w-8 h-8 text-white" />
+                          </div>
+                          <h3 className="text-xl font-semibold mb-3 text-blue-600">Enhanced Agility</h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Rapidly adapt to market changes and customer demands with flexible, scalable digital infrastructure that enables quick pivots and innovation cycles.
+                          </p>
+                        </div>
+                      </motion.div>
+        
+                      <motion.div
+                        className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                        variants={fadeInUp}
+                      >
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <LineChart className="w-8 h-8 text-white" />
+                          </div>
+                          <h3 className="text-xl font-semibold mb-3 text-blue-600">Operational Efficiency</h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Streamline processes through automation and data-driven insights, reducing manual tasks and improving productivity across all business functions.
+                          </p>
+                        </div>
+                      </motion.div>
+        
+                      <motion.div
+                        className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                        variants={fadeInUp}
+                      >
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Users className="w-8 h-8 text-white" />
+                          </div>
+                          <h3 className="text-xl font-semibold mb-3 text-blue-600">Customer Experience</h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Deliver personalized, omnichannel experiences that delight customers and build lasting relationships through digital touchpoints and data insights.
+                          </p>
+                        </div>
+                      </motion.div>
+        
+                      <motion.div
+                        className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                        variants={fadeInUp}
+                      >
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Shield className="w-8 h-8 text-white" />
+                          </div>
+                          <h3 className="text-xl font-semibold mb-3 text-blue-600">Data-Driven Decisions</h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Transform raw data into actionable insights with advanced analytics and AI, enabling informed decision-making and predictive business strategies.
+                          </p>
+                        </div>
+                      </motion.div>
+        
+                      <motion.div
+                        className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                        variants={fadeInUp}
+                      >
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Target className="w-8 h-8 text-white" />
+                          </div>
+                          <h3 className="text-xl font-semibold mb-3 text-blue-600">Innovation Acceleration</h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Foster a culture of innovation with modern tools and platforms that enable rapid prototyping, testing, and deployment of new ideas and solutions.
+                          </p>
+                        </div>
+                      </motion.div>
+        
+                      <motion.div
+                        className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                        variants={fadeInUp}
+                      >
+                        <div className="flex flex-col items-center text-center">
+                          <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Briefcase className="w-8 h-8 text-white" />
+                          </div>
+                          <h3 className="text-xl font-semibold mb-3 text-blue-600">Competitive Advantage</h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            Stay ahead of competitors with cutting-edge technologies and digital capabilities that differentiate your brand and create new market opportunities.
+                          </p>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  </div>
+                </section>
+        
+                {/* Advanced Technologies Section with Sticky Left Column */}
+                <section className="py-16 bg-white text-gray-900">
+                  <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen">
+                      {/* Left Column - Sticky */}
+                      <div className="lg:sticky lg:top-48 lg:h-fit">
+                        <div className="max-w-lg">
+                          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-gray-900">
+                            Advanced Technologies We Use
+                            in <span className='text-blue-700'> Our Digital Transformation Services </span>
+                          </h2>
+                          <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                            From <span className="text-blue-600 underline">cloud migration</span> to AI-powered automation, microservices to 
+                            <span className="text-blue-600 underline">data analytics</span>, our comprehensive digital transformation services 
+                            leverage cutting-edge technologies to modernize your business operations. As a leading digital transformation partner, 
+                            we ensure that your technology stack is optimized, secure, and future-ready 
+                            to drive sustainable growth and innovation.
+                          </p>
+                          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md">
+                            Transform Your Business Today
+                          </Button>
+                        </div>
+                      </div>
+        
+                      {/* Right Column - Scrollable */}
+                      <div className="space-y-12">
+                        {/* Cloud Computing & Migration */}
+                        <motion.div
+                          className="p-8 rounded-lg border border-gray-200"
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6 }}
+                        >
+                          <div className="flex items-start space-x-4 mb-4">
+                            <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
+                              <Cloud className='w-6 h-6 text-blue-600' />
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900">Cloud Computing & Migration</h3>
+                          </div>
+                          <p className="text-gray-700 leading-relaxed">
+                            Our <span className="text-blue-600 underline">cloud transformation</span> services help businesses migrate from legacy infrastructure to modern, 
+                            scalable cloud platforms. We specialize in multi-cloud strategies, serverless architectures, and 
+                            <span className="text-blue-600 underline">container orchestration</span> to ensure your applications are resilient, cost-effective, 
+                            and capable of handling dynamic workloads with automated scaling and enhanced security.
+                          </p>
+                        </motion.div>
+        
+                        {/* Data Analytics & Business Intelligence */}
+                        <motion.div
+                          className="p-8 rounded-lg border border-gray-200"
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                          <div className="flex items-start space-x-4 mb-4">
+                            <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
+                              <BarChart3 className='w-6 h-6 text-blue-600' />
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900">Data Analytics & Business Intelligence</h3>
+                          </div>
+                          <p className="text-gray-700 leading-relaxed">
+                            Transform raw data into actionable insights with our advanced <span className="text-blue-600 underline">analytics platforms</span> 
+                            and business intelligence solutions. We implement real-time dashboards, predictive analytics, 
+                            and machine learning models that enable data-driven decision making, helping you identify 
+                            trends, optimize operations, and discover new revenue opportunities through intelligent data processing.
+                          </p>
+                        </motion.div>
+        
+                        {/* AI & Machine Learning Integration */}
+                        <motion.div
+                          className="p-8 rounded-lg border border-gray-200"
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6, delay: 0.4 }}
+                        >
+                          <div className="flex items-start space-x-4 mb-4">
+                            <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
+                              <BrainCircuit className='w-6 h-6 text-blue-600' />
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900">AI & Machine Learning Integration</h3>
+                          </div>
+                          <p className="text-gray-700 leading-relaxed">
+                            Harness the power of <span className="text-blue-600 underline">artificial intelligence</span> and machine learning to automate 
+                            complex business processes and enhance decision-making capabilities. Our AI solutions include 
+                            natural language processing, computer vision, predictive modeling, and intelligent automation 
+                            that streamline operations, reduce costs, and create personalized customer experiences at scale.
+                          </p>
+                        </motion.div>
+        
+                        {/* API Integration & Microservices */}
+                        <motion.div
+                          className="p-8 rounded-lg border border-gray-200"
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6, delay: 0.6 }}
+                        >
+                          <div className="flex items-start space-x-4 mb-4">
+                            <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
+                              <Blocks className='w-6 h-6 text-blue-600' />
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900">API Integration & Microservices</h3>
+                          </div>
+                          <p className="text-gray-700 leading-relaxed">
+                            Modernize your architecture with <span className="text-blue-600 underline">microservices</span> and seamless API integrations 
+                            that connect disparate systems and enable flexible, scalable solutions. Our approach focuses on 
+                            breaking down monolithic applications into manageable, independent services that can be 
+                            deployed, scaled, and maintained separately, improving system resilience and development velocity.
+                          </p>
+                        </motion.div>
+        
+                        {/* DevOps & Automation */}
+                        <motion.div
+                          className="p-8 rounded-lg border border-gray-200"
+                          initial={{ opacity: 0, y: 50 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.6, delay: 0.8 }}
+                        >
+                          <div className="flex items-start space-x-4 mb-4">
+                            <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
+                              <Settings className='w-6 h-6 text-blue-600' />
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900">DevOps & Automation</h3>
+                          </div>
+                          <p className="text-gray-700 leading-relaxed">
+                            Accelerate software delivery and improve operational efficiency with our comprehensive 
+                            <span className="text-blue-600 underline">DevOps automation</span> solutions. We implement CI/CD pipelines, infrastructure as code, 
+                            automated testing, and monitoring systems that reduce deployment risks, increase release 
+                            frequency, and ensure consistent, reliable software delivery across all environments.
+                          </p>
+                        </motion.div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                {/* Work Process Section */}
+                <WorkProcess />
+        
+                {/* Commitment Section */}
+                <section className="py-20 px-6 md:px-16 bg-blue-100">
+                  <div className="container mx-auto">
+                    <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
+                      <h3 className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
+                        ASSURANCE TO YOU
+                      </h3>
+        
+                      <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+                        Our <span className="text-blue-600">Commitment</span> and Guarantee
+                      </h2>
+        
+                      <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
+        
+                      <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
+                        Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation.
+                      </p>
+        
+        
+                      {/* Commitment Items */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+                        {/* 100% Transparency */}
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <Eye className="w-8 h-8 text-blue-600" />
+                          </div>
+                          <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                            100% Transparency
+                          </h4>
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
+                          </p>
+                        </div>
+        
+                        {/* 95% On Time Delivery */}
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <Clock className="w-8 h-8 text-blue-600" />
+                          </div>
+                          <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                            95% On Time Delivery
+                          </h4>
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
+                          </p>
+                        </div>
+        
+                        {/* Free 30 days support */}
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <Shield className="w-8 h-8 text-blue-600" />
+                          </div>
+                          <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                            Free 30 Days Support
+                          </h4>
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
+                          </p>
+                        </div>
+        
+                        {/* Flexible Engagement */}
+                        <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <Users className="w-8 h-8 text-blue-600" />
+                          </div>
+                          <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                            Flexible Engagement
+                          </h4>
+                          <p className="text-sm text-gray-600 leading-relaxed">
+                            Adaptable working models to suit your project needs, timeline, and budget requirements.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                {/* Why Choose us Section */}
+                <section className="py-16">
+                  <div className="container mx-auto px-4">
+                    <motion.div
+                      className="max-w-6xl mx-auto"
+                      initial="initial"
+                      whileInView="animate"
+                      viewport={{ once: true }}
+                      variants={fadeInUp}
+                    >
+                      <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                          Why Choose us ?
+                        </h2>
+                        <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                        <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed mt-6">
+                          TechBrill is an IT consulting services company with a young, dynamic workforce delivering value to your business 
+                          through innovation and ingenuity. As a dedicated IT consulting service provider, we emphasize personalized strategies and 
+                          forward-thinking solutions tailored to your unique business challenges and objectives.
+                        </p>
+                        <p className="text-gray-900 font-semibold text-lg mt-4">
+                          We are:
+                        </p>
+                      </div>
+        
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        {/* Point 001 - Seasoned Experts */}
+                        <motion.div
+                          className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8"
+                          variants={fadeInUp}
+                        >
+                          <div className="flex-shrink-0">
+                            <span className="text-sm font-mono text-gray-500">001</span>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                              Seasoned Experts
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed">
+                              With a dedicated team of IT service consultants, we ensure that our IT 
+                              consulting and services help you get the maximum value for your 
+                              engagement with us, resulting in a long-lasting partnership we have 
+                              developed with 95% of our clients.
+                            </p>
+                          </div>
+                        </motion.div>
+        
+                        {/* Point 002 - Attention to Every Detail */}
+                        <motion.div
+                          className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 mt-12"
+                          variants={fadeInUp}
+                        >
+                          <div className="flex-shrink-0">
+                            <span className="text-sm font-mono text-gray-500">002</span>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                              Attention to Every Detail
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed">
+                              Our IT support consulting experts and IT project management consultants, 
+                              specializing in technology consulting services, pay attention to every minor 
+                              requirement and assemble a solution to tackle your pain points most 
+                              effectively.
+                            </p>
+                          </div>
+                        </motion.div>
+        
+                        {/* Point 003 - Keeping Transparency Paramount */}
+                        <motion.div
+                          className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 pb-8"
+                          variants={fadeInUp}
+                        >
+                          <div className="flex-shrink-0">
+                            <span className="text-sm font-mono text-gray-500">003</span>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                              Keeping Transparency Paramount
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed">
+                              Believing in the ethos of an open work culture, we, as a leading IT 
+                              professional services provider, work alongside our clients, keeping them 
+                              updated about developments, ideas, and strategies.
+                            </p>
+                          </div>
+                        </motion.div>
+        
+                        {/* Point 004 - Enhanced Security */}
+                        <motion.div
+                          className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 pb-8 mt-6"
+                          variants={fadeInUp}
+                        >
+                          <div className="flex-shrink-0">
+                            <span className="text-sm font-mono text-gray-500">004</span>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                              Enhanced Security
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed">
+                              Our IT services consultants specialize in identifying and mitigating security 
+                              threats within your network and systems. They work closely with your team 
+                              to develop innovative solutions, implement robust security measures, and 
+                              establish protocols to ensure continuous protection of your existing systems.
+                            </p>
+                          </div>
+                        </motion.div>
+        
+                        {/* Point 005 - Client-Centric Approach */}
+                        <motion.div
+                          className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8"
+                          variants={fadeInUp}
+                        >
+                          <div className="flex-shrink-0">
+                            <span className="text-sm font-mono text-gray-500">005</span>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                              Client-Centric Approach
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed">
+                              We prioritize your success by offering a client-centric approach. By deeply 
+                              understanding your business goals, we craft IT strategies that not only solve 
+                              immediate challenges but also position your organization for long-term 
+                              growth and sustainability.
+                            </p>
+                          </div>
+                        </motion.div>
+        
+                        {/* Point 006 - Rapid Project Delivery */}
+                        <motion.div
+                          className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 pb-8 mt-6"
+                          variants={fadeInUp}
+                        >
+                          <div className="flex-shrink-0">
+                            <span className="text-sm font-mono text-gray-500">006</span>
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">
+                              Rapid Project Delivery
+                            </h3>
+                            <p className="text-gray-700 leading-relaxed">
+                              We are committed to accelerating project timelines without compromising 
+                              quality. Our efficient processes and agile methodologies ensure that your IT 
+                              projects are completed quickly, allowing you to capitalize on new 
+                              opportunities and achieve your objectives sooner.
+                            </p>
+                          </div>
+                        </motion.div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </section>
+        
+                
+                {/* Contact CTA Section */}
+                <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+                    <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
+                    <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
+                  </motion.div>
+                </section>
+        
+                {/* Consultation Section */}
+                <ConsultationSection />
+              </main>
+            </ErrorBoundary>
     );
 }

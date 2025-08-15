@@ -91,7 +91,6 @@ export default function ITConsultancyPage() {
         {/* Service Explanation Section - Minimal alternating layout with working images */}
         <ServicesSection />
 
-
         <section className="py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
