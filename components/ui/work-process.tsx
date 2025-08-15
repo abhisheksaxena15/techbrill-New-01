@@ -246,7 +246,8 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-20 px-4 md:px-16 max-w-full overflow-x-hidden">
+    
+    <section className="py-20 px-6 md:px-16 max-w-full overflow-x-hidden bg-white">
       <div className="text-center mb-10">
         <motion.h2
           className="text-3xl md:text-4xl font-extrabold mb-2"
