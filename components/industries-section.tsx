@@ -104,7 +104,7 @@ export default function IndustriesSection() {
               <span className="mb-2 transition-all duration-200 text-blue-900 dark:text-white group-hover:text-white">
                 {item.icon}
               </span>
-              <span className="font-extrabold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center dark:text-white">
+              <span className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center dark:text-white">
                 {item.label}
               </span>
               <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 group-hover:text-white text-center mt-1 px-1 sm:px-2 dark:text-gray-400">
