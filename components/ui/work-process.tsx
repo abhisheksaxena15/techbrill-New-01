@@ -8,7 +8,7 @@
 //   {
 //     key: "Planning & Strategy",
 //     label: "Planning & Strategy",
-//     icon: <Lightbulb className="w-7 h-7" />,
+//     icon: <Lightbulb className="w-11 h-12" />,
 //     heading: "Step 1: Planning & Strategy",
 //     description: (
 //       <div className="text-justify leading-relaxed">
@@ -183,7 +183,14 @@ const STEPS = [
   {
     key: "Planning & Strategy",
     label: "Planning & Strategy",
-    icon: <Lightbulb className="w-7 h-7" />,
+    icon: (
+      // Add a wrapper div with a defined height and hover effect
+      // This wrapper provides a consistent space for the icon to animate within.
+      <div className="flex flex-col items-center justify-center h-24">
+        <Lightbulb className="w-11 h-11 text-yellow-500 hover:scale-135 transition-transform" />
+        
+      </div>
+    ),
     heading: "Step 1: Planning & Strategy",
     description: (
       <div className="text-justify leading-relaxed">
@@ -195,7 +202,13 @@ const STEPS = [
   {
     key: "Design & Prototyping ",
     label: "Design & Prototyping ",
-    icon: <Layout className="w-7 h-7" />,
+    icon: (
+      // New wrapper div for the icon and label
+      <div className="flex flex-col items-center justify-center h-24">
+        <Layout className="w-11 h-12 text-blue-500 hover:scale-135 transition-transform" />
+       
+      </div>
+    ),
     heading: "Step 2: Design & Prototyping ",
     description: (
       <div className="text-justify leading-relaxed">
@@ -207,7 +220,13 @@ const STEPS = [
   {
     key: "development",
     label: "Development",
-    icon: <Code className="w-7 h-7" />,
+    icon: (
+      // New wrapper div for the icon and label
+      <div className="flex flex-col items-center justify-center h-24">
+        <Code className="w-11 h-12 text-green-500 hover:scale-135 transition-transform" />
+        
+      </div>
+    ),
     heading: "Step 4: Development",
     description: (
       <div className="text-justify leading-relaxed">
@@ -219,7 +238,13 @@ const STEPS = [
   {
     key: "QA & Testing",
     label: "QA & Testing",
-    icon: <PenTool className="w-7 h-7" />,
+    icon: (
+      // New wrapper div for the icon and label
+      <div className="flex flex-col items-center justify-center h-24">
+        <PenTool className="w-11 h-12 text-purple-500 hover:scale-135 transition-transform" />
+        
+      </div>
+    ),
     heading: "Step 3: QA & Testing",
     description: (
       <div className="text-justify leading-relaxed">
@@ -231,7 +256,13 @@ const STEPS = [
   {
     key: "launch",
     label: "Launch & Growth",
-    icon: <Rocket className="w-7 h-7" />,
+    icon: (
+      // New wrapper div for the icon and label
+      <div className="flex flex-col items-center justify-center h-24">
+        <Rocket className="w-11 h-12 text-red-500 hover:scale-135 transition-transform" />
+        
+      </div>
+    ),
     heading: "Step 5: Launch & Growth",
     description: (
       <div className="text-justify leading-relaxed">

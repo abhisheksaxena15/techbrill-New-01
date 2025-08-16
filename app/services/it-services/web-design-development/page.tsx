@@ -202,11 +202,11 @@ export default function WebDesignDevelopmentPage() {
                 transition={{ duration: 0.7 }}
               >
                 <div className="text-center mb-6 lg:mb-8">
-                  <h3 className="text-sm font-semibold tracking-wide text-blue-600 dark:text-blue-400">
+                  <h3 className="text-sm font-semibold tracking-wide text-blue-800 dark:text-blue-400">
                     Industry Expertise
                   </h3>
                   <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl text-center">
-                    We transform all <span className="text-blue-700 italic">Industires</span> and business processes
+                    We transform all <span className="text-blue-800 italic">Industires</span> and business processes
                   </h2>
                   <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
                 </div>
@@ -215,14 +215,14 @@ export default function WebDesignDevelopmentPage() {
                 </p>
                 <div className="flex space-x-4">
                   <button
-                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    className="mt-6 px-6 py-3 bg-blue-800 text-white rounded shadow-md font-bold hover:bg-blue-600 transition duration-300"
                     onClick={() => window.location.href = '/industries'}
                   >
                     Explore Industries
                   </button>
 
                   <button
-                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-blue-700 transition duration-300"
+                    className="mt-6 px-6 py-3 bg-blue-800 text-white rounded shadow-md font-bold hover:bg-blue-600 transition duration-300"
                     onClick={() => window.location.href = '/'}
                   >
                     Consult Our Expert
@@ -308,7 +308,7 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
-              <h3 className="text-sm font-semibold tracking-wide text-blue-700 dark:text-blue-400">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-800 dark:text-blue-400">
                 ASSURANCE TO YOU
               </h3>
 
@@ -316,7 +316,7 @@ export default function WebDesignDevelopmentPage() {
                 Our <span className="text-blue-700 italic">Commitment and Guarantee</span>
               </h2>
 
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-blue-800 dark:bg-blue-800 mx-auto mt-4"></div>
 
               <p className= " text-xs text-gray-600  md:text-lg  max-w-3xl mx-auto mt-6 leading-relaxed">
                 We stand behind our work with a promise of quality, transparency, and reliability.  From first consultation to post-launch support, we ensure your website meets expectations, delivers results, and drives your success
@@ -327,7 +327,7 @@ export default function WebDesignDevelopmentPage() {
                 {/* 100% Transparency */}
                 <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Eye className="w-8 h-8 text-blue-600" />
+                    <Eye className="w-8 h-8 text-blue-800" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     100% Transparency
@@ -393,11 +393,11 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <h3 className="text-sm font-semibold tracking-wide text-blue-700 dark:text-blue-400">
+              <h3 className="text-sm font-semibold tracking-wide text-blue-800 dark:text-blue-400">
                 WHY TECHBRILL
               </h3>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Few Good Reason to <span className="text-blue-700 italic">Choose Us</span></h2>
-              <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-600 to-blue-400 rounded-full mb-4" />
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Few Good Reason to <span className="text-blue-800 italic">Choose Us</span></h2>
+              <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-800 to-blue-400 rounded-full mb-4" />
               <p className="text-gray-600 max-w-5xl mx-auto text-base md:text-lg font-medium">
                 Customer satisfaction is our top priority, backed by consistent quality, ongoing innovation, and continuous improvement. We value fairness, transparency, and integrity in everything we do. What sets us apart in the digital landscape includes.
               </p>
@@ -405,32 +405,32 @@ export default function WebDesignDevelopmentPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <CheckCircle className="w-9 h-9 text-blue-600" />,
+                  icon: <CheckCircle className="w-9 h-9 text-blue-800" />,
                   title: 'Unique, Purposeful & Accessibility Standards Design',
                   desc: 'We craft digital experiences that are not only beautiful but also accessible and purposeful for every user.'
                 },
                 {
-                  icon: <Lightbulb className="w-9 h-9 text-blue-600" />,
+                  icon: <Lightbulb className="w-9 h-9 text-blue-800" />,
                   title: 'Strong Technology Capability',
                   desc: 'Our team leverages the latest tech to build robust, scalable, and future-ready solutions.'
                 },
                 {
-                  icon: <Palette className="w-9 h-9 text-blue-600" />,
+                  icon: <Palette className="w-9 h-9 text-blue-800" />,
                   title: 'Highly Creative & Motivated Teams',
                   desc: 'Our passionate experts bring creativity and energy to every project, driving innovation and results.'
                 },
                 {
-                  icon: <Target className="w-9 h-9 text-blue-600" />,
+                  icon: <Target className="w-9 h-9 text-blue-800" />,
                   title: 'Result-Driven Approach and Process',
                   desc: 'We focus on outcomes, using proven processes to deliver measurable business value.'
                 },
                 {
-                  icon: <Handshake className="w-9 h-9 text-blue-600" />,
+                  icon: <Handshake className="w-9 h-9 text-blue-800" />,
                   title: 'Flexible Engagement Models',
                   desc: 'Choose from a range of engagement options tailored to your needs and goals.'
                 },
                 {
-                  icon: <PhoneCall className="w-9 h-9 text-blue-600" />,
+                  icon: <PhoneCall className="w-9 h-9 text-blue-800" />,
                   title: 'Seamless Communication',
                   desc: 'We keep you in the loop with clear, proactive, and responsive communication.'
                 }
@@ -447,7 +447,7 @@ export default function WebDesignDevelopmentPage() {
                   <div className="flex items-center justify-center mb-2">
                     {item.icon}
                   </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1">{item.title}</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-blue-800 mb-1">{item.title}</h3>
                   <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
