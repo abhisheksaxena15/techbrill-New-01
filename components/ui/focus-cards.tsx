@@ -26,6 +26,8 @@ export const Card = React.memo(
         src={card.src}
         alt={card.title}
         className="object-cover w-full h-full absolute inset-0 bg-gray-200"
+        loading="lazy"
+        decoding="async"
       />
       <div
         className={cn(

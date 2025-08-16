@@ -4,13 +4,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Users, Bug, Shield, Target, Briefcase, Clock, Gift, Shuffle, Headphones, Lightbulb, Palette, PhoneCall, ChevronDown, BarChart3, Cloud } from 'lucide-react';
+import { ArrowRight, Lightbulb, LineChart, Users, Shield, Target, Briefcase, ChevronDown, Eye, Clock, BrainCircuit, Brain } from 'lucide-react';
 import { ErrorBoundary } from '@/components/error-boundary';
-import ServicesSection from '@/components/ui/services-section-QA';
-import TechStackSection from '@/components/ui/TechStack-QA';
-import WorkProcess from '@/components/ui/work-process';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import ServicesSection from '@/components/ui/services-section-digital-content-solutions';
+import DigitalSolutionsTechToolsSection from '@/components/ui/digital-solutions-tech-tools-section';
 import ConsultationSection from '@/components/ConsultationSection';
-import { cn } from '@/lib/utils';
+import WorkProcess from '@/components/ui/work-process';
+import AboutPreview from '@/components/about-preview';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -26,14 +28,15 @@ const staggerContainer = {
   }
 };
 
-export default function SoftwareQATestingPage() {
+export default function DigitalContentSolutionsPage() {
   return (
     <ErrorBoundary>
       <main className='bg-white text-gray-900'>
         {/* Hero Section with Background Image */}
+
         <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
-          <Image src="/images/services/qa-testing-hero.jpg" alt="QA & Testing Hero" fill className="object-cover object-center z-0" priority />
+          <Image src="/images/services/it-consultancy-hero.jpg" alt="Web Design Hero" fill className="object-cover object-center z-0" priority />
           {/* Dark Linear Gradient Overlay with Blur */}
           <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
           {/* Centered Content */}
@@ -44,7 +47,7 @@ export default function SoftwareQATestingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              Software QA & Testing
+              Digital Content Solutions
             </motion.h1>
             <motion.p
               className="text-lg text-gray-300 mb-8 max-w-xl text-center"
@@ -52,7 +55,7 @@ export default function SoftwareQATestingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              Ensuring quality, security, and reliability in every release
+              Strategic technology solutions for business growth
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
@@ -65,14 +68,14 @@ export default function SoftwareQATestingPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Get Started</Button>
+                <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button>
+                <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
               </motion.div>
             </motion.div>
           </div>
@@ -86,10 +89,11 @@ export default function SoftwareQATestingPage() {
           </motion.div>
         </section>
 
+        <AboutPreview />
+
         {/* Service Explanation Section - Minimal alternating layout with working images */}
         <ServicesSection />
 
-        {/* Tech Stack Section */}
         <section className="py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
@@ -97,11 +101,12 @@ export default function SoftwareQATestingPage() {
                 Technologies We Use
               </h3>
               <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Driven by precision, delivered through robust <span className="text-blue-700">QA Tech Stacks</span>
+                Driven by bold ideas, delivered through robust <span className="text-blue-700">Tech Stacks</span>
               </h2>
               <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              {/* <h1>We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.</h1> */}
             </div>
-            <TechStackSection />
+            <DigitalSolutionsTechToolsSection />
           </div>
         </section>
 
@@ -116,11 +121,11 @@ export default function SoftwareQATestingPage() {
               variants={fadeInUp}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Key Benefits of QA & Testing
+                Key Benefits of Digital Content Solutions
               </h2>
               <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
               <p className="text-gray-600 max-w-3xl mx-auto text-lg mt-2">
-                Ensure your software is robust, secure, and user-friendly with our comprehensive QA and testing services.
+                Transform your brand presence and drive business growth with strategic digital content that engages audiences, builds authority, and delivers measurable results across all platforms.
               </p>
             </motion.div>
 
@@ -137,11 +142,11 @@ export default function SoftwareQATestingPage() {
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Bug className="w-8 h-8 text-white" />
+                    <Lightbulb className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Early Bug Detection</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Brand Storytelling</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Identify and fix issues early in the development cycle, reducing costs and time to market.
+                    Create compelling narratives that connect with your audience emotionally and establish your brand identity across all digital touchpoints.
                   </p>
                 </div>
               </motion.div>
@@ -152,11 +157,11 @@ export default function SoftwareQATestingPage() {
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Shield className="w-8 h-8 text-white" />
+                    <LineChart className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Enhanced Security</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Increased Engagement</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Comprehensive security testing to protect your application from vulnerabilities and threats.
+                    Drive higher audience engagement through interactive, visually appealing content that encourages sharing and builds community around your brand.
                   </p>
                 </div>
               </motion.div>
@@ -169,9 +174,24 @@ export default function SoftwareQATestingPage() {
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Improved User Experience</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Professional Quality</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Ensure your software delivers a seamless and intuitive experience for all users.
+                    Access experienced content creators and industry best practices to produce high-quality content that reflects your brand&apos;s professionalism and values.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
+                variants={fadeInUp}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Content Consistency</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Maintain consistent brand messaging and visual identity across all content formats to ensure business continuity and strengthen brand recognition.
                   </p>
                 </div>
               </motion.div>
@@ -184,9 +204,9 @@ export default function SoftwareQATestingPage() {
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Performance Optimization</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600">SEO & Visibility</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Identify and resolve performance bottlenecks for optimal application speed and efficiency.
+                    Improve your search engine rankings and online visibility through optimized content that drives organic traffic and enhances digital presence.
                   </p>
                 </div>
               </motion.div>
@@ -199,24 +219,9 @@ export default function SoftwareQATestingPage() {
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Briefcase className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Quality Assurance</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600">ROI & Performance</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Maintain high standards of quality throughout the development process.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Regulatory Compliance</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Ensure your software meets industry standards and regulatory requirements for security, privacy, and accessibility.
+                    Ensure your content investments deliver measurable results through strategic planning, performance tracking, and data-driven optimization.
                   </p>
                 </div>
               </motion.div>
@@ -232,20 +237,25 @@ export default function SoftwareQATestingPage() {
               <div className="lg:sticky lg:top-48 lg:h-fit">
                 <div className="max-w-lg">
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-gray-900">
-                    Advanced QA Technologies We Use
+                    Advanced Technologies We Use
+                    in <span className='text-blue-700'> Our Digital Content Solutions </span>
                   </h2>
                   <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                    From automation frameworks to performance testing tools, our QA engineers leverage the latest technologies to ensure your software is robust, secure, and scalable. We tailor our approach to your needs, using the best tools and methodologies in the industry.
+                    From <span className="text-blue-600 underline">AI-powered content creation</span> to interactive experiences, AR/VR content to 
+                    advanced analytics, our professional digital content services encompass delivering multi-faceted content solutions using the latest tools, technology, and 
+                    methodologies in the market. As a leading digital content agency, 
+                    we ensure that our solutions are engaging, scalable and adaptable 
+                    to future content trends and technological advancements.
                   </p>
-                  <Button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-md">
-                    Let&apos;s Ensure Your Software Quality
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md">
+                    Let&apos;s Transform Your Content
                   </Button>
                 </div>
               </div>
 
               {/* Right Column - Scrollable */}
               <div className="space-y-12">
-                {/* Automation Testing */}
+                {/* Artificial Intelligence */}
                 <motion.div
                   className="p-8 rounded-lg border border-gray-200"
                   initial={{ opacity: 0, y: 50 }}
@@ -255,16 +265,20 @@ export default function SoftwareQATestingPage() {
                 >
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <Bug className='w-6 h-6 text-blue-600' />
+                      {/* <span className="text-blue-600 text-sm">🤖</span> */}
+                      <BrainCircuit className='w-6 h-6' />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Automation Testing</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">AI-Powered Content Creation</h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed">
-                    We implement robust automation frameworks to accelerate testing cycles, improve coverage, and ensure consistent results across releases.
+                    At TechBrill, we understand how <span className="text-blue-600 underline">artificial intelligence</span> can revolutionize content creation. As a leading digital content solutions provider, we leverage 
+                    AI tools for automated content generation, smart editing, and personalized content recommendations. From <span className="text-blue-600 underline">AI copywriting</span> 
+                    to intelligent video editing and automated social media content creation, our AI-driven approach 
+                    ensures your content is more engaging, efficient, and targeted to your audience.
                   </p>
                 </motion.div>
 
-                {/* Performance Testing */}
+                {/* Blockchain */}
                 <motion.div
                   className="p-8 rounded-lg border border-gray-200"
                   initial={{ opacity: 0, y: 50 }}
@@ -274,16 +288,19 @@ export default function SoftwareQATestingPage() {
                 >
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <BarChart3 className='w-6 h-6 text-blue-600' />
+                      <span className="text-blue-600 text-sm">⛓️</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Performance Testing</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Interactive Content Technologies</h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed">
-                    Our performance testing services identify bottlenecks and optimize your software for speed, scalability, and reliability under load.
+                    With our digital content services, we create <span className="text-blue-600 underline">interactive experiences</span> 
+                    using cutting-edge technologies like HTML5, WebGL, and progressive web apps. Our interactive content solutions 
+                    include gamified experiences, interactive infographics, 360° virtual tours, and immersive storytelling that 
+                    engage audiences and create memorable brand experiences that drive higher engagement and conversion rates.
                   </p>
                 </motion.div>
 
-                {/* Security Testing */}
+                {/* Machine Learning */}
                 <motion.div
                   className="p-8 rounded-lg border border-gray-200"
                   initial={{ opacity: 0, y: 50 }}
@@ -293,16 +310,20 @@ export default function SoftwareQATestingPage() {
                 >
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <Shield className='w-6 h-6 text-blue-600' />
+                      <Brain className='w-6 h-6' />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Security Testing</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Advanced Analytics & Personalization</h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed">
-                    We conduct thorough security assessments to uncover vulnerabilities and protect your applications from threats and breaches.
+                    As a premium digital content solutions company, we leverage the power of 
+                    <span className="text-blue-600 underline"> advanced analytics</span> and machine learning to understand audience behavior and create personalized content experiences. Our data-driven approach includes 
+                    content performance tracking, audience segmentation, A/B testing, and predictive content optimization that 
+                    enhances engagement while positioning your brand at the 
+                    forefront of content marketing innovation.
                   </p>
                 </motion.div>
 
-                {/* Usability Testing */}
+                {/* IoT */}
                 <motion.div
                   className="p-8 rounded-lg border border-gray-200"
                   initial={{ opacity: 0, y: 50 }}
@@ -312,19 +333,44 @@ export default function SoftwareQATestingPage() {
                 >
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <Users className='w-6 h-6 text-blue-600' />
+                      <span className="text-blue-600 text-sm">📱</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Usability Testing</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Cross-Platform Content Management</h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed">
-                    Our usability testing ensures your software is intuitive, accessible, and delivers a seamless experience for all users.
+                    Our digital content solutions expertise extends to cross-platform content management that connects and optimizes 
+                    your content ecosystem. We design and implement content strategies that enhance 
+                    brand consistency, automate distribution, and create new engagement opportunities 
+                    through unified content systems and smart publishing workflows.
+                  </p>
+                </motion.div>
+
+                {/* Cloud Computing */}
+                <motion.div
+                  className="p-8 rounded-lg border border-gray-200"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
+                      <span className="text-blue-600 text-sm">☁️</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900">Content Delivery & Storage</h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    Transform your content infrastructure with our comprehensive content delivery and storage solutions. 
+                    We help businesses store, optimize, and distribute their digital content globally, 
+                    ensuring maximum performance, security, and accessibility while enabling 
+                    rapid content scaling and seamless user experiences across all platforms.
                   </p>
                 </motion.div>
               </div>
             </div>
           </div>
         </section>
-
+        
         {/* Work Process Section */}
         <WorkProcess />
 
@@ -343,15 +389,16 @@ export default function SoftwareQATestingPage() {
               <div className="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
 
               <p className="text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
-                We empower businesses by delivering reliable, secure, and high-quality software through our expert QA and testing services. Our commitment is to ensure your applications perform flawlessly and meet the highest standards.
+                Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation.
               </p>
+
 
               {/* Commitment Items */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
                 {/* 100% Transparency */}
                 <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <CheckCircle className="w-8 h-8 text-blue-600" />
+                    <Eye className="w-8 h-8 text-blue-600" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     100% Transparency
@@ -377,7 +424,7 @@ export default function SoftwareQATestingPage() {
                 {/* Free 30 days support */}
                 <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Gift className="w-8 h-8 text-blue-600" />
+                    <Shield className="w-8 h-8 text-blue-600" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     Free 30 Days Support
@@ -390,7 +437,7 @@ export default function SoftwareQATestingPage() {
                 {/* Flexible Engagement */}
                 <div className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-100">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Shuffle className="w-8 h-8 text-blue-600" />
+                    <Users className="w-8 h-8 text-blue-600" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
                     Flexible Engagement
@@ -403,7 +450,7 @@ export default function SoftwareQATestingPage() {
             </div>
           </div>
         </section>
-
+        
         {/* Why Choose us Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -416,11 +463,13 @@ export default function SoftwareQATestingPage() {
             >
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                  Why Choose Us?
+                  Why Choose us ?
                 </h2>
                 <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
                 <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed mt-6">
-                  TechBrill delivers QA and testing services with a focus on precision, transparency, and measurable results. Our team is dedicated to your success, providing tailored solutions and ongoing support for every project.
+                  TechBrill is an IT consulting services company with a young, dynamic workforce delivering value to your business 
+                  through innovation and ingenuity. As a dedicated IT consulting service provider, we emphasize personalized strategies and 
+                  forward-thinking solutions tailored to your unique business challenges and objectives.
                 </p>
                 <p className="text-gray-900 font-semibold text-lg mt-4">
                   We are:
@@ -428,7 +477,7 @@ export default function SoftwareQATestingPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                {/* Point 001 - Experienced QA Engineers */}
+                {/* Point 001 - Seasoned Experts */}
                 <motion.div
                   className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8"
                   variants={fadeInUp}
@@ -438,15 +487,18 @@ export default function SoftwareQATestingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Experienced QA Engineers
+                      Seasoned Experts
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Our team brings years of experience in software testing, ensuring your applications meet the highest standards of quality and reliability.
+                      With a dedicated team of IT service consultants, we ensure that our IT 
+                      consulting and services help you get the maximum value for your 
+                      engagement with us, resulting in a long-lasting partnership we have 
+                      developed with 95% of our clients.
                     </p>
                   </div>
                 </motion.div>
 
-                {/* Point 002 - Detail-Oriented Approach */}
+                {/* Point 002 - Attention to Every Detail */}
                 <motion.div
                   className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 mt-12"
                   variants={fadeInUp}
@@ -456,15 +508,18 @@ export default function SoftwareQATestingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Detail-Oriented Approach
+                      Attention to Every Detail
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      We meticulously test every aspect of your software, leaving no stone unturned to ensure flawless performance and user satisfaction.
+                      Our IT support consulting experts and IT project management consultants, 
+                      specializing in technology consulting services, pay attention to every minor 
+                      requirement and assemble a solution to tackle your pain points most 
+                      effectively.
                     </p>
                   </div>
                 </motion.div>
 
-                {/* Point 003 - Transparent Communication */}
+                {/* Point 003 - Keeping Transparency Paramount */}
                 <motion.div
                   className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 pb-8"
                   variants={fadeInUp}
@@ -474,15 +529,17 @@ export default function SoftwareQATestingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Transparent Communication
+                      Keeping Transparency Paramount
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      We keep you informed at every stage, providing clear updates and actionable insights throughout the QA process.
+                      Believing in the ethos of an open work culture, we, as a leading IT 
+                      professional services provider, work alongside our clients, keeping them 
+                      updated about developments, ideas, and strategies.
                     </p>
                   </div>
                 </motion.div>
 
-                {/* Point 004 - Security Focused */}
+                {/* Point 004 - Enhanced Security */}
                 <motion.div
                   className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8 pb-8 mt-6"
                   variants={fadeInUp}
@@ -492,15 +549,18 @@ export default function SoftwareQATestingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Security Focused
+                      Enhanced Security
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Our QA experts prioritize security, identifying vulnerabilities and implementing best practices to safeguard your applications.
+                      Our IT services consultants specialize in identifying and mitigating security 
+                      threats within your network and systems. They work closely with your team 
+                      to develop innovative solutions, implement robust security measures, and 
+                      establish protocols to ensure continuous protection of your existing systems.
                     </p>
                   </div>
                 </motion.div>
 
-                {/* Point 005 - Client-Centric Solutions */}
+                {/* Point 005 - Client-Centric Approach */}
                 <motion.div
                   className="flex items-start space-x-6 p-6 border-t border-gray-300 pt-8"
                   variants={fadeInUp}
@@ -510,10 +570,13 @@ export default function SoftwareQATestingPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      Client-Centric Solutions
+                      Client-Centric Approach
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      We tailor our QA strategies to your unique business needs, ensuring solutions that drive value and long-term success.
+                      We prioritize your success by offering a client-centric approach. By deeply 
+                      understanding your business goals, we craft IT strategies that not only solve 
+                      immediate challenges but also position your organization for long-term 
+                      growth and sustainability.
                     </p>
                   </div>
                 </motion.div>
@@ -531,7 +594,10 @@ export default function SoftwareQATestingPage() {
                       Rapid Project Delivery
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      Our efficient processes and agile methodologies ensure your QA projects are completed quickly and effectively.
+                      We are committed to accelerating project timelines without compromising 
+                      quality. Our efficient processes and agile methodologies ensure that your IT 
+                      projects are completed quickly, allowing you to capitalize on new 
+                      opportunities and achieve your objectives sooner.
                     </p>
                   </div>
                 </motion.div>
@@ -540,11 +606,12 @@ export default function SoftwareQATestingPage() {
           </div>
         </section>
 
+        
         {/* Contact CTA Section */}
         <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Ensure Your Software Quality?</h2>
-            <p className="mb-6">Let us help you deliver flawless, high-performing software.</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
             <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
           </motion.div>
         </section>
@@ -554,4 +621,4 @@ export default function SoftwareQATestingPage() {
       </main>
     </ErrorBoundary>
   );
-} 
+}

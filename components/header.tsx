@@ -10,6 +10,7 @@ import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
 import { Switch } from "@/components/ui/switch"
+import { FaXTwitter } from 'react-icons/fa6'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -58,13 +59,13 @@ const navItems = [
       },
       {
         category: "Digital Content Solutions",
-        services: [ /* Add specific services here if available */],
+        href: "/services/digital-content-solutions",
+        services: [],
       }
     ],
   },
   { name: "Technologies", href: "/technologies" },
   { name: "Industries", href: "/industries" },
-  { name: "Projects", href: "/projects" },
   { name: "Company", href: "/company" },
 ]
 
@@ -73,11 +74,11 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [hoveredCategoryIndex, setHoveredCategoryIndex] = useState<number | null>(null);
-  
+
   // Add these new state variables for mobile menu dropdowns
   const [mobileDropdowns, setMobileDropdowns] = useState<Record<string, boolean>>({});
   const [mobileCategories, setMobileCategories] = useState<Record<string, boolean>>({});
-  
+
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
 
@@ -127,22 +128,21 @@ export default function Header() {
           </div>
           <div className="flex items-center space-x-4">
             {[
-              { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
-              { icon: <Twitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "Twitter" },
-              { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
               { icon: <Linkedin className="h-4 w-4" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
-
+              { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
+              { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
+              { icon: <Twitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "Twitter" }
             ].map((social, index) => (
-            <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
-              <Link
-                href={social.href}
-                className="text-white hover:text-gray-200 transition-colors"
-                aria-label={social.label}
-                target="_blank"
-              >
-                {social.icon}
-              </Link>
-            </motion.div>
+              <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
+                <Link
+                  href={social.href}
+                  className="text-white hover:text-gray-200 transition-colors"
+                  aria-label={social.label}
+                  target="_blank"
+                >
+                  {social.icon}
+                </Link>
+              </motion.div>
             ))}
             {mounted && (
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -263,18 +263,32 @@ export default function Header() {
                                 asChild
                                 onMouseEnter={() => setHoveredCategoryIndex(catIdx)}
                               >
-                                <Link
-                                  href="#"
-                                  className={cn(
-                                    "block px-3 py-2 rounded-md text-sm font-medium transition-colors flex justify-between items-center",
-                                    catIdx === hoveredCategoryIndex
-                                      ? "bg-gray-700 text-blue-500"
-                                      : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
-                                  )}
-                                >
-                                  {category.category}
-                                  <ChevronRight className="h-4 w-4 ml-2 text-gray-400" />
-                                </Link>
+                                {category.href ? (
+                                  <Link
+                                    href={category.href}
+                                    className={cn(
+                                      "flex px-3 py-2 rounded-md text-sm font-medium transition-colors justify-between items-center",
+                                      catIdx === hoveredCategoryIndex
+                                        ? "bg-gray-700 text-blue-500"
+                                        : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
+                                    )}
+                                  >
+                                    {category.category}
+                                  </Link>
+                                ) : (
+                                  <Link
+                                    href="#"
+                                    className={cn(
+                                      "flex px-3 py-2 rounded-md text-sm font-medium transition-colors justify-between items-center",
+                                      catIdx === hoveredCategoryIndex
+                                        ? "bg-gray-700 text-blue-500"
+                                        : "text-gray-200 hover:bg-gray-700 hover:text-blue-500"
+                                    )}
+                                  >
+                                    {category.category}
+                                    <ChevronRight className="h-4 w-4 ml-2 text-gray-400" />
+                                  </Link>
+                                )}
                               </NavigationMenuLink>
                             </li>
                           ))}
@@ -369,7 +383,7 @@ export default function Header() {
                 >
                   {item.dropdown ? (
                     <div>
-                      <div 
+                      <div
                         className="px-3 py-2 rounded-md text-base font-medium w-full text-gray-700 dark:text-gray-200 flex justify-between items-center cursor-pointer"
                         onClick={() => {
                           // Toggle visibility of this specific dropdown
@@ -382,41 +396,53 @@ export default function Header() {
                         {item.name}
                         <ChevronRight className={`h-4 w-4 transition-transform ${mobileDropdowns[item.name] ? 'rotate-90' : ''}`} />
                       </div>
-                      
+
                       {/* Only display categories when dropdown is active */}
                       {mobileDropdowns[item.name] && (
                         <div className="pl-6 mt-1 space-y-1 border-l-2 border-gray-200 dark:border-gray-700">
                           {item.dropdown.map((category, catIdx) => (
                             <div key={catIdx}>
-                              <div 
-                                className="px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 flex justify-between items-center cursor-pointer"
-                                onClick={() => {
-                                  // Toggle visibility of this specific category
-                                  setMobileCategories(prev => ({
-                                    ...prev,
-                                    [`${item.name}-${catIdx}`]: !prev[`${item.name}-${catIdx}`]
-                                  }));
-                                }}
-                              >
-                                {category.category}
-                                {category.services?.length > 0 && (
-                                  <ChevronRight className={`h-3 w-3 transition-transform ${mobileCategories[`${item.name}-${catIdx}`] ? 'rotate-90' : ''}`} />
-                                )}
-                              </div>
-                              
-                              {/* Display services under each category only when category is expanded */}
-                              {mobileCategories[`${item.name}-${catIdx}`] && category.services && category.services.length > 0 && (
-                                <div className="pl-4 space-y-1">
-                                  {category.services.map((service, srvIdx) => (
-                                    <Link
-                                      key={srvIdx}
-                                      href={service.href}
-                                      className="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
-                                      onClick={() => setIsMenuOpen(false)}
-                                    >
-                                      {service.name}
-                                    </Link>
-                                  ))}
+                              {category.href ? (
+                                <Link
+                                  href={category.href}
+                                  className="block px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  {category.category}
+                                </Link>
+                              ) : (
+                                <div>
+                                  <div
+                                    className="px-3 py-1 text-sm font-semibold text-gray-800 dark:text-gray-300 flex justify-between items-center cursor-pointer"
+                                    onClick={() => {
+                                      // Toggle visibility of this specific category
+                                      setMobileCategories(prev => ({
+                                        ...prev,
+                                        [`${item.name}-${catIdx}`]: !prev[`${item.name}-${catIdx}`]
+                                      }));
+                                    }}
+                                  >
+                                    {category.category}
+                                    {category.services?.length > 0 && (
+                                      <ChevronRight className={`h-3 w-3 transition-transform ${mobileCategories[`${item.name}-${catIdx}`] ? 'rotate-90' : ''}`} />
+                                    )}
+                                  </div>
+
+                                  {/* Display services under each category only when category is expanded */}
+                                  {mobileCategories[`${item.name}-${catIdx}`] && category.services && category.services.length > 0 && (
+                                    <div className="pl-4 space-y-1">
+                                      {category.services.map((service, srvIdx) => (
+                                        <Link
+                                          key={srvIdx}
+                                          href={service.href}
+                                          className="block px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400"
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          {service.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
                                 </div>
                               )}
                             </div>
@@ -440,7 +466,7 @@ export default function Header() {
                   )}
                 </motion.div>
               ))}
-              
+
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -473,10 +499,10 @@ export default function Header() {
               </div>
               <div className="flex space-x-4 mt-4">
                 {[
-                  { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
-              { icon: <Twitter className="h-5 w-5" />, href: "https://x.com/TechbrillS", label: "Twitter" },
-              { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
-              { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
+                  { icon: <Linkedin className="h-4 w-4" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
+                  { icon: <Instagram className="h-4 w-4" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
+                  { icon: <Facebook className="h-4 w-4" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
+                  { icon: <Twitter className="h-4 w-4" />, href: "https://x.com/TechbrillS", label: "Twitter" }
                 ].map((social, index) => (
                   <Link
                     key={index}

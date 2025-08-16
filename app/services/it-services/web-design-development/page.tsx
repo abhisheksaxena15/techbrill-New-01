@@ -263,44 +263,6 @@ export default function WebDesignDevelopmentPage() {
           </div>
         </section>
 
-
-        {/* Industries Section (custom, above Commitment & Guarantee)
-        <section className="relative py-0 px-0 w-full min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover" style={{ backgroundImage: 'url(/images/services/web-design-hero.jpg)' }}>
-          <div className="absolute inset-0 bg-black/60 z-0" />
-          <div className="relative z-10 w-full max-w-none">
-            <div className="text-center pt-24 pb-20">
-              <h2 className="text-4xl font-extrabold text-white tracking-tight mb-2">INDUSTRIES</h2>
-              <p className="text-base text-white font-medium max-w-2xl mx-auto">As a leading tech partner, we excel in offering custom solutions for various industries, ensuring great versatility and the ability to cater to diverse business needs.</p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-0 w-full">
-              {[
-                { label: 'AUTOMOTIVE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2' /><circle cx='7.5' cy='17.5' r='2.5' /><circle cx='16.5' cy='17.5' r='2.5' /></svg> },
-                { label: 'REAL ESTATE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M3 21V9a2 2 0 012-2h14a2 2 0 012 2v12' /><path d='M9 22V12h6v10' /></svg> },
-                { label: 'ENTERTAINMENT', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M8 7V5a4 4 0 018 0v2' /></svg> },
-                { label: 'RETAIL & ECOMMERCE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='17' cy='17' r='2' /><circle cx='7' cy='17' r='2' /><path d='M5 6h14l1 7H4z' /></svg> },
-                { label: 'HEALTHCARE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M12 2a10 10 0 100 20 10 10 0 000-20z' /><path d='M12 6v6l4 2' /></svg> },
-                { label: 'TRANSPORTATION', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M2 17h20' /><path d='M6 17v2' /><path d='M18 17v2' /></svg> },
-                { label: 'MANUFACTURING', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='12' cy='12' r='3' /><path d='M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33h.09a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51h.09a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.09a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z' /></svg> },
-                { label: 'TRAVEL & TOURISM', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M21 16V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8' /><path d='M3 16v2a2 2 0 002 2h14a2 2 0 002-2v-2' /></svg> },
-                { label: 'PROFESSIONAL SERVICES', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='12' cy='12' r='10' /><path d='M8 12h8' /><path d='M12 8v8' /></svg> },
-                { label: 'SOFTWARE VENDORS', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M2 17h20' /><path d='M6 17v2' /><path d='M18 17v2' /></svg> },
-                { label: 'BANKING & FINANCE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M2 17h20' /><path d='M6 17v2' /><path d='M18 17v2' /></svg> },
-                { label: 'EDUCATION', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='12' cy='12' r='10' /><path d='M8 12h8' /><path d='M12 8v8' /></svg> },
-              ].map((item, idx) => (
-                <div
-                  key={item.label}
-                  className={
-                    `flex flex-col items-center justify-center min-h-[140px] md:min-h-[180px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900`
-                  }
-                >
-                  <span className={`mb-2 text-blue-900 group-hover:text-white transition-all duration-200`}>{item.icon}</span>
-                  <span className={`font-extrabold text-base md:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200`}>{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
         {/* 6. Dev Process Section */}
         <WorkProcess />
 

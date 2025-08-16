@@ -1,81 +1,114 @@
 import React from "react";
 import {
-  FaHeartbeat,
-  FaMoneyBillWave,
-  FaUtensils,
-  FaShoppingCart,
-  FaCarBattery,
-  FaCloud,
-  FaPlaneDeparture,
-  FaMusic,
-  FaUserFriends,
-  FaComments,
-  FaTruckMoving,
-  FaBookOpen,
-} from "react-icons/fa";
-import AnimatedText from "./animated-text";
-
-const industries = [
-  { label: "Healthcare", icon: <FaHeartbeat size={28} /> },
-  { label: "Finance", icon: <FaMoneyBillWave size={28} /> },
-  { label: "Restaurant", icon: <FaUtensils size={28} /> },
-  { label: "eCommerce", icon: <FaShoppingCart size={28} /> },
-  { label: "Electric Vehicle (EV)", icon: <FaCarBattery size={28} /> },
-  { label: "SaaS", icon: <FaCloud size={28} /> },
-  { label: "Travel", icon: <FaPlaneDeparture size={28} /> },
-  { label: "Entertainment", icon: <FaMusic size={28} /> },
-  { label: "On-Demand", icon: <FaUserFriends size={28} /> },
-  { label: "Social Media", icon: <FaComments size={28} /> },
-  { label: "Logistics", icon: <FaTruckMoving size={28} /> },
-  { label: "Education", icon: <FaBookOpen size={28} /> },
-];
+  Car,
+  CreditCard,
+  GraduationCap,
+  BookOpen,
+  Heart,
+  ShoppingBag,
+  ShoppingCart,
+  Plane,
+  Truck,
+  HomeIcon,
+  Monitor,
+  Cpu
+} from "lucide-react";
 
 export default function IndustriesSection() {
   return (
-    <section className="bg-gray-50 dark:bg-black py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+    <section
+      className="relative py-0 px-0 w-full min-h-[60vh] md:min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover"
+      style={{ backgroundImage: 'url(/images/services/mobile-app-hero.jpg)' }}
+    >
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      <div className="relative z-10 w-full max-w-none">
+        <div className="text-center pt-8 md:pt-12 pb-6 md:pb-8">
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-500">
             Industry Expertise
           </h3>
-          <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-            Serving <span className="italic text-blue-800 dark:text-blue-200">Key Industries</span> with Tailored Technology Solutions
+          <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white md:text-4xl">
+            Providing High-performance Solutions Of <span className="italic text-blue-500">Digital Marketing</span>
           </h2>
-          <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4 mb-6"></div>
-          <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-            A Unified Vision That Caters To Diverse Industry Demands
+          <div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-6"></div>
+          <p className="max-w-xl mx-auto text-gray-300 text-base">
+            Explore our result-driven digital marketing services designed to boost brand visibility, attract customers, and accelerate business growth in today’s fast-paced digital world.
           </p>
         </div>
-
-        <div className="flex justify-end mb-8 gap-4">
-          {/* <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white">
-            A Unified Vision That Caters To
-            <br />
-            Diverse Industry Demands
-          </h3> */}
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded transition self-start md:self-auto">
-            Explore More In Industries
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {industries.map((industry, idx) => (
-            <button
-              key={industry.label}
-              className="flex flex-col items-center justify-center border border-blue-100 dark:border-gray-700 
-                rounded-lg py-8 px-2 transition text-gray-800 dark:text-white bg-white 
-                dark:bg-transparent shadow-sm hover:shadow-md
-                hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 
-                dark:hover:bg-white/10 hover:scale-105 group"
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-0 w-full">
+          {[
+            {
+              label: 'Automotive',
+              icon: <Car className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'AI-driven design automation, predictive maintenance, and autonomous systems.'
+            },
+            {
+              label: 'Banking & Finance',
+              icon: <CreditCard className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Automated reporting, risk assessment, and personalized financial services.'
+            },
+            {
+              label: 'Education',
+              icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Personalized learning paths, automated assessment, and content generation.'
+            },
+            {
+              label: 'Publishing',
+              icon: <BookOpen className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Content creation, editing automation, and personalized publishing.'
+            },
+            {
+              label: 'Healthcare',
+              icon: <Heart className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Medical imaging analysis, drug discovery, and patient care optimization.'
+            },
+            {
+              label: 'Retail',
+              icon: <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Inventory optimization, customer experience, and demand forecasting.'
+            },
+            {
+              label: 'eCommerce',
+              icon: <ShoppingCart className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Product recommendations, dynamic pricing, and personalized marketing.'
+            },
+            {
+              label: 'Travel',
+              icon: <Plane className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Route optimization, customer service automation, and experience personalization.'
+            },
+            {
+              label: 'Logistics & Transportation',
+              icon: <Truck className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Supply chain optimization, route planning, and predictive maintenance.'
+            },
+            {
+              label: 'Real Estate',
+              icon: <HomeIcon className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Property valuation, market analysis, and virtual property tours.'
+            },
+            {
+              label: 'Media & Entertainment',
+              icon: <Monitor className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Content creation, audience analytics, and personalized recommendations.'
+            },
+            {
+              label: 'Hi-Tech',
+              icon: <Cpu className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+              desc: 'Product development, quality assurance, and innovation acceleration.'
+            },
+          ].map((item, idx) => (
+            <div
+              key={item.label}
+              className="flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px] md:min-h-[180px] lg:min-h-[200px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900 px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8"
             >
-              <span className="mb-2 transition-colors text-blue-600 dark:text-white 
-                group-hover:text-blue-700 dark:group-hover:text-blue-300">
-                {industry.icon}
+              <span className="mb-2 transition-all duration-200">{item.icon}</span>
+              <span className="font-extrabold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center">
+                {item.label}
               </span>
-              <span className="font-semibold transition-colors group-hover:text-blue-700 dark:group-hover:text-blue-300">
-                {industry.label}
+              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 group-hover:text-white text-center mt-1 px-1 sm:px-2">
+                {item.desc}
               </span>
-            </button>
+            </div>
           ))}
         </div>
       </div>

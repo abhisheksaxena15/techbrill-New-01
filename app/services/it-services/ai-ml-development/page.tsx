@@ -10,7 +10,7 @@ import { Icon } from '@iconify/react';
 import ServicesSection from '@/components/ui/services-section-AI&ML';
 import { cn } from '@/lib/utils';
 import ConsultationSection from '@/components/ConsultationSection';
-import TechStackSection from '@/components/ui/tempeffect';
+import TechStackSection from '@/components/ui/TechStack-AI';
 import { ExpandableCardDemo } from '@/components/ui/AI-development-roadmap';
 
 // Animation variants
@@ -159,7 +159,10 @@ export default function AIMlDevelopmentPage() {
         <ServicesSection />
      
         {/* 6. AI DEV Process Section */}
+        <section className = "py-20 px-6 md:px-16 bg-white dark:bg-gray-950">
         {<ExpandableCardDemo/>}
+        </section>
+        
 
         {/*7. AI tech stack section */}
         <TechStackSection/>
