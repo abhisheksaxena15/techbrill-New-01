@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { motion } from "framer-motion"
-import AnimatedSection from "./animated-section"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./animated-section";
 
 export default function ServicesOverview() {
   const services = [
@@ -14,7 +14,7 @@ export default function ServicesOverview() {
         "Crafting elegant, user-first web experiences with responsive design, seamless functionality, and optimized performance to engage your audience across all devices.",
       icon: "monitor",
       image: "/images/services/web-design-hero.jpg",
-      link: "/services#web",
+      link: "/services/it-services/web-design-development",
     },
     {
       title: "Mobile App Development",
@@ -22,7 +22,7 @@ export default function ServicesOverview() {
         "Building exclusive and reliable native and cross-platform mobile applications that connect, inspire, and engage users on the go with intuitive interfaces and powerful features.",
       icon: "smartphone",
       image: "/images/services/mobile-app-hero.jpg",
-      link: "/services#mobile",
+      link: "/services/it-services/mobile-app-development",
     },
     {
       title: "AI & ML Development",
@@ -30,7 +30,7 @@ export default function ServicesOverview() {
         "Empowering businesses with intelligent, scalable AI and ML technologies that transform data into actionable insights, automate processes, and drive innovation.",
       icon: "brain",
       image: "/images/services/ai-ml-hero.jpg",
-      link: "/services#ai-ml",
+      link: "/services/it-services/ai-ml-development",
     },
     {
       title: "Software QA & Testing",
@@ -38,15 +38,15 @@ export default function ServicesOverview() {
         "Ensuring quality and reliability in every line of code through comprehensive testing strategies that identify and resolve issues before they impact users.",
       icon: "refresh-cw",
       image: "/images/services/qa-testing-hero.jpg",
-      link: "/services#software-qa-testing",
+      link: "/services/it-services/software-qa-testing",
     },
     {
-      title: "Digital Marketing",
+      title: "Digital Content Solutions",
       description:
         "Driving brand growth through strategic digital campaigns, SEO, social media, and data-driven marketing to boost visibility, engagement, and conversions.",
       icon: "file-text",
       image: "/images/services/digital-marketing-hero.jpg",
-      link: "/services#digital-marketing",
+      link: "/services/digital-content-solutions",
     },
     {
       title: "IT Consultancy",
@@ -54,9 +54,9 @@ export default function ServicesOverview() {
         "Providing expert guidance and support to help businesses navigate the complex IT landscape, optimize their technology investments, and achieve their strategic goals.",
       icon: "trending-up",
       image: "/images/services/it-consultancy-hero.jpg",
-      link: "/services#it-consultancy",
+      link: "/services/it-services/it-consultancy",
     },
-  ]
+  ];
 
   return (
     <section className="py-12 md:py-16 px-4 bg-white dark:bg-gray-900">
@@ -68,18 +68,14 @@ export default function ServicesOverview() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-
-              <div className="text-center mb-8 md:mb-12">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">What We Offer</h3>
-                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                  We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
-                </h2>
-                <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-                <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                  We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
-                </p>
-              </div>
-
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">What We Offer</h3>
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
+              </h2>
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
+              </p>
             </motion.div>
           </div>
         </AnimatedSection>
@@ -166,7 +162,7 @@ export default function ServicesOverview() {
                     <motion.div
                       className="ml-2"
                       animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+                      transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
                     >
                       <ArrowRight className="h-4 w-4" />
                     </motion.div>
@@ -178,5 +174,5 @@ export default function ServicesOverview() {
         </div>
       </div>
     </section>
-  )
+  );
 }

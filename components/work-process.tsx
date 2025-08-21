@@ -39,7 +39,13 @@ export default function WorkProcess() {
           <h2 className="text-neutral-800 text-3xl md:text-4xl font-semibold mt-2 mb-2">
             Check Out Our Work <span className="italic text-blue-700">Process</span>
           </h2>
-          <div className="mx-auto w-16 h-1 bg-blue-700 rounded mt-2"></div>
+          <p className="max-w-xl mx-auto text-gray-300 text-base">
+          
+          </p>
+          <div className="mx-auto w-16 h-1 bg-blue-700 rounded mt-6"></div>
+          <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            Explore our result-driven digital marketing services designed to boost brand visibility, attract customers, and accelerate business growth in today’s fast-paced digital world.
+          </p>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {steps.map((step, idx) => (

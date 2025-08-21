@@ -103,7 +103,7 @@ const AdvancedServices = () => {
             Transforming business with latest <span className="italic text-blue-800 dark:text-blue-200">Trends & Technologies</span>
           </h2>
           <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-          <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+          <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             We leverage the latest technologies to build new solutions and modernize existing ones, helping you overcome market challenges and stay ahead in the digital race.
           </p>
         </div>
