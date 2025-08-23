@@ -4,7 +4,7 @@ import { createNoise3D } from "simplex-noise";
 import { motion } from "motion/react";
 
 interface VortexProps {
-  children?: any;
+  children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
   particleCount?: number;
@@ -40,7 +40,8 @@ export const Vortex = (props: VortexProps) => {
   let tick = 0;
   const noise3D = createNoise3D();
   let particleProps = new Float32Array(particlePropsLength);
-  let center: [number, number] = [0, 0];
+  const center = React.useMemo(() => [0, 0], []);
+  const [internalCenter, setInternalCenter] = React.useState<[number, number]>([0, 0]);
 
   const HALF_PI: number = 0.5 * Math.PI;
   const TAU: number = 2 * Math.PI;
@@ -66,7 +67,8 @@ export const Vortex = (props: VortexProps) => {
     }
   };
 
-  const draw = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
+
+  const draw = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
     tick++;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -79,8 +81,7 @@ export const Vortex = (props: VortexProps) => {
     renderToScreen(canvas, ctx);
 
     window.requestAnimationFrame(() => draw(canvas, ctx));
-  };
-
+  }, [backgroundColor, drawParticles, renderGlow, renderToScreen, tick]);
   const resize = useCallback((
     canvas: HTMLCanvasElement,
     ctx?: CanvasRenderingContext2D
@@ -90,9 +91,8 @@ export const Vortex = (props: VortexProps) => {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
 
-    center[0] = 0.5 * canvas.width;
-    center[1] = 0.5 * canvas.height;
-  }, [center]);
+    setInternalCenter([0.5 * canvas.width, 0.5 * canvas.height]);
+  }, [setInternalCenter]);
 
   const setup = useCallback(() => {
     const canvas = canvasRef.current;
@@ -106,7 +106,7 @@ export const Vortex = (props: VortexProps) => {
         draw(canvas, ctx);
       }
     }
-  }, [resize, draw, initParticles]);
+  }, [resize, initParticles, draw]);
 
   const initParticle = (i: number) => {
     const canvas = canvasRef.current;
@@ -115,7 +115,7 @@ export const Vortex = (props: VortexProps) => {
     let x, y, vx, vy, life, ttl, speed, radius, hue;
 
     x = rand(canvas.width);
-    y = center[1] + randRange(rangeY);
+    y = internalCenter[1] + randRange(rangeY);
     vx = 0;
     vy = 0;
     life = 0;
@@ -261,3 +261,4 @@ export const Vortex = (props: VortexProps) => {
     </div>
   );
 };
+
