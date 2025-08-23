@@ -6,36 +6,47 @@ import ConsultationSection from "@/components/ConsultationSection";
 import AnimatedText from "@/components/animated-text";
 import AnimatedSection from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Car, Building2, GraduationCap, BookOpen, Heart, ShoppingCart, Globe, Truck, Home, Film, Cpu , ChevronDown } from 'lucide-react';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from 'react';
 
 const bannerImage = "/images/hero-background.jpg";
-const infoImage = "/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg";
+const infoImage = "/images/services/jimmy-desplanques-yt5sOD8Yw9I-unsplash.jpg";
 
 const benefits = [
   {
-    title: "Industry Expertise",
-    description: "Deep experience across healthcare, finance, education, retail, and more.",
-    icon: "💡",
+    icon: "🎯",
+    title: "Domain Expertise",
+    description: "Deep understanding of multiple industries and compliance requirements."
   },
   {
-    title: "Tailored Solutions",
-    description: "Custom strategies and technology for every business challenge.",
-    icon: "🛠️",
+    icon: "⚙️",
+    title: "Customized Solutions",
+    description: "Tailored IT strategies aligned with unique business needs."
   },
   {
-    title: "End-to-End Support",
-    description: "From ideation to launch and beyond, we’re with you at every step.",
-    icon: "🤝",
-  },
-  {
-    title: "Proven Results",
-    description: "A track record of successful digital transformation for diverse clients.",
     icon: "🏆",
+    title: "Proven Track Record",
+    description: "Successful delivery of projects for global clients."
   },
+  {
+    icon: "✅",
+    title: "Quality & Reliability",
+    description: "Rigorous testing and assurance at every stage."
+  },
+  {
+    icon: "📈",
+    title: "Scalable & Future-Ready",
+    description: "Solutions designed to grow with your business."
+  },
+  {
+    icon: "🤝",
+    title: "Continuous Support",
+    description: "Dedicated post-deployment optimization and assistance."
+  }
 ];
+
 
 const industries = [
   {
@@ -44,7 +55,7 @@ const industries = [
     description: 'Driving innovation in vehicle manufacturing, autonomous systems, and mobility solutions for the future of transportation.',
     imageUrl: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/automotive',
-    
+    icon: Car,
     color: 'bg-blue-50 text-blue-600'
   },
   {
@@ -53,6 +64,7 @@ const industries = [
     description: 'Transforming financial services with digital solutions, secure payment systems, and innovative fintech platforms.',
     imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/banking-finance',
+    icon: Building2,
     color: 'bg-green-50 text-green-600'
   },
   {
@@ -61,6 +73,7 @@ const industries = [
     description: 'Empowering learning through innovative educational technologies, e-learning platforms, and digital classroom solutions.',
     imageUrl: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/education',
+    icon: GraduationCap,
     color: 'bg-purple-50 text-purple-600'
   },
   {
@@ -69,6 +82,7 @@ const industries = [
     description: 'Revolutionizing content creation and distribution in the digital publishing landscape with modern solutions.',
     imageUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/publishing',
+    icon: BookOpen,
     color: 'bg-orange-50 text-orange-600'
   },
   {
@@ -77,6 +91,7 @@ const industries = [
     description: 'Advancing patient care through cutting-edge medical technologies, telemedicine, and healthcare management systems.',
     imageUrl: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/healthcare',
+    icon: Heart,
     color: 'bg-red-50 text-red-600'
   },
   {
@@ -85,6 +100,7 @@ const industries = [
     description: 'Enhancing customer experiences through omnichannel retail solutions, inventory management, and customer analytics.',
     imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/retail',
+    icon: ShoppingCart,
     color: 'bg-pink-50 text-pink-600'
   },
   {
@@ -93,6 +109,7 @@ const industries = [
     description: 'Building scalable online marketplaces, digital commerce platforms, and comprehensive shopping experiences.',
     imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/ecommerce',
+    icon: Globe,
     color: 'bg-indigo-50 text-indigo-600'
   },
   {
@@ -101,6 +118,7 @@ const industries = [
     description: 'Creating seamless travel experiences through innovative booking systems, travel management, and hospitality solutions.',
     imageUrl: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/travel',
+    icon: Globe,
     color: 'bg-cyan-50 text-cyan-600'
   },
   {
@@ -109,6 +127,7 @@ const industries = [
     description: 'Optimizing supply chain efficiency with smart logistics, fleet management, and transportation solutions.',
     imageUrl: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/logistics',
+    icon: Truck,
     color: 'bg-yellow-50 text-yellow-600'
   },
   {
@@ -117,6 +136,7 @@ const industries = [
     description: 'Modernizing property management, real estate transactions, and property valuation with innovative digital tools.',
     imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/real-estate',
+    icon: Home,
     color: 'bg-emerald-50 text-emerald-600'
   },
   {
@@ -125,6 +145,7 @@ const industries = [
     description: 'Delivering engaging content experiences across multiple digital platforms, streaming services, and media production.',
     imageUrl: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/media-entertainment',
+    icon: Film,
     color: 'bg-violet-50 text-violet-600'
   },
   {
@@ -133,6 +154,7 @@ const industries = [
     description: 'Pioneering next-generation technologies, innovative software solutions, and cutting-edge technological advancement.',
     imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop&auto=format',
     readMoreUrl: '/industries/hi-tech',
+    icon: Cpu,
     color: 'bg-slate-50 text-slate-600'
   }
 ];
@@ -140,20 +162,75 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <>
+      <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
+          <Image src={bannerImage} alt="Generative AI Hero" fill className="object-cover object-center z-0" priority />
+          {/* Dark Linear Gradient Overlay with Blur */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
+          {/* Centered Content */}
+          <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
+            <motion.h1
+              className="font-bold text-4xl sm:text-5xl text-white mb-4"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+             Industries
+            </motion.h1>
+            <motion.p
+              className="text-lg text-gray-300 mb-8 max-w-xl text-center"
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+            >
+              Empowering Industries with Future-Ready IT Solutions
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 w-full justify-center"
+              initial="hidden"
+              animate="visible"
+              variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Get Started</Button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">Explore Industries</Button>
+              </motion.div>
+            </motion.div>
+          </div>
+          {/* Scroll Down Indicator (if space allows) */}
+          <motion.div
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+          >
+            <ChevronDown className="w-7 h-7 text-white opacity-80" />
+          </motion.div>
+        </section>
+
       {/* Light Info Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl">
             <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
-              Industry Solutions
+              Industry Expertise
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-white">
-              Digital Innovation for Every Sector
+              Empowering Businesses with Customized IT Solutions
             </h2>
             <div className="w-20 h-1 bg-primary mb-6"></div>
             <p className="mb-8 text-gray-700 text-base dark:text-white">
-              We deliver innovative, scalable, and secure technology solutions for organizations across a wide range of industries, helping them achieve operational excellence and business growth. Our team crafts custom strategies and digital products to solve your unique business challenges.
+              We deliver tailored IT solutions designed to address the unique challenges of diverse industries. From healthcare and finance to retail, education, and manufacturing, our expertise ensures scalable, secure, and future-ready technology that drives efficiency and growth. With deep domain knowledge and innovative approaches, we empower businesses to achieve digital transformation across sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
@@ -179,41 +256,36 @@ export default function IndustriesPage() {
         </div>
       </section>
       {/* Hero Banner */}
-      {/* <section className="relative w-full h-[380px] md:h-[420px] flex items-center justify-center overflow-hidden">
-        <Image
-          src={bannerImage}
-          alt="Industries Banner Background"
-          fill
-          className="absolute inset-0 w-full h-full object-cover object-center scale-105 blur-sm"
-          style={{ zIndex: 1 }}
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" style={{ zIndex: 2 }} />
-        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-            Industries We Empower
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
-            Digital transformation and tailored technology for every sector.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
-              Get Started
-            </Button>
-            <Button size="lg" variant="outline" className="bg-white/90 text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-white">
-              Explore Industries
-            </Button>
-          </div>
-        </div>
-      </section> */}
+
 
       {/* Industries Grid */}
       {/* <IndustriesSection /> */}
 
       <div className="w-full bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 py-12">
+          {/* <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Delivering innovative solutions across diverse industries with expertise and commitment to excellence.
+            </p>
+          </div> */}
+
+          <div className="text-center mb-12">
+            <h3 className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+              Industry Expertise
+            </h3>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
+              Transforming Challenges Into Opportunities Across Industries
+            </h2>
+            <div className="h-1 w-20 bg-blue-700 mx-auto mt-4 mb-6"></div>
+            <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+              With deep domain expertise and innovative technologies, we help businesses across diverse industries achieve efficiency, scalability, and digital transformation.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry) => {
+              const IconComponent = industry.icon;
               return (
                 <div
                   key={industry.id}
@@ -231,13 +303,18 @@ export default function IndustriesPage() {
 
                   {/* Content Section */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                      {industry.title}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm">
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                        {industry.title}
+                      </h3>
+                    </div>
 
-                    <p className="text-gray-600 leading-relaxed mb-4 text-sm line-clamp-3">
+                    <p className="text-gray-600 leading-relaxed text-sm">
                       {industry.description}
-                    </p>                  
+                    </p>
                   </div>
                 </div>
               );
@@ -246,33 +323,6 @@ export default function IndustriesPage() {
         </div>
       </div>
 
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="container">
-          <div className="text-center mb-12">
-            <AnimatedText
-              text="Why Choose Techbrill?"
-              className="text-2xl sm:text-3xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-white"
-            />
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="max-w-xl mx-auto text-gray-700 dark:text-white text-base">
-              We believe our growth depends on our clients&apos; growth. Here are a few reasons to partner with us for your next project.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {benefits.map((item, idx) => (
-              <AnimatedSection key={idx} animation="scale" delay={0.05 * idx}>
-                <div className="bg-white p-8 rounded-xl shadow-sm flex flex-col items-center text-center border border-gray-100 h-full">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700 text-sm">{item.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/*Service process section*/}
 
@@ -285,14 +335,14 @@ export default function IndustriesPage() {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
-                Our sevices at a Glance
+                Our Proven Process
               </span>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-                Our Service <span className="italic text-blue-800 dark:text-blue-200">Process</span>
+                Delivering Value Through Tailored IT Solutions
               </h2>
               <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
               <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                We follow a structured approach to ensure that every project is delivered with the highest quality standards and meets your business objectives.
+                We combine industry insight with a proven process to ensure efficiency, reliability, and ongoing support, driving measurable success across industries.
               </p>
             </motion.div>
           </div>
@@ -354,7 +404,6 @@ export default function IndustriesPage() {
                     <a href="/contact">
                       Contact Our Team
                     </a>
-
                   </Button>
 
                 </div>
@@ -363,6 +412,60 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
+
+
+
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container">
+
+
+          <div className="text-center mb-12">
+            <h3 className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+              Why Choose Us
+            </h3>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
+              Why Businesses Across Industries Trust Us
+            </h2>
+            <div className="h-1 w-20 bg-blue-700 mx-auto mt-4 mb-6"></div>
+            <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+              We bring together domain expertise, cutting-edge technology, and proven delivery methods to provide IT solutions that create lasting value across diverse industries
+            </p>
+          </div>
+
+
+
+          {/* 3x2 Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {benefits.map((item, idx) => (
+              <AnimatedSection key={idx} animation="scale" delay={0.05 * idx}>
+                <div className="group bg-white dark:bg-gray-800 p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 md:hover:shadow-xl md:hover:shadow-blue-100 md:dark:hover:shadow-blue-900/20 md:hover:-translate-y-2 md:hover:border-primary/30 md:cursor-pointer active:scale-95 touch-manipulation">
+                  {/* Icon with hover effect */}
+                  <div className="text-4xl mb-4 transform transition-transform duration-300 md:group-hover:scale-110 md:group-hover:rotate-3">
+                    {item.icon}
+                  </div>
+
+                  {/* Title with hover color change */}
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white md:group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed md:group-hover:text-gray-800 md:dark:group-hover:text-gray-200 transition-colors duration-300">
+                    {item.description}
+                  </p>
+
+                  {/* Optional: Add a subtle background gradient on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Consultation/CTA Section */}
       <ConsultationSection />
