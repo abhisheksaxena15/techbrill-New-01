@@ -75,7 +75,7 @@ export default function ServicesOverview() {
                   We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
                 </h2>
                 <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-                <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
                   We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
                 </p>
               </div>

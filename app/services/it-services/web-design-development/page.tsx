@@ -167,11 +167,11 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-lg font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
                 Technologies We Use
               </h3>
-              <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Driven by bold ideas, delivered through robust <span className="text-blue-700">Tech Stacks</span>
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                Driven by bold ideas, delivered through robust <span className="text-blue-800 italic">Tech Stacks</span>
               </h2>
               <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
               {/* Change: Wrapped the h3 tag in a new flex container to control its width
@@ -179,7 +179,7 @@ export default function WebDesignDevelopmentPage() {
     */}
               <div className="flex justify-center mt-4">
                 {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
-                <h3 className=" text-xs text-gray-600  md:text-lg  max-w-3xl mx-auto mt-1 leading-relaxed">
+                <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
                   We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.
                 </h3>
               </div>
@@ -270,17 +270,17 @@ export default function WebDesignDevelopmentPage() {
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
-              <h3 className="text-sm font-semibold tracking-wide text-blue-800 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
                 ASSURANCE TO YOU
               </h3>
 
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Our <span className="text-blue-700 italic">Commitment and Guarantee</span>
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                Our <span className="text-blue-800 italic">Commitment and Guarantee</span>
               </h2>
 
-              <div className="h-1 w-20 bg-blue-800 dark:bg-blue-800 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-600 mx-auto mt-3 mb-2"></div>
 
-              <p className= " text-xs text-gray-600  md:text-lg  max-w-3xl mx-auto mt-6 leading-relaxed">
+              <p className=" text-base text-gray-600   max-w-xl mx-auto mt-1 leading-relaxed">
                 We stand behind our work with a promise of quality, transparency, and reliability.  From first consultation to post-launch support, we ensure your website meets expectations, delivers results, and drives your success
               </p>
 
@@ -343,24 +343,24 @@ export default function WebDesignDevelopmentPage() {
         </section>
 
 
-        
+
 
         {/* Work process section
         <section className="py-20 px-6 md:px-16 bg-white">
           {/* WorkProcess Component */}
-          {/* <WorkProcess />
-        </section> */} 
+        {/* <WorkProcess />
+        </section> */}
 
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <h3 className="text-sm font-semibold tracking-wide text-blue-800 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
                 WHY TECHBRILL
               </h3>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Few Good Reason to <span className="text-blue-800 italic">Choose Us</span></h2>
-              <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-400 via-blue-800 to-blue-400 rounded-full mb-4" />
-              <p className="text-gray-600 max-w-5xl mx-auto text-base md:text-lg font-medium">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Few Good Reason to <span className="text-blue-800 italic">Choose Us</span></h2>
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-600 mx-auto mt-3 mb-2"></div>              
+              <p className="text-base text-gray-600   max-w-2xl mx-auto mt-1 leading-relaxed">
                 Customer satisfaction is our top priority, backed by consistent quality, ongoing innovation, and continuous improvement. We value fairness, transparency, and integrity in everything we do. What sets us apart in the digital landscape includes.
               </p>
             </div>

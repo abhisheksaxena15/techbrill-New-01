@@ -283,17 +283,17 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
 
       <div className="text-center mb-10">
         <motion.h2
-          className="text-3xl md:text-4xl font-extrabold mb-2 text-gray-900"
+          className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          Our <span className="text-blue-700 italic">Work Process</span> to Build Digital Success
+          Our <span className="text-blue-800 italic ">Work Process</span> to Build Digital Success
         </motion.h2>
-        <div className="w-20 h-1 bg-blue-600 mx-auto mb-4 rounded-full" />
+        <div className="w-20 h-1 bg-blue-600 mx-auto mb-3 rounded-full mt-3" />
         <motion.p
-          className="text-gray-600 max-w-xl mx-auto"
+          className="text-base text-gray-600   max-w-xl mx-auto mt-1 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
