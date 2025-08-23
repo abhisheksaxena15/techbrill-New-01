@@ -1,61 +1,59 @@
-"use client"
+"use client";
 
-import React, { useRef, useEffect, useState, useCallback } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
-import { motion, useAnimation } from "framer-motion"
+import React, { useRef, useEffect, useState, useCallback } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, useAnimation } from "framer-motion";
 
 export default function FastGrowingServices() {
   const services = [
     {
       title: "Search Engine Optimization",
-      description: "Boost your online visibility and drive organic traffic with our data-driven SEO strategies.",
+      description:
+        "Improve your website's visibility in search engine results pages (SERPs) and drive organic traffic.",
       icon: "/icons/search.svg",
       image: "/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg",
-      link: "/services#seo",
+      link: "/services/digital-marketing/search-engine-optimization",
     },
     {
       title: "Social Media Marketing",
-      description: "We offer Social Media Optimization services to boost visibility, engagement, and reach.",
+      description:
+        "Build brand awareness, engage with your audience, and drive leads through strategic social media campaigns.",
       icon: "/icons/share-2.svg",
       image: "/images/services/social-media-marketing-hero.avif",
-      link: "/services#social-media-marketing",
+      link: "/services/digital-marketing/social-media-marketing",
     },
     {
       title: "Content Marketing",
-      description: "Create compelling content that resonates with your audience and drives conversions.",
+      description:
+        "Create and distribute valuable, relevant, and consistent content to attract and retain a clearly defined audience.",
       icon: "/icons/file-text.svg",
       image: "/images/services/myriam-jessier-eveI7MOcSmw-unsplash.jpg",
-      link: "/services#content",
-    },
-    {
-      title: "Paid Advertising",
-      description: "Maximize your ROI with targeted paid advertising campaigns across multiple platforms.",
-      icon: "/icons/trending-up.svg",
-      image: "/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg",
-      link: "/services#paid-advertising",
-    },
-    {
-      title: "Web Analytics",
-      description: "Gain valuable insights into your website performance and user behavior.",
-      icon: "/icons/bar-chart.svg",
-      image: "/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg",
-      link: "/services#web-analytics",
+      link: "/services/digital-marketing/content-marketing",
     },
     {
       title: "Design & Print Media",
-      description: "We offer graphic design and print solutions to create impactful visuals for brand identity.",
+      description:
+        "Create visually appealing designs for both digital and print media to enhance your brand identity.",
       icon: "/icons/pen-tool.svg",
       image: "/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg",
-      link: "/services#design-print-media",
+      link: "/services/digital-marketing/design-print-media",
+    },
+    {
+      title: "Web Analytics",
+      description:
+        "Track, analyze, and report on website traffic to gain insights and make data-driven decisions.",
+      icon: "/icons/bar-chart.svg",
+      image: "/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg",
+      link: "/services/digital-marketing/web-analytics",
     },
   ];
 
   const containerRef = useRef<HTMLDivElement | null>(null);
   const containerControls = useAnimation();
   const cardControls = useAnimation();
-  
+
   const [currentOffset, setCurrentOffset] = useState(0);
   const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
   const [cardWidth, setCardWidth] = useState(320); // Default card width
@@ -66,20 +64,21 @@ export default function FastGrowingServices() {
   const calculateConstraints = useCallback(() => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;
-      const totalContentWidth = (services.length * cardWidth) + ((services.length - 1) * gapWidth);
+      const totalContentWidth =
+        services.length * cardWidth + (services.length - 1) * gapWidth;
       const maxScroll = Math.max(0, totalContentWidth - containerWidth);
-      
+
       setDragConstraints({
         left: -maxScroll,
-        right: 0
+        right: 0,
       });
-      
+
       // Reset current offset if it's out of bounds after resize
       if (currentOffset < -maxScroll) {
         setCurrentOffset(-maxScroll);
         containerControls.start({
           x: -maxScroll,
-          transition: { duration: 0.3 }
+          transition: { duration: 0.3 },
         });
       }
     }
@@ -89,36 +88,41 @@ export default function FastGrowingServices() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      
-      if (width < 640) { // Mobile
+
+      if (width < 640) {
+        // Mobile
         setCardWidth(280);
         setVisibleCards(1);
-      } else if (width < 768) { // Small tablet
+      } else if (width < 768) {
+        // Small tablet
         setCardWidth(300);
         setVisibleCards(2);
-      } else if (width < 1024) { // Tablet
+      } else if (width < 1024) {
+        // Tablet
         setCardWidth(310);
         setVisibleCards(2);
-      } else if (width < 1280) { // Small desktop
+      } else if (width < 1280) {
+        // Small desktop
         setCardWidth(320);
         setVisibleCards(3);
-      } else { // Large desktop
+      } else {
+        // Large desktop
         setCardWidth(320);
         setVisibleCards(3);
       }
-      
+
       // Recalculate constraints after size change
       calculateConstraints();
     };
-    
+
     // Initial calculation
     handleResize();
-    
+
     // Add event listener
-    window.addEventListener('resize', handleResize);
-    
+    window.addEventListener("resize", handleResize);
+
     // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [calculateConstraints]);
 
   useEffect(() => {
@@ -128,7 +132,7 @@ export default function FastGrowingServices() {
   const handleMouseEnter = () => {
     cardControls.start({
       scale: 1.03,
-      transition: { duration: 0.2 }
+      transition: { duration: 0.2 },
     });
   };
 
@@ -142,7 +146,7 @@ export default function FastGrowingServices() {
     setCurrentOffset(newOffset);
     containerControls.start({
       x: newOffset,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" },
     });
   };
 
@@ -153,7 +157,7 @@ export default function FastGrowingServices() {
     setCurrentOffset(newOffset);
     containerControls.start({
       x: newOffset,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" },
     });
   };
 
@@ -163,7 +167,7 @@ export default function FastGrowingServices() {
     setCurrentOffset(clampedOffset);
     containerControls.start({
       x: clampedOffset,
-      transition: { duration: 0.3, ease: "easeOut" }
+      transition: { duration: 0.3, ease: "easeOut" },
     });
   };
 
@@ -180,24 +184,30 @@ export default function FastGrowingServices() {
               Fast Growing Services
             </span>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-              Providing High-performance Solution Of <span className="italic text-blue-800 dark:text-blue-200">Digital Marketing</span>
+              Providing High-performance Solution Of{" "}
+              <span className="italic text-blue-800 dark:text-blue-200">
+                Digital Marketing
+              </span>
             </h2>
             <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
-            <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
-            Explore our result-driven digital marketing services designed to boost brand visibility, attract customers, and accelerate business growth in today’s fast-paced digital world.
+            <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+              Explore our result-driven digital marketing services designed to
+              boost brand visibility, attract customers, and accelerate business
+              growth in today’s fast-paced digital world.
             </p>
           </motion.div>
         </div>
 
         {/* Slider Container */}
-        <div 
-          className="overflow-hidden cursor-grab active:cursor-grabbing" 
+        <div
+          className="overflow-hidden cursor-grab active:cursor-grabbing"
           ref={containerRef}
         >
           <motion.div
             className="flex flex-row gap-4 sm:gap-6 md:gap-8 py-4"
             animate={containerControls}
             drag="x"
+            style={{ x: 0 }}
             dragConstraints={dragConstraints}
             dragElastic={0.1}
             onDragEnd={handleDragEnd}
@@ -220,22 +230,32 @@ export default function FastGrowingServices() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     priority={index < visibleCards}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-grow">
                   <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 md:mb-3">
-                    <span className="text-gray-700 dark:text-gray-200">{service.title}</span>
+                    <span className="text-gray-700 dark:text-gray-200">
+                      {service.title}
+                    </span>
                   </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 flex-grow line-clamp-3 sm:line-clamp-none">
+                  <p className="text-xs sm:text-sm md:text-base text-gray-700 dark:text-gray-300 mb-3 sm:mb-4 flex-grow line-clamp-3 sm:line-clamp-none min-h-[150px]">
                     {service.description}
                   </p>
-                  <Link href={service.link} className="text-blue-700 dark:text-blue-400 font-medium flex items-center group mt-auto text-sm sm:text-base">
+                  <Link
+                    href={service.link}
+                    className="text-blue-700 dark:text-blue-400 font-medium flex items-center group mt-auto text-sm sm:text-base"
+                  >
                     Read More
                     <motion.div
                       className="ml-2"
                       animate={{ x: [0, 5, 0] }}
-                      transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
+                      transition={{
+                        repeat: Infinity,
+                        repeatDelay: 3,
+                        duration: 0.8,
+                      }}
                     >
                       <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
                     </motion.div>
@@ -263,7 +283,7 @@ export default function FastGrowingServices() {
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400" />
           </button>
         </div>
-        
+
         {/* Touch indicator for mobile only
         <div className="text-center mt-2 sm:hidden">
           <p className="text-xs text-gray-500 dark:text-gray-400">

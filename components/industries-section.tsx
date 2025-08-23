@@ -27,10 +27,10 @@ export default function IndustriesSection() {
             Industry Expertise
           </h3>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Providing High-performance Solutions Of <span className="italic text-blue-500">Digital Marketing</span>
+            Delivering Tailored Technology Solutions Across <span className="italic text-blue-500">Leading Industries</span>
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-6"></div>
-          <p className="max-w-xl mx-auto text-gray-300 text-base">
+          <p className="max-w-2xl mx-auto text-gray-300 text-base">
             Explore our result-driven digital marketing services designed to boost brand visibility, attract customers, and accelerate business growth in today’s fast-paced digital world.
           </p>
         </div>
@@ -99,13 +99,15 @@ export default function IndustriesSection() {
           ].map((item, idx) => (
             <div
               key={item.label}
-              className="flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px] md:min-h-[180px] lg:min-h-[200px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900 px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8"
+              className="flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px] md:min-h-[180px] lg:min-h-[200px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900 dark:hover:bg-blue-700 dark:bg-gray-900 dark:border-gray-700 px-2 py-4 sm:px-4 sm:py-6 md:px-6 md:py-8"
             >
-              <span className="mb-2 transition-all duration-200">{item.icon}</span>
-              <span className="font-extrabold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center">
+              <span className="mb-2 transition-all duration-200 text-blue-900 dark:text-white group-hover:text-white">
+                {item.icon}
+              </span>
+              <span className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200 text-center dark:text-white">
                 {item.label}
               </span>
-              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 group-hover:text-white text-center mt-1 px-1 sm:px-2">
+              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 group-hover:text-white text-center mt-1 px-1 sm:px-2 dark:text-gray-400">
                 {item.desc}
               </span>
             </div>
