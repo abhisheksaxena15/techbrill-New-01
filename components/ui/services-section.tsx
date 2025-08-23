@@ -639,12 +639,14 @@ export default function ServicesSection() {
 							transition={{ duration: 0.7 }}
 						>
 							{/* Section label with blue underline */}
-							<h3 className="text-xl md:text-2xl font-semibold mb-2 text-black dark:text-white">
+							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
 								We Create More Than Code</h3>
-							<div className="h-1 w-28 bg-blue-800 mb-4 " />
+							{/* <div className="h-1 w-28 bg-blue-600 mb-3 " /> */}
 							{/* Main heading */}
-							<h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">We are your trusted Partner in <span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2>
-							<p className="text-gray-600 dark:text-white mb-2">Your digital presence is more than just a website; it&apos;s your brand&apos;s identity, functionality, and customer experience rolled into one. At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
+							<h2 className=" mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">We are your trusted Partner in <span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2>
+							<div className="h-1 w-28 bg-blue-600 mb-3 " />
+							<p className="text-gray-600 dark:text-white mb-2 mt-3">Your digital presence is more than just a website; it&#39;s your brand&#39;s identity, functionality, and customer experience rolled into one. At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
+
 							</p>
 
 							<p className="text-gray-600 dark:text-white mb-5">
@@ -673,13 +675,13 @@ export default function ServicesSection() {
 			<section className="py-16 bg-white dark:bg-gray-950">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h2 className="text-lg font-semibold uppercase tracking-wide text-blue-800 dark:text-white">
+						<h2 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
 							What We Do
 						</h2>
-						<h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Turning ideas into flawless <span className="text-blue-800 font-bold italic">web development</span> solutions is our expertise
+						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Turning ideas into flawless <span className="text-blue-800 font-bold italic">web development</span> solutions is our expertise
 						</h2>
 						<div className="h-1 w-20 bg-blue-800 mx-auto mt-4 mb-4"></div>
-						<h3 className=" text-xs text-gray-600  md:text-lg  max-w-3xl mx-auto mt-1 leading-relaxed">
+						<h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
 							We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today’s fast-paced digital world.
 						</h3>
 					</div>
@@ -824,7 +826,7 @@ export default function ServicesSection() {
 									<CarouselItem>
 										<div className="rounded-md overflow-hidden">
 											<Image
-												src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
+												src="/images/services/web-design-hero.jpg"
 												alt="E-commerce Platform Design"
 												width={600}
 												height={400}
@@ -1066,13 +1068,14 @@ export default function ServicesSection() {
 								{/* Left: Sticky Heading & CTA */}
 								<div className="w-full md:w-1/2 flex flex-col justify-center md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0">
 
-									<h3 className="text-xl font-semibold uppercase tracking-wide text-blue-800 dark:text-white">
+									<h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
 										Solution & Services
 									</h3>
-									<div className="h-1 w-20 bg-blue-800 dark:bg-blue-400 mx-left mt-4 mb-3"></div>
-									<h3 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+									<h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
 										Comprehensive Web Solutions for Your Business
 									</h3>
+									<div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+
 									{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
                             Comprehensive Web Solutions for Your Business
                         </h2> */}

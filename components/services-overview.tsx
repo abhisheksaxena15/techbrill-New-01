@@ -68,14 +68,20 @@ export default function ServicesOverview() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">What We Offer</h3>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
-              </h2>
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-              <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
-              </p>
+
+
+              <div className="text-center mb-8 md:mb-12">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">What We Offer</h3>
+                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                  We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
+                </h2>
+                <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                  We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
+                </p>
+              </div>
+
+
             </motion.div>
           </div>
         </AnimatedSection>
