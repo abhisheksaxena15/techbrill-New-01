@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, ChevronDown } from "lucide-react"
+import { ArrowRight, ChevronDown, Globe, Smartphone, Brain, Search, Share2, FileText, BarChart3, Palette, Cloud, Database, Zap, Shield, Users, Settings, Code, Target, TrendingUp, Layers, Cpu, Bot, Network, FileCode } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import PageHeader from "@/components/page-header"
 import ServiceCard from "@/components/service-card"
@@ -9,17 +9,20 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { ExpandableServiceCards } from "@/components/ui/expandable-service-cards"
+import Link from "next/link"
 
 export default function ServicesPage() {
 
   const services = [
+    // IT Services
     {
       id: 1,
       title: "Web Design & Development",
       description: "Crafting elegant, user-first web experiences that inspire and engage across every device. Our web development solutions combine cutting-edge technology with intuitive design principles.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
       link: "/services/it-services/web-design-development",
+      icon: Globe,
+      color: "bg-blue-50 text-blue-600"
     },
     {
       id: 2,
@@ -27,6 +30,8 @@ export default function ServicesPage() {
       description: "We craft exclusive and reliable mobile apps that connect, inspire, and engage on the go. Our mobile development expertise spans native and cross-platform solutions.",
       image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
       link: "/services/it-services/mobile-app-development",
+      icon: Smartphone,
+      color: "bg-green-50 text-green-600"
     },
     {
       id: 3,
@@ -34,90 +39,136 @@ export default function ServicesPage() {
       description: "Empowering businesses with intelligent, scalable AI and ML technologies for innovation. We develop custom artificial intelligence solutions that automate processes.",
       image: "/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg",
       link: "/services/it-services/ai-ml-development",
+      icon: Brain,
+      color: "bg-purple-50 text-purple-600"
     },
     {
       id: 4,
+      title: "Software QA & Testing",
+      description: "Comprehensive quality assurance and testing services to ensure your software meets the highest standards of reliability, performance, and user experience.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&auto=format",
+      link: "/services/it-services/software-qa-testing",
+      icon: Shield,
+      color: "bg-red-50 text-red-600"
+    },
+    {
+      id: 5,
+      title: "IT Consultancy",
+      description: "Strategic IT consulting services to help businesses align technology with their goals, optimize processes, and drive digital transformation initiatives.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+      link: "/services/it-services/it-consultancy",
+      icon: Users,
+      color: "bg-indigo-50 text-indigo-600"
+    },
+    
+    // Digital Marketing Services
+    {
+      id: 6,
       title: "Search Engine Optimization",
       description: "Boost your online visibility and drive organic traffic with our data-driven SEO strategies. Our comprehensive approach combines technical optimization and content strategy.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
       link: "/services/digital-marketing/search-engine-optimization",
+      icon: Search,
+      color: "bg-yellow-50 text-yellow-600"
     },
     {
-      id: 5,
+      id: 7,
       title: "Social Media Marketing",
       description: "Engage your audience and build your brand with strategic social media campaigns. Our social media marketing expertise helps businesses create compelling content.",
       image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
       link: "/services/digital-marketing/social-media-marketing",
+      icon: Share2,
+      color: "bg-pink-50 text-pink-600"
     },
     {
-      id: 6,
+      id: 8,
       title: "Content Marketing",
       description: "Create compelling content that resonates with your audience and drives conversions. Our content marketing approach combines strategic planning and creative storytelling.",
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
       link: "/services/digital-marketing/content-marketing",
+      icon: FileText,
+      color: "bg-orange-50 text-orange-600"
     },
     {
-      id: 7,
+      id: 9,
       title: "Web Analytics",
       description: "Gain valuable insights into your website performance and user behavior with comprehensive web analytics solutions. We implement advanced tracking systems.",
       image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80",
       link: "/services/digital-marketing/web-analytics",
+      icon: BarChart3,
+      color: "bg-cyan-50 text-cyan-600"
     },
     {
-      id: 8,
+      id: 10,
       title: "Design & Print Media",
       description: "We offer graphic design and print solutions to create impactful visuals for brand identity. Our design expertise encompasses everything from logo creation.",
       image: "https://images.unsplash.com/photo-1639717995202-02db625f64a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/services/digital-marketing/design-print-media",
+      icon: Palette,
+      color: "bg-emerald-50 text-emerald-600"
     },
+    
+    // AI & Automation Services
     {
-      id: 9,
+      id: 11,
       title: "Cloud & DevOps",
       description: "Streamline your development and deployment processes with our comprehensive Cloud & DevOps solutions. We help businesses achieve faster delivery and improved reliability.",
       image: "/images/services/cloud-devops.jpg",
       link: "/services/ai-automation/cloud-devops",
+      icon: Cloud,
+      color: "bg-blue-50 text-blue-600"
     },
+    {
+      id: 12,
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights with our advanced analytics solutions. We help businesses make data-driven decisions and uncover hidden opportunities.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&auto=format",
+      link: "/services/ai-automation/data-analytics",
+      icon: Database,
+      color: "bg-green-50 text-green-600"
+    },
+    {
+      id: 13,
+      title: "Digital Transformation",
+      description: "Accelerate your digital journey with our comprehensive transformation services. We help businesses modernize processes, systems, and customer experiences.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+      link: "/services/ai-automation/digital-transformation",
+      icon: Zap,
+      color: "bg-purple-50 text-purple-600"
+    },
+    {
+      id: 14,
+      title: "Generative AI",
+      description: "Leverage the power of generative AI to create innovative content, automate creative processes, and unlock new possibilities for your business.",
+      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
+      link: "/services/ai-automation/generative-ai",
+      icon: Bot,
+      color: "bg-pink-50 text-pink-600"
+    },
+    {
+      id: 15,
+      title: "Blockchain Development",
+      description: "Build secure, transparent, and decentralized applications with our blockchain development expertise. We create innovative solutions for the future of digital transactions.",
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop&auto=format",
+      link: "/services/ai-automation/blockchain",
+      icon: Network,
+      color: "bg-orange-50 text-orange-600"
+    },
+    
+    // Digital Content Solutions
+    {
+      id: 16,
+      title: "Digital Content Solutions",
+      description: "Comprehensive digital content creation and management services to help businesses engage their audience and drive meaningful connections through compelling content.",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80",
+      link: "/services/digital-content-solutions",
+      icon: FileCode,
+      color: "bg-indigo-50 text-indigo-600"
+    }
   ]
-
-
-
 
   return (
     <>
-      {/* <section className="py-16">
-        <div className="container">
-          <div className="overflow-hidden" ref={containerRef}>
-            <motion.div
-              className="flex flex-row gap-8"
-              animate={containerControls}
-            >
-              {duplicatedServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  className="flex-shrink-0 w-80"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  animate={cardControls}
-                >
-                  <ServiceCard
-                    title={service.title}
-                    description={service.description}
-                    icon={service.icon}
-                    image={service.image}
-                  />
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
-
-
-
-
-
-
-
       <main className='bg-white text-gray-900'>
         {/* Hero Section with Background Image */}
         <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
@@ -203,10 +254,59 @@ export default function ServicesPage() {
             />
           </div>
 
-          {/* Expandable Service Cards */}
-          <ExpandableServiceCards services={services} />
+          {/* Services Grid - Similar to Industries */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="group bg-white rounded-2xl shadow-lg border-2 border-gray-100 overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2"
+                >
+                  {/* Image Section */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-10 h-10 rounded-lg ${service.color} flex items-center justify-center shadow-sm`}>
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                      {service.description}
+                    </p>
+
+                    {/* Read More Link */}
+                    <Link 
+                      href={service.link}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group/link"
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
+
       <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container">
           <div className="text-center mb-8 sm:mb-10">
