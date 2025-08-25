@@ -192,7 +192,7 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              The solutions you look for are right here
+              Empowering Businesses with Tailored IT Services & Next-Gen Solutions
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
@@ -200,20 +200,22 @@ export default function ServicesPage() {
               animate="visible"
               variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
-              </motion.div>
+                             <motion.div
+                 initial={{ opacity: 0, y: 24 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.6, delay: 0.6 }}
+               >
+                 <Link href="/contact">
+                   <Button size="lg" className="bg-blue-600 text-white rounded-md hover:bg-blue-700 w-full sm:w-auto">Get Started</Button>
+                 </Link>
+               </motion.div>
+                               <motion.div
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  <Button size="lg" variant="outline" className="border border-blue-600 text-blue-600 rounded-md font-semibold hover:bg-blue-600 hover:text-white w-full sm:w-auto">View Portfolio</Button>
+                </motion.div>
             </motion.div>
           </div>
           {/* Scroll Down Indicator (if space allows) */}
@@ -227,6 +229,52 @@ export default function ServicesPage() {
         </section>
       </main>
 
+      {/* IT Excellence Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Left: Text Content */}
+          <div className="flex-1 max-w-xl">
+            <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+              IT Excellence
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-white">
+              End-to-End IT Services for <span className="text-blue-800">Business Growth</span>
+            </h2>
+            <div className="w-20 h-1 bg-primary mb-6"></div>
+            <p className="mb-8 text-gray-700 text-base dark:text-white">
+              At Techbrill, we provide end-to-end IT services that empower businesses to innovate, scale, and succeed in the digital era. Our expertise covers web development, mobile app development, QA & testing, DevOps, cloud solutions, AI & ML, and digital marketing.
+            </p>
+            <p className="mb-8 text-gray-700 text-base dark:text-white">
+              By delivering customized, scalable, and secure solutions, we help organizations improve efficiency, enhance customer experiences, and achieve sustainable growth across industries.
+            </p>
+                         <div className="flex flex-col sm:flex-row gap-4">
+               <Link href="#services">
+                 <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
+                   Explore Services
+                 </Button>
+               </Link>
+               <Link href="/contact">
+                 <Button size="lg" variant="outline" className="bg-white text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-gray-100">
+                   Get Consultation
+                 </Button>
+               </Link>
+             </div>
+          </div>
+          {/* Right: Image */}
+          <div className="flex-1 flex justify-center">
+            <Image
+              src="/images/services/jimmy-desplanques-yt5sOD8Yw9I-unsplash.jpg"
+              alt="IT Services"
+              width={400}
+              height={340}
+              className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+              style={{ minHeight: 240, maxHeight: 340 }}
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
@@ -236,7 +284,7 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              What We Offer
+              Our Services
             </motion.h2>
             <motion.h2 
               className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4"
@@ -316,16 +364,16 @@ export default function ServicesPage() {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
-                Our sevices at a Glance
+               OUR PROVEN PROCESS
               </span>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-                Our Service <span className="italic text-blue-800 dark:text-blue-200">Process</span>
+              Creating Business Value with Tailored  <span className="italic text-blue-800 dark:text-blue-200">IT Solutions</span>
               </h2>
               <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
-              <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                We follow a structured approach to ensure that every project is delivered with the highest quality standards and meets your business objectives.
+              <p className="w-full max-w-2xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                From planning to execution, we follow a streamlined process designed to maximize efficiency, minimize risks, and deliver IT solutions that create real business value and sustainable growth.
               </p>
-            </motion.div>
+            </motion.div> 
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -365,11 +413,13 @@ export default function ServicesPage() {
                 ))}
               </div>
 
-              <div className="mt-8">
-                <Button className="group">
-                  Get Started <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
+                             <div className="mt-8">
+                 <Link href="/contact">
+                   <Button className="group">
+                     Get Started <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                   </Button>
+                 </Link>
+               </div>
             </div>
             <div className="relative h-[500px] w-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
               <div className="absolute inset-0 z-10 rounded-xl bg-gradient-to-r from-blue-600/20 to-blue-600/5"></div>
@@ -381,19 +431,104 @@ export default function ServicesPage() {
                   <p className="mb-6 max-w-sm mx-auto text-gray-700 dark:text-gray-300">
                     We specialize in creating tailored solutions to address your unique business challenges.
                   </p>
-                  <Button variant="outline" className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:text-white group">
-                    <a href="/contact">
-                    Contact Our Team 
-                    </a>
-                    
-                  </Button>
+                                     <Link href="/contact">
+                     <Button variant="outline" className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:text-white group">
+                       Contact Our Team 
+                     </Button>
+                   </Link>
                   
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+                     </div>
+         </div>
+       </section>
+
+       {/* Why Choose Us Section */}
+       <section className="py-16 bg-white dark:bg-gray-900">
+         <div className="container">
+           <div className="text-center mb-12">
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.4, ease: "easeOut" }}
+             >
+               <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+                 WHY CHOOSE US
+               </span>
+               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
+                 Why Clients <span className="text-blue-800">Trust Us</span> to Drive Innovation
+               </h2>
+               <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
+               <p className="w-full max-w-2xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                 We combine innovation, expertise, and commitment to deliver IT services that truly make a difference. Here&apos;s why businesses trust us as their technology partner.
+               </p>
+             </motion.div>
+           </div>
+
+           {/* 3x2 Grid Layout */}
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+             {[
+               {
+                 icon: "🎯",
+                 title: "Domain Expertise",
+                 description: "Deep understanding of multiple industries and compliance requirements."
+               },
+               {
+                 icon: "⚙️",
+                 title: "Customized Solutions",
+                 description: "Tailored IT strategies aligned with unique business needs."
+               },
+               {
+                 icon: "🏆",
+                 title: "Proven Track Record",
+                 description: "Successful delivery of projects for global clients."
+               },
+               {
+                 icon: "✅",
+                 title: "Quality & Reliability",
+                 description: "Rigorous testing and assurance at every stage."
+               },
+               {
+                 icon: "📈",
+                 title: "Scalable & Future-Ready",
+                 description: "Solutions designed to grow with your business."
+               },
+               {
+                 icon: "🤝",
+                 title: "Continuous Support",
+                 description: "Dedicated post-deployment optimization and assistance."
+               }
+             ].map((item, idx) => (
+               <motion.div
+                 key={idx}
+                 initial={{ opacity: 0, y: 20 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.5, delay: idx * 0.1 }}
+                 className="group bg-white dark:bg-gray-800 p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 md:hover:shadow-xl md:hover:shadow-blue-100 md:dark:hover:shadow-blue-900/20 md:hover:-translate-y-2 md:hover:border-primary/30 md:cursor-pointer active:scale-95 touch-manipulation"
+               >
+                 {/* Icon with hover effect */}
+                 <div className="text-4xl mb-4 transform transition-transform duration-300 md:group-hover:scale-110 md:group-hover:rotate-3">
+                   {item.icon}
+                 </div>
+
+                 {/* Title with hover color change */}
+                 <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white md:group-hover:text-primary transition-colors duration-300">
+                   {item.title}
+                 </h3>
+
+                 {/* Description */}
+                 <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed md:group-hover:text-gray-800 md:dark:group-hover:text-gray-200 transition-colors duration-300">
+                   {item.description}
+                 </p>
+
+                 {/* Optional: Add a subtle background gradient on hover */}
+                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
+               </motion.div>
+             ))}
+           </div>
+         </div>
+       </section>
+     </>
+   )
+ }
