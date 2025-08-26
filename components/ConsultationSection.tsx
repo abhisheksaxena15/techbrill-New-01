@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-export default function ConsultationSection({ bgImage = "/images/services/web-design-hero.jpg" }) {
+
+export default function ConsultationSection({ bgImage = "/images/services/web-design-hero.jpg"}) {
   return (
-    <section className="relative min-h-[70vh] w-full md:py-16">
+    <section  className="relative min-h-[70vh] w-full md:py-16">
       {/* Background Image */}
       <Image 
         src={bgImage} 
@@ -113,3 +114,8 @@ export default function ConsultationSection({ bgImage = "/images/services/web-de
     </section>
   );
 }
+
+// ConsultationSection.propTypes = {
+//   id: PropTypes.string,
+//   bgImage: PropTypes.string,
+// };

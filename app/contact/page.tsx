@@ -1,10 +1,12 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import AnimatedText from "@/components/animated-text"
-import AnimatedSection from "@/components/animated-section"
-import Image from "next/image"
+"use client";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import AnimatedText from "@/components/animated-text";
+import AnimatedSection from "@/components/animated-section";
+import Image from "next/image";
+import React, { useEffect } from 'react';
 
 const bannerImage = "/images/hero-background.jpg";
 const infoImage = "/images/about/18771.jpg";
@@ -33,9 +35,20 @@ const benefits = [
 ];
 
 export default function ContactPage() {
+  // Use a useEffect hook to handle scrolling to the form section
+  useEffect(() => {
+    // This runs only on the client side after the component mounts
+    if (window.location.hash) {
+      const element = document.getElementById(window.location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <>
-      {/* Hero Banner */}
+      {/* Hero Banner Section */}
       <section className="relative w-full h-[380px] md:h-[420px] flex items-center justify-center overflow-hidden">
         <Image
           src={bannerImage}
@@ -67,7 +80,7 @@ export default function ContactPage() {
       {/* Main Contact/Quote Section */}
       <section className="py-16 bg-white">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div id="contact-form" className=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade" delay={0.1}>
               <div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900">
@@ -77,9 +90,10 @@ export default function ContactPage() {
                 <p className="text-gray-700 mb-8">
                   Have a question or want to discuss a project? Fill out the form and our team will get back to you as soon as possible.
                 </p>
-                <form className="space-y-6">
+                {/* The unique ID is on the form itself, making it the scroll target */}
+                <form  className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div >
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Your Name
                       </label>
@@ -202,5 +216,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
