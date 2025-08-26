@@ -75,7 +75,7 @@ export default function AboutPreview() {
             <AnimatedSection animation="fade" delay={0.6}>
               <Link href="/contact">
                 <Button className="group">
-                  Let's Connect{" "}
+                  Let&apos;s Connect{" "}
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
