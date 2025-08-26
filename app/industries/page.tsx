@@ -6,10 +6,11 @@ import ConsultationSection from "@/components/ConsultationSection";
 import AnimatedText from "@/components/animated-text";
 import AnimatedSection from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Car, Building2, GraduationCap, BookOpen, Heart, ShoppingCart, Globe, Truck, Home, Film, Cpu , ChevronDown } from 'lucide-react';
+import { ArrowRight, Car, Building2, GraduationCap, BookOpen, Heart, ShoppingCart, Globe, Truck, Home, Film, Cpu, ChevronDown } from 'lucide-react';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from 'react';
+import Link from "next/link";
 
 const bannerImage = "/images/hero-background.jpg";
 const infoImage = "/images/services/jimmy-desplanques-yt5sOD8Yw9I-unsplash.jpg";
@@ -163,59 +164,67 @@ export default function IndustriesPage() {
   return (
     <>
       <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
-          {/* Background Image */}
-          <Image src={bannerImage} alt="Generative AI Hero" fill className="object-cover object-center z-0" priority />
-          {/* Dark Linear Gradient Overlay with Blur */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
-          {/* Centered Content */}
-          <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
-            <motion.h1
-              className="font-bold text-4xl sm:text-5xl text-white mb-4"
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
-             Industries
-            </motion.h1>
-            <motion.p
-              className="text-lg text-gray-300 mb-8 max-w-xl text-center"
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-            >
-              Empowering Industries with Future-Ready IT Solutions
-            </motion.p>
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 w-full justify-center"
-              initial="hidden"
-              animate="visible"
-              variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Get Started</Button>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">Explore Industries</Button>
-              </motion.div>
-            </motion.div>
-          </div>
-          {/* Scroll Down Indicator (if space allows) */}
-          <motion.div
-            className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
+        {/* Background Image */}
+        <Image src={bannerImage} alt="Generative AI Hero" fill className="object-cover object-center z-0" priority />
+        {/* Dark Linear Gradient Overlay with Blur */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-transparent backdrop-blur-sm" />
+        {/* Centered Content */}
+        <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
+          <motion.h1
+            className="font-bold text-4xl sm:text-5xl text-white mb-4"
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <ChevronDown className="w-7 h-7 text-white opacity-80" />
+            Industries
+          </motion.h1>
+          <motion.p
+            className="text-lg text-gray-300 mb-8 max-w-xl text-center"
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+            Empowering Industries with Future-Ready IT Solutions
+          </motion.p>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 w-full justify-center"
+            initial="hidden"
+            animate="visible"
+            variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <Link href = "/services" passHref legacyBehavior>
+              <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Explore Our Services</Button>
+              </Link>
+              
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <Link href="/contact" passHref legacyBehavior>
+                <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">
+                  Contact Us
+                </Button>
+              </Link>
+
+            </motion.div>
           </motion.div>
-        </section>
+        </div>
+        {/* Scroll Down Indicator (if space allows) */}
+        <motion.div
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        >
+          <ChevronDown className="w-7 h-7 text-white opacity-80" />
+        </motion.div>
+      </section>
 
       {/* Light Info Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
@@ -233,12 +242,12 @@ export default function IndustriesPage() {
               We deliver tailored IT solutions designed to address the unique challenges of diverse industries. From healthcare and finance to retail, education, and manufacturing, our expertise ensures scalable, secure, and future-ready technology that drives efficiency and growth. With deep domain knowledge and innovative approaches, we empower businesses to achieve digital transformation across sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
-                View All Industries
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-gray-100">
-                Consult Our Expert
-              </Button>
+              <Link href="/contact" passHref legacyBehavior>
+                <Button size="lg" variant="outline" className="bg-white text-primary font-semibold px-8 py-3 text-base border-2 border-primary shadow-md hover:bg-gray-100 hover:text-black">
+                  Consult Our Expert
+                </Button>
+              </Link>
+
             </div>
           </div>
           {/* Right: Image */}
@@ -272,7 +281,7 @@ export default function IndustriesPage() {
 
           <div className="text-center mb-12">
             <h3 className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
-              Industry Expertise
+              Industries we serve
             </h3>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
               Transforming Challenges Into Opportunities Across Industries
@@ -384,11 +393,11 @@ export default function IndustriesPage() {
                 ))}
               </div>
 
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <Button className="group">
                   Get Started <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-              </div>
+              </div> */}
             </div>
             <div className="relative h-[500px] w-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
               <div className="absolute inset-0 z-10 rounded-xl bg-gradient-to-r from-blue-600/20 to-blue-600/5"></div>
