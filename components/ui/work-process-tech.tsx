@@ -13,7 +13,7 @@ const STEPS = [
             { name: "Shopify", icon: "🛍️" },
             { name: "WooCommerce", icon: "💻" },
         ],
-        image: "/images/services/ecommerce.jpg",
+        image: "/images/services/eCommerce.jpg",
     },
     {
         key: "FinTech",
