@@ -31,7 +31,7 @@ export default function AboutPreview() {
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
                 <blockquote className="text-xs md:text-sm italic text-gray-700 dark:text-gray-300">
-                  &ldquo;We believe that our growth depends on our clients&apos; growth. Your success is our success.&rdquo;
+                  &ldquo;Give your business digital wings with Technology Brilliance.&rdquo;
                 </blockquote>
               </motion.div>
             </div>
@@ -57,12 +57,9 @@ export default function AboutPreview() {
 
             <AnimatedSection animation="fade" delay={0.5}>
               <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                Founded in 2017 in Noida, India, Techbrill Solutions has rapidly grown into a leading IT service
-                provider and brand communication company. Our team of passionate designers, developers, and digital
-                strategists share one goal: delivering high-performance digital solutions that drive real business
-                growth.
+              Techbrill Solutions is an IT services and brand communication company delivering high-performance, scalable, and secure digital solutions. We help startups and enterprise clients achieve their business goals, drive growth, and create meaningful impact through innovative, user-friendly technology.
               </p>
-              <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
+              {/* <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
                 We&apos;ve successfully partnered with startups and enterprise-level clients across industries including
                 healthcare, finance, education, and retail. Our approach combines technical expertise with creative
                 innovation to build scalable, secure, and user-friendly solutions tailored to your specific business
@@ -72,13 +69,13 @@ export default function AboutPreview() {
                 At Techbrill, we stand for brilliance, diligence, and commitment to core values of collaboration. We
                 tackle every challenge with determination and creativity, ensuring we reach our common goal no matter
                 the impediment.
-              </p>
+              </p> */}
             </AnimatedSection>
 
             <AnimatedSection animation="fade" delay={0.6}>
-              <Link href="/about">
+              <Link href="/contact">
                 <Button className="group">
-                  Learn More About Us{" "}
+                  Let's Connect{" "}
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
