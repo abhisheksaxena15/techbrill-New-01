@@ -172,6 +172,7 @@
 
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
@@ -195,8 +196,11 @@ const techTabs = [
       {
         name: "Automation",
         icon: (
-          <Icon
-            icon="logos:automate"
+          <Image
+            src="/images/techno_logo/automation.svg"
+            alt="Automation"
+            width={28}
+            height={28}
             className="w-7 h-7"
           />
         ),
@@ -204,8 +208,11 @@ const techTabs = [
       {
         name: "Personalization",
         icon: (
-          <Icon
-            icon="logos:segment"
+          <Image
+            src="/images/techno_logo/team.png"
+            alt="Personalization"
+            width={28}
+            height={28}
             className="w-7 h-7"
           />
         ),
@@ -304,8 +311,11 @@ const techTabs = [
       {
         name: "Consensus Mechanisms",
         icon: (
-          <Icon
-            icon="logos:hyperledger"
+          <Image
+            src="/images/techno_logo/team.png"
+            alt="Consensus Mechanisms"
+            width={28}
+            height={28}
             className="w-7 h-7"
           />
         ),
@@ -313,8 +323,11 @@ const techTabs = [
       {
         name: "Cryptographic Security",
         icon: (
-          <Icon
-            icon="logos:chainlink"
+          <Image
+            src="/images/techno_logo/encryption-icon.svg"
+            alt="Cryptographic Security"
+            width={28}
+            height={28}
             className="w-7 h-7"
           />
         ),
@@ -322,8 +335,11 @@ const techTabs = [
       {
         name: "Interoperability & Cross-chain",
         icon: (
-          <Icon
-            icon="logos:polkadot"
+          <Image
+            src="/images/techno_logo/service_1681505.png"
+            alt="Interoperability & Cross-chain"
+            width={28}
+            height={28}
             className="w-7 h-7"
           />
         ),
@@ -422,8 +438,11 @@ const techTabs = [
       {
         name: "Spatial mapping",
         icon: (
-          <Icon
-            icon="devicon:googlemaps"
+          <Image
+            src="/images/techno_logo/location.jpg"
+            alt="Spatial mapping"
+            width={28}
+            height={28}
             className="w-7 h-7"
           />
         ),
@@ -521,8 +540,8 @@ export default function TechnoTechToolsSection() {
               <button
                 key={tab.label}
                 className={`flex justify-between items-center px-4 py-3 rounded-md text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
-                    ? "bg-blue-800 shadow-lg text-white"
-                    : "hover:bg-blue-800/80 opacity-80 text-gray-200"
+                  ? "bg-blue-800 shadow-lg text-white"
+                  : "hover:bg-blue-800/80 opacity-80 text-gray-200"
                   }`}
                 onClick={() => setActiveTab(idx)}
               >
