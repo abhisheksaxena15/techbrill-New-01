@@ -645,7 +645,7 @@ export default function ServicesSection() {
 							{/* Main heading */}
 							<h2 className=" mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">We are your trusted Partner in <span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2>
 							<div className="h-1 w-28 bg-blue-600 mb-3 " />
-							<p className="text-gray-600 dark:text-white mb-2 mt-3">Your digital presence is more than just a website; it's your brand's identity, functionality, and customer experience rolled into one. At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
+							<p className="text-gray-600 dark:text-white mb-2 mt-3">Your digital presence is more than just a website; it&#39;s your brand&#39;s identity, functionality, and customer experience rolled into one. At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
 
 							</p>
 

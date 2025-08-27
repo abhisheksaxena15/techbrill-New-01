@@ -30,19 +30,19 @@ const steps = [
 
 export default function WorkProcess() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-blue-700 font-medium uppercase tracking-wide text-sm">
             How It Work
           </span>
-          <h2 className="tmt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+          <h2 className="tmt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-4xl">
             Check Out Our Work <span className="italic text-blue-700">Process</span>
           </h2>
           <p className="max-w-xl mx-auto text-gray-300 text-base">
           </p>
           <div className="mx-auto w-16 h-1 bg-blue-700 rounded mt-6"></div>
-          <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700">
+          <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             Explore our result-driven digital marketing services designed to boost brand visibility, attract customers, and accelerate business growth in today’s fast-paced digital world.
           </p>
         </div>
@@ -62,12 +62,12 @@ export default function WorkProcess() {
                   {step.step}
                 </span>
               </div>
-              <h3 className="text-neutral-800 text-lg font-semibold mt-2 mb-2">{step.title}</h3>
-              <p className="h-14 text-gray-600 text-sm">{step.desc}</p>
+              <h3 className="text-neutral-800 dark:text-neutral-200 text-lg font-semibold mt-2 mb-2">{step.title}</h3>
+              <p className="h-14 text-gray-600 dark:text-gray-400 text-sm">{step.desc}</p>
               {idx < steps.length - 1 && (
                 <div className="hidden md:block absolute top-1/4 right-0 translate-x-1/2 -translate-y-1/2">
                   <svg width="60" height="24" fill="none" viewBox="0 0 60 24">
-                    <path d="M0 12h56m0 0l-6-6m6 6l-6 6" stroke="#b0b7c3" strokeWidth="2" />
+                    <path d="M0 12h56m0 0l-6-6m6 6l-6 6" stroke="#b0b7c3 dark:stroke-gray-600" strokeWidth="2" />
                   </svg>
                 </div>
               )}
