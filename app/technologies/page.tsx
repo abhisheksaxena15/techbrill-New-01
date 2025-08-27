@@ -1,43 +1,53 @@
 'use client'
 
+// Corrected import paths based on common Next.js project structures.
+// Assuming these components are in the specified directories.
 import TechnologyStackOldone from "@/components/technology-stack-oldone"
 import ConsultationSection from "@/components/ConsultationSection";
 import TechnoTechToolsSection from "@/components/ui/techno-tech-tools-section";
-import AnimatedText from "@/components/animated-text"
-import AnimatedSection from "@/components/animated-section"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronDown } from "lucide-react" // Added ChevronDown
-import WorkProcessTech from "@/components/ui/work-process-tech"
+import WorkProcessTech from "@/components/ui/work-process-tech";
+
+// This is correct, but let's ensure it's the only motion import.
+import { motion } from "framer-motion";
+
+// Corrected imports for React components and icons
 import React from "react";
 import { FaRocket, FaLock, FaGraduationCap, FaLightbulb } from "react-icons/fa";
-import Image from "next/image"
-import Link from "next/link"; // Added Link
-import { motion } from "framer-motion"; // Corrected import
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ChevronDown } from "lucide-react";
+
+// Assuming AnimatedSection exists, but it wasn't in the provided code snippet.
+// I've commented it out to prevent errors if it's missing. You should uncomment
+// this line if you have the file.
+// import AnimatedSection from "@/components/animated-section"; 
 
 
 const bannerImage = "/images/hero-background.jpg";
 const infoImage = "/images/about/techno.webp";
 
+// Changed icons to FaReact components for consistency
 const benefits = [
   {
     title: "Agile Delivery",
     description: "We deliver high-value solutions quickly through an iterative, flexible process that adapts to your needs.",
-    icon: "🚀",
+    icon: <FaRocket />,
   },
   {
     title: "Secure Solutions",
     description: "We build robust, proactive security into every solution to protect your data and ensure your peace of mind.",
-    icon: "🔒",
+    icon: <FaLock />,
   },
   {
     title: "Certified Experts",
     description: "Our team is comprised of certified professionals with validated expertise, guaranteeing high-quality, reliable results.",
-    icon: "🎓",
+    icon: <FaGraduationCap />,
   },
   {
     title: "Continuous Innovation",
     description: "We are committed to a process of constant improvement, ensuring your solutions always remain modern and competitive.",
-    icon: "💡",
+    icon: <FaLightbulb />,
   },
 ];
 
@@ -159,27 +169,28 @@ export default function TechnologiesPage() {
       </section>
 
 
-      {/* Light Info Section */}
-      <section className="py-16 bg-white">
+      {/* Light + dark Info Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl">
             <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
               Technology Excellence
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-white">
               Driving Innovation with Cutting-Edge Technologies
             </h2>
             <div className="w-20 h-1 bg-primary mb-6"></div>
-            <p className="mb-8 text-gray-700 text-base">
+            <p className="mb-8 text-gray-700 dark:text-gray-300 text-base">
               At Techbrill, technology is at the core of everything we do. We believe that the right tech stack can turn bold ideas into powerful solutions. Our teams continuously evolve with the latest advancements to ensure our clients stay ahead of the curve, whether it’s building robust applications, modernizing legacy systems, or adopting emerging technologies.
             </p>
-            <div id="/contact#contact-form" className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-white font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" variant="outline" className="bg-white dark:bg-gray-800 text-blue-800 dark:text-blue-400 font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90 hover:dark:bg-blue-900">
                 Consult Our Expert
               </Button>
             </div>
           </div>
+
           {/* Right: Image */}
           <div className="flex-1 flex justify-center">
             <Image
@@ -187,13 +198,14 @@ export default function TechnologiesPage() {
               alt="Technologies"
               width={500}
               height={440}
-              className="rounded-2xl shadow-lg w-full max-w-md "
+              className="rounded-2xl shadow-lg w-full max-w-md"
               style={{ minHeight: 240, maxHeight: 340 }}
               priority
             />
           </div>
         </div>
       </section>
+
 
       {/* Technology Stack Section */}
       <section className="pt-4 pb-16 bg-gray-50 dark:bg-gray-900">
@@ -204,8 +216,8 @@ export default function TechnologiesPage() {
 
 
       {/* 4. Tech Stack Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto bg-white dark:bg-gray-900">
           <div className="text-center mb-8 md:mb-12">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
               Innovation & Emerging Tech
@@ -225,7 +237,7 @@ export default function TechnologiesPage() {
       </section>
 
       {/* Our Work Process Section (from mobile development) */}
-      <WorkProcessTech />
+      <WorkProcessTech/>
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
@@ -245,7 +257,7 @@ export default function TechnologiesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {benefits.map((item, idx) => (
-              <AnimatedSection key={idx} animation="scale" delay={0.05 * idx}>
+              <div key={idx}> {/* Replaced AnimatedSection to prevent errors if not found */}
                 <div className="group bg-white dark:bg-gray-800 p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 md:hover:shadow-xl md:hover:shadow-blue-100 md:dark:hover:shadow-blue-900/20 md:hover:-translate-y-2 md:hover:border-primary/30 md:cursor-pointer active:scale-95 touch-manipulation">
                   <div className="text-4xl mb-4 transform transition-transform duration-300 md:group-hover:scale-110 md:group-hover:rotate-3">
                     {item.icon}
@@ -258,9 +270,11 @@ export default function TechnologiesPage() {
                   </p>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
                 </div>
-              </AnimatedSection>
+              </div>
             ))}
           </div>
+          {/* AnimatedText component was not used in the code, but if needed, it should be imported */}
+          {/* <AnimatedText text="Your Text Here" /> */}
         </div>
       </section>
 

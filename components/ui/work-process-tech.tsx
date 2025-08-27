@@ -60,12 +60,11 @@ const STEPS = [
     },
 ];
 
-
 export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEPS }) {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-20 px-6 md:px-16 max-w-full overflow-x-hidden bg-white">
+    <section className="py-20 px-6 md:px-16 max-w-full overflow-x-hidden bg-white dark:bg-gray-900">
       {/* Heading */}
       <div className="text-center mb-10">
         <motion.h2
@@ -75,14 +74,14 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+          <span className="text-primary dark:text-blue-400 font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
             Industry Specific Technologies
           </span>
           Transforming Industries Through Specialized Technology
         </motion.h2>
-        <div className="w-20 h-1 bg-blue-600 mx-auto mb-3 rounded-full mt-3" />
+        <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-3 rounded-full mt-3" />
         <motion.p
-          className="text-base text-gray-600 max-w-xl mx-auto mt-1 leading-relaxed"
+          className="text-base text-gray-600 dark:text-gray-300 max-w-xl mx-auto mt-1 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -94,7 +93,7 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
 
       {/* Tabs */}
       <div
-        className="flex gap-4 md:gap-6 border-b pb-4 pl-4 pr-4 md:pl-0 md:pr-0 
+        className="flex gap-4 md:gap-6 border-b dark:border-gray-700 pb-4 pl-4 pr-4 md:pl-0 md:pr-0 
         justify-start md:justify-center overflow-x-auto snap-x w-full"
       >
         {steps.map((step, idx) => (
@@ -102,8 +101,8 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
             key={step.key}
             className={`flex flex-col items-center px-2 md:px-4 pb-2 focus:outline-none transition relative group snap-center min-w-[72px] flex-shrink-0
               ${active === idx
-                ? "text-blue-600 font-semibold"
-                : "text-gray-500 hover:text-blue-500"
+                ? "text-blue-600 dark:text-blue-400 font-semibold"
+                : "text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-300"
               }`}
             onClick={() => setActive(idx)}
             type="button"
@@ -115,7 +114,7 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
             {active === idx && (
               <motion.div
                 layoutId="underline"
-                className="absolute left-0 right-0 -bottom-1 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400 shadow-md"
+                className="absolute left-0 right-0 -bottom-1 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400 dark:from-blue-400 dark:via-blue-500 dark:to-blue-300 shadow-md"
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
@@ -123,7 +122,7 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
         ))}
       </div>
 
-      {/* Details lower pane (with step heading + tech icons + labels) */}
+      {/* Details lower pane */}
       <div className="flex flex-col md:flex-row gap-8 mt-10 items-center justify-between mx-auto max-w-6xl">
         <AnimatePresence mode="wait">
           <motion.div
@@ -134,19 +133,19 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
             transition={{ duration: 0.5 }}
             className="flex-1 w-full md:w-1/2 min-w-[220px]"
           >
-            {/* 🔹 Step-style heading */}
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-blue-700">
-               {steps[active].label} Technologies
+            {/* Step heading */}
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-blue-700 dark:text-blue-400">
+              {steps[active].label} Technologies
             </h3>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-              {steps[active].techs.map((tech) => (
+              {steps[active]?.techs?.map((tech) => (
                 <div
                   key={tech.name}
-                  className="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-4 shadow hover:shadow-md transition"
+                  className="flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 rounded-xl p-4 shadow hover:shadow-md transition"
                 >
                   <div className="text-3xl mb-2">{tech.icon}</div>
-                  <span className="text-gray-700 text-sm font-medium">
+                  <span className="text-gray-700 dark:text-gray-200 text-sm font-medium">
                     {tech.name}
                   </span>
                 </div>
