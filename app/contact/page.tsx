@@ -72,16 +72,16 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact/Quote Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container">
           <div id="contact-form" className=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade" delay={0.1}>
               <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-gray-100">
                   Let&apos;s Connect and Create the Right Solution
                 </h2>
                 <div className="w-20 h-1 bg-primary mb-6"></div>
-                <p className="text-gray-700 mb-8">
+                <p className="text-gray-700 dark:text-gray-300 mb-8">
                   Have a question or a project in mind? Please share your details below, and our team will get back to you as soon as possible.
                 </p>
                 {/* The unique ID is on the form itself, making it the scroll target */}
@@ -119,7 +119,7 @@ export default function ContactPage() {
               </div>
             </AnimatedSection>
             <AnimatedSection animation="scale" delay={0.2}>
-              <div className="bg-gray-50 p-8 rounded-xl shadow-lg flex flex-col gap-8 items-center">
+              <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col gap-8 items-center">
                 <Image
                   src={infoImage}
                   alt="Contact Info"
@@ -137,7 +137,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold mb-1">Our Location</h4>
-                      <p className="text-gray-700">GH12/1 ACE Platinum, Sector Zeta -1, Gr. Noida, India</p>
+                      <p className="text-gray-700 dark:text-gray-300">GH12/1 ACE Platinum, Sector Zeta -1, Gr. Noida, India</p>
                     </div>
                   </div>
                   {/* FIX: Changed items-center to items-start */}
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold mb-1">Email Us</h4>
-                      <p className="text-gray-700">info@techbrillsolutions.com</p>
+                      <p className="text-gray-700 dark:text-gray-300">info@techbrillsolutions.com</p>
                     </div>
                   </div>
                   {/* FIX: Changed items-center to items-start */}
@@ -157,7 +157,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold mb-1">Call Us</h4>
-                      <p className="text-gray-700">+91 88 6077 1100</p>
+                      <p className="text-gray-700 dark:text-gray-300">+91 88 6077 1100</p>
                     </div>
                   </div>
                   {/* FIX: Changed items-center to items-start */}
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     </div>
                     <div className="ml-4">
                       <h4 className="text-lg font-semibold mb-1">Working Hours</h4>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 dark:text-gray-300">
                         Monday - Friday: 9:00 AM - 6:00 PM
                         <br />
                         Saturday: 10:00 AM - 2:00 PM
