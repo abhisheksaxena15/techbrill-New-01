@@ -6,6 +6,8 @@ import TechnologyStackOldone from "@/components/technology-stack-oldone"
 import ConsultationSection from "@/components/ConsultationSection";
 import TechnoTechToolsSection from "@/components/ui/techno-tech-tools-section";
 import WorkProcessTech from "@/components/ui/work-process-tech";
+import AnimatedText from "@/components/animated-text"
+import AnimatedSection from "@/components/animated-section"
 
 // This is correct, but let's ensure it's the only motion import.
 import { motion } from "framer-motion";
@@ -32,22 +34,22 @@ const benefits = [
   {
     title: "Agile Delivery",
     description: "We deliver high-value solutions quickly through an iterative, flexible process that adapts to your needs.",
-    icon: <FaRocket />,
+    icon: "🚀",
   },
   {
     title: "Secure Solutions",
     description: "We build robust, proactive security into every solution to protect your data and ensure your peace of mind.",
-    icon: <FaLock />,
+    icon: "🔒",
   },
   {
     title: "Certified Experts",
     description: "Our team is comprised of certified professionals with validated expertise, guaranteeing high-quality, reliable results.",
-    icon: <FaGraduationCap />,
+    icon: "🎓" ,
   },
   {
     title: "Continuous Innovation",
     description: "We are committed to a process of constant improvement, ensuring your solutions always remain modern and competitive.",
-    icon: <FaLightbulb />,
+    icon: "💡",
   },
 ];
 
@@ -237,7 +239,7 @@ export default function TechnologiesPage() {
       </section>
 
       {/* Our Work Process Section (from mobile development) */}
-      <WorkProcessTech/>
+      <WorkProcessTech />
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
@@ -257,21 +259,24 @@ export default function TechnologiesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {benefits.map((item, idx) => (
-              <div key={idx}> {/* Replaced AnimatedSection to prevent errors if not found */}
-                <div className="group bg-white dark:bg-gray-800 p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 md:hover:shadow-xl md:hover:shadow-blue-100 md:dark:hover:shadow-blue-900/20 md:hover:-translate-y-2 md:hover:border-primary/30 md:cursor-pointer active:scale-95 touch-manipulation">
-                  <div className="text-4xl mb-4 transform transition-transform duration-300 md:group-hover:scale-110 md:group-hover:rotate-3">
-                    {item.icon}
+              <AnimatedSection key={idx} animation="scale" delay={0.05 * idx}>
+                <div key={idx}> {/* Replaced AnimatedSection to prevent errors if not found */}
+                  <div className="group bg-white dark:bg-gray-800 p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 md:hover:shadow-xl md:hover:shadow-blue-100 md:dark:hover:shadow-blue-900/20 md:hover:-translate-y-2 md:hover:border-primary/30 md:cursor-pointer active:scale-95 touch-manipulation">
+                    <div className="text-4xl mb-4 transform transition-transform duration-300 md:group-hover:scale-110 md:group-hover:rotate-3">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white md:group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed md:group-hover:text-gray-800 md:dark:group-hover:text-gray-200 transition-colors duration-300">
+                      {item.description}
+                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
                   </div>
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white md:group-hover:text-primary transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed md:group-hover:text-gray-800 md:dark:group-hover:text-gray-200 transition-colors duration-300">
-                    {item.description}
-                  </p>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
+
           </div>
           {/* AnimatedText component was not used in the code, but if needed, it should be imported */}
           {/* <AnimatedText text="Your Text Here" /> */}
