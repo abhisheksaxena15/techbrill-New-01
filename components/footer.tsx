@@ -54,7 +54,7 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <MapPin className="h-5 w-5 mr-3 text-primary mt-0.5" />
-                <span className="text-gray-400">123 Tech Street, IT Park, Noida, India</span>
+                <span className="text-gray-400">GH12/1 ACE Platinum, Sector Zeta -1, Gr. Noida, India</span>
               </motion.div>
               <motion.div 
                 className="flex items-center"
