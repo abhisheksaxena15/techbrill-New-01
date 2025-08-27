@@ -312,7 +312,7 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="group bg-white rounded-2xl shadow-lg border-2 border-gray-100 overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-2 border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Image Section */}
                   <div className="relative h-48 overflow-hidden">
@@ -330,12 +330,12 @@ export default function ServicesPage() {
                       <div className={`w-10 h-10 rounded-lg ${service.color} flex items-center justify-center shadow-sm`}>
                         <IconComponent className="w-5 h-5" />
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors duration-300">
                         {service.title}
                       </h3>
                     </div>
 
-                    <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm mb-4">
                       {service.description}
                     </p>
 

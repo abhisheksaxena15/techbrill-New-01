@@ -59,23 +59,15 @@ export default function AboutPreview() {
               <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
               Techbrill Solutions is an IT services and brand communication company delivering high-performance, scalable, and secure digital solutions. We help startups and enterprise clients achieve their business goals, drive growth, and create meaningful impact through innovative, user-friendly technology.
               </p>
-              {/* <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                We&apos;ve successfully partnered with startups and enterprise-level clients across industries including
-                healthcare, finance, education, and retail. Our approach combines technical expertise with creative
-                innovation to build scalable, secure, and user-friendly solutions tailored to your specific business
-                goals.
-              </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">
-                At Techbrill, we stand for brilliance, diligence, and commitment to core values of collaboration. We
-                tackle every challenge with determination and creativity, ensuring we reach our common goal no matter
-                the impediment.
-              </p> */}
+                At Techbrill, we stand for brilliance, diligence, and commitment to core values of collaboration. We tackle every challenge with determination and creativity, ensuring we reach our common goal no matter the impediment.
+              </p>
             </AnimatedSection>
 
             <AnimatedSection animation="fade" delay={0.6}>
-              <Link href="/contact">
+              <Link href="/company">
                 <Button className="group">
-                  Let&apos;s Connect{" "}
+                  Explore More{" "}
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
