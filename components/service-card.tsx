@@ -28,8 +28,8 @@ export default function ServiceCard({ title, description, image, icon, className
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-3">{title}</h3>
+        <div className="p-6">
+          <h3 className="text-xl font-semibold mb-3 dark:text-white">{title}</h3>
         <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
         <Link
           href={`/services#${title.toLowerCase().replace(/\s+/g, "-")}`}

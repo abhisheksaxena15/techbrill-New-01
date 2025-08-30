@@ -45,6 +45,9 @@ const navItems = [
           { name: "Blockchain", href: "/services/ai-automation/blockchain" },
           { name: "Data Analytics", href: "/services/ai-automation/data-analytics" },
           { name: "Cloud & DevOps", href: "/services/ai-automation/cloud-devops" },
+          { name: "Artificial Intelligence", href: "#" },
+          { name: "Machine Learning", href: "#" },
+          
         ],
       },
       {
@@ -522,3 +525,4 @@ export default function Header() {
     </header>
   )
 }
+

@@ -146,10 +146,10 @@ export default function CompanyPage() {
               Founded in 2017 and based in Noida, India, Techbrill began its journey with a simple yet powerful vision to transform businesses through innovative technology solutions.
             </p>
             <p className="mb-4 text-gray-700 dark:text-gray-300 text-base max-w-4xl mx-auto">
-              Over the years, we've evolved from a small team of passionate developers into a full-service digital agency, serving clients across various industries.
+              Over the years, we&apos;ve evolved from a small team of passionate developers into a full-service digital agency, serving clients across various industries.
             </p>
             <p className="mb-8 text-gray-700 dark:text-gray-300 text-base max-w-4xl mx-auto">
-              Today, we're proud to be trusted technology partners for businesses worldwide, delivering solutions that drive real business growth and digital transformation.
+              Today, we&apos;re proud to be trusted technology partners for businesses worldwide, delivering solutions that drive real business growth and digital transformation.
             </p>
           </div>
 
@@ -339,7 +339,7 @@ export default function CompanyPage() {
             </h2>
             <div className="w-20 h-1 bg-primary mb-6 mx-auto"></div>
             <p className="text-gray-700 dark:text-gray-300 text-base max-w-3xl mx-auto">
-              Don't just take our word for it. Hear directly from the businesses we've helped empower and transform.
+              Don&apos;t just take our word for it. Hear directly from the businesses we&apos;ve helped empower and transform.
             </p>
           </div>
 
@@ -357,7 +357,7 @@ export default function CompanyPage() {
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic mb-4">
-                "Techbrill transformed our online presence. Their expertise and dedication are unmatched. We've seen a significant increase in engagement and conversions since partnering with them."
+              &apos;Techbrill transformed our online presence. Their expertise and dedication are unmatched. We&apos;ve seen a significant increase in engagement and conversions since partnering with them.&apos;
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>⭐️⭐️⭐️⭐️⭐️</span>
@@ -377,7 +377,7 @@ export default function CompanyPage() {
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic mb-4">
-                "The team at Techbrill delivered beyond our expectations. Their strategic insights and flawless execution have been instrumental in our recent growth. Highly recommended!"
+              &apos;The team at Techbrill delivered beyond our expectations. Their strategic insights and flawless execution have been instrumental in our recent growth. Highly recommended!&apos;
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>⭐️⭐️⭐️⭐️⭐️</span>
@@ -397,7 +397,7 @@ export default function CompanyPage() {
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic mb-4">
-                "From concept to completion, Techbrill was a pleasure to work with. Their deep understanding of technology and commitment to our vision made all the difference."
+              &apos;From concept to completion, Techbrill was a pleasure to work with. Their deep understanding of technology and commitment to our vision made all the difference.&apos;
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>⭐️⭐️⭐️⭐️⭐️</span>
@@ -417,7 +417,7 @@ export default function CompanyPage() {
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic mb-4">
-                "Their technical support is phenomenal. Any issue we faced was addressed promptly and efficiently. A true partner in our digital journey."
+              &apos;Their technical support is phenomenal. Any issue we faced was addressed promptly and efficiently. A true partner in our digital journey.&apos;
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>⭐️⭐️⭐️⭐️⭐️</span>
@@ -437,7 +437,7 @@ export default function CompanyPage() {
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic mb-4">
-                "Techbrill's secure and scalable solutions have provided us with a robust foundation for our expanding operations. Their expertise is invaluable."
+              &quot;Techbrill&apos;s secure and scalable solutions have provided us with a robust foundation for our expanding operations. Their expertise is invaluable.&apos;
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>⭐️⭐️⭐️⭐️⭐️</span>
@@ -457,7 +457,7 @@ export default function CompanyPage() {
                 </div>
               </div>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed italic mb-4">
-                "The custom software development from Techbrill has streamlined our operations significantly. Their attention to detail and client satisfaction is commendable."
+              &quot;The custom software development from Techbrill has streamlined our operations significantly. Their attention to detail and client satisfaction is commendable.&quot;
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                 <span>⭐️⭐️⭐️⭐️⭐️</span>
