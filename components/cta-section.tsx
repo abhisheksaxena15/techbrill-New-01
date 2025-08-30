@@ -58,10 +58,10 @@ export default function CTASection() {
 
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "100+", label: "Happy Clients" },
-              { number: "20+", label: "Years Experience" },
-              { number: "50+", label: "Team Members" },
+              { number: "100+", label: "Projects Completed" },
+              { number: "50+", label: "Happy Clients" },
+              { number: "8+", label: "Years Experience" },
+              { number: "20+", label: "Team Members" },
             ].map((stat, index) => (
               <AnimatedSection key={index} animation="scale" delay={0.2 + index * 0.1}>
                 <motion.div

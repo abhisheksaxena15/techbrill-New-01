@@ -41,20 +41,20 @@ export default function Hero() {
               </div>
 
               {/* Stats */}
-              <div className="mt-12 flex flex-wrap gap-8 text-center sm:text-left">
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+              <div className="mt-12 flex flex-wrap gap-8 text-center sm:text-left [&>div]:w-[calc(50%-1rem)]">
+                <div className="bg-white text-center dark:bg-gray-800 rounded-lg shadow p-4">
                   <p className="text-2xl font-bold text-blue-600">8+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+                <div className="bg-white text-center dark:bg-gray-800 rounded-lg shadow p-4">
                   <p className="text-2xl font-bold text-blue-600">20+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Team Members</p>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+                <div className="bg-white text-center dark:bg-gray-800 rounded-lg shadow p-4">
                   <p className="text-2xl font-bold text-blue-600">100+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</p>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-4">
+                <div className="bg-white text-center dark:bg-gray-800 rounded-lg shadow p-4">
                   <p className="text-2xl font-bold text-blue-600">50+</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Happy Clients</p>
                 </div>
