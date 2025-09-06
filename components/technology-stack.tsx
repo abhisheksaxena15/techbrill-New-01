@@ -7,22 +7,75 @@ import AnimatedSection from "./animated-section"
 
 export default function TechnologyStack() {
   // Curated list of 12 trending technologies for a 6x2 grid
+  // const technologies = [
+  //   // Row 1
+  //   { name: "React", icon: "devicon:react" },
+  //   { name: "Next.js", icon: "devicon:nextjs" },
+  //   { name: "TypeScript", icon: "devicon:typescript" },
+  //   { name: "Node.js", icon: "devicon:nodejs" },
+  //   { name: "Python", icon: "devicon:python" },
+  //   { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
+  //   { name: "Docker", icon: "devicon:docker" },
+  //   // Row 2
+  //   { name: "Kubernetes", icon: "devicon:kubernetes" },
+  //   { name: "AWS", icon: "devicon:amazonwebservices-wordmark" },
+  //   { name: "PostgreSQL", icon: "devicon:postgresql" },
+  //   { name: "Figma", icon: "devicon:figma" },
+  //   { name: "Git", icon: "devicon:git" },
+  //   { name: "JavaScript", icon: "devicon:javascript"},
+  //   { name: "Vue.js", icon: "devicon:vuejs"}
+  // ]
   const technologies = [
-    // Row 1
+    // Core Development Technologies
     { name: "React", icon: "devicon:react" },
     { name: "Next.js", icon: "devicon:nextjs" },
     { name: "TypeScript", icon: "devicon:typescript" },
     { name: "Node.js", icon: "devicon:nodejs" },
     { name: "Python", icon: "devicon:python" },
     { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
-    // Row 2
+    { name: "JavaScript", icon: "devicon:javascript" },
+    { name: "Vue.js", icon: "devicon:vuejs" },
+  
+    // Enterprise & Backend Technologies
+    { name: "Java", icon: "devicon:java" },
+    { name: "Spring Boot", icon: "devicon:spring" },
+    { name: "C#", icon: "devicon:csharp" },
+    { name: ".NET", icon: "devicon:dotnetcore" },
+    { name: "Go", icon: "devicon:go" },
+    { name: "Git", icon: "devicon:git" },
+
+  
+    // Cloud & Infrastructure
     { name: "Docker", icon: "devicon:docker" },
     { name: "Kubernetes", icon: "devicon:kubernetes" },
     { name: "AWS", icon: "devicon:amazonwebservices-wordmark" },
+    { name: "Google Cloud", icon: "devicon:googlecloud" },
+
+  
+    // Databases & Data Management
     { name: "PostgreSQL", icon: "devicon:postgresql" },
+    { name: "MongoDB", icon: "devicon:mongodb" },
+    { name: "MySQL", icon: "devicon:mysql" },
+
+  
+    // AI/ML & Data Science
+    { name: "TensorFlow", icon: "devicon:tensorflow" },
+    { name: "PyTorch", icon: "devicon:pytorch" },
+
+  
+  
+    // Design & Collaboration
     { name: "Figma", icon: "devicon:figma" },
-    { name: "Git", icon: "devicon:git" },
-  ]
+
+
+
+  
+    // Mobile Development
+    { name: "React Native", icon: "devicon:react" },
+    { name: "Flutter", icon: "devicon:flutter" },
+    { name: "Swift", icon: "devicon:swift" },
+    { name: "Kotlin", icon: "devicon:kotlin" },
+  ];
 
   return (
     <section className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900 px-4">
@@ -33,19 +86,19 @@ export default function TechnologyStack() {
               Technologies We Use
             </h3>
             <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-              Driven by innovation, powered by the right{" "}
+            Driven by Innovation, Powered by the Right {" "}
               <span className="italic text-blue-800 dark:text-blue-200">Technology Stack</span>
             </h2>
             <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-            <p className="mt-3 text-gray-500 dark:text-gray-400">
-              Delivering responsive, high-performance, and user-friendly interfaces with modern frontend
-              technologies
+            <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            We leverage the latest technologies to build robust, scalable, and future-proof 
+            solutions that give your business a competitive edge in today's digital landscape.
             </p>
           </div>
         </AnimatedSection>
 
         {/* 6x2 Grid with simple rounded rectangle cards */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 max-w-5xl mx-auto">
           {technologies.map((tech, index) => (
             <AnimatedSection key={tech.name} animation="scale" delay={0.05 * index}>
               <motion.div
@@ -59,7 +112,7 @@ export default function TechnologyStack() {
               >
                 <Icon
                   icon={tech.icon}
-                  className="w-8 h-8 mb-1.5 text-gray-700 dark:text-gray-200"
+                  className="w-12 h-12 mb-1.5 text-gray-700 dark:text-gray-200"
                 />
                 <span className="text-xs font-semibold text-gray-800 dark:text-white leading-tight">
                   {tech.name}

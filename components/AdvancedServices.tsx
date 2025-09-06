@@ -20,7 +20,7 @@ const cards: CardProps[] = [
     title: 'Digital Transformation',
     description: 'We help businesses evolve through digital transformation—leveraging the latest technologies, data-driven strategies, and streamlined processes to boost efficiency, enhance customer experience, and achieve long-term growth.',
     icon: '/icons/digital-content.svg',
-    href: '#',
+    href: '/services/ai-automation/digital-transformation',
     image: '/images/digital-content.jpg',
   },
   {
@@ -34,7 +34,7 @@ const cards: CardProps[] = [
     title: 'Generative AI',
     description: 'We use Generative AI to create intelligent, creative solutions—automating content generation, enhancing customer experiences, and driving innovation with advanced models that understand, generate, and adapt in real time.',
     icon: '/icons/generative-ai.svg',
-    href: '#',
+    href: '/services/ai-automation/generative-ai',
     image: '/images/generative-ai.jpg',
   },
   {
@@ -48,21 +48,21 @@ const cards: CardProps[] = [
     title: 'Cloud & DevOps',
     description: 'Accelerate your digital journey with our Cloud and DevOps solutions—enabling faster deployments, scalable infrastructure, and continuous delivery through automation, collaboration, and modern cloud-native technologies.',
     icon: '/icons/cloud-devops.svg',
-    href: '#',
+    href: '/services/ai-automation/cloud-devops',
     image: '/images/cloud-devops.jpg',
   },  
   {
     title: 'Data Analytics',
     description: 'Unlock actionable insights with our data science and analytics services—leveraging advanced tools, machine learning, and real-time data to drive smarter decisions, optimize performance, and accelerate business growth.',
     icon: '/icons/data-analytics.svg',
-    href: '#',
+    href: '/services/ai-automation/data-analytics',
     image: '/images/data-analytics.jpg',
   },
   {
     title: 'Blockchain',
     description: 'Secure, transparent, and decentralized blockchain solutions to streamline operations and build digital trust.',
     icon: '/icons/blockchain.svg',
-    href: '#',
+    href: '/services/ai-automation/blockchain',
     image: '/images/blockchain.jpg',
   },
 ];
@@ -100,7 +100,7 @@ const AdvancedServices = () => {
         <div className="text-center mb-8 md:mb-12">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Advanced Services</h3>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-            Transforming business with latest <span className="italic text-blue-800 dark:text-blue-200">Trends & Technologies</span>
+          Driving Business Transformation with the Latest <span className="italic text-blue-800 dark:text-blue-200">Technology Trends</span>
           </h2>
           <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
           <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">

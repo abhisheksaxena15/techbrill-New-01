@@ -184,7 +184,7 @@ export default function FastGrowingServices() {
               Fast Growing Services
             </span>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-              Providing High-performance Solution Of{" "}
+            Boosting Business Performance Through{" "}
               <span className="italic text-blue-800 dark:text-blue-200">
                 Digital Marketing
               </span>

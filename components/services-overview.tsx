@@ -41,12 +41,12 @@ export default function ServicesOverview() {
       link: "/services/it-services/software-qa-testing",
     },
     {
-      title: "Digital Content Solutions",
+      title: "Digital Marketing",
       description:
         "Driving brand growth through strategic digital campaigns, SEO, social media, and data-driven marketing to boost visibility, engagement, and conversions.",
       icon: "file-text",
       image: "/images/services/digital-marketing-hero.jpg",
-      link: "/services/digital-content-solutions",
+      link: "/services/digital-marketing",
     },
     {
       title: "IT Consultancy",
@@ -71,13 +71,13 @@ export default function ServicesOverview() {
 
 
               <div className="text-center mb-8 md:mb-12">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">What We Offer</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Our Core Services</h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                  We Provide High-Perfomace <span className="italic text-blue-800 dark:text-blue-200">IT Services</span> For Small & Mid-sized Bussinesses.
+                  Empowering small & <span className="italic text-blue-800 dark:text-blue-200">mid-sized businesses </span> with smart IT services
                 </h2>
                 <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
                 <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                  We’re passionate about technology and offer all the IT and digital solutions your business needs. Our comprehensive range of IT services is designed to help businesses transform, innovate, and thrive in today&apos;s rapidly evolving digital landscape.
+                Passionate about technology, we provide IT solutions that drive innovation, transformation, and growth for your business.
                 </p>
               </div>
 
