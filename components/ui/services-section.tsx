@@ -608,7 +608,7 @@ export default function ServicesSection() {
 	return (
 		<>
 			{/* 1. What We Do Section - matches the image layout */}
-			<section className="py-16 bg-white dark:bg-gray-950">
+			<section className="pt-16 pb-10 bg-white dark:bg-gray-950">
 				<div className="container mx-auto max-w-6xl">
 					<div className="flex flex-col md:flex-row items-center gap-9">
 						{/* Left: Code image */}
@@ -639,23 +639,23 @@ export default function ServicesSection() {
 							transition={{ duration: 0.7 }}
 						>
 							{/* Section label with blue underline */}
-							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
-								We Create More Than Code</h3>
+							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+								WEB EXCELLENCE</h3>
 							{/* <div className="h-1 w-28 bg-blue-600 mb-3 " /> */}
 							{/* Main heading */}
-							<h2 className=" mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">We are your trusted Partner in <span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2>
-							<div className="h-1 w-28 bg-blue-600 mb-3 " />
-							<p className="text-gray-600 dark:text-white mb-2 mt-3">Your digital presence is more than just a website; it&#39;s your brand&#39;s identity, functionality, and customer experience rolled into one. At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
-
+							<h2 className=" mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">End-to-End Web Solutions for Modern Businesses </h2> {/*<span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2> */}
+							<div className="h-1 w-28 bg-red-600 mb-3 " />
+							<p className="text-gray-600 dark:text-white mb-2 mt-3">Your digital presence is more than just a website it&#39;s your brand&#39;s identity, functionality, and customer experience rolled into one.
 							</p>
-
+							<p className="text-gray-600 dark:text-white mb-2 mt-3">At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
+							</p>
 							<p className="text-gray-600 dark:text-white mb-5">
 								Backed by creativity and deep technical expertise, our team builds scalable, responsive, and secure solutions tailored to your audience. Whether you need a business website, a custom web app, or a complex portal, we ensure it communicates your vision clearly and delivers real value—across every screen and interaction.
 							</p>
 
 							<AnimatedSection animation="fade" delay={0.6}>
 								<Link href="/contact">
-									<Button className="group bg-blue-800 dark:bg-blue-700 ">
+									<Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700 ">
 										Consult with us{" "}
 										<motion.div
 											animate={{ x: [0, 5, 0] }}
@@ -666,6 +666,9 @@ export default function ServicesSection() {
 									</Button>
 								</Link>
 							</AnimatedSection>
+							<p className="text-gray-600 dark:text-white mb-2 mt-3 italic">We don&#39;t just write code — we craft solutions and create value.
+
+							</p>
 						</motion.div>
 					</div>
 				</div>
@@ -675,14 +678,14 @@ export default function ServicesSection() {
 			<section className="py-16 bg-white dark:bg-gray-950">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h2 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
-							What We Do
+						<h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+							WHO WE ARE
 						</h2>
-						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Turning ideas into flawless <span className="text-blue-800 font-bold italic">web development</span> solutions is our expertise
+						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Building Smart, Scalable, and Engaging Web Platforms
 						</h2>
-						<div className="h-1 w-20 bg-blue-800 mx-auto mt-4 mb-4"></div>
+						<div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
 						<h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
-							We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today’s fast-paced digital world.
+							We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today&#39;s fast-paced digital world.
 						</h3>
 					</div>
 
@@ -1039,7 +1042,7 @@ export default function ServicesSection() {
                     </div> */}
 					{/* 3. Emerging Tech Solutions Section */}
 					<div className="mt-4">
-						<section className="py-12 bg-blue-50 dark:bg-gray-900 " >
+						<section className="py-11 bg-gray-50 dark:bg-gray-900 " >
 							{/* <div className="container mx-auto">
                     <div className="text-left mb-8 md:mb-12">
                         <h3 className="text-2xl font-semibold uppercase tracking-wide text-blue-700 dark:text-white">
@@ -1063,30 +1066,30 @@ export default function ServicesSection() {
                 </div> */ }
 
 							{/******/}
-
-							<div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px] ">
+							{/* <section className="py-0 bg-blue-50 dark:bg-gray-900"> */}
+							<div className=" container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px] ">
 								{/* Left: Sticky Heading & CTA */}
-								<div className="w-full md:w-1/2 flex flex-col justify-center md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0">
+								<div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
 
-									<h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
-										Solution & Services
+									<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+										OUR WEB SOLUTIONS INCLUDE
 									</h3>
 									<h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
 										Comprehensive Web Solutions for Your Business
 									</h3>
-									<div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+									<div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
 
 									{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
                             Comprehensive Web Solutions for Your Business
                         </h2> */}
 									<p
-										className="text-gray-600 dark:text-white mb-2"
+										className="text-gray-600 dark:text-white mb-4"
 										style={{ textAlign: "justify" }}
 									>
 										We deliver advanced, end-to-end web services powered by modern technologies and innovation. From responsive design and scalable development to seamless integrations and performance optimization, our solutions are tailored to enhance user experience, boost efficiency, and accelerate your digital growth.
 									</p>
 									<p
-										className="text-gray-600 dark:text-white mb-2"
+										className="text-gray-600 dark:text-white mb-4"
 										style={{ textAlign: "justify" }}
 									>
 										Our team is here to understand your needs and deliver solutions that help your business grow. Whether you want a fresh website, smoother operations, or stronger security, we’ll support you every step so you can stay competitive and ready for the future.
@@ -1130,10 +1133,11 @@ export default function ServicesSection() {
 									))}
 								</div>
 							</div>
-						</section>
-					</div>
+						{/* </section> */}
+					</section>
 				</div>
-			</section>
+			</div>
+		</section >
 		</>
 	);
 }

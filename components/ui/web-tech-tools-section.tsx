@@ -159,6 +159,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const techTabs = [
   {
@@ -205,6 +206,9 @@ const techTabs = [
       { name: "Postman", icon: <Icon icon="logos:postman-icon" className="w-7 h-7" /> },
       { name: "Playwright", icon: <Icon icon="logos:playwright" className="w-7 h-7" /> },
       { name: "Cucumber", icon: <Icon icon="logos:cucumber" className="w-7 h-7" /> },
+      { name: "Jira", icon: <Icon icon="logos:jira" className="w-7 h-7" /> },
+      { name: "Bugzilla", icon: <Icon icon="mdi:bug
+        " className="w-7 h-7" /> },
     ],
   },
   {
@@ -241,20 +245,20 @@ export default function WebTechToolsSection() {
             {techTabs.map((tab, idx) => (
               <button
                 key={tab.label}
-                className={`flex justify-between items-center px-4 py-3 rounded-md text-left transition-all font-semibold text-lg tracking-wide ${
-                  activeTab === idx
-                    ? "bg-blue-800 shadow-lg text-white"
-                    : "hover:bg-blue-800/80 opacity-80 text-gray-200"
-                }`}
+                className={`flex justify-between items-center px-4 py-3 rounded-md text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
+                  ? "bg-blue-800 shadow-lg text-white"
+                  : "hover:bg-blue-800/80 opacity-80 text-gray-200"
+                  }`}
                 onClick={() => setActiveTab(idx)}
               >
                 <span className="flex items-center">
-                  <span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}>{`0${idx + 1}.`}</span>
+                  {/* <span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}>{`0${idx + 1}.`}</span> */}
                   {tab.label}
                 </span>
                 {activeTab === idx && <span className="ml-2 text-lg">→</span>}
               </button>
             ))}
+
           </div>
 
           {/* Mobile Accordion */}
@@ -274,7 +278,7 @@ export default function WebTechToolsSection() {
                   onClick={() => setOpenAccordion(openAccordion === idx ? null : idx)}
                 >
                   {/* Serial Number as in the laptop view */}
-                  <span className="mr-2 font-bold text-white w-8 h-8 flex items-center justify-center">{`0${idx + 1}.`}</span>
+                  {/* <span className="mr-2 font-bold text-white w-8 h-8 flex items-center justify-center">{`0${idx + 1}.`}</span> */}
                   <span>{tab.label}</span>
                   <span className="ml-auto">
                     <Icon
@@ -297,6 +301,7 @@ export default function WebTechToolsSection() {
                           <span className="text-base font-medium text-black">{skill.name}</span>
                         </div>
                       ))}
+
                     </div>
                   </div>
                 )}
@@ -320,6 +325,24 @@ export default function WebTechToolsSection() {
               ))}
             </div>
           </div>
+        </div>
+        {/* GLOBAL Explore More Link - Always Visible */}
+        {/* GLOBAL Explore More Button - Always Visible */}
+        {/* <div className="mt-6 flex justify-end">
+          <button
+            className="bg-blue-600 text-white font-semibold px-5 py-2 rounded-md hover:bg-blue-700 transition"
+            onClick={() => {
+              // Add your click functionality here
+              console.log("Explore More clicked");
+            }}
+          >
+            Explore More
+          </button>
+        </div> */}
+        <div className="mt-6 text-right">
+          <a href="/technologies" className="text-red-600 font-semibold hover:underline">
+            Explore More →
+          </a>
         </div>
       </div>
     </motion.div>
