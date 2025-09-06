@@ -188,7 +188,7 @@ const STEPS = [
       // This wrapper provides a consistent space for the icon to animate within.
       <div className="flex flex-col items-center justify-center h-24">
         <Lightbulb className="w-11 h-11 text-yellow-500 hover:scale-135 transition-transform" />
-        
+
       </div>
     ),
     heading: "Step 1: Planning & Strategy",
@@ -206,7 +206,7 @@ const STEPS = [
       // New wrapper div for the icon and label
       <div className="flex flex-col items-center justify-center h-24">
         <Layout className="w-11 h-12 text-blue-500 hover:scale-135 transition-transform" />
-       
+
       </div>
     ),
     heading: "Step 2: Design & Prototyping ",
@@ -224,14 +224,13 @@ const STEPS = [
       // New wrapper div for the icon and label
       <div className="flex flex-col items-center justify-center h-24">
         <Code className="w-11 h-12 text-green-500 hover:scale-135 transition-transform" />
-        
+
       </div>
     ),
     heading: "Step 4: Development",
     description: (
       <div className="text-justify leading-relaxed">
-        Our developers bring designs to life with clean, scalable code. We use modern technologies to ensure your product is robust, secure, and high-performing.
-      </div>
+        Now the magic happens behind the scenes. Our developers transform approved designs into a fully functional, responsive website with clean, scalable code. This stage covers front-end and back-end development, database integration, and feature implementation — ensuring performance, security, and cross-device compatibility.      </div>
     ),
     image: "/images/services/web-design-hero.jpg",
   },
@@ -242,31 +241,30 @@ const STEPS = [
       // New wrapper div for the icon and label
       <div className="flex flex-col items-center justify-center h-24">
         <PenTool className="w-11 h-12 text-purple-500 hover:scale-135 transition-transform" />
-        
+
       </div>
     ),
     heading: "Step 3: QA & Testing",
     description: (
       <div className="text-justify leading-relaxed">
-        We conduct rigorous testing to ensure flawless functionality, performance, and security across devices and browsers. This includes usability checks, bug fixes, and compatibility verification. Our thorough QA process guarantees a seamless, accessible, and error-free user experience before the website goes live.
-      </div>
+We perform rigorous testing to ensure flawless functionality, performance, and security across all devices and browsers. From usability checks and bug fixes to compatibility testing, our QA process guarantees a seamless, accessible, and error-free user experience before launch.      </div>
     ),
     image: "/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg",
   },
   {
     key: "launch",
-    label: "Launch & Growth",
+    label: "Launch & Support",
     icon: (
       // New wrapper div for the icon and label
       <div className="flex flex-col items-center justify-center h-24">
         <Rocket className="w-11 h-12 text-red-500 hover:scale-135 transition-transform" />
-        
+
       </div>
     ),
-    heading: "Step 5: Launch & Growth",
+    heading: "Step 5: Launch & Support",
     description: (
       <div className="text-justify leading-relaxed">
-        Our partnership doesn’t end at launch. We ensure a smooth go-live, then continue supporting you with ongoing consultancy, maintenance, and optimizations to keep your website secure, updated, and high-performing. From refining features to implementing growth strategies, we’re committed to helping your online presence thrive and your business succeed at every stage.
+        Our partnership doesn&#39;t end at launch. We ensure a smooth go-live, then continue supporting you with ongoing consultancy, maintenance, and optimizations to keep your website secure, updated, and high-performing. From refining features to implementing growth strategies, we’re committed to helping your online presence thrive and your business succeed at every stage.
       </div>
     ),
     image: "/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg",
@@ -278,7 +276,7 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
 
   return (
 
-    
+
     <section className="py-20 px-6 md:px-16 max-w-full overflow-x-hidden bg-white">
 
       <div className="text-center mb-10">
@@ -289,9 +287,12 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          Our <span className="text-blue-800 italic ">Work Process</span> to Build Digital Success
+          <span className="text-red-600 dark:text-blue-400 font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+            OUR PROVEN PROCESS
+          </span>
+          Our Work Process to Build Digital Success
         </motion.h2>
-        <div className="w-20 h-1 bg-blue-600 mx-auto mb-3 rounded-full mt-3" />
+        <div className="w-20 h-1 bg-red-600 mx-auto mb-3 rounded-full mt-3" />
         <motion.p
           className="text-base text-gray-600   max-w-xl mx-auto mt-1 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
@@ -299,8 +300,7 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          A seamless journey from concept to launch, combining strategy, creativity, and technology. Our clear, step-by-step process turns ideas into reality more efficiently and effectively.
-        </motion.p>
+A seamless journey from concept to launch, blending strategy, creativity, and technology to turn ideas into reality efficiently.        </motion.p>
       </div>
       {/* Tabs */}
       <div className="
@@ -351,7 +351,7 @@ export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS })
             transition={{ duration: 0.5 }}
             className="flex-1 w-full md:w-1/2 min-w-[220px]"
           >
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-blue-700">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-red-700">
               {steps[active].heading}
             </h3>
             <div className="text-gray-600 mt-4 max-w-2xl">
