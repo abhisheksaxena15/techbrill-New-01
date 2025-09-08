@@ -1,6 +1,8 @@
 'use client';
 
+
 import React, { useState } from 'react';
+import OurAssurance from "@/components/OurAssurance";
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -17,6 +19,7 @@ import WorkProcess from '@/components/ui/work-process';
 import ConsultationSection from '@/components/ConsultationSection';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
+import Link from "next/link";
 
 // Animation variants
 const fadeIn = {
@@ -126,7 +129,7 @@ export default function WebDesignDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              Modern, high-performance websites for your business growth.
+              Crafting Digital Experiences That Drive Growth.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
@@ -160,28 +163,38 @@ export default function WebDesignDevelopmentPage() {
           </motion.div>
         </section>
 
+
         {/* 3. Services Section */}
         <ServicesSection />
 
+        {/* 8. Contact CTA Section */}
+        <section className="pb-12 py-10 bg-blue-800 text-white text-center mb-9">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
+            <Link href="/contact"><Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-red-700 hover:text-white">Contact Us</Button>
+            </Link>
+          </motion.div>
+        </section>
+
         {/* 4. Tech Stack Section */}
-        <section className="py-16">
+        <section className="pt-16 , pb-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
                 Technologies We Use
               </h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                Driven by bold ideas, delivered through robust <span className="text-blue-800 italic">Tech Stacks</span>
+                Driven by bold ideas, delivered through robust Tech Stacks
               </h2>
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
               {/* Change: Wrapped the h3 tag in a new flex container to control its width
       and ensure it stays centered while having a maximum width.
     */}
               <div className="flex justify-center mt-4">
                 {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
                 <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                  We use the latest web technologies to build dynamic, high-performance web applications that are responsive, secure, and scalable, ensuring your digital presence stays modern, efficient, and ready for future growth.
-                </h3>
+                  We leverage the latest technologies to build dynamic, secure, and scalable web applications that keep your digital presence modern and future-ready.                </h3>
               </div>
             </div>
             <WebTechToolsSection />
@@ -201,28 +214,34 @@ export default function WebDesignDevelopmentPage() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7 }}
               >
-                <div className="text-center mb-6 lg:mb-8">
-                  <h3 className="text-sm font-semibold tracking-wide text-blue-800 dark:text-blue-400">
+                <div className="text-left mb-6 lg:mb-8">
+                  <h3 className="text-sm font-semibold tracking-wide text-red-600 dark:text-blue-400">
                     Industry Expertise
                   </h3>
-                  <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl text-center">
-                    We transform all <span className="text-blue-800 italic">Industires</span> and business processes
+                  <h2 className="text-left mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl ">
+                    Empowering Diverse Industries with Tailored Digital Solutions
                   </h2>
-                  <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                  <div className=" h-1 w-20 bg-red-600 dark:bg-blue-400  mt-4"></div>
+                  <div className="flex justify-center mt-4">
+                    {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
+                    <h3 className="mb-0 max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                      Our web solutions are designed around your industry needs to accelerate growth and maximize business impact.
+                    </h3>
+                  </div>
                 </div>
-                <p className="text-gray-600 text-left max-w-lg lg:mx-0 mt-4 text-justify leading-relaxed">
+                <p className="text-gray-600 text-left max-w-lg lg:mx-0 mt-1 text-justify leading-relaxed">
                   Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation. With a focus on tangible outcomes, we help organizations accelerate growth, improve customer experience, and stay ahead in a dynamic digital landscape. Our team delivers custom web solutions that solve real business problems and drive measurable results.
                 </p>
                 <div className="flex space-x-4">
                   <button
-                    className="mt-6 px-6 py-3 bg-blue-800 text-white rounded shadow-md font-bold hover:bg-blue-600 transition duration-300"
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-red-800 transition duration-300"
                     onClick={() => window.location.href = '/industries'}
                   >
                     Explore Industries
                   </button>
 
                   <button
-                    className="mt-6 px-6 py-3 bg-blue-800 text-white rounded shadow-md font-bold hover:bg-blue-600 transition duration-300"
+                    className="mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-md font-bold hover:bg-red-800 transition duration-300"
                     onClick={() => window.location.href = '/'}
                   >
                     Consult Our Expert
@@ -266,81 +285,90 @@ export default function WebDesignDevelopmentPage() {
         {/* 6. Dev Process Section */}
         <WorkProcess />
 
+
         {/*7 Our commitment section*/}
-        <section className="py-20 px-6 md:px-16 bg-white">
+        <OurAssurance />
+
+        {/*7 Our commitment section*/}
+        {/* <section className="py-20 px-6 md:px-16 bg-white">
           <div className="container mx-auto">
             <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
                 ASSURANCE TO YOU
               </h3>
 
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                Our <span className="text-blue-800 italic">Commitment and Guarantee</span>
+                Our Commitment and Guarantee
               </h2>
 
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-600 mx-auto mt-3 mb-2"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-blue-600 mx-auto mt-3 mb-2"></div>
 
               <p className=" text-base text-gray-600   max-w-xl mx-auto mt-1 leading-relaxed">
-                We stand behind our work with a promise of quality, transparency, and reliability.  From first consultation to post-launch support, we ensure your website meets expectations, delivers results, and drives your success
-              </p>
+                We promise quality, transparency, and reliability from consultation to post-launch support and ensure your website meets expectations, delivers results, and drives success.              </p>
 
               {/* Commitment Items */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
-                {/* 100% Transparency */}
-                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <Eye className="w-8 h-8 text-blue-800" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    100% Transparency
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.
-                  </p>
-                </div>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+                {[
+                  {
+                    icon: <Eye className="w-8 h-8 text-blue-800" />,
+                    bg: "bg-blue-100",
+                    title: "100% Transparency",
+                    desc: "Complete visibility into project progress, timelines, and deliverables. No hidden costs or surprise changes.",
+                  },
+                  {
+                    icon: <Clock className="w-8 h-8 text-green-600" />,
+                    bg: "bg-green-100",
+                    title: "95% On Time Delivery",
+                    desc: "Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.",
+                  },
+                  {
+                    icon: <Shield className="w-8 h-8 text-purple-600" />,
+                    bg: "bg-purple-100",
+                    title: "Free 30 Days Support",
+                    desc: "Complimentary post-launch support to ensure smooth operation and address any issues that may arise.",
+                  },
+                  {
+                    icon: <Users className="w-8 h-8 text-orange-600" />,
+                    bg: "bg-orange-100",
+                    title: "Flexible Engagement",
+                    desc: "Adaptable working models to suit your project needs, timeline, and budget requirements.",
+                  },
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    className="relative flex flex-col items-center text-center p-6 rounded-lg bg-slate-100 shadow-sm overflow-hidden transition-transform duration-200 group"
+                    whileHover={{
+                      y: -6, // lift up
+                      boxShadow: "0 12px 28px rgba(0,0,0,0.15)",
+                      transition: { type: "spring", stiffness: 300, damping: 20 }, // instant & smooth
+                    }}
+                  >
+                    {/* Gradient bar always visible at top */}
+        {/* <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-red-500 rounded-t-lg"></div>
 
-                {/* 95% On Time Delivery */}
-                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                    <Clock className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    95% On Time Delivery
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Proven track record of meeting deadlines with quality deliverables. We value your time and business commitments.
-                  </p>
-                </div>
+                    {/* Icon */}
+        {/* <div
+                      className={`w-16 h-16 ${item.bg} rounded-full flex items-center justify-center mb-4 shadow-md transition-transform duration-300 group-hover:scale-110`}
+                    >
+                      {item.icon}
+                    </div> */}
 
-                {/* Free 30 days support */}
-                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                    <Shield className="w-8 h-8 text-purple-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    Free 30 Days Support
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Complimentary post-launch support to ensure smooth operation and address any issues that may arise.
-                  </p>
-                </div>
+        {/* Title */}
+        {/* <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      {item.title}
+                    </h4> */}
 
-                {/* Flexible Engagement */}
-                <div className="flex flex-col items-center text-center p-6 bg-slate-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-                    <Users className="w-8 h-8 text-orange-600" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    Flexible Engagement
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Adaptable working models to suit your project needs, timeline, and budget requirements.
-                  </p>
-                </div>
-              </div>
+        {/* Description
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))} */}
+        {/* </div>
+
             </div>
-          </div>
-        </section>
+          </div> */}
+        {/*/ </section>  */}
 
 
 
@@ -354,78 +382,106 @@ export default function WebDesignDevelopmentPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
+            {/* Section Heading */}
             <div className="text-center mb-10">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
-                WHY TECHBRILL
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                WHY CHOOSE US
               </h3>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Few Good Reason to <span className="text-blue-800 italic">Choose Us</span></h2>
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-600 mx-auto mt-3 mb-2"></div>              
-              <p className="text-base text-gray-600   max-w-2xl mx-auto mt-1 leading-relaxed">
-                Customer satisfaction is our top priority, backed by consistent quality, ongoing innovation, and continuous improvement. We value fairness, transparency, and integrity in everything we do. What sets us apart in the digital landscape includes.
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                Why Choosing Us Makes the Difference
+              </h2>
+              <div className="h-1 w-20 bg-red-600  mx-auto mt-3 mb-2 rounded-full"></div>
+              <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-1 leading-relaxed">
+                CCustomer satisfaction drives us, powered by consistent quality, ongoing innovation, and integrity in every project
               </p>
             </div>
+
+            {/* Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <CheckCircle className="w-9 h-9 text-blue-800" />,
-                  title: 'Unique, Purposeful & Accessibility Standards Design',
-                  desc: 'We craft digital experiences that are not only beautiful but also accessible and purposeful for every user.'
+                  icon: <CheckCircle className="w-6 h-6 text-white" />,
+                  title: "Unique, Purposeful & Accessibility Standards Design",
+                  desc: "We craft digital experiences that are not only beautiful but also accessible and purposeful for every user.",
                 },
                 {
-                  icon: <Lightbulb className="w-9 h-9 text-blue-800" />,
-                  title: 'Strong Technology Capability',
-                  desc: 'Our team leverages the latest tech to build robust, scalable, and future-ready solutions.'
+                  icon: <Lightbulb className="w-6 h-6 text-white" />,
+                  title: "Strong Technology Capability",
+                  desc: "Our team leverages the latest tech to build robust, scalable, and future-ready solutions.",
                 },
                 {
-                  icon: <Palette className="w-9 h-9 text-blue-800" />,
-                  title: 'Highly Creative & Motivated Teams',
-                  desc: 'Our passionate experts bring creativity and energy to every project, driving innovation and results.'
+                  icon: <Palette className="w-6 h-6 text-white" />,
+                  title: "Highly Creative & Motivated Teams",
+                  desc: "Our passionate experts bring creativity and energy to every project, driving innovation and results.",
                 },
                 {
-                  icon: <Target className="w-9 h-9 text-blue-800" />,
-                  title: 'Result-Driven Approach and Process',
-                  desc: 'We focus on outcomes, using proven processes to deliver measurable business value.'
+                  icon: <Target className="w-6 h-6 text-white" />,
+                  title: "Result-Driven Approach and Process",
+                  desc: "We focus on outcomes, using proven processes to deliver measurable business value.",
                 },
                 {
-                  icon: <Handshake className="w-9 h-9 text-blue-800" />,
-                  title: 'Flexible Engagement Models',
-                  desc: 'Choose from a range of engagement options tailored to your needs and goals.'
+                  icon: <Handshake className="w-6 h-6 text-white" />,
+                  title: "Flexible Engagement Models",
+                  desc: "Choose from a range of engagement options tailored to your needs and goals.",
                 },
                 {
-                  icon: <PhoneCall className="w-9 h-9 text-blue-800" />,
-                  title: 'Seamless Communication',
-                  desc: 'We keep you in the loop with clear, proactive, and responsive communication.'
-                }
+                  icon: <PhoneCall className="w-6 h-6 text-white" />,
+                  title: "Seamless Communication",
+                  desc: "We keep you in the loop with clear, proactive, and responsive communication.",
+                },
               ].map((item, idx) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: idx * 0.08 }}
-                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(59,130,246,0.10)', borderColor: '#2563eb', backgroundColor: 'rgba(59,130,246,0.04)' }}
-                  className="flex flex-col items-center text-center gap-3 bg-white/80 rounded-2xl border border-blue-100 shadow-md px-7 py-8 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-500 hover:shadow-lg"
+                  transition={{ duration: 0.6, delay: idx * 0.08 }} // only for entrance
+                  whileHover={{
+                    y: -8, // move up
+                    scale: 1.03, // subtle zoom
+                    boxShadow: "0 10px 36px rgba(59,130,246,0.25)",
+                    borderColor: "#3B82F6",
+                    transition: { duration: 0.2 }, // separate quick hover animation
+                  }}
+                  className="flex flex-col items-center text-center gap-3 bg-white dark:bg-gray-800 rounded-2xl 
+  border border-blue-100 dark:border-gray-700 shadow-md px-7 py-8 
+  transition-colors duration-300 
+  hover:bg-gradient-to-br hover:from-blue-50 hover:to-red-50 
+  dark:hover:from-gray-800 dark:hover:to-gray-900"
                 >
-                  <div className="flex items-center justify-center mb-2">
+
+
+                  {/* Gradient Icon Circle */}
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-red-500 flex items-center justify-center mb-3 shadow-md group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-800 mb-1">{item.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.desc}</p>
+
+                  {/* Title */}
+                  <h3 className="text-base md:text-lg font-semibold text-blue-800 dark:text-white group-hover:text-red-600 transition-colors duration-300 mb-1">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
+
         </section>
 
 
+
         {/* 8. Contact CTA Section */}
-        <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
+        {/* <section className="py-12 bg-gradient-to-r from-blue-600 to-blue-400 text-white text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
             <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
             <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
           </motion.div>
-        </section>
+        </section> */}
 
         {/* 9. Contact Form Section */}
         {/* <section className="py-16">
