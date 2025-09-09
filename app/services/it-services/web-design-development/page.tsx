@@ -221,7 +221,7 @@ export default function WebDesignDevelopmentPage() {
                   <h2 className="text-left mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl ">
                     Empowering Diverse Industries with Tailored Digital Solutions
                   </h2>
-                  <div className=" h-1 w-20 bg-red-600 dark:bg-blue-400  mt-4"></div>
+                  <div className="w-20 h-1 bg-red-600  mb-3 rounded-full mt-3" />
                   <div className="flex justify-center mt-4">
                     {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
                     <h3 className="mb-0 max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
@@ -392,7 +392,7 @@ export default function WebDesignDevelopmentPage() {
               </h2>
               <div className="h-1 w-20 bg-red-600  mx-auto mt-3 mb-2 rounded-full"></div>
               <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-1 leading-relaxed">
-                CCustomer satisfaction drives us, powered by consistent quality, ongoing innovation, and integrity in every project
+                Customer satisfaction drives us, powered by consistent quality, ongoing innovation, and integrity in every project
               </p>
             </div>
 
