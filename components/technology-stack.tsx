@@ -92,7 +92,7 @@ export default function TechnologyStack() {
             <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
             <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             We leverage the latest technologies to build robust, scalable, and future-proof 
-            solutions that give your business a competitive edge in today's digital landscape.
+            solutions that give your business a competitive edge in today&apos;s digital landscape.
             </p>
           </div>
         </AnimatedSection>

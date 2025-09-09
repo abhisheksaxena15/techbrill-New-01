@@ -4,7 +4,7 @@ import type React from "react"
 
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react"
+import { Mail, Phone, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
 import { useState } from "react"
@@ -54,7 +54,7 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <MapPin className="h-5 w-5 mr-3 text-primary mt-0.5" />
-                <span className="text-gray-400">GH12/1 ACE Platinum, Sector Zeta -1, Gr. Noida, India</span>
+                <span className="text-gray-400">GH12/1 ACE Platinum, Sector&nbsp;Zeta&nbsp;-1, Gr. Noida, India</span>
               </motion.div>
               <motion.div 
                 className="flex items-center"
@@ -119,12 +119,11 @@ export default function Footer() {
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6">Our Services</h3>
             <ul className="space-y-2 md:space-y-3">
               {[
-                { name: "Web Development", href: "/services#web" },
-                { name: "Mobile App Development", href: "/services#mobile" },
-                { name: "AI & ML Solutions", href: "/services#ai-ml" },
-                { name: "Digital Marketing", href: "/services#marketing" },
-                { name: "UI/UX Design", href: "/services#design" },
-                { name: "Cloud Solutions", href: "/services#cloud" },
+                { name: "Web Development", href: "/services/it-services/web-design-development"},
+                { name: "Mobile App Development", href: "/services/it-services/mobile-app-development"},
+                { name: "QA & testing", href: "/services/it-services/software-qa-testing"},
+                { name: "AI & ML Solutions", href: "/services/it-services/ai-ml-development"},
+                { name: "Digital Marketing", href: "/services/digital-marketing/content-marketing"},
               ].map((service, index) => (
                 <motion.li 
                   key={index}
@@ -174,6 +173,30 @@ export default function Footer() {
                 <p className="text-green-400 mt-2">Thank you for subscribing!</p>
               )}
             </form>
+            
+            {/* Social Media Links */}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold text-gray-300 mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                {[
+                  { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/techbrills/", label: "LinkedIn" },
+                  { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/techbrills/", label: "Instagram" },
+                  { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/techbrillsolutions/", label: "Facebook" },
+                  { icon: <Twitter className="h-5 w-5" />, href: "https://x.com/TechbrillS", label: "Twitter" }
+                ].map((social, index) => (
+                  <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }}>
+                    <Link
+                      href={social.href}
+                      className="text-gray-400 hover:text-primary transition-colors"
+                      aria-label={social.label}
+                      target="_blank"
+                    >
+                      {social.icon}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
