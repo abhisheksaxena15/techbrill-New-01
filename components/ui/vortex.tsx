@@ -158,16 +158,6 @@ export const Vortex = (props: VortexProps) => {
     particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
   };
 
-<<<<<<< HEAD
-  
-  const drawParticles = useCallback((ctx: CanvasRenderingContext2D) => {
-    for (let i = 0; i < particlePropsLength; i += particlePropCount) {
-      updateParticle(i, ctx);
-    }
-  }, [particlePropsLength, updateParticle]);
-
-=======
->>>>>>> 0b9797059ff4b7a528d87f3e93a69987443c5956
   const updateParticle = (i: number, ctx: CanvasRenderingContext2D) => {
     const canvas = canvasRef.current;
     if (!canvas) return;

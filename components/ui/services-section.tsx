@@ -64,7 +64,6 @@ export default function ServicesSection() {
 						  viewport={{ once: true }}
 						  transition={{ duration: 0.7 }}
 						>
-<<<<<<< HEAD
 							{/* Section label with blue underline */}
 							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
 								WEB EXCELLENCE</h3>
@@ -94,38 +93,6 @@ export default function ServicesSection() {
 								</Link>
 							</AnimatedSection>
 							=
-=======
-						  <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
-							WEB EXCELLENCE
-						  </h3>
-						  <h2 className="mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-							End-to-End Web Solutions for Modern Businesses
-						  </h2>
-						  <div className="h-1 w-28 bg-red-600 mb-3" />
-						  <p className="text-gray-600 dark:text-white mb-2 mt-3">
-							Your digital presence is more than just a website it&#39;s your brand&#39;s identity, functionality, and customer experience rolled into one.
-						  </p>
-						  <p className="text-gray-600 dark:text-white mb-2 mt-3">
-							At TechBrill, we specialize in crafting stunning websites, powerful web applications, and intelligent portals that not only look great but work seamlessly. We focus on design that captivates, development that performs, and user journeys that convert.
-						  </p>
-						  <p className="text-gray-600 dark:text-white mb-5">
-							Backed by creativity and deep technical expertise, our team builds scalable, responsive, and secure solutions tailored to your audience. Whether you need a business website, a custom web app, or a complex portal, we ensure it communicates your vision clearly and delivers real value—across every screen and interaction.
-						  </p>
-			
-						  <AnimatedSection animation="fade" delay={0.6}>
-							<Link href="/contact">
-							  <Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700">
-								Consult with us{" "}
-								<motion.div
-								  animate={{ x: [0, 5, 0] }}
-								  transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
-								>
-								  <ArrowRight className="ml-2 h-4 w-4" />
-								</motion.div>
-							  </Button>
-							</Link>
-						  </AnimatedSection>
->>>>>>> 0b9797059ff4b7a528d87f3e93a69987443c5956
 						</motion.div>
 					  </div>
 					</div>
