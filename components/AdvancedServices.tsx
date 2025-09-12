@@ -100,7 +100,7 @@ const AdvancedServices = () => {
         <div className="text-center mb-8 md:mb-12">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Advanced Services</h3>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-          Driving Business Transformation with the Latest <span className="italic text-blue-800 dark:text-blue-200">Technology Trends</span>
+          Driving Business Transformation with the Latest <span className="text-blue-800 dark:text-blue-200">Technology Trends</span>
           </h2>
           <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
           <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
