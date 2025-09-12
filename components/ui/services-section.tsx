@@ -691,7 +691,7 @@ export default function ServicesSection() {
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
 						<h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
-							WHO WE ARE
+							WHO WE DO
 						</h2>
 						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Building Smart, Scalable, and Engaging Web Platforms
 						</h2>
