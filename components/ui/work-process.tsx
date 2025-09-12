@@ -332,7 +332,7 @@ A seamless journey from concept to launch, blending strategy, creativity, and te
             {active === idx && (
               <motion.div
                 layoutId="underline"
-                className="absolute left-0 right-0 -bottom-1 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400 shadow-md"
+                className="absolute left-0 right-0 -bottom-1 h-1 rounded-full bg-gradient-to-r from-red-500 via-red-500 to-red-600 shadow-md"
                 style={{ zIndex: 1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
@@ -351,7 +351,7 @@ A seamless journey from concept to launch, blending strategy, creativity, and te
             transition={{ duration: 0.5 }}
             className="flex-1 w-full md:w-1/2 min-w-[220px]"
           >
-            <h3 className="text-xl md:text-2xl font-bold mb-2 text-red-700">
+            <h3 className="text-xl md:text-2xl font-bold mb-2 text-blue-700">
               {steps[active].heading}
             </h3>
             <div className="text-gray-600 mt-4 max-w-2xl">
@@ -377,3 +377,4 @@ A seamless journey from concept to launch, blending strategy, creativity, and te
     </section>
   );
 }
+//

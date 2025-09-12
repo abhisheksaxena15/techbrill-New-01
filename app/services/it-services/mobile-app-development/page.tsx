@@ -1,5 +1,6 @@
 'use client';
 
+import Reviews from "@/components/review";
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
@@ -14,10 +15,11 @@ import { FocusCards } from '@/components/ui/focus-cards';
 import WebTechToolsSection from '@/components/ui/web-tech-tools-section';
 import MobileTechToolsSection from '@/components/ui/mobile-tech-tools-section';
 import ServicesSection from '@/components/ui/services-section-mobile';
-import WorkProcess from '@/components/ui/work-process';
+import WorkProcessMob from '@/components/ui/work-process-mob';
 import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
 import ConsultationSection from '@/components/ConsultationSection';
+import ConsultationSectionMob from '@/components/ConsultationSectionMob';
 
 // Animation variants
 const fadeIn = {
@@ -106,7 +108,7 @@ export default function MobileAppDevelopmentPage() {
     <ErrorBoundary>
       <main className="bg-white text-gray-900">
         {/* 1. Hero Banner */}
-        <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
+        <section className="relative py-10 max-h-[450px] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <Image src="/images/services/mobile-app-hero.jpg" alt="Mobile App Development Hero" fill className="object-cover object-center z-0" priority />
           {/* Dark Linear Gradient Overlay with Blur */}
@@ -140,14 +142,14 @@ export default function MobileAppDevelopmentPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Get Started</Button>
+                {/* <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Get Started</Button> */}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button>
+                {/* <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button> */}
               </motion.div>
             </motion.div>
           </div>
@@ -168,68 +170,85 @@ export default function MobileAppDevelopmentPage() {
         <section className="py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-lg font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
                 Technologies We Use
               </h3>
               <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Driven by bold ideas, delivered through robust <span className="text-blue-800">Mobile Tech Stacks</span>
+                Powering Innovation with Proven Mobile Technologies
               </h2>
-              <div className="h-1 w-20 bg-blue-800 dark:bg-blue-400 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mb-3 mt-4"></div>
+              <h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+                We leverage modern frameworks, tools, and platforms to build secure, scalable, and high-performing mobile apps tailored to your business needs.						</h3>
             </div>
             <MobileTechToolsSection />
           </div>
         </section>
 
         {/* 5. Industries Section */}
-        <section className="relative py-0 px-0 w-full min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover" style={{ backgroundImage: 'url(/images/services/mobile-app-hero.jpg)' }}>
+        <section
+          className="relative py-0 px-0 w-full min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover"
+          style={{ backgroundImage: 'url(/images/services/mobile-app-hero.jpg)' }}
+        >
           <div className="absolute inset-0 bg-black/60 z-0" />
-          <div className="relative z-10 w-full max-w-none">
-            <div className="text-center pt-24 pb-20">
-              <h2 className="text-4xl font-extrabold text-white tracking-tight mb-2">INDUSTRIES</h2>
-              <p className="text-base text-white font-medium max-w-2xl mx-auto">As a leading tech partner, we excel in offering custom solutions for various industries, ensuring great versatility and the ability to cater to diverse business needs.</p>
+          <div className="relative z-10 w-full w-full">
+            <div className="text-center pt-24 pb-20 px-6">
+              <h2 className="text-xl font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">INDUSTRIES EXPERTISE</h2>
+              <h3 className="mt-2 mb-2 text-xl sm:text-3xl font-bold text-white dark:text-white md:text-4xl">
+                Tailored App Solutions for Every Industry Need
+              </h3>
+              <p className="text-base text-white font-medium max-w-2xl mx-auto">
+                As a leading tech partner, we excel in offering custom solutions for various industries,
+                ensuring great versatility and the ability to cater to diverse business needs.
+              </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-0 w-full">
-              {[
-                { label: 'AUTOMOTIVE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2' /><circle cx='7.5' cy='17.5' r='2.5' /><circle cx='16.5' cy='17.5' r='2.5' /></svg> },
-                { label: 'REAL ESTATE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M3 21V9a2 2 0 012-2h14a2 2 0 012 2v12' /><path d='M9 22V12h6v10' /></svg> },
-                { label: 'ENTERTAINMENT', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M8 7V5a4 4 0 018 0v2' /></svg> },
-                { label: 'RETAIL & ECOMMERCE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='17' cy='17' r='2' /><circle cx='7' cy='17' r='2' /><path d='M5 6h14l1 7H4z' /></svg> },
-                { label: 'HEALTHCARE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M12 2a10 10 0 100 20 10 10 0 000-20z' /><path d='M12 6v6l4 2' /></svg> },
-                { label: 'TRANSPORTATION', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M2 17h20' /><path d='M6 17v2' /><path d='M18 17v2' /></svg> },
-                { label: 'MANUFACTURING', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='12' cy='12' r='3' /><path d='M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33h.09a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51h.09a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.09a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z' /></svg> },
-                { label: 'TRAVEL & TOURISM', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><path d='M21 16V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8' /><path d='M3 16v2a2 2 0 002 2h14a2 2 0 002-2v-2' /></svg> },
-                { label: 'PROFESSIONAL SERVICES', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='12' cy='12' r='10' /><path d='M8 12h8' /><path d='M12 8v8' /></svg> },
-                { label: 'SOFTWARE VENDORS', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M2 17h20' /><path d='M6 17v2' /><path d='M18 17v2' /></svg> },
-                { label: 'BANKING & FINANCE', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><rect x='2' y='7' width='20' height='10' rx='2' /><path d='M2 17h20' /><path d='M6 17v2' /><path d='M18 17v2' /></svg> },
-                { label: 'EDUCATION', icon: <svg width='48' height='48' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24' className='mx-auto'><circle cx='12' cy='12' r='10' /><path d='M8 12h8' /><path d='M12 8v8' /></svg> },
-              ].map((item, idx) => (
-                <div
-                  key={item.label}
-                  className={
-                    `flex flex-col items-center justify-center min-h-[140px] md:min-h-[180px] w-full border border-gray-200 transition-all duration-200 cursor-pointer group bg-white hover:bg-blue-900`
-                  }
-                >
-                  <span className={`mb-2 text-blue-900 group-hover:text-white transition-all duration-200`}>{item.icon}</span>
-                  <span className={`font-extrabold text-base md:text-lg uppercase tracking-wide text-blue-900 group-hover:text-white transition-all duration-200`}>{item.label}</span>
-                </div>
-              ))}
+
+            {/* White background wrapper */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {[
+                  { label: 'AUTOMOTIVE', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="16.5" cy="17.5" r="2.5" /></svg> },
+                  { label: 'REAL ESTATE', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 21V9a2 2 0 012-2h14a2 2 0 012 2v12" /><path d="M9 22V12h6v10" /></svg> },
+                  { label: 'ENTERTAINMENT', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M8 7V5a4 4 0 018 0v2" /></svg> },
+                  { label: 'RETAIL & ECOMMERCE', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="17" cy="17" r="2" /><circle cx="7" cy="17" r="2" /><path d="M5 6h14l1 7H4z" /></svg> },
+                  { label: 'HEALTHCARE', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" /><path d="M12 6v6l4 2" /></svg> },
+                  { label: 'TRANSPORTATION', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M2 17h20" /><path d="M6 17v2" /><path d="M18 17v2" /></svg> },
+                  { label: 'MANUFACTURING', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33h.09a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51h.09a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.09a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" /></svg> },
+                  { label: 'TRAVEL & TOURISM', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8" /><path d="M3 16v2a2 2 0 002 2h14a2 2 0 002-2v-2" /></svg> },
+                  { label: 'PROFESSIONAL SERVICES', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg> },
+                  { label: 'SOFTWARE VENDORS', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M2 17h20" /><path d="M6 17v2" /><path d="M18 17v2" /></svg> },
+                  { label: 'BANKING & FINANCE', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M2 17h20" /><path d="M6 17v2" /><path d="M18 17v2" /></svg> },
+                  { label: 'EDUCATION', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M8 12h8" /><path d="M12 8v8" /></svg> },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-100 group"
+                  >
+                    <span className="mb-3 text-blue-700 group-hover:text-blue-600 transition-colors duration-300">{item.icon}</span>
+                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-black group-hover:text-blue-600 transition-colors duration-300">{item.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
+
         {/* 6. Dev Process Section */}
-        <WorkProcess />
-        
+        <WorkProcessMob />
+
 
         {/* 7. Commitment & Why Choose Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Our Commitment & Guarantee</h2>
-              <div className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800 rounded-full mb-4" />
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                ASSURANCE TO YOU              </h3>
+              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+                Our Commitment & Guarantee
+              </h2>
+              <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
               <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver robust, scalable, and high-performance mobile solutions. Our team is dedicated to transparency, timely delivery, and ongoing support—empowering your business to thrive in a mobile-first world.
-              </p>
+                We promise consistent excellence for delivering on time, supporting you always, and ensuring every project is handled with care and integrity.              </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
               {[
@@ -245,7 +264,7 @@ export default function MobileAppDevelopmentPage() {
                 },
                 {
                   icon: <Gift className="w-10 h-10 text-blue-800" />,
-                  title: '30 Days Free Support',
+                  title: '30 Days Support',
                   desc: 'Enjoy complimentary post-launch support for a smooth transition.'
                 },
                 {
@@ -255,7 +274,7 @@ export default function MobileAppDevelopmentPage() {
                 },
                 {
                   icon: <Headphones className="w-10 h-10 text-blue-800" />,
-                  title: '24/7 Expert Help',
+                  title: '24/7 Support',
                   desc: 'Our team is always available to assist you, day or night.'
                 }
               ].map((item, idx) => (
@@ -285,44 +304,46 @@ export default function MobileAppDevelopmentPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Why Choose Us</h2>
-              <div className="w-20 h-1 mx-auto bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800 rounded-full mb-4" />
+            <div className="text-center mb-8">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-white">
+                WHY CHOOSE US</h3>
+              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+                Good Reasons to Team Up with Us              </h2>
+              <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
               <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver more than just mobile apps — we bring vision, precision, and a results-driven process to every project.
-              </p>
+                What makes us stand out is our commitment to innovation, user experience, and scalable solutions that truly empower businesses.                </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <CheckCircle className="w-9 h-9 text-blue-800" />,
-                  title: 'Unique, Purposeful & Accessibility Standards Design',
-                  desc: 'We craft mobile experiences that are not only beautiful but also accessible and purposeful for every user.'
+                  title: 'Proven Expertise',
+                  desc: 'Skilled team with deep domain knowledge in mobile app development.'
                 },
                 {
                   icon: <Lightbulb className="w-9 h-9 text-blue-800" />,
-                  title: 'Strong Technology Capability',
-                  desc: 'Our team leverages the latest mobile tech to build robust, scalable, and future-ready solutions.'
+                  title: 'End-to-End Services',
+                  desc: 'From ideation to post-launch, everything under one roof.'
                 },
                 {
                   icon: <Palette className="w-9 h-9 text-blue-800" />,
-                  title: 'Highly Creative & Motivated Teams',
-                  desc: 'Our passionate experts bring creativity and energy to every mobile project, driving innovation and results.'
+                  title: 'Industry Experience',
+                  desc: 'Proven track record across multiple industries and use cases.'
                 },
                 {
                   icon: <Target className="w-9 h-9 text-blue-800" />,
-                  title: 'Result-Driven Approach and Process',
-                  desc: 'We focus on outcomes, using proven processes to deliver measurable business value through mobile apps.'
+                  title: 'User-Centric Design',
+                  desc: 'Focused on delivering intuitive experiences that delight users.'
                 },
                 {
                   icon: <Handshake className="w-9 h-9 text-blue-800" />,
-                  title: 'Flexible Engagement Models',
-                  desc: 'Choose from a range of engagement options tailored to your mobile app needs and goals.'
+                  title: 'Innovation First',
+                  desc: 'Cutting-edge technologies and creative solutions for future-ready apps.'
                 },
                 {
                   icon: <PhoneCall className="w-9 h-9 text-blue-800" />,
-                  title: 'Seamless Communication',
-                  desc: 'We keep you in the loop with clear, proactive, and responsive communication throughout your mobile app journey.'
+                  title: 'Scalable Solutions',
+                  desc: 'Apps designed to grow with your business needs.'
                 }
               ].map((item, idx) => (
                 <motion.div
@@ -330,22 +351,42 @@ export default function MobileAppDevelopmentPage() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: idx * 0.08 }}
-                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(30,64,175,0.10)', borderColor: '#1e40af', backgroundColor: 'rgba(30,64,175,0.04)' }}
-                  className="flex flex-col items-center text-center gap-3 bg-white/80 rounded-2xl border border-blue-100 shadow-md px-7 py-8 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-800 hover:shadow-lg"
+                  transition={{ duration: 0.5 }}
+                  whileHover={{
+                    scale: 1.05,
+                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
+                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
+                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
+                  }}
+                  className="flex flex-col items-center text-center gap-3 
+                 bg-gradient-to-br from-blue-50 to-white   // ✅ applied to ALL cards
+                 rounded-2xl border border-blue-200 
+                 shadow-md px-7 py-8 
+                 transition-all duration-300 hover:shadow-xl"
                 >
                   <div className="flex items-center justify-center mb-2">
                     {item.icon}
                   </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1">{item.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </motion.div>
               ))}
             </div>
+
           </div>
         </section>
+        <div>
 
-        <ConsultationSection bgImage="/images/services/mobile-app-hero.jpg" />
+      {/* Tstimonial */}
+      <Reviews />
+
+    </div>
+
+        <ConsultationSectionMob bgImage="/images/services/mobile-app-hero.jpg" />
       </main>
     </ErrorBoundary>
   );

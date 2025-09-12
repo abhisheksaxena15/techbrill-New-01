@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -121,29 +122,8 @@ export default function AIMlDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              Helping businesses grow with AI & ML solutions.
-            </motion.p>
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 w-full justify-center"
-              initial="hidden"
-              animate="visible"
-              variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
-            >
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <Button size="lg" className="bg-blue-800 text-white rounded-md hover:bg-blue-900 w-full sm:w-auto">Get Started</Button>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button>
-              </motion.div>
-            </motion.div>
+              Transforming Ideas into Intelligent Solutions with AI & ML
+            </motion.p>  
           </div>
           {/* Scroll Down Indicator (if space allows) */}
           <motion.div
@@ -158,53 +138,48 @@ export default function AIMlDevelopmentPage() {
         {/* 3. Services Section */}
         <ServicesSection />
      
-        {/* 6. AI DEV Process Section */}
-        <section className = "py-20 px-6 md:px-16 bg-white dark:bg-gray-950">
-        {<ExpandableCardDemo/>}
-        </section>
-        
-
-        {/*7. AI tech stack section */}
-        <TechStackSection/>
-
-
+       
         {/* 7. Commitment & Why Choose Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Our Commitment & Guarantee</h2>
-              <div className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800 rounded-full mb-4" />
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+               BUSINESS BENEFITS              </h3>
+              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+               AI & ML Driving Real Business Impact
+              </h2>
+              <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
               <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver robust, scalable, and high-performance mobile solutions. Our team is dedicated to transparency, timely delivery, and ongoing support—empowering your business to thrive in a mobile-first world.
-              </p>
+              Leverage AI & ML to streamline operations, boost efficiency, and unlock new opportunities for growth.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
               {[
                 {
-                  icon: <CheckCircle className="w-10 h-10 text-blue-800" />,
-                  title: '100% Transparency',
-                  desc: 'Clear, honest communication and full project visibility from start to finish.'
+                  icon: <Database className="w-10 h-10 text-blue-800" />,
+                  title: 'Data-Driven',
+                  desc: 'Make smarter decisions with actionable insights.'
                 },
                 {
                   icon: <Clock className="w-10 h-10 text-blue-800" />,
-                  title: 'On-Time Delivery',
-                  desc: '95%+ of our projects launch on schedule, so you can plan with confidence.'
+                  title: 'Efficiency Boost ',
+                  desc: 'Automate processes and save valuable time.'
                 },
                 {
-                  icon: <Gift className="w-10 h-10 text-blue-800" />,
-                  title: '30 Days Free Support',
-                  desc: 'Enjoy complimentary post-launch support for a smooth transition.'
+                  icon: <BadgeDollarSign className="w-10 h-10 text-blue-800" />,
+                  title: 'Cost Optimization ',
+                  desc: 'Reduce expenses while maximizing output.'
                 },
                 {
-                  icon: <Shuffle className="w-10 h-10 text-blue-800" />,
-                  title: 'Flexible Engagements',
-                  desc: 'Choose a partnership model that fits your business and budget.'
+                  icon: <Users className="w-10 h-10 text-blue-800" />,
+                  title: 'Customer Experience ',
+                  desc: 'Deliver personalized and seamless interactions.'
                 },
                 {
-                  icon: <Headphones className="w-10 h-10 text-blue-800" />,
-                  title: '24/7 Expert Help',
-                  desc: 'Our team is always available to assist you, day or night.'
+                  icon: <TrendingUp className="w-10 h-10 text-blue-800" />,
+                  title: 'Scalable Growth ',
+                  desc: 'Expand operations effortlessly as you grow.'
                 }
+
               ].map((item, idx) => (
                 <motion.div
                   key={item.title}
@@ -228,6 +203,25 @@ export default function AIMlDevelopmentPage() {
             </div>
           </div>
         </section>
+
+
+        <section className="pb-12 mt-10 py-10 bg-blue-800 text-white text-center mb-9">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to transform your business with AI & ML?</h2>
+            <p className="mb-6">Let bring intelligence to your business. Partner with us for end-to-end AI & ML solutions that deliver real impact.</p>
+            <Link href="/contact"><Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-red-700 hover:text-white">Speak To Us</Button>
+            </Link>
+          </motion.div>
+        </section>
+        
+
+        {/*7. AI tech stack section */}
+        <TechStackSection/>
+
+
+
+        
+
 
         {/* Why Choose Us Section */}
         <section className="py-20 px-6 md:px-16 bg-white">
