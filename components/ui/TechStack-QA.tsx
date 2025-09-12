@@ -238,7 +238,7 @@ export default function ITConsultancyTechToolsSection() {
                   onClick={() => setActiveTab(idx)}
                 >
                   <span className="flex items-center">
-                    <span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}>{`0${idx + 1}.`}</span>
+                    <span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}></span>
                     {tab.label}
                   </span>
                   {activeTab === idx && <span className="ml-2 text-lg">→</span>}
@@ -299,8 +299,14 @@ export default function ITConsultancyTechToolsSection() {
               </div>
             </div>
           </div>
+          <div className="mt-6 text-right">
+          <a href="/technologies" className="text-red-600 font-semibold hover:underline">
+            Explore More →
+          </a>
+        </div>
         </div>
       </motion.div>
     </>
   );
 }
+

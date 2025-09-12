@@ -183,30 +183,36 @@ export default function ServicesSection() {
                             transition={{ duration: 0.7 }}
                         >
                             {/* Section label with blue underline */}
-                            <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black  dark:text-white">We Build More Than Algorithms</h3>
-                            <div className="h-1 w-28 bg-blue-800 mb-6 " />
+                            <h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                            TURNING DATA INTO INTELLIGENT ACTION</h3>
+                            
                             {/* Main heading */}
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">We help you to <span className="text-blue-800">create </span> while other <span className="text-blue-800">adapt to change</span> in AI world.</h2>
-                            <p className="text-gray-600 dark:text-white mb-2">As a trusted AI software development partner, TechBrill Solutions combines cutting-edge technical prowess with strategic insight to transform complex business challenges into intelligent, scalable solutions. By seamlessly integrating advanced AI capabilities into your existing infrastructure, we accelerate innovation, optimize operational efficiency, and ensure your organization stays ahead in an increasingly digital landscape.
+                            <h2 className=" mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Transforming Businesses with AI & ML Innovation </h2> {/*<span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2> */}
+							<div className="h-1 w-28 bg-red-600 mb-3 " />
+                            <p className="text-gray-600 dark:text-white mb-2">Artificial Intelligence (AI) and Machine Learning (ML) are transforming industries by enabling smarter decision-making, automation, and personalized experiences. Businesses that leverage AI/ML gain a competitive edge through improved efficiency and innovation.
                             </p>
 
                             <p className="text-gray-600 dark:text-white mb-5">
-                                Our team of skilled engineers and data scientists works closely with clients to understand their unique requirements, developing tailored intelligent systems that enhance decision-making, automate complex workflows, and unlock new revenue opportunities. From initial concept to deployment and beyond, we ensure your AI initiatives deliver tangible results that align with your strategic objectives.
+                            At Techbrill Solutions, we offer tailored AI and ML development services, including predictive analytics, natural language processing, computer vision, and custom model deployment. We specialize in building scalable, secure, and industry-specific solutions that drive measurable results.
+                            </p>
+                            <p className="text-gray-600 dark:text-white mb-5">
+                            Our expert team consists of data scientists, ML engineers, and AI specialists with deep domain knowledge. We are passionate about solving complex challenges and delivering intelligent systems that help businesses thrive in the digital era.
                             </p>
 
+
                             <AnimatedSection animation="fade" delay={0.6}>
-                                <Link href="/contact">
-                                    <Button className="group bg-blue-800 dark: bg-blue-700 ">
-                                        Consult with us{" "}
-                                        <motion.div
-                                            animate={{ x: [0, 5, 0] }}
-                                            transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
-                                        >
-                                            <ArrowRight className="ml-2 h-4 w-4 " />
-                                        </motion.div>
-                                    </Button>
-                                </Link>
-                            </AnimatedSection>
+								<Link href="/contact">
+									<Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700 ">
+										Consult with us{" "}
+										<motion.div
+											animate={{ x: [0, 5, 0] }}
+											transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+										>
+											<ArrowRight className="ml-2 h-4 w-4 " />
+										</motion.div>
+									</Button>
+								</Link>
+							</AnimatedSection>
                         </motion.div>
                     </div>
                 </div>
@@ -216,31 +222,37 @@ export default function ServicesSection() {
 
             {/* 3. Services Section - Using the custom dark theme from the image */}
             <section className="py-16 bg-white dark:bg-gray-950">
-                <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="text-center mb-8 md:mb-12">
-                        <h2 className="text-lg font-semibold uppercase tracking-wide text-black dark:text-white">
-                            What We Do
-                        </h2>
-                        <h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Empowering your business through customn <span className="text-blue-800 font-bold">AI services</span></h2>
-                        <div className="h-1 w-20 bg-blue-800 mx-auto mt-4 mb-4"></div>
-            
-                    </div>
+				<div className="container mx-auto px-4 max-w-6xl">
+					<div className="text-center mb-8 md:mb-12">
+						<h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                        CORE OFFERINGS
+						</h2>
+						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Accelerate Growth with Full-Spectrum AI & ML Development Services
+						</h2>
+						<div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
+						<h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+                        Delivering end-to-end AI & ML solutions that streamline operations, drive innovation, and unlock sustainable business growth.
+						</h3>
+					</div>
 
-                    {/*Design with carousel */}
+                    {/* AI Development */}
                     <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                Custom AI Solutions
+                                Artificial Intelligence (AI) Development
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                We develop custom AI solutions tailored to your unique business challenges and objectives. From automating workflows to enhancing customer experiences, our AI systems are designed to deliver measurable impact, drive innovation, and scale with your growth.
+                                AI solutions that help businesses automate processes, enhance decision-making, and deliver intelligent customer experiences. At Techbrill, we design and deploy AI systems that are secure, scalable, and tailored to your goals, enabling your business to operate smarter, faster, and with greater efficiency.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>AI-powered business process automation</li>
-                                <li> Intelligent data analysis & forecasting</li>
-                                <li>Custom model development & integration</li>
-                                <li>Scalable solutions aligned with your goals</li>
+                                <li>Intelligent process automation</li>
+                                <li>AI-powered chatbots & assistants</li>
+                                <li>Decision-support systems</li>
+                                <li>End-to-end AI integration</li>
                             </ul>
+                            
+                                <Button className="mt-4">Explore more</Button>
+                            
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3500 })]}>
@@ -249,7 +261,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-                                                alt="UI/UX Design Process"
+                                                alt="AI Development"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -260,7 +272,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg"
-                                                alt="UI/UX Design Workshop"
+                                                alt="AI Integration"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -273,21 +285,24 @@ export default function ServicesSection() {
                     </div>
 
 
-                    {/* Android App Development with carousel */}
+                    {/* Gen AI Solutions */}
                     <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                Speech Recognition & Voice Processing
+                                Generative AI Solutions
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                We integrate sophisticated models that convert spoken words into text with high accuracy and real-time processing capabilities. Our speech recognition solutions enhance virtual assistants, power transcription tools, and enable voice-controlled applications that transform how users interact with technology across various industries and use cases.
+                                Generative AI empowers businesses with creative automation and intelligent content generation. From building advanced chatbots to automating content creation, Techbrill helps you leverage generative models to unlock innovation, reduce manual effort, and accelerate growth while maintaining security and reliability at scale.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>Real-time speech-to-text conversion & transcription</li>
-                                <li>Voice-enabled virtual assistants & chatbots</li>
-                                <li>Multi-language support with accent recognition</li>
-                                <li>Custom voice command systems & integrations</li>
+                                <li>Conversational AI & chatbots</li>
+                                <li>Automated content generation</li>
+                                <li>Design & creative automation</li>
+                                <li>Personalized user experiences</li>
                             </ul>
+                            
+                                <Button className="mt-4">Explore more</Button>
+                            
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4000 })]}>
@@ -296,7 +311,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg"
-                                                alt="Android App Development"
+                                                alt="Gen AI Solutions"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -307,7 +322,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/web-design-hero.jpg"
-                                                alt="Android App Tools"
+                                                alt="Gen AI Tools"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -319,21 +334,24 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-                    {/* iOS App Development with carousel */}
+                    {/* ML Development */}
                     <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                Object Detection & Recognition
+                                Machine Learning (ML) Development
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                We implement advanced deep learning models that accurately identify, classify, and locate multiple objects within images and video streams in real-time. Our object detection solutions power automated surveillance systems, enhance inventory management, and enable smart monitoring applications that deliver precise results across diverse environments and conditions.
+                                Our ML solutions enable businesses to learn from data, predict outcomes, and optimize operations. We develop machine learning models that enhance decision-making, improve customer insights, and unlock new business opportunities with accuracy, scalability, and measurable results.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>Real-time object identification & localization</li>
-                                <li>Multi-object tracking & counting systems</li>
-                                <li>Custom object detection for specific industries</li>
-                                <li>Edge deployment for offline processing</li>
+                                <li>Predictive analytics models</li>
+                                <li>Recommendation systems</li>
+                                <li>Anomaly & fraud detection</li>
+                                <li>Demand forecasting</li>
                             </ul>
+                            
+                                <Button className="mt-4">Explore more</Button>
+                            
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
@@ -342,7 +360,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-                                                alt="iOS App Development"
+                                                alt="ML Development"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -353,7 +371,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
-                                                alt="iOS App Tools"
+                                                alt="ML Tools"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -365,24 +383,24 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-
-                    {/* Cross-Platform App Development with carousel */}
+                    {/* Data Engineering & Model Training */}
                     <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                Computer Vision & Image Analysis
+                                Data Engineering & Model Training
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                We develop comprehensive computer vision solutions that extract meaningful insights from visual data through advanced image processing and pattern recognition techniques. Our systems enable automated visual inspection, document digitization, and intelligent image analysis that streamline operations and enhance decision-making across various business processes.
+                                High-quality data is the foundation of successful AI & ML projects. Techbrill provides robust data engineering, preparation, and model training services to ensure your systems are powered by clean, reliable, and optimized datasets for maximum accuracy and performance.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>Automated visual quality inspection & defect detection</li>
-                                <li>Optical Character Recognition (OCR) & document processing</li>
-                                <li>Device feature access with native-like performance</li>
-                                <li>Image enhancement & preprocessing pipelines</li>
-                                <li>Custom visual analytics & pattern recognition</li>
-
+                                <li>Data preparation & cleaning</li>
+                                <li>Scalable data pipelines</li>
+                                <li>Feature engineering</li>
+                                <li>Model training & optimization</li>
                             </ul>
+                            
+                                <Button className="mt-4">Explore more</Button>
+                            
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
@@ -391,7 +409,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
-                                                alt="Cross-Platform App Development"
+                                                alt="Data Engineering"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -402,7 +420,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-                                                alt="Cross-Platform App Design"
+                                                alt="Model Training"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -413,211 +431,73 @@ export default function ServicesSection() {
                             </Carousel>
                         </div>
                     </div>
-
-                    {/* Progressive Web App Development with carousel */}
-                    <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-                        <div className="w-full md:w-1/2">
-                            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                Intelligent Process Automation (IPA)
-                            </h3>
-                            <p className="text-gray-600 dark:text-white mb-4">
-                                We develop AI-powered automation solutions that handle complex, rule-based tasks requiring human-level decision-making and contextual understanding. Our intelligent systems streamline repetitive workflows, reduce operational costs, and free up your team to focus on strategic initiatives while maintaining accuracy and compliance standards.
-                            </p>
-                            <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>Document processing & intelligent data extraction</li>
-                                <li>Workflow automation with decision-making capabilities</li>
-                                <li>Custom business process optimization & integration</li>
-                                <li>Compliance monitoring & automated reporting systems</li>
-                            </ul>
-                        </div>
-                        <div className="w-full md:w-1/2">
-                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4200 })]}>
-                                <CarouselContent>
-                                    <CarouselItem>
-                                        <div className="rounded-md overflow-hidden">
-                                            <Image
-                                                src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-                                                alt="Progressive Web App Development"
-                                                width={600}
-                                                height={400}
-                                                className="object-cover w-full h-[300px]"
-                                            />
-                                        </div>
-                                    </CarouselItem>
-                                    <CarouselItem>
-                                        <div className="rounded-md overflow-hidden">
-                                            <Image
-                                                src="/images/services/web-design-hero.jpg"
-                                                alt="PWA Tools"
-                                                width={600}
-                                                height={400}
-                                                className="object-cover w-full h-[300px]"
-                                            />
-                                        </div>
-                                    </CarouselItem>
-                                </CarouselContent>
-                            </Carousel>
-                        </div>
-                    </div>
-                    {/* AI, ML & Chatbot Solutions with carousel8*/}
-					<div className="flex flex-col md:flex-row-reverse items-start gap-10">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								AI, ML & Chatbot Solutions
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Harness the power of Artificial Intelligence and Machine Learning to automate,
-								personalize, and elevate user experiences. Our smart AI, ML, and chatbot solutions
-								optimize workflows, enhance customer engagement, and deliver data-driven insights.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>AI-powered data analysis & predictions</li>
-								<li>Custom ML model development & deployment</li>
-								<li>Natural Language Processing (NLP) integrations</li>
-								<li>Intelligent chatbot design & automation</li>
-								<li>AI-enhanced personalization for web & mobile</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3600 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-												alt="AI &ML chatbot"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-												alt="AI &ML chatbot"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div> 
-
-                    {/* SEO & Digital Marketing with carousel
-					<div className="flex flex-col md:flex-row-reverse items-start gap-10">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								SEO & Digital Marketing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Grow your online reach and drive measurable results with our
-								comprehensive digital marketing expertise. We combine strategic
-								SEO, compelling content creation, and data-driven analytics to
-								help your business stand out in the competitive digital landscape.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>On-page & technical SEO optimization</li>
-								<li>Content strategy & high-quality creation</li>
-								<li>Analytics setup & performance reporting</li>
-								<li>Social media integration & management</li>
-								<li>Conversion rate optimization & A/B testing</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3600 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-												alt="SEO & Digital Marketing"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-												alt="Digital Marketing Strategy"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div> */}
-
-
-
-                    {/* Continue adding the rest of your services with carousels... */}
-                    {/* Mobile App Development, CMS & Content Solutions, SEO & Digital Marketing */}
                 </div>
             </section>
             
-            {/* Emerging Tech Solutions Section */}
-            {/* <section className="py-12 bg-blue-50 dark:bg-gray-900">
-                <div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]"> */}
-                    {/* Left: Sticky Heading & CTA */}
-                    {/* <div className="w-full md:w-1/2 flex flex-col justify-center md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0"> */}
-                        {/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-                            Built to Scale, Tested to Perform, Smart Systems Engineered with End-to-End Qualitys
-                        </h2>
-                        <p className="text-gray-600 dark:text-white mb-2 ">
-                            At Techbrill, we believe high-impact digital experiences begin with bulletproof quality and intelligent design.
-                            Our <span className="text-blue-800 font-semibold">QA & Testing services</span> ensure your solutions are robust, secure, and user-ready—powered by precision-driven methodologies
-                            and automation that accelerate delivery without compromise.
-                        </p>
-                        <p className="text-gray-600 dark:text-white mb-2 ">
-                            Meanwhile, our  <span className="text-blue-800 font-semibold">Mobile App Development</span> & Integration capabilities fuse creativity, technology, and strategy to build scalable, stunning apps tailored for tomorrows users. Whether launching a product or optimizing legacy systems, we deliver results that exceed expectations—and industry-best timelines.
-                        </p>
-                    </div> */}
-                    {/* Right: Scrollable Tech Cards */}
-                    {/* <div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory"> */}
-                        {/* Card Example */}
-                        {/* {[
-                            // Card data array (title, description)
-                            { title: "Functional Testing", desc: "We validate every feature of your application against defined requirements to ensure a seamless and bug-free user experience." },
-                            { title: "Performance Testing", desc: "Our team simulates real-world conditions to measure app stability, responsiveness, and scalability under load." },
-                            { title: "Security Testing", desc: "We uncover vulnerabilities, protect sensitive data, and safeguard your software from internal and external threats." },
-                            { title: "Usability Testing", desc: "Through real-user simulations, we identify design flaws and optimize user experience across all touchpoints." },
-                            { title: "Compatibility Testing", desc: "Ensure your app runs flawlessly on different browsers, devices, operating systems, and network environments." },
-                            { title: "API Testing", desc: "We verify your APIs for reliability, performance, and security—ensuring smooth system integrations." },
-                            { title: "Mobile App Testing", desc: "From cross-device functionality to platform-specific nuances, we ensure your mobile app works wherever your users are." },
-                            { title: "Load & Stress Testing", desc: "We mimic extreme user traffic to monitor system endurance, resource usage, and fault tolerance." },
-                            { title: "Continuous Testing", desc: "Integrated into your CI/CD pipeline, we support constant feedback, faster iterations, and higher code confidence." },
-                            { title: "UI/UX Design for Mobile Apps", desc: "Our design-first approach ensures intuitive interfaces that combine visual appeal with frictionless usability." },
-                            { title: "Custom App Development", desc: "We craft tailor-made mobile apps that align perfectly with your brand identity and functional needs." },
-                            { title: "Enterprise Mobile App Solutions", desc: "Scalable, secure, and enterprise-grade—our apps empower businesses to streamline operations and engage stakeholders" },
-                            { title: "App Testing & Quality Assurance", desc: "Rigorous end-to-end testing ensures your app launches polished, reliable, and high-performing from Day One." },
-                            { title: "App Integration with APIs", desc: "We connect your apps with essential third-party services to boost functionality and deliver a seamless experience." },
-                            { title: "App Integration with Backend Systems", desc: "We synchronize your mobile front ends with existing backend ecosystems—whether cloud-native or on-premise." },
-                            { title: "App Store Deployment & Optimization", desc: "From metadata optimization to compliance checks—we ensure smooth approval and discoverability on both Android & iOS stores." },
-                            { title: "Post-Launch Maintenance & Support", desc: "Your success doesn't stop at launch. We offer continuous monitoring, updates, and support for optimal performance." },
-                        ].map((card, idx) => (
-                            <div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0">
-                                <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                                    <Image src={`/images/icons/${ICONS[idx % ICONS.length]}`} alt={card.title + " icon"} width={40} height={40} />
-                                </span>
-                                <div className="flex-1">
-                                    <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">{card.title}</h3>
-                                    <p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section> */}
+           <div className="mt-4">
+                                <section className="py-11 bg-gray-50 dark:bg-gray-900 " >
+                                    
+           
+                                    {/******/}
+                                    {/* <section className="py-0 bg-blue-50 dark:bg-gray-900"> */}
+                                    <div className=" container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px] ">
+                                        {/* Left: Sticky Heading & CTA */}
+                                        <div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
+           
+                                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+                                                SOLUTIONS INCLUDE
+                                            </h3>
+                                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                                              Unlock Advanced AI & ML Capabilities
+                                            </h3>
+                                            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+           
+                                        
+                                            <p
+                                                className="text-gray-600 dark:text-white mb-4"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                Unlock the true potential of AI & ML with innovations that go beyond the basics. Our advanced offerings are built to tackle complex business challenges, delivering intelligent, scalable, and secure solutions that drive meaningful transformation.
+                                            </p>
+                                            <p
+                                                className="text-gray-600 dark:text-white mb-4"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                At Techbrill, we blend technical expertise with deep industry knowledge to create AI solutions that are practical yet transformative. By enabling smarter decisions, seamless automation, and future-ready capabilities, we empower businesses to stay competitive and lead with confidence.
+                                            </p>
+           
+                                            {/* <p className="text-gray-600 dark:text-white mb-2 ">
+                                       Meanwhile, our  <span className="text-blue-800 font-semibold">Mobile App Development</span> & Integration capabilities fuse creativity, technology, and strategy to build scalable, stunning apps tailored for tomorrows users. Whether launching a product or optimizing legacy systems, we deliver results that exceed expectations—and industry-best timelines.
+                                   </p> */}
+                                        </div>
+                                        {/* Right: Scrollable Tech Cards */}
+                                        <div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
+                                            {/* Card Example */}
+                                            {[
+                                                { title: "Natural Language Processing (NLP) Solutions", desc: "Enable machines to understand, analyze, and respond to human language with intelligent chatbots, sentiment analysis, and voice processing." },
+                                                { title: "Computer Vision Applications", desc: "Leverage AI for image recognition, object detection, facial recognition, and automated quality inspection in real time" },
+                                                { title: "AI-Powered Business Automation", desc: "Streamline workflows with AI-driven automation to cut manual effort, reduce costs, and boost productivity across teams." },
+                                                { title: "Predictive Analytics & Forecasting", desc: "Anticipate future trends, detect risks, and model scenarios with data-driven predictions to make smarter business decisions." },
+                                                { title: "AI-Powered Quality Assurance & Testing", desc: "Enhance QA with intelligent test automation, anomaly detection, and defect prediction to accelerate release cycles" },
+                                                { title: "AI Integration with Enterprise Systems", desc: "Embed AI into CRMs, ERPs, and SaaS platforms for improved customer engagement, smarter insights, and operational excellence." },
+                                
+                                            ].map((card, idx) => (
+                                                <div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0">
+                                                    <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                                                        <Image src={`/images/icons/${ICONS[idx % ICONS.length]}`} alt={card.title + " icon"} width={40} height={40} />
+                                                    </span>
+                                                    <div className="flex-1">
+                                                        <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">{card.title}</h3>
+                                                        <p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                {/* </section> */}
+                            </section>
+                        </div>
         </>
     );
 }
+

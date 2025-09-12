@@ -37,9 +37,8 @@ export const Vortex = (props: VortexProps) => {
   const yOff = 0.00125;
   const zOff = 0.0005;
   const backgroundColor = props.backgroundColor || "#000000";
-  let tick = 0;
   const noise3D = createNoise3D();
-  let particleProps = new Float32Array(particlePropsLength);
+  const particleProps = useRef(new Float32Array(particlePropsLength));
   const center = React.useMemo(() => [0, 0], []);
   const [internalCenter, setInternalCenter] = React.useState<[number, number]>([0, 0]);
 
@@ -58,21 +57,21 @@ export const Vortex = (props: VortexProps) => {
   
 
   const initParticles = useCallback(() => {
-    tick = 0;
     // simplex = new SimplexNoise();
-    particleProps = new Float32Array(particlePropsLength);
+    particleProps.current = new Float32Array(particlePropsLength);
 
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
       initParticle(i);
     }
-  }, []);
+  }, [particlePropsLength, initParticle]);
+
 
 
   const draw = useCallback((canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
+    let tick = 0;
     tick++;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -132,7 +131,7 @@ export const Vortex = (props: VortexProps) => {
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
       updateParticle(i, ctx);
     }
-  }, []);
+  }, [particlePropsLength, updateParticle]);
 
   const updateParticle = (i: number, ctx: CanvasRenderingContext2D) => {
     const canvas = canvasRef.current;

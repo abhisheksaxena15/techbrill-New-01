@@ -90,20 +90,29 @@ export default function SoftwareQATestingPage() {
         <ServicesSection />
 
         {/* Tech Stack Section */}
-        <section className="py-16">
-          <div className="container mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-lg font-semibold uppercase tracking-wide text-gray-900 dark:text-white">
-                Technologies We Use
-              </h3>
-              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
-                Driven by precision, delivered through robust <span className="text-blue-700">QA Tech Stacks</span>
-              </h2>
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-            </div>
-            <TechStackSection />
-          </div>
-        </section>
+        <section className="pt-16 , pb-16">
+                 <div className="container mx-auto">
+                   <div className="text-center mb-8 md:mb-12">
+                     <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                      Tools & Technologies We Use
+                     </h3>
+                     <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                      Powered by Industry-Leading Tools & Frameworks
+                     </h2>
+                     <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                     {/* Change: Wrapped the h3 tag in a new flex container to control its width
+             and ensure it stays centered while having a maximum width.
+           */}
+                     <div className="flex justify-center mt-4">
+                       {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
+                       <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                       We leverage industry-leading QA tools and modern technologies to ensure accuracy, efficiency, and reliability across every stage of the software testing lifecycle.</h3>
+                     </div>
+                   </div>
+                   <TechStackSection />
+                 </div>
+       
+               </section>
 
         {/* Key Benefits Section */}
         <section className="py-16 bg-slate-100">
