@@ -90,149 +90,6 @@ export default function SoftwareQATestingPage() {
         {/* Service Explanation Section - Minimal alternating layout with working images */}
         <ServicesSection />
 
-        {/* Tech Stack Section */}
-        <section className="pt-16 , pb-16">
-                 <div className="container mx-auto">
-                   <div className="text-center mb-8 md:mb-12">
-                     <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
-                      Tools & Technologies We Use
-                     </h3>
-                     <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                      Powered by Industry-Leading Tools & Frameworks
-                     </h2>
-                     <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
-                     {/* Change: Wrapped the h3 tag in a new flex container to control its width
-             and ensure it stays centered while having a maximum width.
-           */}
-                     <div className="flex justify-center mt-4">
-                       {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
-                       <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                       We leverage industry-leading QA tools and modern technologies to ensure accuracy, efficiency, and reliability across every stage of the software testing lifecycle.</h3>
-                     </div>
-                   </div>
-                   <TechStackSection />
-                 </div>
-       
-               </section>
-
-        {/* Key Benefits Section */}
-        <section className="py-16 bg-slate-100">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Key Benefits of QA & Testing
-              </h2>
-              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-              <p className="text-gray-600 max-w-3xl mx-auto text-lg mt-2">
-                Ensure your software is robust, secure, and user-friendly with our comprehensive QA and testing services.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Bug className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Early Bug Detection</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Identify and fix issues early in the development cycle, reducing costs and time to market.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Enhanced Security</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Comprehensive security testing to protect your application from vulnerabilities and threats.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Improved User Experience</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Ensure your software delivers a seamless and intuitive experience for all users.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Target className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Performance Optimization</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Identify and resolve performance bottlenecks for optimal application speed and efficiency.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Briefcase className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Quality Assurance</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Maintain high standards of quality throughout the development process.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Regulatory Compliance</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Ensure your software meets industry standards and regulatory requirements for security, privacy, and accessibility.
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
 
         {/* Advanced Technologies Section with Sticky Left Column */}
         <section className="py-16 bg-white dark:bg-gray-950 text-gray-900">
@@ -428,7 +285,7 @@ export default function SoftwareQATestingPage() {
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <div className="text-center mb-8 md:mb-12">
-                <br/>
+                <br />
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-300">Quality Assurance</h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                   How We <span className="text-blue-800 dark:text-blue-300">Ensure Quality</span>
@@ -454,7 +311,7 @@ export default function SoftwareQATestingPage() {
                   darkIcon: "🔍"
                 },
                 {
-                  step: "02", 
+                  step: "02",
                   title: "Test Planning",
                   description: "Creating test strategy with scope, tools, timelines, and resource allocation.",
                   icon: "📝",
@@ -463,7 +320,7 @@ export default function SoftwareQATestingPage() {
                 },
                 {
                   step: "03",
-                  title: "Test Design & Development", 
+                  title: "Test Design & Development",
                   description: "Building detailed test cases, scripts, and scenarios for full coverage.",
                   icon: "⚙️",
                   lightIcon: "⚙️",
@@ -531,7 +388,7 @@ export default function SoftwareQATestingPage() {
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <motion.div 
+                        <motion.div
                           className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center text-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors duration-300"
                           whileHover={{
                             scale: 1.1,
@@ -550,7 +407,7 @@ export default function SoftwareQATestingPage() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-2 mb-2">
-                          <motion.span 
+                          <motion.span
                             className="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900 px-2 py-1 rounded group-hover:bg-blue-100 dark:group-hover:bg-blue-800 transition-colors duration-300"
                             whileHover={{
                               scale: 1.05,
@@ -572,7 +429,7 @@ export default function SoftwareQATestingPage() {
                         </p>
                       </div>
                     </div>
-                    
+
                     {/* Hover effect overlay */}
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -599,7 +456,7 @@ export default function SoftwareQATestingPage() {
                 }}
                 viewport={{ once: true }}
               >
-                <motion.div 
+                <motion.div
                   className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-xl p-8 md:p-12 border border-blue-200 dark:border-blue-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300"
                   whileHover={{
                     scale: 1.02,
@@ -610,13 +467,13 @@ export default function SoftwareQATestingPage() {
                     }
                   }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="text-blue-600 dark:text-blue-400 text-4xl mb-4"
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.1, 1],
                       opacity: [0.7, 1, 0.7]
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut"
@@ -627,13 +484,13 @@ export default function SoftwareQATestingPage() {
                   <blockquote className="text-lg md:text-xl font-medium text-gray-800 dark:text-gray-100 italic mb-4">
                     A transparent workflow that guarantees quality at every stage;
                   </blockquote>
-                  <motion.div 
+                  <motion.div
                     className="text-blue-600 dark:text-blue-400 text-4xl"
-                    animate={{ 
+                    animate={{
                       scale: [1, 1.1, 1],
                       opacity: [0.7, 1, 0.7]
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -648,12 +505,12 @@ export default function SoftwareQATestingPage() {
           </div>
         </AnimatedSection>
 
-        
 
 
 
 
-        
+
+
 
         {/* Why Choose us Section */}
         <section className="py-12 bg-white dark:bg-gray-900">
