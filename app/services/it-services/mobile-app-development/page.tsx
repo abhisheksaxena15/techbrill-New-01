@@ -129,8 +129,8 @@ export default function MobileAppDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-Transform Your Ideas into Powerful Mobile Apps            
-</motion.p>
+              Transform Your Ideas into Powerful Mobile Apps
+            </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
               initial="hidden"
@@ -381,10 +381,10 @@ Transform Your Ideas into Powerful Mobile Apps
         </section>
         <div>
 
-      {/* Tstimonial */}
-      <Reviews />
+          {/* Tstimonial */}
+          <Reviews />
 
-    </div>
+        </div>
 
         <ConsultationSectionMob bgImage="/images/services/mobile-app-hero.jpg" />
       </main>

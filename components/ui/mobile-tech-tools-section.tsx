@@ -103,10 +103,10 @@ export default function MobileTechToolsSection() {
             }`}
             onClick={() => setActiveTab(idx)}
           >
-            {/* <span className="flex items-center">
-              <span className="mr-2 font-bold">{`0${idx + 1}.`}</span>
+            <span className="flex items-center">
+              
               {tab.label}
-            </span> */}
+            </span>
             {activeTab === idx && <span className="ml-2 text-lg">→</span>}
           </button>
         ))}
