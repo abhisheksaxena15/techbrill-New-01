@@ -178,7 +178,7 @@ const techTabs = [
       },
       {
         name: "Bugzilla",
-        icon: <img src = "" alt="Allure Report logo" className="w-7 h-7 object-contain" />
+        icon: <img src = "https://www.bugzilla.org/assets/img/logo-header.svg" alt="Allure Report logo" className="w-7 h-7 object-contain" />
       }
     ],
   },

@@ -622,10 +622,10 @@ export default function SoftwareQATestingPage() {
                       ease: "easeInOut"
                     }}
                   >
-                    "
+                    &quot;
                   </motion.div>
                   <blockquote className="text-lg md:text-xl font-medium text-gray-800 dark:text-gray-100 italic mb-4">
-                    A transparent workflow that guarantees quality at every stage
+                    A transparent workflow that guarantees quality at every stage;
                   </blockquote>
                   <motion.div 
                     className="text-blue-600 dark:text-blue-400 text-4xl"
@@ -640,7 +640,7 @@ export default function SoftwareQATestingPage() {
                       delay: 0.5
                     }}
                   >
-                    "
+                    &quot;
                   </motion.div>
                 </motion.div>
               </motion.div>
