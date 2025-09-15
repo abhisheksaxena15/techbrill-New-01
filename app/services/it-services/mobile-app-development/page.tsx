@@ -108,7 +108,7 @@ export default function MobileAppDevelopmentPage() {
     <ErrorBoundary>
       <main className="bg-white text-gray-900">
         {/* 1. Hero Banner */}
-        <section className="relative py-10 max-h-[450px] flex items-center justify-center overflow-hidden">
+        <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <Image src="/images/services/mobile-app-hero.jpg" alt="Mobile App Development Hero" fill className="object-cover object-center z-0" priority />
           {/* Dark Linear Gradient Overlay with Blur */}
@@ -129,7 +129,7 @@ export default function MobileAppDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              Innovative and user-friendly mobile applications for your business growth.
+              Transform Your Ideas into Powerful Mobile Apps
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
@@ -221,10 +221,10 @@ export default function MobileAppDevelopmentPage() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-100 group"
+                    className="flex flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
                   >
-                    <span className="mb-3 text-blue-700 group-hover:text-blue-600 transition-colors duration-300">{item.icon}</span>
-                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-black group-hover:text-blue-600 transition-colors duration-300">{item.label}</span>
+                    <span className="mb-3 text-blue-500 group-hover:text-blue-400 transition-colors duration-300">{item.icon}</span>
+                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-700 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -381,10 +381,10 @@ export default function MobileAppDevelopmentPage() {
         </section>
         <div>
 
-      {/* Tstimonial */}
-      <Reviews />
+          {/* Tstimonial */}
+          <Reviews />
 
-    </div>
+        </div>
 
         <ConsultationSectionMob bgImage="/images/services/mobile-app-hero.jpg" />
       </main>
