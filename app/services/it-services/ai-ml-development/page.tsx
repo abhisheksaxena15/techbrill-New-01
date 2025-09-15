@@ -191,7 +191,7 @@ export default function AIMlDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              Helping businesses grow with AI & ML solutions.
+              Transforming Ideas into intelligence solutions with AI & ML
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
@@ -383,67 +383,6 @@ export default function AIMlDevelopmentPage() {
 
           </div>
         </div>
-        {/* 7. Commitment & Why Choose Section */}
-        {/* <section className="py-20 px-6 md:px-16 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Our Commitment & Guarantee</h2>
-              <div className="w-32 h-1 mx-auto bg-gradient-to-r from-blue-800 via-blue-800 to-blue-800 rounded-full mb-4" />
-              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                We deliver robust, scalable, and high-performance mobile solutions. Our team is dedicated to transparency, timely delivery, and ongoing support—empowering your business to thrive in a mobile-first world.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
-              {[
-                {
-                  icon: <CheckCircle className="w-10 h-10 text-blue-800" />,
-                  title: '100% Transparency',
-                  desc: 'Clear, honest communication and full project visibility from start to finish.'
-                },
-                {
-                  icon: <Clock className="w-10 h-10 text-blue-800" />,
-                  title: 'On-Time Delivery',
-                  desc: '95%+ of our projects launch on schedule, so you can plan with confidence.'
-                },
-                {
-                  icon: <Gift className="w-10 h-10 text-blue-800" />,
-                  title: '30 Days Free Support',
-                  desc: 'Enjoy complimentary post-launch support for a smooth transition.'
-                },
-                {
-                  icon: <Shuffle className="w-10 h-10 text-blue-800" />,
-                  title: 'Flexible Engagements',
-                  desc: 'Choose a partnership model that fits your business and budget.'
-                },
-                {
-                  icon: <Headphones className="w-10 h-10 text-blue-800" />,
-                  title: '24/7 Expert Help',
-                  desc: 'Our team is always available to assist you, day or night.'
-                }
-              ].map((item, idx) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: idx * 0.08 }}
-                  whileHover={{ scale: 1.04, boxShadow: '0 4px 32px 0 rgba(30,64,175,0.10)', borderColor: '#1e40af', backgroundColor: 'rgba(30,64,175,0.04)' }}
-                  className={cn(
-                    "flex flex-col items-center justify-center text-center gap-4 bg-white/70 backdrop-blur-md rounded-2xl shadow-lg px-6 py-8 min-w-0 border border-blue-100 transition-all duration-200 hover:bg-blue-50/60 hover:border-blue-800 hover:shadow-xl",
-                    "sm:gap-3 md:gap-4"
-                  )}
-                >
-                  <div className="flex items-center justify-center mb-0">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1 uppercase tracking-wide">{item.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-xs">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
 
         {/*9. Process Steps + Right Panel */}
         <section className="py-16 bg-gray-50 dark:bg-gray-900">
