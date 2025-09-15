@@ -120,7 +120,7 @@ const techTabs = [
 export default function ITConsultancyTechToolsSection() {
   const [activeTab, setActiveTab] = useState(0);
   const activeSkills = techTabs[activeTab].skills;
-  const [openAccordion, setOpenAccordion] = useState(null);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
 
   return (
@@ -161,60 +161,7 @@ export default function ITConsultancyTechToolsSection() {
 				}
 			`}</style>
 
-
-<section className="pt-16">
-                  <div className="container mx-auto">
-                    <div className="text-center mb-8 md:mb-12">
-                      <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
-                        Technologies We Use
-                      </h3>
-                      <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                        Driven by bold ideas, delivered through robust Tech Stacks
-                      </h2>
-                      <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
-                      
-                      <div className="flex justify-center mt-4">
-                        {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
-                        <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                          We leverage the latest technologies to build dynamic, secure, and scalable web applications that keep your digital presence modern and future-ready.                </h3>
-                      </div>
-                    </div>
-                  
-                  </div>
-        
-                </section>
-
-      
-
-        <motion.div
-          className="px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="mx-auto w-full max-w-[1100px]">
-            <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
-              {/* Tab Selector - Desktop Vertical */}
-              <div className="bg-blue-900 text-white p-6 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] custom-scrollbar hidden md:flex">
-                {techTabs.map((tab, idx) => (
-                  <button
-                    key={tab.label}
-                    className={`flex justify-between items-center px-4 py-3 rounded-xl text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
-                      ? "bg-blue-800 shadow-lg text-white"
-                      : "hover:bg-blue-800/80 opacity-80 text-gray-200"
-                      }`}
-                    onClick={() => setActiveTab(idx)}
-                  >
-                    <span className="flex items-center">
-                      <span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}>{`0${idx + 1}.`}</span>
-                      {tab.label}
-                    </span>
-                    {activeTab === idx && <span className="ml-2 text-lg">→</span>}
-                  </button>
-                ))}
-              </div>
-
+      {/* Keep only the later, correct content section below */}
       <section className="pt-10">
         <div className="container mx-auto">
           <div className="text-center mb-8 md:mb-12">
@@ -280,8 +227,6 @@ export default function ITConsultancyTechToolsSection() {
                     }}
                     onClick={() => setOpenAccordion(openAccordion === idx ? null : idx)}
                   >
-                    {/* Serial Number as in the laptop view */}
-                    {/* <span className="mr-2 font-bold text-white w-8 h-8 flex items-center justify-center">{`0${idx + 1}.`}</span> */}
                     <span>{tab.label}</span>
                     <span className="ml-auto">
                       <Icon
@@ -329,16 +274,10 @@ export default function ITConsultancyTechToolsSection() {
               </div>
             </div>
 
-    
           </div>
 
         </div>
       </motion.div>
     </>
   );
-        </motion.div>
-        
-      </>
-      );
-
 }

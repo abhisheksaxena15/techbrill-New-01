@@ -16,7 +16,7 @@ import { ExpandableCardDemo } from '@/components/ui/AI-development-roadmap';
 import FaqSection from "@/components/ui/FaqSection"; // adjust the path based on your folder
 import Differentiators from "@/components/ui/Differentiators"; // adjust path
 import { useRef } from "react";
-import Link from 'next/link';
+
 
 
 // Animation variants
@@ -216,10 +216,6 @@ export default function AIMlDevelopmentPage() {
                 {/* <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button> */}
               </motion.div>
             </motion.div>
-
-              Transforming Ideas into Intelligent Solutions with AI & ML
-            </motion.p>  
-
           </div>
           <motion.div
             className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
@@ -397,7 +393,7 @@ export default function AIMlDevelopmentPage() {
         
 
         {/*7. AI tech stack section */}
-        <TechStackSection/>
+        
 
 
 
@@ -464,7 +460,7 @@ export default function AIMlDevelopmentPage() {
               ))}
             </div>
           </div>
-        </section> */}
+        </section>
 
 
         {/*9. Process Steps + Right Panel */}
