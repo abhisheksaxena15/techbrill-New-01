@@ -158,12 +158,13 @@ export default function ServicesSection() {
                                     alt="Code editor with web development code"
                                     width={600}
                                     height={400}
-                                    className="object-cover w-full h-[380px]"
+                                    className="object-cover w-full h-[420px]"
                                     priority
                                 />
                             </div>
                         </motion.div>
 
+                        {/* Right: Text content */}
                         {/* Right: Text content */}
                         <motion.div
                             className="w-full md:w-1/2"
@@ -172,21 +173,23 @@ export default function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
-                            {/* Section label with blue underline */}
-                            <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black  dark:text-white">Strategize. Optimize. Modernize</h3>
-                            <div className="h-1 w-28 bg-blue-500 mb-6 " />
-                            {/* Main heading */}
-                            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">What We Do in <span className="text-blue-700"> IT Consultancy </span> </h2>
-                            <p className="text-gray-600 dark:text-white mb-4">
-                                At Techbrill Solutions, we provide expert IT consultancy services to help businesses navigate the complex world of technology. Our team of experienced consultants works closely with you to understand your unique challenges and develop strategic solutions that drive growth and innovation.
-                            </p>
-                            <p className="text-gray-600 dark:text-white mb-4">
-                                From digital transformation to technology strategy and implementation, we guide you through every step of your technology journey, ensuring you make informed decisions that align with your business objectives.
-                            </p>
+                            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                                STRATEGIZE. OPTIMIZE. MODERNIZE
+                            </h3>
+                            <h2 className="mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                                Empowering Enterprises with Strategic IT Consulting
+                            </h2>
+                            <div className="h-1 w-28 bg-red-600 mb-3" />
+                            <p className="text-gray-600 dark:text-white mb-2 mt-3">
+                                At Techbrill, we provide IT consultancy services that align business objectives with the right technology solutions. Our goal is to design strategies that boost efficiency, reduce risks, and accelerate digital transformation.                            </p>
+                            <p className="text-gray-600 dark:text-white mb-2 mt-3">
+                                From strengthening security to modernizing systems and scaling operations, we deliver clear, actionable guidance that helps your business grow, adapt, and stay competitive in today’s evolving digital landscape.                            </p>
+                            <p className="text-gray-600 dark:text-white mb-5">
+                                With expertise in cloud adoption, enterprise architecture, and cybersecurity, our consultants combine deep industry knowledge with proven methodologies to ensure your IT investments create measurable value and long-term growth.                            </p>
 
                             <AnimatedSection animation="fade" delay={0.6}>
                                 <Link href="/contact">
-                                    <Button className="group">
+                                    <Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700">
                                         Consult with us{" "}
                                         <motion.div
                                             animate={{ x: [0, 5, 0] }}
@@ -206,29 +209,33 @@ export default function ServicesSection() {
             <section className="py-16 bg-white dark:bg-gray-950">
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-8 md:mb-12">
-                        <h2 className="text-lg font-semibold uppercase tracking-wide text-black dark:text-white">
-                            What We Do
+                        <h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                            KEY SERVICES
                         </h2>
-                        <h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Transforming businesses through strategic technology solutions is <span className="text-blue-700 font-bold">Our Expertise</span></h2>
-                        <div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-10"></div>
-                        {/*<p className="text-lg text-gray-600 dark:text-white mb-4">We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today’s fast-paced digital world</p> */}
+                        <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                            Driving Transformation Through End-to-End Technology Advisory
+                        </h2>
+                        <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
+                        <h3 className=" text-base text-gray-600 max-w-3xl mx-auto mt-1 leading-relaxed">
+                            Explore our full spectrum of IT consultancy services designed to transform operations, enhance security, and accelerate business growth.
+                        </h3>
                     </div>
 
-                    {/* Digital Transformation & Strategy Services with carousel */}
+                    {/* IT Strategy & Roadmap */}
                     <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                Digital Transformation & Strategy
+                                IT Strategy & Roadmap
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                We help organizations embrace digital transformation, develop technology roadmaps, and implement strategies that drive innovation and efficiency.
+                                We help organizations align IT with business vision by creating tailored strategies and roadmaps. Our approach ensures smarter investments, higher efficiency, and long-term value from technology.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>Technology Roadmap Development</li>
-                                <li>Digital Transformation Strategy</li>
-                                <li>IT Infrastructure Planning</li>
-                                <li>Cloud Strategy & Migration</li>
-                                <li>IT Governance & Compliance</li>
+                                <li>Business-aligned IT planning</li>
+                                <li>ROI-focused investment strategies</li>
+                                <li>Agile and adaptable roadmaps</li>
+                                <li>Governance and compliance guidance</li>
+                                <li>Future-ready technology adoption</li>
                             </ul>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -238,7 +245,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/it-consultancy-hero.jpg"
-                                                alt="UI/UX Design Process"
+                                                alt="IT Strategy"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -249,7 +256,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
-                                                alt="UI/UX Design Workshop"
+                                                alt="Strategy Session"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -261,22 +268,21 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-
-                    {/* IT Implementation & Support with carousel */}
+                    {/* Digital Transformation Consulting */}
                     <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                IT Implementation & Support
+                                Digital Transformation Consulting
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                Our implementation services ensure your technology investments deliver value. We provide project management, change management, and ongoing support.
+                                Transform how your business operates with technology-driven change. From process automation to customer experience, we guide you through every stage of digital transformation for measurable impact.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>Project Management</li>
-                                <li>Change Management</li>
-                                <li>Vendor Selection & Management</li>
-                                <li>Process Optimization</li>
-                                <li>Technology Integration</li>
+                                <li>Legacy system modernization</li>
+                                <li>Workflow automation solutions</li>
+                                <li>Customer experience enhancement</li>
+                                <li>Cloud-native business models</li>
+                                <li>Scalable digital strategies</li>
                             </ul>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -286,7 +292,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg"
-                                                alt="Web Development"
+                                                alt="Digital Transformation"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -297,7 +303,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/it-consultancy-hero.jpg"
-                                                alt="Web Development Tools"
+                                                alt="Business Model"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -309,33 +315,31 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-                    
-
-                    {/* IT Strategy & Advisory with carousel */}
+                    {/* Cloud Consulting & Migration */}
                     <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-                                IT Strategy & Advisory
+                                Cloud Consulting & Migration
                             </h3>
                             <p className="text-gray-600 dark:text-white mb-4">
-                                Our advisory services provide strategic insights to align your IT initiatives with business goals, ensuring you leverage technology for competitive advantage.
+                                Our experts design and implement cloud strategies that improve agility, reduce costs, and enhance security. We ensure seamless migration and optimization for long-term scalability.
                             </p>
                             <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-                                <li>IT Strategy Development</li>
-                                <li>Technology Assessment</li>
-                                <li>Risk Management & Mitigation</li>
-                                <li>IT Budgeting & Cost Optimization</li>
-                                <li>Performance Measurement & Reporting</li>
+                                <li>Cloud readiness assessment</li>
+                                <li>Migration planning & execution</li>
+                                <li>Hybrid & multi-cloud strategies</li>
+                                <li>Cost and performance optimization</li>
+                                <li>Security and compliance assurance</li>
                             </ul>
                         </div>
                         <div className="w-full md:w-1/2">
-                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
+                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4200 })]}>
                                 <CarouselContent>
                                     <CarouselItem>
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
-                                                alt="IT Strategy Session"
+                                                alt="Cloud Migration"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -346,7 +350,7 @@ export default function ServicesSection() {
                                         <div className="rounded-md overflow-hidden">
                                             <Image
                                                 src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-                                                alt="IT Advisory Meeting"
+                                                alt="Cloud Strategy"
                                                 width={600}
                                                 height={400}
                                                 className="object-cover w-full h-[300px]"
@@ -356,14 +360,273 @@ export default function ServicesSection() {
                                 </CarouselContent>
                             </Carousel>
                         </div>
-
-                        
                     </div>
 
-                    {/* Continue adding the rest of your services with carousels... */}
-                    {/* Mobile App Development, CMS & Content Solutions, SEO & Digital Marketing */}
+                    {/* Cybersecurity & Risk Management */}
+                    <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+                        <div className="w-full md:w-1/2">
+                            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+                                Cybersecurity & Risk Management
+                            </h3>
+                            <p className="text-gray-600 dark:text-white mb-4">
+                                Protect your business with proactive security strategies. We identify vulnerabilities, implement safeguards, and ensure compliance so your operations remain resilient against evolving threats.
+                            </p>
+                            <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+                                <li>Threat & risk assessment</li>
+                                <li>Security architecture design</li>
+                                <li>Compliance (ISO, GDPR, etc.)</li>
+                                <li>Identity & access management</li>
+                                <li>Incident response planning</li>
+                            </ul>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4300 })]}>
+                                <CarouselContent>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/it-consultancy-hero.jpg"
+                                                alt="Cybersecurity"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg"
+                                                alt="Risk Management"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                            </Carousel>
+                        </div>
+                    </div>
+
+                    {/* Enterprise Architecture & Infrastructure */}
+                    <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
+                        <div className="w-full md:w-1/2">
+                            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+                                Enterprise Architecture & Infrastructure
+                            </h3>
+                            <p className="text-gray-600 dark:text-white mb-4">
+                                We design robust IT architectures that support growth and innovation. Our solutions strengthen infrastructure, improve resilience, and align with business demands.
+                            </p>
+                            <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+                                <li>IT infrastructure assessment</li>
+                                <li>Cloud & on-premise integration</li>
+                                <li>Scalable architecture frameworks</li>
+                                <li>Disaster recovery planning</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4400 })]}>
+                                <CarouselContent>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+                                                alt="Enterprise Architecture"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
+                                                alt="Infrastructure Solutions"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                            </Carousel>
+                        </div>
+                    </div>
+
+                    {/* Software & Application Consulting */}
+                    <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+                        <div className="w-full md:w-1/2">
+                            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+                                Software & Application Consulting
+                            </h3>
+                            <p className="text-gray-600 dark:text-white mb-4">
+                                Optimize, modernize, or integrate software applications to meet your business needs. We provide insights to enhance performance, usability, and scalability.
+                            </p>
+                            <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+                                <li>Application modernization roadmaps</li>
+                                <li>Integration & API strategies</li>
+                                <li>Technology stack evaluation</li>
+                                <li>Performance optimization audits</li>
+                                <li>Vendor & tool selection guidance</li>
+                            </ul>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
+                                <CarouselContent>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/it-consultancy-hero.jpg"
+                                                alt="Software Consulting"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg"
+                                                alt="Application Integration"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                            </Carousel>
+                        </div>
+                    </div>
+
+                    {/* Data Analytics & AI Advisory */}
+                    <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
+                        <div className="w-full md:w-1/2">
+                            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+                                Data Analytics & AI Advisory
+                            </h3>
+                            <p className="text-gray-600 dark:text-white mb-4">
+                                Leverage data and AI to drive better decisions. We help businesses uncover insights, predict outcomes, and innovate with intelligent solutions.
+                            </p>
+                            <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+                                <li>Data strategy & governance</li>
+                                <li>Advanced analytics models</li>
+                                <li>AI use-case identification</li>
+                                <li>Predictive & prescriptive analytics</li>
+                                <li>BI & visualization solutions</li>
+                            </ul>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4600 })]}>
+                                <CarouselContent>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+                                                alt="Data Analytics"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
+                                                alt="AI Advisory"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                            </Carousel>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+                        <div className="w-full md:w-1/2">
+                            <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+                                QA & Testing Consultancy
+                            </h3>
+                            <p className="text-gray-600 dark:text-white mb-4">
+                                Ensure product reliability and performance with our QA consulting. We define quality frameworks that reduce risks, improve user satisfaction, and accelerate time-to-market.
+                            </p>
+                            <ul className="list-disc list-inside space-y-2 ml-2 text-gray-600 dark:text-gray-300">
+                                <li>Test strategy & planning</li>
+                                <li>Automation frameworks</li>
+                                <li>Performance & load testing</li>
+                                <li>Security & compliance testing</li>
+                                <li>Continuous testing in DevOps</li>
+                            </ul>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
+                                <CarouselContent>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/it-consultancy-hero.jpg"
+                                                alt="Software Consulting"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                    <CarouselItem>
+                                        <div className="rounded-md overflow-hidden">
+                                            <Image
+                                                src="/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg"
+                                                alt="Application Integration"
+                                                width={600}
+                                                height={400}
+                                                className="object-cover w-full h-[300px]"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                            </Carousel>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+            {/* QA & Testing Consultancy
+    <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+      <div className="w-full md:w-1/2">
+        <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+          QA & Testing Consultancy
+        </h3>
+        <p className="text-gray-600 dark:text-white mb-4">
+          Ensure product reliability and performance with our QA consulting. We define quality frameworks that reduce risks, improve user satisfaction, and accelerate time-to-market.
+        </p>
+        <ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+          <li>Test strategy & planning</li>
+          <li>Automation frameworks</li>
+          <li>Performance & load testing</li>
+          <li>Security & compliance testing</li>
+          <li>Continuous testing in DevOps</li>
+        </ul>
+      </div>
+      <div className="w-full md:w-1/2">
+        <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4700 })]}>
+          <CarouselContent>
+            <CarouselItem>
+              <div className="rounded-md overflow-hidden">
+                <Image
+                  src="/images/services/flipsnack-YoNWSk5NnUE-unsplash.jpg"
+                  alt="QA Consultancy"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-[300px] */}
+
         </>
     );
 }
