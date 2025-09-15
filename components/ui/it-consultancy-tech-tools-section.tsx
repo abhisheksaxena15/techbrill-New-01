@@ -80,6 +80,8 @@ const techTabs = [
 export default function ITConsultancyTechToolsSection() {
 	const [activeTab, setActiveTab] = useState(0);
 	const activeSkills = techTabs[activeTab].skills;
+	const [openAccordion, setOpenAccordion] = useState(null);
+
 
 	return (
 		<>
@@ -132,15 +134,13 @@ export default function ITConsultancyTechToolsSection() {
 							{techTabs.map((tab, idx) => (
 								<button
 									key={tab.label}
-									className={`flex justify-between items-center px-4 py-3 rounded-xl text-left transition-all font-semibold text-lg tracking-wide ${
-										activeTab === idx
+									className={`flex justify-between items-center px-4 py-3 rounded-xl text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
 											? "bg-blue-800 shadow-lg text-white"
 											: "hover:bg-blue-800/80 opacity-80 text-gray-200"
-									}`}
+										}`}
 									onClick={() => setActiveTab(idx)}
 								>
 									<span className="flex items-center">
-										<span className={`mr-2 font-bold ${activeTab === idx ? 'text-white' : 'text-gray-300'}`}>{`0${idx + 1}.`}</span>
 										{tab.label}
 									</span>
 									{activeTab === idx && <span className="ml-2 text-lg">→</span>}
@@ -149,21 +149,50 @@ export default function ITConsultancyTechToolsSection() {
 						</div>
 
 						{/* Tab Selector - Mobile Horizontal */}
-						<div className="bg-blue-900 text-white p-2 flex md:hidden flex-row gap-3 overflow-x-auto mobile-scrollbar snap-x snap-mandatory w-full">
+						<div className="md:hidden flex flex-col gap-5 w-full bg-white py-2">
 							{techTabs.map((tab, idx) => (
-								<button
+								<div
 									key={tab.label}
-									className={`flex items-center px-5 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-all snap-center min-w-[180px] max-w-[220px] flex-shrink-0 overflow-hidden ${
-										activeTab === idx
-											? "bg-blue-800 shadow text-white"
-											: "bg-blue-700/70 text-gray-200 hover:bg-blue-800/80"
-									}`}
-									onClick={() => setActiveTab(idx)}
-									style={{ textOverflow: 'ellipsis' }}
+									className="bg-blue-900 rounded-lg shadow relative"
+									style={{ borderRadius: '16px' }}
 								>
-									<span className="mr-2 font-bold">{`0${idx+1}.`}</span>
-									<span className="truncate block w-full">{tab.label}</span>
-								</button>
+									<button
+										className="flex items-center gap-3 w-full px-4 py-4 text-white font-semibold text-left"
+										style={{
+											minHeight: "56px",
+											fontSize: "1.13rem",
+										}}
+										onClick={() => setOpenAccordion(openAccordion === idx ? null : idx)}
+									>
+										{/* Serial Number as in the laptop view */}
+										{/* <span className="mr-2 font-bold text-white w-8 h-8 flex items-center justify-center">{`0${idx + 1}.`}</span> */}
+										<span>{tab.label}</span>
+										<span className="ml-auto">
+											<Icon
+												icon={openAccordion === idx ? "mdi:chevron-up" : "mdi:chevron-down"}
+												className="w-6 h-6"
+											/>
+										</span>
+									</button>
+									{openAccordion === idx && (
+										<div className="bg-[#efefef] dark:bg-white px-4 py-4 rounded-b-lg transition-all duration-300">
+											<div className="flex flex-col gap-3">
+												{tab.skills.map(skill => (
+													<div
+														key={skill.name}
+														className="flex items-center gap-3 bg-white border border-gray-200 rounded-md shadow-sm px-3 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow transition text-neutral-800"
+													>
+														<div className="w-8 h-8 min-w-[32px] flex items-center justify-center shrink-0">
+															{skill.icon}
+														</div>
+														<span className="text-base font-medium text-black">{skill.name}</span>
+													</div>
+												))}
+
+											</div>
+										</div>
+									)}
+								</div>
 							))}
 						</div>
 
@@ -185,7 +214,7 @@ export default function ITConsultancyTechToolsSection() {
 						</div>
 
 						{/* Mobile Carousel */}
-						<div className="w-full bg-[#efefef] dark:bg-white p-2 min-h-[110px] flex md:hidden items-center">
+						{/* <div className="w-full bg-[#efefef] dark:bg-white p-2 min-h-[110px] flex md:hidden items-center">
 							<div className="flex flex-row gap-4 overflow-x-auto mobile-scrollbar snap-x snap-mandatory w-full">
 								{activeSkills.map((skill) => (
 									<div
@@ -200,7 +229,7 @@ export default function ITConsultancyTechToolsSection() {
 									</div>
 								))}
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</motion.div>

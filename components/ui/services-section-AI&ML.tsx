@@ -8,6 +8,14 @@ import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/animated-section";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import {
+    MessageSquare,   // 💬 NLP
+    Eye,             // 👁 Computer Vision
+    Cog,             // ⚙️ Business Automation
+    LineChart,       // 📈 Predictive Analytics
+    ShieldCheck,     // 🛡️ QA & Testing
+    CloudCog         // ☁️ AI Integration
+} from "lucide-react";
 
 const SERVICES = [
     {
@@ -154,7 +162,8 @@ export default function ServicesSection() {
             <section className="py-16 bg-white dark:bg-gray-950">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center gap-9">
-                        {/* Left: Code image */}
+
+                        {/* Left: Code image with floating quote */}
                         <motion.div
                             className="w-full md:w-1/2 flex items-center justify-center"
                             initial={{ opacity: 0, x: -40 }}
@@ -162,15 +171,30 @@ export default function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
-                            <div className="rounded-md overflow-hidden w-full">
-                                <Image
-                                    src="/images/services/web-design-hero.jpg"
-                                    alt="Code editor with web development code"
-                                    width={600}
-                                    height={400}
-                                    className="object-cover w-full h-[500px]"
-                                    priority
-                                />
+                            <div className="relative w-full">
+                                {/* Image wrapper */}
+                                <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+                                    <Image
+                                        src="/images/services/web-design-hero.jpg"
+                                        alt="Code editor with web development code"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </div>
+
+                                {/* Floating quote box */}
+                                <motion.div
+                                    className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg max-w-xs text-center"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.5, duration: 0.5 }}
+                                >
+                                    <blockquote className="text-xs md:text-sm italic text-gray-700 dark:text-gray-300">
+                                        &ldquo;Your vision, powered by AI & ML is carefully crafted and delivered to create meaningful impact.&rdquo;
+                                    </blockquote>
+                                </motion.div>
                             </div>
                         </motion.div>
 
@@ -182,37 +206,45 @@ export default function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
-                            {/* Section label with blue underline */}
-                            <h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
-                            TURNING DATA INTO INTELLIGENT ACTION</h3>
-                            
+
+                            {/* Section label */}
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-3">
+                                TURNING DATA INTO INTELLIGENT ACTION
+                            </h3>
+
                             {/* Main heading */}
-                            <h2 className=" mb-5 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Transforming Businesses with AI & ML Innovation </h2> {/*<span className="text-blue-800 italic"> Web Design, Development</span> and Beyond</h2> */}
-							<div className="h-1 w-28 bg-red-600 mb-3 " />
-                            <p className="text-gray-600 dark:text-white mb-2">Artificial Intelligence (AI) and Machine Learning (ML) are transforming industries by enabling smarter decision-making, automation, and personalized experiences. Businesses that leverage AI/ML gain a competitive edge through improved efficiency and innovation.
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                                Transforming Businesses with AI & ML Innovation
+                            </h2>
+                            <div className="h-1 w-28 bg-red-600 mb-3" />
+
+                            <p className="text-gray-600 dark:text-white mb-2">
+                                Artificial Intelligence (AI) and Machine Learning (ML) are transforming industries by enabling smarter decision-making, automation, and personalized experiences. Businesses that leverage AI/ML gain a competitive edge through improved efficiency and innovation.
                             </p>
 
                             <p className="text-gray-600 dark:text-white mb-5">
-                            At Techbrill Solutions, we offer tailored AI and ML development services, including predictive analytics, natural language processing, computer vision, and custom model deployment. We specialize in building scalable, secure, and industry-specific solutions that drive measurable results.
+                                At Techbrill Solutions, we offer tailored AI and ML development services, including predictive analytics, natural language processing, computer vision, and custom model deployment. We specialize in building scalable, secure, and industry-specific solutions that drive measurable results.
                             </p>
+
                             <p className="text-gray-600 dark:text-white mb-5">
-                            Our expert team consists of data scientists, ML engineers, and AI specialists with deep domain knowledge. We are passionate about solving complex challenges and delivering intelligent systems that help businesses thrive in the digital era.
+                                Our expert team consists of data scientists, ML engineers, and AI specialists with deep domain knowledge. We are passionate about solving complex challenges and delivering intelligent systems that help businesses thrive in the digital era.
                             </p>
 
-
+                            {/* Button */}
                             <AnimatedSection animation="fade" delay={0.6}>
-								<Link href="/contact">
-									<Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700 ">
-										Consult with us{" "}
-										<motion.div
-											animate={{ x: [0, 5, 0] }}
-											transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
-										>
-											<ArrowRight className="ml-2 h-4 w-4 " />
-										</motion.div>
-									</Button>
-								</Link>
-							</AnimatedSection>
+                                <Link href="/contact">
+                                    <Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700">
+                                        Consult with us{" "}
+                                        <motion.div
+                                            animate={{ x: [0, 5, 0] }}
+                                            transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+                                        >
+                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                        </motion.div>
+                                    </Button>
+                                </Link>
+                            </AnimatedSection>
+
                         </motion.div>
                     </div>
                 </div>
@@ -220,20 +252,22 @@ export default function ServicesSection() {
 
 
 
+
             {/* 3. Services Section - Using the custom dark theme from the image */}
-            <section className="py-16 bg-white dark:bg-gray-950">
-				<div className="container mx-auto px-4 max-w-6xl">
-					<div className="text-center mb-8 md:mb-12">
-						<h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
-                        CORE OFFERINGS
-						</h2>
-						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Accelerate Growth with Full-Spectrum AI & ML Development Services
-						</h2>
-						<div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
-						<h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
-                        Delivering end-to-end AI & ML solutions that streamline operations, drive innovation, and unlock sustainable business growth.
-						</h3>
-					</div>
+            <section className="pt-13 bg-white dark:bg-gray-950">
+                <div className="container mx-auto px-4 max-w-6xl">
+                    <div className="text-center mb-8 md:mb-12">
+                        <h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                            CORE OFFERINGS
+                        </h2>
+                        <h2 className="mt-2 text-2xl mx-auto max-w-5xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Accelerate Growth with Full-Spectrum AI & ML Development Services
+                        </h2>
+                        <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
+                        <h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+                            Delivering end-to-end AI & ML solutions that streamline operations, drive innovation, and unlock sustainable business growth.
+                        </h3>
+                    </div>
+
 
                     {/* AI Development */}
                     <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
@@ -250,9 +284,13 @@ export default function ServicesSection() {
                                 <li>Decision-support systems</li>
                                 <li>End-to-end AI integration</li>
                             </ul>
-                            
-                                <Button className="mt-4">Explore more</Button>
-                            
+
+
+                            <Button asChild className="mt-4">
+                                <a href="/services/it-services/ai-ml-development">Explore more</a>
+                            </Button>
+
+
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3500 })]}>
@@ -300,9 +338,13 @@ export default function ServicesSection() {
                                 <li>Design & creative automation</li>
                                 <li>Personalized user experiences</li>
                             </ul>
-                            
-                                <Button className="mt-4">Explore more</Button>
-                            
+
+
+                            <Button asChild className="mt-4">
+                                <a href="/services/ai-automation/generative-ai">Explore more</a>
+                            </Button>
+
+
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4000 })]}>
@@ -349,10 +391,11 @@ export default function ServicesSection() {
                                 <li>Anomaly & fraud detection</li>
                                 <li>Demand forecasting</li>
                             </ul>
-                            
-                                <Button className="mt-4">Explore more</Button>
-                            
-                        </div>
+
+                            <Button asChild className="mt-4">
+                                <a href="/services/it-services/ai-ml-development">Explore more</a>
+                            </Button>
+           </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
                                 <CarouselContent>
@@ -398,9 +441,11 @@ export default function ServicesSection() {
                                 <li>Feature engineering</li>
                                 <li>Model training & optimization</li>
                             </ul>
-                            
-                                <Button className="mt-4">Explore more</Button>
-                            
+
+                            <Button asChild className="mt-4">
+                                <a href="/services/ai-automation/data-analytics">Explore more</a>
+                            </Button>
+
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
@@ -433,6 +478,91 @@ export default function ServicesSection() {
                     </div>
                 </div>
             </section>
+
+            <div className="mt-4">
+                <section className="bg-gray-50 dark:bg-gray-900">
+                    <div className="container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
+                        {/* Left: Sticky Heading & CTA */}
+                        <div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0">
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+                                SOLUTIONS INCLUDE
+                            </h3>
+                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                                Unlock Advanced AI & ML Capabilities
+                            </h3>
+                            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+
+                            <p
+                                className="text-gray-600 dark:text-white mb-4"
+                                style={{ textAlign: "justify" }}
+                            >
+                                Unlock the true potential of AI & ML with innovations that go beyond the basics. Our advanced offerings are built to tackle complex business challenges, delivering intelligent, scalable, and secure solutions that drive meaningful transformation.
+                            </p>
+                            <p
+                                className="text-gray-600 dark:text-white mb-4"
+                                style={{ textAlign: "justify" }}
+                            >
+                                At Techbrill, we blend technical expertise with deep industry knowledge to create AI solutions that are practical yet transformative. By enabling smarter decisions, seamless automation, and future-ready capabilities, we empower businesses to stay competitive and lead with confidence.
+                            </p>
+                        </div>
+
+                        {/* Right: Scrollable Tech Cards */}
+                        <div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
+                            {[
+                                {
+                                    title: "Natural Language Processing (NLP) Solutions",
+                                    desc: "Enable machines to understand, analyze, and respond to human language with intelligent chatbots, sentiment analysis, and voice processing.",
+                                    icon: MessageSquare,
+                                },
+                                {
+                                    title: "Computer Vision Applications",
+                                    desc: "Leverage AI for image recognition, object detection, facial recognition, and automated quality inspection in real time.",
+                                    icon: Eye,
+                                },
+                                {
+                                    title: "AI-Powered Business Automation",
+                                    desc: "Streamline workflows with AI-driven automation to cut manual effort, reduce costs, and boost productivity across teams.",
+                                    icon: Cog,
+                                },
+                                {
+                                    title: "Predictive Analytics & Forecasting",
+                                    desc: "Anticipate future trends, detect risks, and model scenarios with data-driven predictions to make smarter business decisions.",
+                                    icon: LineChart,
+                                },
+                                {
+                                    title: "AI-Powered Quality Assurance & Testing",
+                                    desc: "Enhance QA with intelligent test automation, anomaly detection, and defect prediction to accelerate release cycles.",
+                                    icon: ShieldCheck,
+                                },
+                                {
+                                    title: "AI Integration with Enterprise Systems",
+                                    desc: "Embed AI into CRMs, ERPs, and SaaS platforms for improved customer engagement, smarter insights, and operational excellence.",
+                                    icon: CloudCog,
+                                },
+                            ].map((card) => (
+                                <div
+                                    key={card.title}
+                                    className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0"
+                                >
+                                    <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                                        <card.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                                    </span>
+                                    <div className="flex-1">
+                                        <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                                            {card.title}
+                                        </h3>
+                                        <p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </>
+    );
+}
+
             
            <div className="mt-4">
                                 <section className="py-11 bg-gray-50 dark:bg-gray-900 " >
