@@ -37,7 +37,7 @@ export default function WorkProcess() {
             How It Work
           </span>
           <h2 className="tmt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-4xl">
-            Check Out Our Work <span className="italic text-blue-700">Process</span>
+            Check Out Our Work <span className="text-blue-700">Process</span>
           </h2>
           <p className="max-w-xl mx-auto text-gray-300 text-base">
           </p>

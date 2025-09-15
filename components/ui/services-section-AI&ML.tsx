@@ -206,6 +206,7 @@ export default function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
+
                             {/* Section label */}
                             <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-3">
                                 TURNING DATA INTO INTELLIGENT ACTION
@@ -243,6 +244,7 @@ export default function ServicesSection() {
                                     </Button>
                                 </Link>
                             </AnimatedSection>
+
                         </motion.div>
                     </div>
                 </div>
@@ -266,6 +268,7 @@ export default function ServicesSection() {
                         </h3>
                     </div>
 
+
                     {/* AI Development */}
                     <div className="flex flex-col md:flex-row items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
@@ -282,9 +285,11 @@ export default function ServicesSection() {
                                 <li>End-to-end AI integration</li>
                             </ul>
 
+
                             <Button asChild className="mt-4">
                                 <a href="/services/it-services/ai-ml-development">Explore more</a>
                             </Button>
+
 
                         </div>
                         <div className="w-full md:w-1/2">
@@ -334,9 +339,11 @@ export default function ServicesSection() {
                                 <li>Personalized user experiences</li>
                             </ul>
 
+
                             <Button asChild className="mt-4">
                                 <a href="/services/ai-automation/generative-ai">Explore more</a>
                             </Button>
+
 
                         </div>
                         <div className="w-full md:w-1/2">
@@ -388,7 +395,7 @@ export default function ServicesSection() {
                             <Button asChild className="mt-4">
                                 <a href="/services/it-services/ai-ml-development">Explore more</a>
                             </Button>
-                        </div>
+           </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
                                 <CarouselContent>
@@ -438,6 +445,7 @@ export default function ServicesSection() {
                             <Button asChild className="mt-4">
                                 <a href="/services/ai-automation/data-analytics">Explore more</a>
                             </Button>
+
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
@@ -554,3 +562,72 @@ export default function ServicesSection() {
         </>
     );
 }
+
+            
+           <div className="mt-4">
+                                <section className="py-11 bg-gray-50 dark:bg-gray-900 " >
+                                    
+           
+                                    {/******/}
+                                    {/* <section className="py-0 bg-blue-50 dark:bg-gray-900"> */}
+                                    <div className=" container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px] ">
+                                        {/* Left: Sticky Heading & CTA */}
+                                        <div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
+           
+                                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+                                                SOLUTIONS INCLUDE
+                                            </h3>
+                                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                                              Unlock Advanced AI & ML Capabilities
+                                            </h3>
+                                            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+           
+                                        
+                                            <p
+                                                className="text-gray-600 dark:text-white mb-4"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                Unlock the true potential of AI & ML with innovations that go beyond the basics. Our advanced offerings are built to tackle complex business challenges, delivering intelligent, scalable, and secure solutions that drive meaningful transformation.
+                                            </p>
+                                            <p
+                                                className="text-gray-600 dark:text-white mb-4"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                At Techbrill, we blend technical expertise with deep industry knowledge to create AI solutions that are practical yet transformative. By enabling smarter decisions, seamless automation, and future-ready capabilities, we empower businesses to stay competitive and lead with confidence.
+                                            </p>
+           
+                                            {/* <p className="text-gray-600 dark:text-white mb-2 ">
+                                       Meanwhile, our  <span className="text-blue-800 font-semibold">Mobile App Development</span> & Integration capabilities fuse creativity, technology, and strategy to build scalable, stunning apps tailored for tomorrows users. Whether launching a product or optimizing legacy systems, we deliver results that exceed expectations—and industry-best timelines.
+                                   </p> */}
+                                        </div>
+                                        {/* Right: Scrollable Tech Cards */}
+                                        <div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
+                                            {/* Card Example */}
+                                            {[
+                                                { title: "Natural Language Processing (NLP) Solutions", desc: "Enable machines to understand, analyze, and respond to human language with intelligent chatbots, sentiment analysis, and voice processing." },
+                                                { title: "Computer Vision Applications", desc: "Leverage AI for image recognition, object detection, facial recognition, and automated quality inspection in real time" },
+                                                { title: "AI-Powered Business Automation", desc: "Streamline workflows with AI-driven automation to cut manual effort, reduce costs, and boost productivity across teams." },
+                                                { title: "Predictive Analytics & Forecasting", desc: "Anticipate future trends, detect risks, and model scenarios with data-driven predictions to make smarter business decisions." },
+                                                { title: "AI-Powered Quality Assurance & Testing", desc: "Enhance QA with intelligent test automation, anomaly detection, and defect prediction to accelerate release cycles" },
+                                                { title: "AI Integration with Enterprise Systems", desc: "Embed AI into CRMs, ERPs, and SaaS platforms for improved customer engagement, smarter insights, and operational excellence." },
+                                
+                                            ].map((card, idx) => (
+                                                <div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0">
+                                                    <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                                                        <Image src={`/images/icons/${ICONS[idx % ICONS.length]}`} alt={card.title + " icon"} width={40} height={40} />
+                                                    </span>
+                                                    <div className="flex-1">
+                                                        <h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">{card.title}</h3>
+                                                        <p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                {/* </section> */}
+                            </section>
+                        </div>
+        </>
+    );
+}
+

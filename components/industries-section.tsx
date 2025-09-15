@@ -27,7 +27,7 @@ export default function IndustriesSection() {
             Industry Expertise
           </h3>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white md:text-4xl">
-            Delivering Tailored Technology Solutions Across <span className="italic text-blue-500">Industries</span>
+            Delivering Tailored Technology Solutions Across <span className="text-blue-500">Industries</span>
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-6"></div>
           <p className="max-w-2xl mx-auto text-gray-300 text-base">

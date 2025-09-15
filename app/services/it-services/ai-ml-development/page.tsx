@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -191,6 +192,7 @@ export default function AIMlDevelopmentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
+
               Helping businesses grow with AI & ML solutions.
             </motion.p>
             <motion.div
@@ -214,6 +216,10 @@ export default function AIMlDevelopmentPage() {
                 {/* <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button> */}
               </motion.div>
             </motion.div>
+
+              Transforming Ideas into Intelligent Solutions with AI & ML
+            </motion.p>  
+
           </div>
           <motion.div
             className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30"
@@ -232,6 +238,7 @@ export default function AIMlDevelopmentPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                
                 BUSINESS BENEFITS              </h3>
               <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
                 AI & ML Driving Real Business Impact
@@ -239,6 +246,7 @@ export default function AIMlDevelopmentPage() {
               <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
               <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
                 Leverage AI & ML to streamline operations, boost efficiency, and unlock new opportunities for growth.</p>
+
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
               {[
@@ -385,6 +393,20 @@ export default function AIMlDevelopmentPage() {
         </div>
         {/* 7. Commitment & Why Choose Section */}
         {/* <section className="py-20 px-6 md:px-16 bg-white">
+
+        
+
+        {/*7. AI tech stack section */}
+        <TechStackSection/>
+
+
+
+        
+
+
+        {/* Why Choose Us Section */}
+        <section className="py-20 px-6 md:px-16 bg-white">
+
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-black">Our Commitment & Guarantee</h2>

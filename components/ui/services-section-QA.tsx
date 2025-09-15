@@ -180,16 +180,13 @@ export default function ServicesSection() {
 							viewport={{ once: true }}
 							transition={{ duration: 0.7 }}
 						>
-							<h3 className="text-xl md:text-2xl font-semibold mb-2 text-black  dark:text-white">We Build More Than Test Cases</h3>
+							<h3 className="text-xl md:text-2xl font-semibold mb-2 text-black  dark:text-white">Ensuring Excellence</h3>
 							<div className="h-1 w-28 bg-blue-800 mb-6 " />
-							<h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">Your Partner for <span className="text-blue-800">Quality Assurance</span> and <span className="text-blue-800">Reliable Software</span></h2>
+							<h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">Powering Digital Success Through <span className="text-blue-800">Quality Assurance</span></h2>
 							<p className="text-gray-600 dark:text-white mb-2 ">
-								At TechBrill, we believe that software quality is the foundation of business success. Our QA & Testing services are designed to ensure your applications are robust, secure, and deliver exceptional user experiences.
+								We help businesses deliver reliable, secure, and user-friendly software through comprehensive QA and testing services. From manual checks to advanced automation, performance, and security testing, our experts ensure every release is smooth and defect-free. With proven processes and modern tools, we minimize risks, accelerate delivery, and guarantee exceptional digital experiences for your customers.
 							</p>
-							<p className="text-gray-600 dark:text-white mb-2">We combine industry-leading methodologies, automation, and deep technical expertise to identify and resolve issues before they impact your users or business goals.</p>
-							<p className="text-gray-600 dark:text-white mb-5">
-								From initial planning to post-launch support, our team partners with you at every stage to deliver measurable results, reduce risk, and accelerate your software delivery.
-							</p>
+
 							<AnimatedSection animation="fade" delay={0.6}>
 								<Link href="/contact">
 									<Button className="group bg-blue-800 dark: bg-blue-700 ">
@@ -209,302 +206,347 @@ export default function ServicesSection() {
 			</section>
 
 
-            <section className="py-16 bg-white dark:bg-gray-950">
-	<div className="container mx-auto px-4 max-w-6xl">
-		<div className="text-center mb-8 md:mb-12">
-			<h2 className="text-lg font-semibold uppercase tracking-wide text-black dark:text-white">
-				What We Do
-			</h2>
-			<h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Ensuring quality through comprehensive <span className="text-blue-800 font-bold">Software QA & Testing</span></h2>
-			<div className="h-1 w-20 bg-blue-800 mx-auto mt-4 mb-4"></div>
-		</div>
+			<section className="py-16 bg-white dark:bg-gray-950">
+				<div className="container mx-auto px-4 max-w-6xl">
+					<div className="text-center mb-8 md:mb-12">
+						<h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Core QA services</h3>
+						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Seamless QA Services for Every Development Stage</h2>
+						<div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+						<p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+							Our core QA services ensure every aspect of your software is thoroughly validated and ensure your applications consistently meet the highest standards of quality and performance.
+						</p>
+					</div>
 
-		{/* Test Automation Services with carousel */}
-		<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-			<div className="w-full md:w-1/2">
-				<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-					Test Automation Services
-				</h3>
-				<p className="text-gray-600 dark:text-white mb-4">
-					Accelerate your testing cycles with robust automation frameworks that reduce manual effort and increase test coverage. Our automation solutions ensure consistent, reliable, and repeatable testing across all environments.
-				</p>
-				<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-					<li>End-to-end test automation framework development</li>
-					<li>UI/UX automation using Selenium, Cypress & Playwright</li>
-					<li>API & web services automation testing</li>
-					<li>Cross-browser & cross-platform test execution</li>
-					<li>CI/CD pipeline integration & continuous testing</li>
-				</ul>
-			</div>
-			<div className="w-full md:w-1/2">
-				<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3500 })]}>
-					<CarouselContent>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-									alt="Test Automation Framework"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg"
-									alt="Automation Testing Tools"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-					</CarouselContent>
-				</Carousel>
-			</div>
-		</div>
+					{/* Manual Functional Testing */}
+					<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								Manual Functional Testing
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Ensure core user journeys work flawlessly with requirement-driven functional validation across browsers, devices, and environments.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>Requirement-based test case design & execution</li>
+								<li>Smoke, sanity & regression testing</li>
+								<li>Cross-browser & cross-device validation</li>
+								<li>Exploratory & usability testing</li>
+								<li>Defect logging, triage & detailed reporting</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3500 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
+												alt="Manual Functional Testing"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg"
+												alt="Test Case Execution"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
 
-		{/* Performance Testing with carousel */}
-		<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
-			<div className="w-full md:w-1/2">
-				<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-					Performance Testing
-				</h3>
-				<p className="text-gray-600 dark:text-white mb-4">
-					Ensure your applications perform optimally under various load conditions. Our performance testing services identify bottlenecks, optimize response times, and guarantee scalability for peak user traffic.
-				</p>
-				<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-					<li>Load testing with JMeter, Gatling & K6</li>
-					<li>Stress testing & volume testing scenarios</li>
-					<li>Database performance optimization</li>
-					<li>Real-time monitoring & performance analytics</li>
-					<li>Scalability assessment & capacity planning</li>
-				</ul>
-			</div>
-			<div className="w-full md:w-1/2">
-				<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4000 })]}>
-					<CarouselContent>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg"
-									alt="Performance Testing Dashboard"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/web-design-hero.jpg"
-									alt="Load Testing Tools"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-					</CarouselContent>
-				</Carousel>
-			</div>
-		</div>
+					{/* Automation Testing */}
+					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								Automation Testing
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Accelerate release cycles with robust automation that improves coverage, reliability, and repeatability across layers.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>End-to-end test automation frameworks</li>
+								<li>UI automation with Selenium, Cypress & Playwright</li>
+								<li>API & integration automation</li>
+								<li>Data-driven & keyword-driven suites</li>
+								<li>CI/CD integration & scheduled runs</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4000 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg"
+												alt="Automation Framework"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/web-design-hero.jpg"
+												alt="Automation Tools"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
 
-		{/* API Testing with carousel */}
-		<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-			<div className="w-full md:w-1/2">
-				<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-					API Testing Services
-				</h3>
-				<p className="text-gray-600 dark:text-white mb-4">
-					Validate the reliability, functionality, and security of your APIs with comprehensive testing strategies. Our API testing ensures seamless data exchange and integration between different system components.
-				</p>
-				<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-					<li>REST & SOAP API functional testing</li>
-					<li>Data validation & schema verification</li>
-					<li>Authentication & authorization testing</li>
-					<li>API security & vulnerability assessment</li>
-					<li>Integration testing & microservices validation</li>
-					<li>Response time & throughput optimization</li>
-				</ul>
-			</div>
-			<div className="w-full md:w-1/2">
-				<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
-					<CarouselContent>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-									alt="API Testing Process"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
-									alt="API Testing Tools"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-					</CarouselContent>
-				</Carousel>
-			</div>
-		</div>
+					{/* Mobile Application Testing */}
+					<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								Mobile Application Testing
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Deliver flawless mobile experiences across devices, OS versions, and network conditions for both native and hybrid apps.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>Native iOS & Android functional testing</li>
+								<li>Device & OS compatibility coverage</li>
+								<li>Real device & emulator test execution</li>
+								<li>Mobile performance & battery profiling</li>
+								<li>App store readiness & release validation</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+												alt="Mobile Testing"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
+												alt="Mobile Devices"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
 
-		{/* Mobile Testing with carousel */}
-		<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
-			<div className="w-full md:w-1/2">
-				<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-					Mobile App Testing
-				</h3>
-				<p className="text-gray-600 dark:text-white mb-4">
-					Deliver flawless mobile experiences across devices and platforms. Our mobile testing services cover functionality, usability, performance, and compatibility testing for both native and hybrid applications.
-				</p>
-				<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-					<li>Native iOS & Android app testing</li>
-					<li>Cross-platform compatibility testing</li>
-					<li>Device-specific functionality validation</li>
-					<li>Mobile performance & battery optimization</li>
-					<li>App store compliance & deployment testing</li>
-				</ul>
-			</div>
-			<div className="w-full md:w-1/2">
-				<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
-					<CarouselContent>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
-									alt="Mobile App Testing"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-									alt="Mobile Testing Devices"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-					</CarouselContent>
-				</Carousel>
-			</div>
-		</div>
+					{/* Performance & Load Testing */}
+					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								Performance & Load Testing
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Validate scalability and responsiveness under real-world and peak traffic to deliver consistently fast experiences.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>Load, stress, spike & endurance testing</li>
+								<li>Bottleneck identification & performance tuning</li>
+								<li>Server, database & network profiling</li>
+								<li>Real-user & synthetic monitoring insights</li>
+								<li>Capacity planning & scalability reports</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
+												alt="Performance Dashboard"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
+												alt="Load Testing Tools"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
 
-		{/* Security Testing with carousel */}
-		<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-			<div className="w-full md:w-1/2">
-				<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-					Security Testing Services
-				</h3>
-				<p className="text-gray-600 dark:text-white mb-4">
-					Protect your applications from vulnerabilities and security threats with comprehensive security testing. Our security assessment identifies risks, validates security controls, and ensures compliance with industry standards.
-				</p>
-				<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-					<li>Penetration testing & vulnerability assessment</li>
-					<li>OWASP Top 10 security validation</li>
-					<li>Authentication & authorization testing</li>
-					<li>Data encryption & privacy compliance</li>
-					<li>Security code review & static analysis</li>
-					<li>Compliance testing (GDPR, HIPAA, SOX)</li>
-				</ul>
-			</div>
-			<div className="w-full md:w-1/2">
-				<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4200 })]}>
-					<CarouselContent>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-									alt="Security Testing Process"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/web-design-hero.jpg"
-									alt="Security Testing Tools"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-					</CarouselContent>
-				</Carousel>
-			</div>
-		</div>
+					{/* Security Testing */}
+					<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								Security Testing
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Identify and remediate vulnerabilities to protect sensitive data and harden applications against threats.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>Vulnerability assessment & penetration testing</li>
+								<li>OWASP Top 10 coverage</li>
+								<li>Auth, access control & session management testing</li>
+								<li>Static & dynamic security analysis</li>
+								<li>Compliance checks (GDPR, HIPAA, SOC 2)</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4200 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+												alt="Security Assessment"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/web-design-hero.jpg"
+												alt="Security Tools"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
 
-		{/* Test Management & QA Consulting with carousel */}
-		<div className="flex flex-col md:flex-row-reverse items-start gap-10">
-			<div className="w-full md:w-1/2">
-				<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-					Test Management & QA Consulting
-				</h3>
-				<p className="text-gray-600 dark:text-white mb-4">
-					Optimize your QA processes with strategic consulting and comprehensive test management solutions. We help establish testing best practices, implement quality frameworks, and build efficient testing workflows.
-				</p>
-				<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-					<li>QA strategy development & process optimization</li>
-					<li>Test planning & execution management</li>
-					<li>Quality metrics & reporting dashboards</li>
-					<li>Team training & skill development</li>
-					<li>Testing tool selection & implementation</li>
-					<li>Agile & DevOps testing integration</li>
-				</ul>
-			</div>
-			<div className="w-full md:w-1/2">
-				<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3600 })]}>
-					<CarouselContent>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-									alt="QA Consulting"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-						<CarouselItem>
-							<div className="rounded-md overflow-hidden">
-								<Image
-									src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-									alt="Test Management"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[300px]"
-								/>
-							</div>
-						</CarouselItem>
-					</CarouselContent>
-				</Carousel>
-			</div>
-		</div>
-	</div>
-</section>
+					{/* API Testing */}
+					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								API Testing
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Ensure reliable integrations with comprehensive functional, security, and performance validation of your APIs and services.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>REST & SOAP functional testing</li>
+								<li>Contract & schema validation</li>
+								<li>Authentication, authorization & rate limit testing</li>
+								<li>Data integrity & error handling checks</li>
+								<li>Performance & reliability benchmarking</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+												alt="API Testing Process"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
+												alt="API Tools"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
+
+					{/* Test Consulting & Strategy */}
+					<div className="flex flex-col md:flex-row items-start gap-10">
+						<div className="w-full md:w-1/2">
+							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+								Test Consulting & Strategy
+							</h3>
+							<p className="text-gray-600 dark:text-white mb-4">
+								Build a scalable quality framework with the right mix of processes, tools, and metrics aligned to business goals.
+							</p>
+							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
+								<li>QA maturity assessment & roadmap</li>
+								<li>Test strategy & planning</li>
+								<li>Tool selection & process optimization</li>
+								<li>Quality metrics, dashboards & reporting</li>
+								<li>Team enablement & best practices</li>
+							</ul>
+						</div>
+						<div className="w-full md:w-1/2">
+							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3600 })]}>
+								<CarouselContent>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
+												alt="QA Consulting"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+									<CarouselItem>
+										<div className="rounded-md overflow-hidden">
+											<Image
+												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
+												alt="Test Strategy"
+												width={600}
+												height={400}
+												className="object-cover w-full h-[300px]"
+											/>
+										</div>
+									</CarouselItem>
+								</CarouselContent>
+							</Carousel>
+						</div>
+					</div>
+				</div>
+			</section>
 
 
 
