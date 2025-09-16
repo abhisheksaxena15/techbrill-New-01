@@ -12,6 +12,9 @@ import WorkProcess from '@/components/ui/work-process';
 import ConsultationSection from '@/components/ConsultationSection';
 import { cn } from '@/lib/utils';
 import AnimatedSection from '@/components/animated-section';
+import Link from 'next/link';
+import IndustriesSection from '@/components/industries-section-QA';
+import IndustriesSectionQA from '@/components/industries-section-QA';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -27,10 +30,44 @@ const staggerContainer = {
   }
 };
 
+const benefits = [
+  {
+    icon: <Target className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    title: "Proven Expertise",
+    description: "Years of QA excellence across diverse industries."
+  },
+  {
+    icon: <Clock className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    title: "Faster Time-to-Market",
+    description: "Accelerated delivery with automation and DevOps QA."
+  },
+  {
+    icon: <Users className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    title: "Dedicated QA Teams",
+    description: "Skilled professionals tailored for your project needs."
+  },
+  {
+    icon: <Shield className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    title: "Robust Security Focus",
+    description: "Ensuring applications remain secure and compliant."
+  },
+  {
+    icon: <Lightbulb className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    title: "Cutting-Edge Innovation",
+    description: "Adopting next-gen tools and methodologies for QA."
+  },
+  {
+    icon: <Headphones className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    title: "Client-Centric Approach",
+    description: "Tailored QA solutions aligned with business goals."
+  }
+];
+
 export default function SoftwareQATestingPage() {
   return (
     <ErrorBoundary>
       <main className='bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100'>
+
         {/* Hero Section with Background Image */}
         <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
@@ -61,7 +98,7 @@ export default function SoftwareQATestingPage() {
               animate="visible"
               variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
             >
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -74,7 +111,7 @@ export default function SoftwareQATestingPage() {
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <Button size="lg" variant="outline" className="border border-blue-800 text-blue-800 rounded-md font-semibold hover:bg-blue-800 hover:text-white w-full sm:w-auto">View Portfolio</Button>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </div>
           {/* Scroll Down Indicator (if space allows) */}
@@ -85,6 +122,81 @@ export default function SoftwareQATestingPage() {
           >
             <ChevronDown className="w-7 h-7 text-white opacity-80" />
           </motion.div>
+        </section>
+
+        <section className="py-12 md:py-16 px-4 bg-white dark:bg-gray-900">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+              <AnimatedSection animation="scale" delay={0.2}>
+                <div className="relative">
+                  <div className="relative h-64 md:h-80 lg:h-[400px] w-full rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/about/18771.jpg"
+                      alt="Team collaboration"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <motion.div
+                    className="absolute -bottom-4 md:-bottom-6 -right-4 md:-right-6 bg-white dark:bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg max-w-xs text-center md:text-left"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                  >
+                    <blockquote className="text-xs md:text-sm italic text-gray-700 dark:text-gray-300">
+                      &ldquo;Partnering with Techbrill means delivering quality with confidence and accelerating your digital journey.&rdquo;
+                    </blockquote>
+                  </motion.div>
+                </div>
+              </AnimatedSection>
+
+              <div>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">ENSURING EXCELLENCE</h3>
+                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                  Powering Digital Success Through Quality Assurance
+                </h2>
+                <br />
+                <div className="w-20 h-1 bg-primary mb-6"></div>
+                {/* <AnimatedSection animation="fade" delay={0.3}>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-blue-700 dark:text-white">WHO WE ARE</h2>
+              <div className="w-20 h-1 bg-primary mb-6"></div>
+            </AnimatedSection>
+
+            <AnimatedText
+              text="We deal with the aspects of professional IT Services"
+              className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 leading-tight text-gray-900 dark:text-white"
+              delay={0.4}
+            /> */}
+
+                <AnimatedSection animation="fade" delay={0.5}>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
+                    Quality assurance has become a cornerstone of modern software delivery, ensuring reliability, security, and seamless user experiences in today’s fast-paced digital world. Robust QA practices not only reduce risks but also accelerate time-to-market and strengthen customer trust.
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
+                    At Techbrill, we deliver end-to-end QA and Testing services tailored to your business goals. From functional, automation, and mobile testing to performance, security, and API validation, our solutions combine precision, scalability, and compliance to guarantee excellence.
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">
+                    Our expert QA engineers, automation specialists, and domain-focused professionals leverage next-gen tools and proven methodologies to deliver flawless, future-ready software.
+                  </p>
+                </AnimatedSection>
+
+                <AnimatedSection animation="fade" delay={0.6}>
+                  <Link href="/company">
+                    <Button className="group">
+                      Explore More{" "}
+                      <motion.div
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+                      >
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </motion.div>
+                    </Button>
+                  </Link>
+                </AnimatedSection>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Service Explanation Section - Minimal alternating layout with working images */}
@@ -176,83 +288,112 @@ export default function SoftwareQATestingPage() {
           </div>
         </section>
 
-        {/*Specialised services*/}
+        {/*Specialized QA Services*/}
         <section className="py-16 bg-white dark:bg-gray-950 text-gray-900">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen">
-              {/* Left Column - Sticky */}
-              <div className="lg:sticky lg:top-48 lg:h-fit">
+            {/* Header Section */}
+            <div className="text-center mb-12">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">SPECIALIZED QA SERVICES</h3>
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                Specialized QA Solutions Beyond Standard Testing
+              </h2>
+              <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base mt-4">
+                Targeted QA solutions to strengthen processes, compliance, and team scalability.
+              </p>
+            </div>
 
-                <div className="text-left mb-8 md:mb-12">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Specialised Services</h3>
-                  <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                    Specialized QA Solutions Beyond Standard Testing</h2>
-                  <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-                  <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                    Our specialized QA services help businesses improve quality, optimize processes, and stay future-ready beyond standard testing.
+            {/* Three Service Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* QA Audit & Process Improvement - Card with Image */}
+              <motion.div
+                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                whileHover={{ y: -5 }}
+              >
+                {/* Background with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20"></div>
+
+                {/* Image Section */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                  
+                    src="/images/services/it-consultancy-hero.jpg"
+                    alt="QA Audit & Process Improvement"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
+
+                {/* Content */}
+                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">QA Audit & Process Improvement</h3>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Comprehensive assessment of your current QA processes with actionable recommendations for optimization, compliance enhancement, and quality improvement.
                   </p>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Right Column - Scrollable */}
-              <div className="space-y-12">
-                {/* AI & Emerging Tech Testing */}
-                <motion.div
-                  className="p-8 rounded-lg border border-gray-200"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="flex items-start space-x-4 mb-4">
-                    <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <Lightbulb className='w-6 h-6 text-blue-600' />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">AI & Emerging Tech Testing</h3>
-                  </div>
-                  <p className="text-gray-700 dark:text-white leading-relaxed">
-                    Specialized testing for AI-powered applications, machine learning models, IoT devices, and blockchain solutions to ensure reliability in cutting-edge technologies.
-                  </p>
-                </motion.div>
+              {/* QA Documentation & Reporting - Card with Icon */}
+              <motion.div
+                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ y: -5 }}
+              >
+                {/* Background with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20"></div>
 
-                {/* AI-Powered Test Automation */}
-                <motion.div
-                  className="p-8 rounded-lg border border-gray-200"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <div className="flex items-start space-x-4 mb-4">
-                    <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <Bug className='w-6 h-6 text-blue-600' />
+                {/* Content */}
+                <div className="relative p-8 h-full flex flex-col justify-center">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                      <BarChart3 className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">AI-Powered Test Automation</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">QA Documentation & Reporting</h3>
                   </div>
-                  <p className="text-gray-700 dark:text-white leading-relaxed">
-                    Leverage artificial intelligence to create intelligent test automation that adapts, learns, and optimizes testing strategies for maximum efficiency and coverage.
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Professional documentation services including test plans, reports, compliance documentation, and comprehensive quality metrics for stakeholders.
                   </p>
-                </motion.div>
+                </div>
+              </motion.div>
 
-                {/* Continuous Testing in DevOps */}
-                <motion.div
-                  className="p-8 rounded-lg border border-gray-200"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <div className="flex items-start space-x-4 mb-4">
-                    <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center flex-shrink-0">
-                      <Cloud className='w-6 h-6 text-blue-600' />
+              {/* On-Demand QA Staffing - Card with Icon */}
+              <motion.div
+                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover={{ y: -5 }}
+              >
+                {/* Background with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20"></div>
+
+                {/* Content */}
+                <div className="relative p-8 h-full flex flex-col justify-center">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                      <Users className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Continuous Testing in DevOps</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">On-Demand QA Staffing</h3>
                   </div>
-                  <p className="text-gray-700 dark:text-white leading-relaxed">
-                    Seamlessly integrate testing into your DevOps pipeline with continuous testing strategies that provide instant feedback and accelerate delivery cycles.
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Flexible QA talent solutions including dedicated QA engineers, automation specialists, and testing consultants to scale your team as needed.
                   </p>
-                </motion.div>
-              </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -262,7 +403,7 @@ export default function SoftwareQATestingPage() {
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <h3 className="text-lg font-semibold uppercase tracking-wide text-blue-600 dark:text-white">
-                Tools & Technologies We Use
+                Tools & Technologies
               </h3>
               <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Powered by Industry-Leading Tools & Frameworks
@@ -275,6 +416,10 @@ export default function SoftwareQATestingPage() {
             <TechStackSection />
           </div>
         </section>
+
+        {/*Industries we serve*/}
+        <IndustriesSectionQA />
+
 
         {/* How We Ensure Quality Section */}
         <AnimatedSection animation="fade" delay={0.2}>
@@ -507,141 +652,131 @@ export default function SoftwareQATestingPage() {
 
 
 
+        {/* work porcess */}
+        <section className="py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6">
+                  {[
+                    {
+                      step: "01",
+                      title: "Discovery & Planning",
+                      description: "We begin by understanding your business needs, goals, and target audience.",
+                    },
+                    {
+                      step: "02",
+                      title: "Design & Development",
+                      description: "Our team creates prototypes and develops solutions based on the approved designs.",
+                    },
+                    {
+                      step: "03",
+                      title: "Testing & Quality Assurance",
+                      description:
+                        "Rigorous testing ensures that the final product meets all requirements and quality standards.",
+                    },
+                    {
+                      step: "04",
+                      title: "Deployment & Support",
+                      description: "We deploy the solution and provide ongoing support and maintenance.",
+                    },
+                  ].map((item, index) => (
+                    <div key={index} className="flex">
+                      <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white dark:text-white font-bold">
+                        {item.step}
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">{item.title}</h3>
+                        <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-
-
-
-
-        {/* Why Choose us Section */}
-        <section className="py-12 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="max-w-6xl mx-auto"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                  Why Clients Trust Our QA Services
-                </h2>
-                <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-3"></div>
-                <p className="text-gray-600 dark:text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed mt-4">
-                  Our proven track record and client-focused approach make us the trusted partner for businesses seeking reliable QA solutions.
-                </p>
+                {/* <div className="mt-8">
+                <Button className="group">
+                  Get Started <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div> */}
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                {/* Expertise */}
-                <motion.div
-                  className="flex items-start space-x-4 p-4 border-t border-gray-300 dark:border-gray-600 pt-6"
-                  variants={fadeInUp}
-                >
-                  <div className="flex-shrink-0">
-                    <span className="text-sm font-mono text-gray-500 dark:text-gray-400">•</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      Expertise
+              <div className="relative h-[500px] w-full rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800">
+                {/* Background Image */}
+                {/* public/images/services/content-marketing-overview.jpg */}
+                <Image
+                  src="/images/services/content-marketing-overview.jpg"
+                  alt="Custom solution background"
+                  fill
+                  priority
+                  className="object-cover object-center z-0"
+                />
+                <div className="absolute inset-0 z-10 rounded-xl bg-gradient-to-r from-blue-600/20 to-blue-600/5"></div>
+                <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="text-center p-8 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 mx-4">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                      Need a Custom Solution?
                     </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                      Decades of QA experience across diverse industries.
+                    <p className="mb-6 max-w-sm mx-auto text-gray-700 dark:text-gray-300">
+                      We specialize in creating tailored solutions to address your unique business challenges.
                     </p>
-                  </div>
-                </motion.div>
+                    <Button variant="outline" className="bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 dark:text-white group">
+                      <a href="/contact">
+                        Contact Our Team
+                      </a>
+                    </Button>
 
-                {/* Reliability */}
-                <motion.div
-                  className="flex items-start space-x-4 p-4 border-t border-gray-300 dark:border-gray-600 pt-6 mt-6"
-                  variants={fadeInUp}
-                >
-                  <div className="flex-shrink-0">
-                    <span className="text-sm font-mono text-gray-500 dark:text-gray-400">•</span>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      Reliability
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                      Consistent delivery of high-quality, defect-free software.
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Agility */}
-                <motion.div
-                  className="flex items-start space-x-4 p-4 border-t border-gray-300 dark:border-gray-600 pt-6 pb-6"
-                  variants={fadeInUp}
-                >
-                  <div className="flex-shrink-0">
-                    <span className="text-sm font-mono text-gray-500 dark:text-gray-400">•</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      Agility
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                      Flexible processes that adapt to evolving business needs.
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Transparency */}
-                <motion.div
-                  className="flex items-start space-x-4 p-4 border-t border-gray-300 dark:border-gray-600 pt-6 pb-6 mt-6"
-                  variants={fadeInUp}
-                >
-                  <div className="flex-shrink-0">
-                    <span className="text-sm font-mono text-gray-500 dark:text-gray-400">•</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      Transparency
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                      Clear reporting and open communication at every stage.
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Innovation */}
-                <motion.div
-                  className="flex items-start space-x-4 p-4 border-t border-gray-300 dark:border-gray-600 pt-6"
-                  variants={fadeInUp}
-                >
-                  <div className="flex-shrink-0">
-                    <span className="text-sm font-mono text-gray-500 dark:text-gray-400">•</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      Innovation
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                      Advanced tools and modern practices for smarter QA.
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Client-Centric */}
-                <motion.div
-                  className="flex items-start space-x-4 p-4 border-t border-gray-300 dark:border-gray-600 pt-6 pb-6 mt-6"
-                  variants={fadeInUp}
-                >
-                  <div className="flex-shrink-0">
-                    <span className="text-sm font-mono text-gray-500 dark:text-gray-400">•</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                      Client-Centric
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                      Tailored solutions focused on your business success.
-                    </p>
-                  </div>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="py-16 bg-white dark:bg-gray-900">
+          <div className="container">
+
+
+            <div className="text-center mb-12">
+              <h3 className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+                Why Choose Us
+              </h3>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
+                Why Businesses Across Industries Trust Us
+              </h2>
+              <div className="h-1 w-20 bg-blue-700 mx-auto mt-4 mb-6"></div>
+              <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+                We bring together domain expertise, cutting-edge technology, and proven delivery methods to provide IT solutions that create lasting value across diverse industries
+              </p>
+            </div>
+
+
+
+            {/* 3x2 Grid Layout */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+              {benefits.map((item, idx) => (
+                <AnimatedSection key={idx} animation="scale" delay={0.05 * idx}>
+                  <div className="group bg-white dark:bg-gray-800 p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 md:hover:shadow-xl md:hover:shadow-blue-100 md:dark:hover:shadow-blue-900/20 md:hover:-translate-y-2 md:hover:border-primary/30 md:cursor-pointer active:scale-95 touch-manipulation">
+                    {/* Icon with hover effect */}
+                    <div className="text-4xl mb-4 transform transition-transform duration-300 md:group-hover:scale-110 md:group-hover:rotate-3">
+                      {item.icon}
+                    </div>
+
+                    {/* Title with hover color change */}
+                    <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white md:group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed md:group-hover:text-gray-800 md:dark:group-hover:text-gray-200 transition-colors duration-300">
+                      {item.description}
+                    </p>
+
+                    {/* Optional: Add a subtle background gradient on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </section>
 

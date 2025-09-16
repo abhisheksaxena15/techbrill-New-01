@@ -234,8 +234,8 @@ export default function ITConsultancyTechToolsSection() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="mx-auto w-full max-w-[1100px]">
-          <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
+        <div className="mx-auto w-full max-w-[1280px]">
+          <div className="flex flex-col md:grid md:grid-cols-[1.2fr_2.2fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
             {/* Tab Selector - Desktop Vertical */}
             <div className="bg-blue-900 dark:bg-gray-800 text-white p-6 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] custom-scrollbar hidden md:flex">
               {techTabs.map((tab, idx) => (
@@ -247,7 +247,7 @@ export default function ITConsultancyTechToolsSection() {
                     }`}
                   onClick={() => setActiveTab(idx)}
                 >
-                  <span className="flex items-center">
+                  <span className="flex items-center whitespace-nowrap">
                     {tab.label}
                   </span>
                   {activeTab === idx && <span className="ml-2 text-lg">→</span>}

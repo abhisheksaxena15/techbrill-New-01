@@ -497,54 +497,7 @@ export default function ServicesSection() {
 								</CarouselContent>
 							</Carousel>
 						</div>
-					</div>
-
-					{/* Test Consulting & Strategy */}
-					<div className="flex flex-col md:flex-row items-start gap-10">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Test Consulting & Strategy
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Build a scalable quality framework with the right mix of processes, tools, and metrics aligned to business goals.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>QA maturity assessment & roadmap</li>
-								<li>Test strategy & planning</li>
-								<li>Tool selection & process optimization</li>
-								<li>Quality metrics, dashboards & reporting</li>
-								<li>Team enablement & best practices</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3600 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-												alt="QA Consulting"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-												alt="Test Strategy"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
+					</div>					
 				</div>
 			</section>
 
