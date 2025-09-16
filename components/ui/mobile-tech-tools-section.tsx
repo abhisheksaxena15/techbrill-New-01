@@ -104,7 +104,7 @@ export default function MobileTechToolsSection() {
             onClick={() => setActiveTab(idx)}
           >
             <span className="flex items-center">
-              <span className="mr-2 font-bold">{`0${idx + 1}.`}</span>
+              
               {tab.label}
             </span>
             {activeTab === idx && <span className="ml-2 text-lg">→</span>}
@@ -128,7 +128,7 @@ export default function MobileTechToolsSection() {
               }}
               onClick={() => setOpenAccordion(openAccordion === idx ? null : idx)}
             >
-              <span className="mr-2 font-bold text-white">{`0${idx + 1}.`}</span>
+              {/* <span className="mr-2 font-bold text-white">{`0${idx + 1}.`}</span> */}
               <span>{tab.label}</span>
               <span className="ml-auto">
                 <Icon
