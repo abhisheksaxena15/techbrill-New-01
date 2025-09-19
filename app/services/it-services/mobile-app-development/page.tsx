@@ -311,7 +311,8 @@ export default function MobileAppDevelopmentPage() {
                 Good Reasons to Team Up with Us              </h2>
               <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
               <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
-                What makes us stand out is our commitment to innovation, user experience, and scalable solutions that truly empower businesses.                </p>
+                What makes us stand out is our commitment to innovation, user experience, and scalable solutions that truly empower businesses.
+              </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[

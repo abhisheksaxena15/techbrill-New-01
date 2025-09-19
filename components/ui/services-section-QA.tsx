@@ -148,70 +148,12 @@ import Autoplay from "embla-carousel-autoplay";
 export default function ServicesSection() {
 	return (
 		<>
-			{/* QA & Testing What We Do Section */}
-			<section className="py-16 bg-white dark:bg-gray-950">
-				<div className="container mx-auto max-w-6xl">
-					<div className="flex flex-col md:flex-row items-center gap-9">
-						{/* Left: QA image */}
-						<motion.div
-							className="w-full md:w-1/2 flex items-center justify-center"
-							initial={{ opacity: 0, x: -40 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.7 }}
-						>
-							<div className="rounded-md overflow-hidden w-full">
-								<Image
-									src="/images/services/qa-testing-hero.jpg"
-									alt="QA & Testing Hero"
-									width={600}
-									height={400}
-									className="object-cover w-full h-[500px]"
-									priority
-								/>
-							</div>
-						</motion.div>
-
-						{/* Right: Text content */}
-						<motion.div
-							className="w-full md:w-1/2"
-							initial={{ opacity: 0, x: 40 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.7 }}
-						>
-							<h3 className="text-xl md:text-2xl font-semibold mb-2 text-black  dark:text-white">Ensuring Excellence</h3>
-							<div className="h-1 w-28 bg-blue-800 mb-6 " />
-							<h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">Powering Digital Success Through <span className="text-blue-800">Quality Assurance</span></h2>
-							<p className="text-gray-600 dark:text-white mb-2 ">
-								We help businesses deliver reliable, secure, and user-friendly software through comprehensive QA and testing services. From manual checks to advanced automation, performance, and security testing, our experts ensure every release is smooth and defect-free. With proven processes and modern tools, we minimize risks, accelerate delivery, and guarantee exceptional digital experiences for your customers.
-							</p>
-
-							<AnimatedSection animation="fade" delay={0.6}>
-								<Link href="/contact">
-									<Button className="group bg-blue-800 dark: bg-blue-700 ">
-										Consult with us{" "}
-										<motion.div
-											animate={{ x: [0, 5, 0] }}
-											transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
-										>
-											<ArrowRight className="ml-2 h-4 w-4 " />
-										</motion.div>
-									</Button>
-								</Link>
-							</AnimatedSection>
-						</motion.div>
-					</div>
-				</div>
-			</section>
-
-
 			<section className="py-16 bg-white dark:bg-gray-950">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Core QA services</h3>
+						<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Core QA services</h3>
 						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Seamless QA Services for Every Development Stage</h2>
-						<div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+						<div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
 						<p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
 							Our core QA services ensure every aspect of your software is thoroughly validated and ensure your applications consistently meet the highest standards of quality and performance.
 						</p>
@@ -497,7 +439,7 @@ export default function ServicesSection() {
 								</CarouselContent>
 							</Carousel>
 						</div>
-					</div>					
+					</div>
 				</div>
 			</section>
 
