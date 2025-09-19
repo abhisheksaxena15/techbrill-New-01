@@ -166,14 +166,14 @@ export default function ITConsultancyTechToolsSection() {
                         Technologies We Use
                       </h3>
                       <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                        Driven by bold ideas, delivered through robust Tech Stacks
+                       Intelligent Technologies Powering Global Enterprises
                       </h2>
                       <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
                       
                       <div className="flex justify-center mt-4">
                         {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
                         <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                          We leverage the latest technologies to build dynamic, secure, and scalable web applications that keep your digital presence modern and future-ready.                </h3>
+                        Leveraging intelligent technologies that empower enterprises with innovation, efficiency, and lasting business impact        </h3>
                       </div>
                     </div>
                   

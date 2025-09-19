@@ -41,9 +41,9 @@ export default function ProjectsPreview() {
       <div className="container">
         <AnimatedSection animation="fade">
           <div className="text-center mb-12">
-            <AnimatedText text="Explore Recent Projects" className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white" />
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+            <AnimatedText text="Explore Recent Projects" className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl" />
+            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+            <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-300 mt-4">
               Discover our portfolio of successful projects that showcase our expertise, creativity, and commitment to
               delivering exceptional results for our clients.
             </p>
@@ -211,7 +211,7 @@ export default function ProjectsPreview() {
         <AnimatedSection animation="fade" delay={0.5}>
           <div className="text-center mt-12">
             <Link href="/projects">
-              <Button className="group">
+              <Button className="group hover:bg-red-700 transition-colors duration-300">
                 View All Projects{" "}
                 <motion.div
                   className="ml-2"

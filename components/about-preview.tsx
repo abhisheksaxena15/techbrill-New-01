@@ -38,25 +38,15 @@ export default function AboutPreview() {
           </AnimatedSection>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">WHO WE ARE</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">WHO WE ARE</h3>
             <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
               Your Trusted Partner Delivering IT Excellence and Innovation
             </h2>
             <br />
-            <div className="w-20 h-1 bg-primary mb-6"></div>
-            {/* <AnimatedSection animation="fade" delay={0.3}>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-blue-700 dark:text-white">WHO WE ARE</h2>
-              <div className="w-20 h-1 bg-primary mb-6"></div>
-            </AnimatedSection>
-
-            <AnimatedText
-              text="We deal with the aspects of professional IT Services"
-              className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 leading-tight text-gray-900 dark:text-white"
-              delay={0.4}
-            /> */}
-
+            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400"></div>
+            
             <AnimatedSection animation="fade" delay={0.5}>
-              <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
+              <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base mt-4">
               Techbrill Solutions is an IT services and brand communication company delivering high-performance, scalable, and secure digital solutions. We help startups and enterprise clients achieve their business goals, drive growth, and create meaningful impact through innovative, user-friendly technology.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">
@@ -66,7 +56,7 @@ export default function AboutPreview() {
 
             <AnimatedSection animation="fade" delay={0.6}>
               <Link href="/company">
-                <Button className="group">
+                <Button className="group hover:bg-red-600 hover:text-white">
                   Explore More{" "}
                   <motion.div
                     animate={{ x: [0, 5, 0] }}

@@ -71,12 +71,12 @@ export default function ServicesOverview() {
 
 
               <div className="text-center mb-8 md:mb-12">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Our Core Services</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Our Core Services</h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                  Empowering small & <span className="italic text-blue-800 dark:text-blue-200">mid-sized businesses </span> with smart IT services
+                  Empowering small & mid-sized businesses  with smart IT services
                 </h2>
-                <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
-                <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base mt-4">
                 Passionate about technology, we provide IT solutions that drive innovation, transformation, and growth for your business.
                 </p>
               </div>
@@ -163,14 +163,14 @@ export default function ServicesOverview() {
                   >
                     {service.description}
                   </motion.p>
-                  <Link href={service.link} className="text-primary font-medium flex items-center group mt-auto">
+                  <Link href={service.link} className="text-red-600 font-medium flex items-center group mt-auto">
                     Read More
                     <motion.div
                       className="ml-2"
                       animate={{ x: [0, 5, 0] }}
                       transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
                     >
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 text-red-600" />
                     </motion.div>
                   </Link>
                 </div>
