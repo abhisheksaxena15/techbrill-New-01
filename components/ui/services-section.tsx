@@ -65,7 +65,9 @@ export default function ServicesSection() {
 						  transition={{ duration: 0.7 }}
 						>
 							{/* Section label with blue underline */}
+
 							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
+
 								WEB EXCELLENCE</h3>
 							{/* <div className="h-1 w-28 bg-blue-600 mb-3 " /> */}
 							{/* Main heading */}

@@ -1,100 +1,76 @@
 import React from "react";
 import {
-  Car,
   CreditCard,
   GraduationCap,
-  BookOpen,
   Heart,
-  ShoppingBag,
   ShoppingCart,
   Plane,
   Truck,
-  HomeIcon,
   Monitor,
-  Cpu
+  Cpu,
+  Shield,
+  PhoneCall
 } from "lucide-react";
 
-export default function IndustriesSection() {
+export default function IndustriesSectionQA() {
   return (
     <section
-      className="relative py-0 px-0 w-full min-h-[60vh] md:min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: 'url(/images/services/mobile-app-hero.jpg)' }}
+      className="relative py-0 px-0 w-full min-h-[60vh] md:min-h-[75vh] overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black/60 z-0" />
       <div className="relative z-10 w-full max-w-none">
         <div className="text-center pt-8 md:pt-12 pb-6 md:pb-8">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-500">
             Industry Expertise
           </h3>
-          <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white md:text-4xl">
+          <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-black dark:text-white  md:text-4xl">
             Delivering Tailored Technology Solutions Across <span className="text-blue-500">Industries</span>
           </h2>
           <div className="h-1 w-20 bg-blue-500 mx-auto mt-4 mb-6"></div>
-          <p className="max-w-2xl mx-auto text-gray-300 text-base">
+          <p className="max-w-2xl mx-auto text-gray-600 text-base">
           From startups to enterprises, we provide industry-focused technology solutions that drive transformation, performance, and measurable results.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-0 w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-5 grid-rows-5 lg:grid-rows-2 gap-2 w-full">
           {[
             {
-              label: 'Automotive',
-              icon: <Car className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'AI-driven design automation, predictive maintenance, and autonomous systems.'
-            },
-            {
-              label: 'Banking & Finance',
+              label: 'Fintech',
               icon: <CreditCard className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Automated reporting, risk assessment, and personalized financial services.'
-            },
-            {
-              label: 'Education',
-              icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Personalized learning paths, automated assessment, and content generation.'
-            },
-            {
-              label: 'Publishing',
-              icon: <BookOpen className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Content creation, editing automation, and personalized publishing.'
             },
             {
               label: 'Healthcare',
               icon: <Heart className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Medical imaging analysis, drug discovery, and patient care optimization.'
             },
             {
-              label: 'Retail',
-              icon: <ShoppingBag className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Inventory optimization, customer experience, and demand forecasting.'
-            },
-            {
-              label: 'eCommerce',
+              label: 'Retails & eCommerce',
               icon: <ShoppingCart className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Product recommendations, dynamic pricing, and personalized marketing.'
             },
             {
-              label: 'Travel',
+              label: 'Telecom',
+              icon: <PhoneCall className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+            },
+            {
+              label: 'Edtech',
+              icon: <GraduationCap className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+            },
+            {
+              label: 'Travel & hospitality',
               icon: <Plane className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Route optimization, customer service automation, and experience personalization.'
             },
             {
-              label: 'Logistics & Transportation',
+              label: 'Logistics',
               icon: <Truck className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Supply chain optimization, route planning, and predictive maintenance.'
-            },
-            {
-              label: 'Real Estate',
-              icon: <HomeIcon className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Property valuation, market analysis, and virtual property tours.'
             },
             {
               label: 'Media & Entertainment',
               icon: <Monitor className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Content creation, audience analytics, and personalized recommendations.'
             },
             {
-              label: 'Hi-Tech',
+              label: 'Insurance',
+              icon: <Shield className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
+            },
+            {
+              label: 'Manufacturing',
               icon: <Cpu className="w-10 h-10 md:w-12 md:h-12 mx-auto text-blue-600 group-hover:text-white" />,
-              desc: 'Product development, quality assurance, and innovation acceleration.'
             },
           ].map((item, idx) => (
             <div

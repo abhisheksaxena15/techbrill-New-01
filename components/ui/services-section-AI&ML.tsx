@@ -206,6 +206,7 @@ export default function ServicesSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.7 }}
                         >
+
                             {/* Section label */}
                             <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-3">
                                 TURNING DATA INTO INTELLIGENT ACTION
@@ -243,13 +244,11 @@ export default function ServicesSection() {
                                     </Button>
                                 </Link>
                             </AnimatedSection>
+
                         </motion.div>
                     </div>
                 </div>
             </section>
-
-
-
 
             {/* 3. Services Section - Using the custom dark theme from the image */}
             <section className="pt-13 bg-white dark:bg-gray-950">
@@ -285,7 +284,6 @@ export default function ServicesSection() {
                             <Button asChild className="mt-4">
                                 <a href="/services/it-services/ai-ml-development">Explore more</a>
                             </Button>
-
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3500 })]}>
@@ -317,7 +315,6 @@ export default function ServicesSection() {
                         </div>
                     </div>
 
-
                     {/* Gen AI Solutions */}
                     <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
                         <div className="w-full md:w-1/2">
@@ -337,7 +334,6 @@ export default function ServicesSection() {
                             <Button asChild className="mt-4">
                                 <a href="/services/ai-automation/generative-ai">Explore more</a>
                             </Button>
-
                         </div>
                         <div className="w-full md:w-1/2">
                             <Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4000 })]}>
@@ -421,7 +417,7 @@ export default function ServicesSection() {
 
                     {/* Data Engineering & Model Training */}
                     <div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
-                        <div className="w-full md:w-1/2">
+                        <div className="w_full md:w-1/2">
                             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
                                 Data Engineering & Model Training
                             </h3>
@@ -449,12 +445,12 @@ export default function ServicesSection() {
                                                 alt="Data Engineering"
                                                 width={600}
                                                 height={400}
-                                                className="object-cover w-full h-[300px]"
+                                                className="object-cover w_full h-[300px]"
                                             />
                                         </div>
                                     </CarouselItem>
                                     <CarouselItem>
-                                        <div className="rounded-md overflow-hidden">
+                                        <div className="rounded-md overflow_hidden">
                                             <Image
                                                 src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
                                                 alt="Model Training"
@@ -479,21 +475,15 @@ export default function ServicesSection() {
                             <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
                                 SOLUTIONS INCLUDE
                             </h3>
-                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text_WHITE md:text-4xl">
                                 Unlock Advanced AI & ML Capabilities
                             </h3>
                             <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
 
-                            <p
-                                className="text-gray-600 dark:text-white mb-4"
-                                style={{ textAlign: "justify" }}
-                            >
+                            <p className="text-gray-600 dark:text_WHITE mb-4" style={{ textAlign: "justify" }}>
                                 Unlock the true potential of AI & ML with innovations that go beyond the basics. Our advanced offerings are built to tackle complex business challenges, delivering intelligent, scalable, and secure solutions that drive meaningful transformation.
                             </p>
-                            <p
-                                className="text-gray-600 dark:text-white mb-4"
-                                style={{ textAlign: "justify" }}
-                            >
+                            <p className="text-gray-600 dark:text_WHITE mb-4" style={{ textAlign: "justify" }}>
                                 At Techbrill, we blend technical expertise with deep industry knowledge to create AI solutions that are practical yet transformative. By enabling smarter decisions, seamless automation, and future-ready capabilities, we empower businesses to stay competitive and lead with confidence.
                             </p>
                         </div>
@@ -532,17 +522,12 @@ export default function ServicesSection() {
                                     icon: CloudCog,
                                 },
                             ].map((card) => (
-                                <div
-                                    key={card.title}
-                                    className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0"
-                                >
+                                <div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-8 00/80 cursor-pointer min-w-[280px] md:min-w-0">
                                     <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
                                         <card.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                                     </span>
                                     <div className="flex-1">
-                                        <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                                            {card.title}
-                                        </h3>
+                                        <h3 className="font-bold text-lg text-gray-900 dark:text_WHITE">{card.title}</h3>
                                         <p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
                                     </div>
                                 </div>
@@ -554,3 +539,4 @@ export default function ServicesSection() {
         </>
     );
 }
+
