@@ -238,14 +238,14 @@ export default function WebTechToolsSection() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="mx-auto w-full max-w-[1100px]">
+      <div className="mx-auto w-full max-w-[1100px] ">
         <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
           {/* Desktop Tab Selector */}
           <div className="bg-blue-900 text-white p-4 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-500 hide-scrollbar hidden md:flex">
             {techTabs.map((tab, idx) => (
               <button
                 key={tab.label}
-                className={`flex justify-between items-center px-4 py-3 rounded-md text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
+                className={`flex justify-between items-center px-4 py-3 rounded-md text-left transition-all font-semibold  text-lg tracking-wide ${activeTab === idx
                   ? "bg-blue-800 shadow-lg text-white"
                   : "hover:bg-blue-800/80 opacity-80 text-gray-200"
                   }`}
@@ -310,17 +310,17 @@ export default function WebTechToolsSection() {
           </div>
 
           {/* Laptop/Desktop Skills Grid */}
-          <div className="w-full bg-[#efefef] dark:bg-white p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%] sm:max-w-[90%] transition-all duration-300">
+          <div className="w-full bg-[#efefef]  dark:bg-gray-800 p-4 sm:p-6 min-h-[340px] items-center  justify-center hidden md:flex">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%]  sm:max-w-[90%] transition-all duration-300">
               {techTabs[activeTab].skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 bg-white border border-gray-200 rounded-md shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
+                  className="flex items-center dark:bg-gray-900 gap-3 bg-white border border-gray-800 rounded-md shadow-sm px-4 py-3 dark:hover:bg-gray-800 dark:hover:border-gray-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
                 >
                   <div className="w-8 h-8 flex items-center justify-center shrink-0">
                     {skill.icon}
                   </div>
-                  <span className="text-base font-medium text-black">{skill.name}</span>
+                  <span className="text-base font-medium dark:text-white text-black">{skill.name}</span>
                 </div>
               ))}
             </div>

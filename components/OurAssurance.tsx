@@ -86,25 +86,25 @@ const OurAssurance = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 px-6 md:px-16 bg-white dark:bg-gray-950"
+      className=" px-6 md:px-16 bg-white dark:bg-gray-900"
     >
       <div className="container mx-auto text-center max-w-6xl">
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+        <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
           ASSURANCE TO YOU
         </h3>
         <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
           Our Commitment and Guarantee
         </h2>
-        <div className="mx-auto h-1 w-20 bg-red-600 dark:bg-blue-400  mt-4"></div>
-        <p className="text-base text-gray-600 max-w-xl mx-auto mt-1 leading-relaxed">
+        <div className="mx-auto h-1 w-20 bg-red-600 dark:bg-red-600  mt-4"></div>
+        <p className="text-base dark:text-white text-gray-600 max-w-xl mx-auto mt-1 leading-relaxed">
           We promise quality, transparency, and reliability from consultation to post-launch support and ensure your website meets expectations, delivers results, and drives success.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
+        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 w-full">
           {cards.map((item, idx) => (
             <motion.div
               key={idx}
-              className="relative bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex flex-col items-center text-center p-6 rounded-lg bg-slate-100 shadow-sm overflow-hidden transition-transform duration-200 group"
+              className="dark:bg-gray-900 relative bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 flex flex-col items-center text-center p-6 rounded-lg bg-slate-100 shadow-sm overflow-hidden transition-transform duration-200 group"
               whileHover={{
                 y: -6,
                 boxShadow: "0 12px 28px rgba(0,0,0,0.15)",
@@ -113,7 +113,7 @@ const OurAssurance = () => {
             >
               {/* Scroll gradient line */}
               <div
-  className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-600 to-red-700 dark:from-red-500 dark:to-red-600 rounded-t-2xl"
+  className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-600 to-red-700 dark:from-red-800 dark:to-red-800 rounded-t-2xl"
   style={{ width: `${maxScrollPercent}%` }}
 ></div>
               {/* <div className="absolute top-0 left-0 h-1 rounded-t-lg bg-red-600"
@@ -127,12 +127,12 @@ const OurAssurance = () => {
               </div>
 
               {/* Title */}
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+              <h4 className="text-lg dark:text-blue-400 font-semibold text-gray-900 mb-2">
                 {item.title}
               </h4>
 
               {/* Description */}
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm dark:text-white text-gray-600 leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
