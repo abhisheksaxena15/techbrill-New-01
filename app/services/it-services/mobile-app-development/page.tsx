@@ -206,7 +206,7 @@ export default function MobileAppDevelopmentPage() {
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {[
-                  { label: 'Automotive', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="16.5" cy="17.5" r="2.5" /></svg> },
+                  { label: 'Automative', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="16.5" cy="17.5" r="2.5" /></svg> },
                   { label: 'Real Estate', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 21V9a2 2 0 012-2h14a2 2 0 012 2v12" /><path d="M9 22V12h6v10" /></svg> },
                   { label: 'Entertainment', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2" /><path d="M8 7V5a4 4 0 018 0v2" /></svg> },
                   { label: 'Retail & ECommerce', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="17" cy="17" r="2" /><circle cx="7" cy="17" r="2" /><path d="M5 6h14l1 7H4z" /></svg> },

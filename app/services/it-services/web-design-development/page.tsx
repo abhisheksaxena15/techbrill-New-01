@@ -108,7 +108,7 @@ export default function WebDesignDevelopmentPage() {
     <ErrorBoundary>
       <main className="bg-white text-gray-900">
         {/* 1. Hero Banner */}
-        <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden">
+        <section className="relative py-20 max-h-[450px] flex items-center justify-center overflow-hidden dark:bg-gray-900">
           {/* Background Image */}
           <Image src="/images/services/web-design-hero.jpg" alt="Web Design Hero" fill className="object-cover object-center z-0" priority />
           {/* Dark Linear Gradient Overlay with Blur */}
@@ -168,7 +168,7 @@ export default function WebDesignDevelopmentPage() {
         <ServicesSection />
 
         {/* 8. Contact CTA Section */}
-        <section className="pb-12 py-10 bg-blue-800 text-white text-center mb-9">
+        <section className="pb-12 py-10 bg-blue-800 text-white text-center ">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
             <p className="mb-6">Let us help you build a stunning, high-performing website.</p>
@@ -178,16 +178,16 @@ export default function WebDesignDevelopmentPage() {
         </section>
 
         {/* 4. Tech Stack Section */}
-        <section className="pt-16 , pb-16">
-          <div className="container mx-auto">
+        <section className="dark:bg-gray-900 pt-16 , pb-16">
+          <div className=" container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                 Technologies We Use
               </h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Driven by bold ideas, delivered through robust Tech Stacks
               </h2>
-              <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
               {/* Change: Wrapped the h3 tag in a new flex container to control its width
       and ensure it stays centered while having a maximum width.
     */}
@@ -203,7 +203,7 @@ export default function WebDesignDevelopmentPage() {
         </section>
 
         {/* 5. Industries Section */}
-        <section className="py-20 px-6 md:px-16 bg-slate-100">
+        <section className="dark:bg-gray-900  px-6 md:px-16 bg-slate-100">
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
               {/* Left Column: Text */}
@@ -214,22 +214,22 @@ export default function WebDesignDevelopmentPage() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7 }}
               >
-                <div className="text-left mb-6 lg:mb-8">
-                  <h3 className="text-sm font-semibold tracking-wide text-red-600 dark:text-blue-400">
+                <div className=" text-left mb-6 lg:mb-8">
+                  <h3 className="text-sm font-semibold tracking-wide text-red-600 dark:text-red-600">
                     Industry Expertise
                   </h3>
-                  <h2 className="text-left mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl ">
+                  <h2 className="dark:text-white text-left mt-2 text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl ">
                     Empowering Diverse Industries with Tailored Digital Solutions
                   </h2>
-                  <div className="w-20 h-1 bg-red-600  mb-3 rounded-full mt-3" />
+                  <div className="w-20 h-1 bg-red-600 dark:bg-red-600 mb-3 rounded-full mt-3" />
                   <div className="flex justify-center mt-4">
                     {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
-                    <h3 className="mb-0 max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+                    <h3 className="mb-0 max-w-3xl mx-auto text-gray-700 dark:text-white text-base">
                       Our web solutions are designed around your industry needs to accelerate growth and maximize business impact.
                     </h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-left max-w-lg lg:mx-0 mt-1 text-justify leading-relaxed">
+                <p className="text-gray-600 dark:text-white text-left max-w-lg lg:mx-0 mt-1 text-justify leading-relaxed">
                   Our team empowers businesses across industries by integrating cutting-edge technologies and optimizing workflows. We specialize in crafting tailored web solutions that address core operational challenges, enhance efficiency, and spark innovation. With a focus on tangible outcomes, we help organizations accelerate growth, improve customer experience, and stay ahead in a dynamic digital landscape. Our team delivers custom web solutions that solve real business problems and drive measurable results.
                 </p>
                 <div className="flex space-x-4">
@@ -278,17 +278,17 @@ export default function WebDesignDevelopmentPage() {
 
         
         {/* Why Choose Us Section */}
-        <section className="py-20 px-6 md:px-16 bg-white">
+        <section className="py-20 px-6 md:px-16 dark:bg-gray-900 bg-white">
           <div className="max-w-6xl mx-auto">
             {/* Section Heading */}
             <div className="text-center mb-10">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                 WHY CHOOSE US
               </h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Why Choosing Us Makes the Difference
               </h2>
-              <div className="h-1 w-20 bg-red-600  mx-auto mt-3 mb-2 rounded-full"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600   mx-auto mt-3 mb-2 rounded-full"></div>
               <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-1 leading-relaxed">
                 Customer satisfaction drives us, powered by consistent quality, ongoing innovation, and integrity in every project
               </p>
