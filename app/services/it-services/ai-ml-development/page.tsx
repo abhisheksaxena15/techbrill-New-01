@@ -193,7 +193,8 @@ export default function AIMlDevelopmentPage() {
               transition={{ duration: 0.7, delay: 0.4 }}
             >
 
-              Helping businesses grow with AI & ML solutions.
+              Transforming Ideas into intelligence solutions with AI & ML
+
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 w-full justify-center"
@@ -387,6 +388,8 @@ export default function AIMlDevelopmentPage() {
 
           </div>
         </div>
+
+
         {/* 7. Commitment & Why Choose Section */}
         {/* <section className="py-20 px-6 md:px-16 bg-white">
 
@@ -461,6 +464,7 @@ export default function AIMlDevelopmentPage() {
             </div>
           </div>
         </section>
+
 
 
         {/*9. Process Steps + Right Panel */}

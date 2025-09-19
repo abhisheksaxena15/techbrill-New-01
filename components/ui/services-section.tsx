@@ -21,7 +21,7 @@ export default function ServicesSection() {
 	return (
 		<>
 			{/* 1. What We Do Section - matches the image layout */}
-				  <section className="pt-16 pb-10 bg-white dark:bg-gray-950">
+				  <section className="pt-16 pb-10 bg-white dark:bg-gray-900">
 					<div className="container mx-auto max-w-6xl">
 					  <div className="flex flex-col md:flex-row items-center gap-9">
 						{/* Left: Code image */}
@@ -65,7 +65,9 @@ export default function ServicesSection() {
 						  transition={{ duration: 0.7 }}
 						>
 							{/* Section label with blue underline */}
-							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+
+							<h3 className=" mb-3 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
+
 								WEB EXCELLENCE</h3>
 							{/* <div className="h-1 w-28 bg-blue-600 mb-3 " /> */}
 							{/* Main heading */}
@@ -99,16 +101,16 @@ export default function ServicesSection() {
 				  </section>
 
 			{/* 2. Services Section - Using the custom dark theme from the image */}
-			<section className="py-16 bg-white dark:bg-gray-950">
+			<section className="py-16 bg-white dark:bg-gray-900">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+						<h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
 							WHO WE DO
 						</h2>
 						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Building Smart, Scalable, and Engaging Web Platforms
 						</h2>
 						<div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
-						<h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+						<h3 className="dark:text-white text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
 							We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today&#39;s fast-paced digital world.
 						</h3>
 					</div>
@@ -491,17 +493,17 @@ export default function ServicesSection() {
 
 							{/******/}
 							{/* <section className="py-0 bg-blue-50 dark:bg-gray-900"> */}
-							<div className=" container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px] ">
+							<div className="dark:bg-gray-900 container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px] ">
 								{/* Left: Sticky Heading & CTA */}
 								<div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
 
-									<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+									<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600 mt-6">
 										OUR WEB SOLUTIONS INCLUDE
 									</h3>
 									<h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
 										Comprehensive Web Solutions for Your Business
 									</h3>
-									<div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+									<div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-left mt-2 mb-4"></div>
 
 									{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
                             Comprehensive Web Solutions for Your Business
