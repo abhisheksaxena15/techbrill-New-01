@@ -33,15 +33,15 @@ export default function WorkProcess() {
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-blue-700 font-medium uppercase tracking-wide text-sm">
+          <span className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
             How It Work
           </span>
-          <h2 className="tmt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-4xl">
-            Check Out Our Work <span className="text-blue-700">Process</span>
+          <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            Check Out Our Work Process
           </h2>
           <p className="max-w-xl mx-auto text-gray-300 text-base">
           </p>
-          <div className="mx-auto w-16 h-1 bg-blue-700 rounded mt-6"></div>
+          <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
           <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             We keep things simple - listen to your goals, plan together, and bring your ideas to life with ease.
           </p>
@@ -53,7 +53,7 @@ export default function WorkProcess() {
               className="flex flex-col items-center text-center flex-1 relative group cursor-pointer transition-all duration-500 hover:-translate-y-2"
             >
               <div className="relative mb-4">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mx-auto relative group-hover:border-blue-400 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-blue-500/25 group-hover:scale-110">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mx-auto relative group-hover:border-red-600 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-red-500/25 group-hover:scale-110">
                   <Image
                     src={step.img}
                     alt={step.title}
@@ -102,3 +102,4 @@ export default function WorkProcess() {
     </section>
   );
 }
+

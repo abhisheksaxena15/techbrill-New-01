@@ -98,11 +98,11 @@ const AdvancedServices = () => {
     <section className="py-12 md:py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Advanced Services</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Advanced Services</h3>
           <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-          Driving Business Transformation with the Latest <span className="text-blue-800 dark:text-blue-200">Technology Trends</span>
+          Driving Business Transformation with the Latest Technology Trends
           </h2>
-          <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+          <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
           <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             We leverage the latest technologies to build new solutions and modernize existing ones, helping you overcome market challenges and stay ahead in the digital race.
           </p>
@@ -179,12 +179,12 @@ const AdvancedServices = () => {
               </motion.p>
               <Link
                 href={cards[active].href}
-                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-base md:text-lg font-medium mt-6"
+                className="inline-flex items-center text-red-600 dark:text-red-400 hover:underline text-base md:text-lg font-medium mt-3"
               >
                 Read More <span className="ml-2">&#x2192;</span>
               </Link>
             </motion.div>
-            <div className="flex gap-4 pt-12 md:pt-0">
+            <div className="flex gap-4 mt-3 pt-12 md:pt-0">
               <button
                 onClick={handlePrev}
                 className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"

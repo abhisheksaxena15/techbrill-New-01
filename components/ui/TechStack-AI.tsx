@@ -161,8 +161,7 @@ export default function ITConsultancyTechToolsSection() {
 				}
 			`}</style>
 
-      {/* Keep only the later, correct content section below */}
-      <section className="pt-10">
+      <section className="pt-16">
         <div className="container mx-auto">
           <div className="text-center mb-8 md:mb-12">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
@@ -176,108 +175,115 @@ export default function ITConsultancyTechToolsSection() {
             <div className="flex justify-center mt-4">
               {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
               <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-              Leverage intelligent technologies that empower enterprises with innovation, efficiency and lasting buiseness impact.                </h3>
+                Leveraging intelligent technologies that empower enterprises with innovation, efficiency, and lasting business impact        </h3>
             </div>
           </div>
 
         </div>
 
       </section>
-      <motion.div
-        className="mt-20 px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="mx-auto w-full max-w-[1100px]">
-          <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
-            {/* Tab Selector - Desktop Vertical */}
-            <div className="bg-blue-900 text-white p-6 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] custom-scrollbar hidden md:flex">
-              {techTabs.map((tab, idx) => (
+
+      <div className="flex justify-center mt-4">
+        {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
+        <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+          Leverage intelligent technologies that empower enterprises with innovation, efficiency and lasting buiseness impact.                </h3>
+      </div>
+    
+    <motion.div
+      className="mt-20 px-4 sm:px-6 lg:px-8"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="mx-auto w-full max-w-[1100px]">
+        <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
+          {/* Tab Selector - Desktop Vertical */}
+          <div className="bg-blue-900 text-white p-6 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] custom-scrollbar hidden md:flex">
+            {techTabs.map((tab, idx) => (
+              <button
+                key={tab.label}
+                className={`flex justify-between items-center px-4 py-3 rounded-xl text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
+                  ? "bg-blue-800 shadow-lg text-white"
+                  : "hover:bg-blue-800/80 opacity-80 text-gray-200"
+                  }`}
+                onClick={() => setActiveTab(idx)}
+              >
+                <span className="flex items-center">
+                  {tab.label}
+                </span>
+                {activeTab === idx && <span className="ml-2 text-lg">→</span>}
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Selector - Mobile Horizontal */}
+          <div className="md:hidden flex flex-col gap-5 w-full bg-white py-2">
+            {techTabs.map((tab, idx) => (
+              <div
+                key={tab.label}
+                className="bg-blue-900 rounded-lg shadow relative"
+                style={{ borderRadius: '16px' }}
+              >
                 <button
-                  key={tab.label}
-                  className={`flex justify-between items-center px-4 py-3 rounded-xl text-left transition-all font-semibold text-lg tracking-wide ${activeTab === idx
-                    ? "bg-blue-800 shadow-lg text-white"
-                    : "hover:bg-blue-800/80 opacity-80 text-gray-200"
-                    }`}
-                  onClick={() => setActiveTab(idx)}
+                  className="flex items-center gap-3 w-full px-4 py-4 text-white font-semibold text-left"
+                  style={{
+                    minHeight: "56px",
+                    fontSize: "1.13rem",
+                  }}
+                  onClick={() => setOpenAccordion(openAccordion === idx ? null : idx)}
                 >
-                  <span className="flex items-center">
-                    {tab.label}
+                  <span>{tab.label}</span>
+                  <span className="ml-auto">
+                    <Icon
+                      icon={openAccordion === idx ? "mdi:chevron-up" : "mdi:chevron-down"}
+                      className="w-6 h-6"
+                    />
                   </span>
-                  {activeTab === idx && <span className="ml-2 text-lg">→</span>}
                 </button>
-              ))}
-            </div>
-
-            {/* Tab Selector - Mobile Horizontal */}
-            <div className="md:hidden flex flex-col gap-5 w-full bg-white py-2">
-              {techTabs.map((tab, idx) => (
-                <div
-                  key={tab.label}
-                  className="bg-blue-900 rounded-lg shadow relative"
-                  style={{ borderRadius: '16px' }}
-                >
-                  <button
-                    className="flex items-center gap-3 w-full px-4 py-4 text-white font-semibold text-left"
-                    style={{
-                      minHeight: "56px",
-                      fontSize: "1.13rem",
-                    }}
-                    onClick={() => setOpenAccordion(openAccordion === idx ? null : idx)}
-                  >
-                    <span>{tab.label}</span>
-                    <span className="ml-auto">
-                      <Icon
-                        icon={openAccordion === idx ? "mdi:chevron-up" : "mdi:chevron-down"}
-                        className="w-6 h-6"
-                      />
-                    </span>
-                  </button>
-                  {openAccordion === idx && (
-                    <div className="bg-[#efefef] dark:bg-white px-4 py-4 rounded-b-lg transition-all duration-300">
-                      <div className="flex flex-col gap-3">
-                        {tab.skills.map(skill => (
-                          <div
-                            key={skill.name}
-                            className="flex items-center gap-3 bg-white border border-gray-200 rounded-md shadow-sm px-3 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow transition text-neutral-800"
-                          >
-                            <div className="w-8 h-8 min-w-[32px] flex items-center justify-center shrink-0">
-                              {skill.icon}
-                            </div>
-                            <span className="text-base font-medium text-black">{skill.name}</span>
+                {openAccordion === idx && (
+                  <div className="bg-[#efefef] dark:bg-white px-4 py-4 rounded-b-lg transition-all duration-300">
+                    <div className="flex flex-col gap-3">
+                      {tab.skills.map(skill => (
+                        <div
+                          key={skill.name}
+                          className="flex items-center gap-3 bg-white border border-gray-200 rounded-md shadow-sm px-3 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow transition text-neutral-800"
+                        >
+                          <div className="w-8 h-8 min-w-[32px] flex items-center justify-center shrink-0">
+                            {skill.icon}
                           </div>
-                        ))}
+                          <span className="text-base font-medium text-black">{skill.name}</span>
+                        </div>
+                      ))}
 
-                      </div>
                     </div>
-                  )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Right: Skills Grid - Desktop */}
+          <div className="w-full bg-[#efefef] dark:bg-white p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex overflow-y-auto custom-scrollbar">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%] sm:max-w-[90%] transition-all duration-300">
+              {activeSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                    {skill.icon}
+                  </div>
+                  <span className="text-base font-medium text-black">{skill.name}</span>
                 </div>
               ))}
             </div>
-
-            {/* Right: Skills Grid - Desktop */}
-            <div className="w-full bg-[#efefef] dark:bg-white p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex overflow-y-auto custom-scrollbar">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%] sm:max-w-[90%] transition-all duration-300">
-                {activeSkills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
-                  >
-                    <div className="w-8 h-8 flex items-center justify-center shrink-0">
-                      {skill.icon}
-                    </div>
-                    <span className="text-base font-medium text-black">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
           </div>
 
         </div>
-      </motion.div>
+
+      </div>
+    </motion.div>
     </>
   );
 }

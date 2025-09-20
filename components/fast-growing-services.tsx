@@ -180,16 +180,14 @@ export default function FastGrowingServices() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <span className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+            <span className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
               Fast Growing Services
             </span>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
-            Boosting Business Performance Through{" "}
-              <span className="text-blue-800 dark:text-blue-200">
-                Digital Marketing
-              </span>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            Boosting Business Performance Through{" "}Digital Marketing
+              
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-blue-700 mx-auto mb-4 sm:mb-6"></div>
+            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
             <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
               Explore our result-driven digital marketing services designed to
               boost brand visibility, attract customers, and accelerate business
@@ -245,7 +243,7 @@ export default function FastGrowingServices() {
                   </p>
                   <Link
                     href={service.link}
-                    className="text-blue-700 dark:text-blue-400 font-medium flex items-center group mt-auto text-sm sm:text-base"
+                    className="text-red-700 dark:text-red-400 font-medium flex items-center group mt-auto text-sm sm:text-base"
                   >
                     Read More
                     <motion.div
@@ -284,12 +282,7 @@ export default function FastGrowingServices() {
           </button>
         </div>
 
-        {/* Touch indicator for mobile only
-        <div className="text-center mt-2 sm:hidden">
-          <p className="text-xs text-gray-500 dark:text-gray-400">
-            Swipe to see more
-          </p>
-        </div> */}
+        
       </div>
     </section>
   );

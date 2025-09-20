@@ -6,25 +6,7 @@ import { motion } from "framer-motion"
 import AnimatedSection from "./animated-section"
 
 export default function TechnologyStack() {
-  // Curated list of 12 trending technologies for a 6x2 grid
-  // const technologies = [
-  //   // Row 1
-  //   { name: "React", icon: "devicon:react" },
-  //   { name: "Next.js", icon: "devicon:nextjs" },
-  //   { name: "TypeScript", icon: "devicon:typescript" },
-  //   { name: "Node.js", icon: "devicon:nodejs" },
-  //   { name: "Python", icon: "devicon:python" },
-  //   { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
-  //   { name: "Docker", icon: "devicon:docker" },
-  //   // Row 2
-  //   { name: "Kubernetes", icon: "devicon:kubernetes" },
-  //   { name: "AWS", icon: "devicon:amazonwebservices-wordmark" },
-  //   { name: "PostgreSQL", icon: "devicon:postgresql" },
-  //   { name: "Figma", icon: "devicon:figma" },
-  //   { name: "Git", icon: "devicon:git" },
-  //   { name: "JavaScript", icon: "devicon:javascript"},
-  //   { name: "Vue.js", icon: "devicon:vuejs"}
-  // ]
+ 
   const technologies = [
     // Core Development Technologies
     { name: "React", icon: "devicon:react" },
@@ -82,14 +64,13 @@ export default function TechnologyStack() {
       <div className="container mx-auto">
         <AnimatedSection animation="fade">
           <div className="text-center mb-8 md:mb-12">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
               Technologies We Use
             </h3>
             <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-            Driven by Innovation, Powered by the Right {" "}
-              <span className="text-blue-800 dark:text-blue-200">Technology Stack</span>
+            Driven by Innovation, Powered by the Right {" "}Technology Stack
             </h2>
-            <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
             <p className="max-w-2xl mx-auto mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             We leverage the latest technologies to build robust, scalable, and future-proof 
             solutions that give your business a competitive edge in today&apos;s digital landscape.
