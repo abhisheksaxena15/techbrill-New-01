@@ -85,7 +85,7 @@ export default function TechnologiesPage() {
   return (
     <>
       {/* Hero Banner with Motion Effects */}
-      <section className="relative w-full h-[320px] md:h-[320px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[320px] md:h-[320px] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-gray-900">
         {/* Background Image with motion effect */}
         <motion.div
           className="absolute inset-0 z-0"
@@ -176,10 +176,10 @@ export default function TechnologiesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl">
-            <span className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-4 ">
+            <span className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 m ">
               Technology Excellence
             </span>
-            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl mb-3">
               Driving Innovation with Cutting-Edge Technologies
             </h2>
             <div className="w-32 h-1 bg-red-600 rounded-full mb-4" />
@@ -249,7 +249,7 @@ export default function TechnologiesPage() {
             <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-2">
               Why Choose Us
             </h3>
-            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl mb-3">
               Blending Expertise, Reliability, and Forward Thinking
             </h2>
             <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mt-4 mb-4" />

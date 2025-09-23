@@ -244,7 +244,7 @@ export default function TechnologyStackOldone() {
 
         <div className="text-center mb-8 md:mb-12">
           <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Our Technology Stack</h3>
-          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-4xl mb-3">
             Powering Innovation with a Robust Tech Stack
           </h2>
           <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
@@ -375,3 +375,4 @@ export default function TechnologyStackOldone() {
     </section>
   )
 }
+
