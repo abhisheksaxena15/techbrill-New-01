@@ -243,27 +243,17 @@ export default function TechnologyStackOldone() {
       <AnimatedSection animation="fade">
 
         <div className="text-center mb-8 md:mb-12">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Our Technology Stack</h3>
-          <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-            Powering Innovation with a Robust <span className="italic text-blue-800 dark:text-blue-200">Tech Stack</span>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Our Technology Stack</h3>
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+            Powering Innovation with a Robust Tech Stack
           </h2>
-          <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4 mb-3"></div>
-          <h3 className=" max-w-2xl mx-auto text-gray-700 dark:text-gray-300 text-base">
+          <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
+          <h3 className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
             We work across a wide spectrum of technologies to design solutions that align perfectly with business needs.                </h3>
 
         </div>
 
-        {/* <div className="text-center mb-8 md:mb-12">
-            <AnimatedText
-              text="Driven by innovation, powered by the right Technology Stack"
-              className="text-2xl sm:text-3xl font-bold mb-2 md:mb-4 leading-tight text-gray-800 dark:text-white"
-            />
-            <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-              We leverage the latest technologies to build robust, scalable, and future-proof solutions that give your
-              business a competitive edge in today&apos;s digital landscape.
-            </p>
-          </div> */}
+        
       </AnimatedSection>
 
       {/* Stack Navigation */}

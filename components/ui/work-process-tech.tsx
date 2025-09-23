@@ -74,12 +74,14 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-primary dark:text-blue-400 font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
-            Industry Specific Technologies
-          </span>
-          Transforming Industries Through Specialized Technology
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-3">
+              Innovation & Emerging Tech
+            </h3>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl mb-4">
+            Transforming Industries Through Specialized Technology
+            </h2>
         </motion.h2>
-        <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-3 rounded-full mt-3" />
+        <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
         <motion.p
           className="text-base text-gray-600 dark:text-gray-300 max-w-xl mx-auto mt-1 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
@@ -101,8 +103,8 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
             key={step.key}
             className={`flex flex-col items-center px-2 md:px-4 pb-2 focus:outline-none transition relative group snap-center min-w-[72px] flex-shrink-0
               ${active === idx
-                ? "text-blue-600 dark:text-blue-400 font-semibold"
-                : "text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-300"
+                ? "text-red-600 dark:text-red-400 font-semibold"
+                : "text-gray-500 dark:text-gray-400 hover:text-red-500 dark:hover:text-red-300"
               }`}
             onClick={() => setActive(idx)}
             type="button"
@@ -114,7 +116,7 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
             {active === idx && (
               <motion.div
                 layoutId="underline"
-                className="absolute left-0 right-0 -bottom-1 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400 dark:from-blue-400 dark:via-blue-500 dark:to-blue-300 shadow-md"
+                className="absolute left-0 right-0 -bottom-1 h-1 rounded-full bg-gradient-to-r from-red-500 via-red-600 to-red-400 dark:from-red-400 dark:via-red-500 dark:to-red-300 shadow-md"
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               />
             )}
@@ -134,7 +136,7 @@ export default function WorkProcessTech({ steps = STEPS }: { steps?: typeof STEP
             className="flex-1 w-full md:w-1/2 min-w-[220px]"
           >
             {/* Step heading */}
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-blue-700 dark:text-blue-400">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-red-700 dark:text-red-400">
               {steps[active].label} Technologies
             </h3>
 

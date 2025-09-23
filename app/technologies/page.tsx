@@ -176,18 +176,19 @@ export default function TechnologiesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl">
-            <span className="text-primary font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+            <span className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-4 ">
               Technology Excellence
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4 leading-tight text-gray-900 dark:text-white">
+            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
               Driving Innovation with Cutting-Edge Technologies
             </h2>
-            <div className="w-20 h-1 bg-primary mb-6"></div>
-            <p className="mb-8 text-gray-700 dark:text-gray-300 text-base">
+            <div className="w-32 h-1 bg-red-600 rounded-full mb-4" />
+
+            <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
               At Techbrill, technology is at the core of everything we do. We believe that the right tech stack can turn bold ideas into powerful solutions. Our teams continuously evolve with the latest advancements to ensure our clients stay ahead of the curve, whether it’s building robust applications, modernizing legacy systems, or adopting emerging technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="outline" className="bg-white dark:bg-gray-800 text-blue-800 dark:text-blue-400 font-semibold px-8 py-3 text-base shadow-md hover:bg-primary/90 hover:dark:bg-blue-900">
+              <Button size="lg" variant="outline" className="bg-white dark:bg-gray-800 text-blue-800 dark:text-blue-400 font-semibold px-8 py-3 text-base shadow-md hover:bg-red-800 hover:dark:bg-red-900 hover:text-white mt-4">
                 Consult Our Expert
               </Button>
             </div>
@@ -221,13 +222,13 @@ export default function TechnologiesPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto bg-white dark:bg-gray-900">
           <div className="text-center mb-8 md:mb-12">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-4">
               Innovation & Emerging Tech
             </h3>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl mt-4">
               Transforming Ideas with Next-Gen Technologies
             </h2>
-            <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
+            <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mt-4 mb-4" />
             <div className="flex justify-center mt-4">
               <h3 className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
                 We don’t just adopt technology, we innovate with it. Our R&D team explores next-gen solutions that drive competitive advantage.
@@ -245,14 +246,14 @@ export default function TechnologiesPage() {
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h3 className="text-blue-700 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-2">
               Why Choose Us
             </h3>
-            <h2 className="mx-auto text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white max-w-4xl">
+            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
               Blending Expertise, Reliability, and Forward Thinking
             </h2>
-            <div className="h-1 w-20 bg-blue-700 mx-auto mt-4 mb-6"></div>
-            <p className="max-w-3xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mt-4 mb-4" />
+            <p className="max-w-xl mx-auto text-gray-700 dark:text-gray-300 text-base">
               Our focus on innovation, quality, and reliability ensures that every solution we deliver is built to scale, secure by design, and aligned with your business goals for long-term success.
             </p>
           </div>
