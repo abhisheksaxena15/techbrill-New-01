@@ -83,7 +83,7 @@ export default function ServicesSection() {
 
 							<AnimatedSection animation="fade" delay={0.6}>
 								<Link href="/contact">
-									<Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700 ">
+									<Button className="group bg-blue-800 dark:hover:bg-red-700 hover:bg-red-700 dark:bg-blue-700 ">
 										Consult with us{" "}
 										<motion.div
 											animate={{ x: [0, 5, 0] }}
@@ -94,7 +94,7 @@ export default function ServicesSection() {
 									</Button>
 								</Link>
 							</AnimatedSection>
-							=
+							
 						</motion.div>
 					  </div>
 					</div>

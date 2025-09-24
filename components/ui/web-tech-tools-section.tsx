@@ -262,7 +262,7 @@ export default function WebTechToolsSection() {
           </div>
 
           {/* Mobile Accordion */}
-          <div className="md:hidden flex flex-col gap-5 w-full bg-white py-2">
+          <div className="md:hidden flex flex-col dark:bg-gray-900   gap-5 w-full bg-white py-2">
             {techTabs.map((tab, idx) => (
               <div
                 key={tab.label}

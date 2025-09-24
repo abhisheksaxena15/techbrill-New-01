@@ -167,17 +167,17 @@ export default function MobileAppDevelopmentPage() {
         <ServicesSection />
 
         {/* 4. Tech Stack Section */}
-        <section className="py-16">
+        <section className="dark:bg-gray-900 pb-16 pt-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                 Technologies We Use
               </h3>
-              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
+              <h2 className="dark:text-white  text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl">
                 Powering Innovation with Proven Mobile Technologies
               </h2>
-              <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mb-3 mt-4"></div>
-              <h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mb-3 mt-4"></div>
+              <h3 className="dark:text-white text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
                 We leverage modern frameworks, tools, and platforms to build secure, scalable, and high-performing mobile apps tailored to your business needs.						</h3>
             </div>
             <MobileTechToolsSection />
@@ -186,7 +186,7 @@ export default function MobileAppDevelopmentPage() {
 
         {/* 5. Industries Section */}
         <section
-          className="relative py-0 px-0 w-full min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover"
+          className="  relative py-0 px-0 w-full min-h-[75vh] overflow-hidden bg-fixed bg-center bg-cover"
           style={{ backgroundImage: 'url(/images/services/mobile-app-hero.jpg)' }}
         >
           <div className="absolute inset-0 bg-black/60 z-0" />
@@ -203,8 +203,8 @@ export default function MobileAppDevelopmentPage() {
             </div>
 
             {/* White background wrapper */}
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6">
+              <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {[
                   { label: 'Automative', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="16.5" cy="17.5" r="2.5" /></svg> },
                   { label: 'Real Estate', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 21V9a2 2 0 012-2h14a2 2 0 012 2v12" /><path d="M9 22V12h6v10" /></svg> },
@@ -221,10 +221,10 @@ export default function MobileAppDevelopmentPage() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
+                    className="flex dark:bg-gray-600 flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
                   >
                     <span className="mb-3 text-blue-500 group-hover:text-blue-400 transition-colors duration-300">{item.icon}</span>
-                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-700 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
+                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-300 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -239,15 +239,15 @@ export default function MobileAppDevelopmentPage() {
 
         
         {/* Why Choose Us Section */}
-        <section className="py-20 px-6 md:px-16 bg-white">
+        <section className="py-20 px-6 dark:bg-gray-900 md:px-16 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-white">
+              <h3 className="dark:text-red-600 text-sm font-semibold uppercase tracking-wide text-red-600 ">
                 WHY CHOOSE US</h3>
-              <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
+              <h2 className=" dark:text-white text-xl sm:text-3xl font-bold text-gray-900 md:text-4xl mb-3">
                 Good Reasons to Team Up with Us              </h2>
-              <div className="w-32 h-1 mx-auto bg-red-600 rounded-full mb-4" />
-              <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-medium">
+              <div className="w-32 h-1 mx-auto dark:bg-red-600  bg-red-600 rounded-full mb-4" />
+              <p className="text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-1 leading-relaxed">
                 What makes us stand out is our commitment to innovation, user experience, and scalable solutions that truly empower businesses.
               </p>
             </div>
@@ -291,24 +291,24 @@ export default function MobileAppDevelopmentPage() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5 }}
                   whileHover={{
+                      // move up
                     scale: 1.05,
                     background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
                     boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
                     borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
                   }}
-                  className="flex flex-col items-center text-center gap-3 
-                 bg-gradient-to-br from-blue-50 to-white   // ✅ applied to ALL cards
-                 rounded-2xl border border-blue-200 
-                 shadow-md px-7 py-8 
-                 transition-all duration-300 hover:shadow-xl"
-                >
+                 className="flex flex-col items-center text-center gap-3 bg-white dark:bg-gray-800 rounded-2xl 
+  border border-blue-100 dark:border-gray-700 shadow-md px-7 py-8 
+  transition-colors duration-300 
+  hover:bg-gradient-to-br hover:from-blue-50 hover:to-red-50 
+  dark:hover:from-gray-800 dark:hover:to-gray-900"                >
                   <div className="flex items-center justify-center mb-2">
                     {item.icon}
                   </div>
-                  <h3 className="text-base md:text-lg font-semibold text-blue-900 mb-1">
+                  <h3 className="dark:text-white text-base md:text-lg font-semibold text-blue-900 mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                  <p className="dark:text-gray-300 text-sm md:text-base text-gray-600 leading-relaxed">
                     {item.desc}
                   </p>
                 </motion.div>

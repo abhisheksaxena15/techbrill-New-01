@@ -151,7 +151,7 @@ export default function ServicesSection() {
 	return (
 		<>
 			{/* 2. What We Do Section - matches the image layout */}
-			<section className="py-16 bg-white dark:bg-gray-950">
+			<section className="pt-16 bg-white dark:bg-gray-950">
 				<div className="container mx-auto max-w-6xl">
 					<div className="flex flex-col md:flex-row items-center gap-9">
 						{/* Left: Code image with floating quote */}
@@ -164,7 +164,7 @@ export default function ServicesSection() {
 						>
 							<div className="relative w-full">
 								{/* Image wrapper */}
-								<div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+								<div className="relative w-full h-[450px] rounded-xl overflow-hidden">
 									<Image
 										src="/images/services/web-design-hero.jpg"
 										alt="Code editor with web development code"
@@ -198,7 +198,7 @@ export default function ServicesSection() {
 							transition={{ duration: 0.7 }}
 						>
 							{/* Section label */}
-							<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-3">
+							<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600 mb-3">
 								INNOVATION PARTNER
 							</h3>
 
@@ -228,7 +228,7 @@ export default function ServicesSection() {
 
 							<AnimatedSection animation="fade" delay={0.6}>
 								<Link href="/contact">
-									<Button className="group bg-blue-800 hover:bg-red-600 dark:bg-blue-700">
+									<Button className="group hover:bg-red-600 bg-blue-800 dark:hover:bg-red-700 dark:bg-blue-700">
 										Consult with us{" "}
 										<motion.div
 											animate={{ x: [0, 5, 0] }}
@@ -255,12 +255,12 @@ export default function ServicesSection() {
 			<section className="pt-16 bg-white dark:bg-gray-950">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h2 className="text-lg font-semibold uppercase tracking-wide text-red-600 dark:text-white">
+						<h2 className="text-lg font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
 							CORE OFFERINGS
 						</h2>
 						<h2 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-4">Comprehensive Mobile App Services for Your Business</h2>
 						<div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
-						<h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+						<h3 className="dark:text-white text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
 							We provide end-to-end web design and development solutions that empower businesses to grow, adapt, and succeed in today&#39;s fast-paced digital world.
 						</h3>
 						{/* <p className="text-lg text-gray-600 dark:text-white text-center mt-2">
@@ -615,17 +615,17 @@ export default function ServicesSection() {
 				</div>
 			</section>
 			{/* Emerging Tech Solutions Section */}
-			<section className="py-12 bg-blue-50 dark:bg-gray-900">
+			<section className=" bg-blue-50 dark:bg-gray-900">
 				<div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
 					{/* Left: Sticky Heading & CTA */}
 					<div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
 
-						<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+						<h3 className="dark:text-red-600 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
 							SERVICES INCLUDE
 						</h3>
 						<h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
 							End-to-End Solutions for Growth and Scalability									</h3>
-						<div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+						<div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-left mt-2 mb-4"></div>
 
 						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
                             Comprehensive Web Solutions for Your Business

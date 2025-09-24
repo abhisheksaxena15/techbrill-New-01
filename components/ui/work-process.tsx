@@ -271,7 +271,7 @@ We perform rigorous testing to ensure flawless functionality, performance, and s
   },
 ];
 
-export default function WorkProcess({ steps = STEPS }: { steps?: typeof STEPS }) {
+export default function   WorkProcess({ steps = STEPS }: { steps?: typeof STEPS }) {
   const [active, setActive] = useState(0);
 
   return (
@@ -354,7 +354,7 @@ A seamless journey from concept to launch, blending strategy, creativity, and te
             <h3 className="text-xl md:text-2xl font-bold mb-2 text-blue-700">
               {steps[active].heading}
             </h3>
-            <div className="text-gray-600 mt-4 max-w-2xl">
+            <div className="text-gray-600 dark:text-gray-300 mt-4 max-w-2xl">
               {steps[active].description}
             </div>
           </motion.div>

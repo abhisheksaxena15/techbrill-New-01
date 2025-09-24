@@ -103,7 +103,7 @@ export default function WorkProcessMob({ steps = STEPS }: { steps?: typeof STEPS
     return (
 
 
-        <section className="py-20 px-6 md:px-16 max-w-full overflow-x-hidden bg-white">
+        <section className="dark:bg-gray-900 py-20 px-6 md:px-16 max-w-full overflow-x-hidden bg-white">
 
             <div className="text-center mb-10">
                 <motion.h2
@@ -113,13 +113,13 @@ export default function WorkProcessMob({ steps = STEPS }: { steps?: typeof STEPS
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                 >
-                    <span className="text-red-600 dark:text-blue-400 font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
+                    <span className="text-red-600 dark:text-red-600 font-semibold uppercase tracking-wide text-xs md:text-sm block mb-2">
                         OUR PROVEN PROCESS
                     </span>
                     Our Work Process to Transform Ideas into Apps        </motion.h2>
                 <div className="w-20 h-1 bg-red-600 mx-auto mb-3 rounded-full mt-3" />
                 <motion.p
-                    className="text-base text-gray-600   max-w-xl mx-auto mt-1 leading-relaxed"
+                    className="dark:text-white text-base text-gray-600   max-w-xl mx-auto mt-1 leading-relaxed"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -186,7 +186,7 @@ export default function WorkProcessMob({ steps = STEPS }: { steps?: typeof STEPS
       <h3 className="text-xl md:text-2xl font-bold mb-4 text-blue-700">
         {steps[active].heading}
       </h3>
-      <p className="text-gray-600 text-base md:text-lg max-w-xl mx-auto md:mx-0">
+      <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-xl mx-auto md:mx-0">
         {steps[active].description}
       </p>
     </motion.div>

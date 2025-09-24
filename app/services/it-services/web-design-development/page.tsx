@@ -1,16 +1,12 @@
 'use client';
-
-
 import React, { useState } from 'react';
 import OurAssurance from "@/components/OurAssurance";
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Eye, Clock, Shield, Users, CheckCircle, Code, Layout, Smartphone, Zap, Phone, Globe, Briefcase, Layers, Database, TrendingUp, ChevronDown, Lightbulb, Palette, Target, Handshake, PhoneCall } from 'lucide-react';
-
 import { ErrorBoundary } from '@/components/error-boundary';
 import { SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss, SiFigma, SiAmazon, SiMongodb, SiTypescript } from 'react-icons/si';
-
 import { TextRevealCard } from '@/components/ui/text-reveal-card';
 import { FocusCards } from '@/components/ui/focus-cards';
 import WebTechToolsSection from '@/components/ui/web-tech-tools-section';

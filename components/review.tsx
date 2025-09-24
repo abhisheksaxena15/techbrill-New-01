@@ -92,7 +92,7 @@ const ReviewCard: React.FC<Review> = ({
     color,
 }) => {
     return (
-        <div className="mb-4 bg-white rounded-2xl shadow-md p-6 flex flex-col h-80 flex-1 min-w-[300px] max-w-[350px] mx-4">
+        <div className="mb-4 dark:bg-gray-500 bg-white rounded-2xl shadow-md p-6 flex flex-col h-80 flex-1 min-w-[300px] max-w-[350px] mx-4">
             {/* Header */}
             <div className="flex items-center gap-3 mb-3">
                 <div
@@ -103,14 +103,14 @@ const ReviewCard: React.FC<Review> = ({
                 </div>
                 <div>
                     <h3 className="font-semibold text-gray-800">{name}</h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm dark:text-gray-700 text-gray-500">
                         {role}, {company}
                     </p>
                 </div>
             </div>
 
             {/* Review */}
-            <p className="text-gray-700 italic mb-3 flex-1 overflow-hidden text-ellipsis">
+            <p className="text-gray-700 italic mb-3 dark:text-gray-900 flex-1 overflow-hidden text-ellipsis">
                 {`"${review}"`}
             </p>
 
@@ -122,7 +122,7 @@ const ReviewCard: React.FC<Review> = ({
             </div>
 
             {/* Location */}
-            <p className="text-sm text-gray-500">{location}</p>
+            <p className="text-sm dark:text-gray-700 text-gray-500">{location}</p>
         </div>
     );
 };
@@ -130,9 +130,9 @@ const ReviewCard: React.FC<Review> = ({
 // Reviews container with sliding effect
 const Reviews: React.FC = () => {
     return (
-        <div className="p-10 max-w-full overflow-hidden relative bg-gray-50">
+        <div className="p-10 max-w-full dark:bg-gray-900 overflow-hidden relative bg-gray-50">
             <div className="text-center mb-10">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                <h3 className="dark:text-red-600 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
                     WHAT OUR CLIENTS SAY
                 </h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">

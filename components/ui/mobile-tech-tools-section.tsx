@@ -113,7 +113,7 @@ export default function MobileTechToolsSection() {
       </div>
 
       {/* Mobile Accordion */}
-      <div className="md:hidden flex flex-col gap-5 w-full bg-white py-2">
+      <div className="md:hidden flex flex-col gap-5 dark:bg-gray-900 w-full bg-white py-2">
         {techTabs.map((tab, idx) => (
           <div
             key={tab.label}
@@ -159,17 +159,17 @@ export default function MobileTechToolsSection() {
       </div>
 
       {/* Desktop Skills Grid */}
-      <div className="w-full bg-[#efefef] dark:bg-white p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex">
+      <div className="w-full bg-[#efefef] dark:bg-gray-800 p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%] sm:max-w-[90%] transition-all duration-300">
           {activeSkills.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center gap-3 bg-white border border-gray-200 rounded-md shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
+              className="flex items-center gap-3 dark:bg-gray-900 bg-white border border-gray-200 rounded-md shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
             >
               <div className="w-8 h-8 flex items-center justify-center shrink-0">
                 {skill.icon}
               </div>
-              <span className="text-base font-medium text-black">{skill.name}</span>
+              <span className="text-base font-medium dark:text-white text-black">{skill.name}</span>
             </div>
           ))}
         </div>
