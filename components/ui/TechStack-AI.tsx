@@ -161,16 +161,16 @@ export default function ITConsultancyTechToolsSection() {
 				}
 			`}</style>
 
-      <section className="pt-16">
-        <div className="container mx-auto">
+      <section className="dark:bg-gray-900  pt-16">
+        <div className="container dark:bg-gray-900 mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
               Technologies We Use
             </h3>
             <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
               Intelligent Technologies Powering Global Enterprises
             </h2>
-            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+            <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
 
             <div className="flex justify-center mt-4">
               {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
@@ -181,22 +181,14 @@ export default function ITConsultancyTechToolsSection() {
 
         </div>
 
-      </section>
-
-      <div className="flex justify-center mt-4">
-        {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
-        <h3 className=" max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-          Leverage intelligent technologies that empower enterprises with innovation, efficiency and lasting buiseness impact.                </h3>
-      </div>
-    
-    <motion.div
+        <motion.div
       className="mt-20 px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="mx-auto w-full max-w-[1100px]">
+      <div className="mx-auto dark:bg-gray-900 w-full max-w-[1100px]">
         <div className="flex flex-col md:grid md:grid-cols-[1fr_2.3fr] gap-0 items-stretch rounded-3xl overflow-hidden shadow-sm">
           {/* Tab Selector - Desktop Vertical */}
           <div className="bg-blue-900 text-white p-6 flex-col gap-4 overflow-y-auto max-h-[340px] min-h-[340px] custom-scrollbar hidden md:flex">
@@ -218,7 +210,7 @@ export default function ITConsultancyTechToolsSection() {
           </div>
 
           {/* Tab Selector - Mobile Horizontal */}
-          <div className="md:hidden flex flex-col gap-5 w-full bg-white py-2">
+          <div className="md:hidden flex flex-col gap-5 w-full dark:bg-gray-900 bg-white py-2">
             {techTabs.map((tab, idx) => (
               <div
                 key={tab.label}
@@ -264,17 +256,17 @@ export default function ITConsultancyTechToolsSection() {
           </div>
 
           {/* Right: Skills Grid - Desktop */}
-          <div className="w-full bg-[#efefef] dark:bg-white p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex overflow-y-auto custom-scrollbar">
+          <div className="w-full bg-[#efefef] dark:bg-gray-800 p-4 sm:p-6 min-h-[340px] items-center justify-center hidden md:flex overflow-y-auto custom-scrollbar">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[100%] sm:max-w-[90%] transition-all duration-300">
               {activeSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
+                  className="flex items-center gap-3 bg-white border dark:bg-gray-900 border-gray-200 rounded-xl shadow-sm px-4 py-3 hover:bg-blue-50 hover:border-blue-200 hover:shadow-md transition min-h-[56px] text-neutral-800"
                 >
                   <div className="w-8 h-8 flex items-center justify-center shrink-0">
                     {skill.icon}
                   </div>
-                  <span className="text-base font-medium text-black">{skill.name}</span>
+                  <span className="text-base font-medium dark:text-white text-black">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -284,6 +276,12 @@ export default function ITConsultancyTechToolsSection() {
 
       </div>
     </motion.div>
+
+      </section>
+
+      
+    
+    
     </>
   );
 }

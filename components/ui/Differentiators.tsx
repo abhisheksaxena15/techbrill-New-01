@@ -51,21 +51,21 @@ const differentiators: Differentiator[] = [
 
 const Differentiators: React.FC = () => {
     return (
-        <section className="bg-white py-16 px-6">
+        <section className="dark:bg-gray-900 bg-white py-16 px-6">
             <div className="max-w-6xl mx-auto text-center">
                 <div className="text-center mb-8 md:mb-12">
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                    <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                         WHY CHOSE US              </h3>
                     <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                         Why Businesses Rely on Our Expertise              </h2>
-                    <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                    <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
                     {/* Change: Wrapped the h3 tag in a new flex container to control its width
       and ensure it stays centered while having a maximum width.
     */}
                     <div className="flex justify-center mt-4">
                         {/* "text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed" */}
                         <h3 className=" max-w-5xl mx-auto text-gray-700 dark:text-gray-300 text-base">
-                            We don’t just deliver AI & ML solutions, we deliver measurable business impact.
+                            We don&#39;t just deliver AI & ML solutions, we deliver measurable business impact.
                         </h3>
                     </div>
                 </div>
@@ -77,23 +77,29 @@ const Differentiators: React.FC = () => {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
-                            transition={{ duration: 0.6, delay: idx * 0.08 }} // ✅ only for entry animation
+                            // Snappy transition for scale/color changes to remove delay
+                            transition={{
+                                // Entry animation (opacity/y) transition
+                                opacity: { duration: 0.6, delay: idx * 0.08 },
+                                y: { duration: 0.6, delay: idx * 0.08 },
+                                // A snappy 0.01s transition for all other properties (scale, shadow, colors)
+                                default: { duration: 0.01, ease: "easeOut" }
+                            }}
                             whileHover={{
                                 scale: 1.04,
                                 boxShadow: "0 4px 32px 0 rgba(30,64,175,0.10)",
                                 borderColor: "#1e40af",
-                                backgroundColor: "rgba(30,64,175,0.04)",
-                                transition: { duration: 0.2, ease: "easeOut" }, // ✅ snappy hover
+                                // NEW: Change background color to gray-300 (#d1d5db) on hover
+                                backgroundColor: "#d1d5db",
                             }}
-                            whileTap={{ scale: 0.98 }} // ✅ quick click/tap effect
-                            className="flex flex-col text-left bg-white/80 rounded-2xl 
-             border border-blue-100 shadow-md overflow-hidden 
-             transition-all duration-200"
+                            whileTap={{ scale: 0.98 }}
+                            // UPDATED Tailwind Classes for default appearance
+                            className="flex  flex-col text-left rounded-2xl border border-gray-500 shadow-md overflow-hidden bg-white  text-white hover:text-gray-900 "
                         >
                             <img
                                 src={item.image}
                                 alt={item.title}
-                                className="w-full h-40 object-cover"
+                                className="w-full  h-40 object-cover"
                             />
                             <div className="p-6">
                                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
@@ -104,7 +110,6 @@ const Differentiators: React.FC = () => {
                                 </p>
                             </div>
                         </motion.div>
-
                     ))}
                 </div>
             </div>

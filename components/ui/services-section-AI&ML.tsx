@@ -159,7 +159,7 @@ export default function ServicesSection() {
     return (
         <>
             {/* 2. What We Do Section - matches the image layout */}
-            <section className="py-16 bg-white dark:bg-gray-950">
+            <section className="py-16 bg-white dark:bg-gray-900">
                 <div className="container mx-auto max-w-6xl">
                     <div className="flex flex-col md:flex-row items-center gap-9">
 
@@ -208,7 +208,7 @@ export default function ServicesSection() {
                         >
 
                             {/* Section label */}
-                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mb-3">
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600 mb-3">
                                 TURNING DATA INTO INTELLIGENT ACTION
                             </h3>
 
@@ -233,7 +233,7 @@ export default function ServicesSection() {
                             {/* Button */}
                             <AnimatedSection animation="fade" delay={0.6}>
                                 <Link href="/contact">
-                                    <Button className="group bg-blue-800 hover:bg-red-700 dark:bg-blue-700">
+                                    <Button className="group bg-blue-800 hover:bg-red-700 dark:hover:bg-red-700 dark:bg-blue-700">
                                         Consult with us{" "}
                                         <motion.div
                                             animate={{ x: [0, 5, 0] }}
@@ -251,16 +251,16 @@ export default function ServicesSection() {
             </section>
 
             {/* 3. Services Section - Using the custom dark theme from the image */}
-            <section className="pt-13 bg-white dark:bg-gray-950">
-                <div className="container mx-auto px-4 max-w-6xl">
+            <section className="pt-13 bg-white dark:bg-gray-900">
+                <div className="ark:bg-gray-900 container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-8 md:mb-12">
-                        <h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                        <h2 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                             CORE OFFERINGS
                         </h2>
                         <h2 className="mt-2 text-2xl mx-auto max-w-5xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Accelerate Growth with Full-Spectrum AI & ML Development Services
                         </h2>
-                        <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-4"></div>
-                        <h3 className=" text-base text-gray-600   max-w-3xl mx-auto mt-1 leading-relaxed">
+                        <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4 mb-4"></div>
+                        <h3 className=" text-base text-gray-600  dark:text-gray-300 max-w-3xl mx-auto mt-1 leading-relaxed">
                             Delivering end-to-end AI & ML solutions that streamline operations, drive innovation, and unlock sustainable business growth.
                         </h3>
                     </div>
@@ -281,7 +281,7 @@ export default function ServicesSection() {
                                 <li>End-to-end AI integration</li>
                             </ul>
 
-                            <Button asChild className="mt-4">
+                            <Button asChild className="hover:bg-red-700 mt-4">
                                 <a href="/services/it-services/ai-ml-development">Explore more</a>
                             </Button>
                         </div>
@@ -331,7 +331,7 @@ export default function ServicesSection() {
                                 <li>Personalized user experiences</li>
                             </ul>
 
-                            <Button asChild className="mt-4">
+                            <Button asChild className="hover:bg-red-700  mt-4">
                                 <a href="/services/ai-automation/generative-ai">Explore more</a>
                             </Button>
                         </div>
@@ -381,7 +381,7 @@ export default function ServicesSection() {
                                 <li>Demand forecasting</li>
                             </ul>
 
-                            <Button asChild className="mt-4">
+                            <Button asChild className="hover:bg-red-700  mt-4">
                                 <a href="/services/it-services/ai-ml-development">Explore more</a>
                             </Button>
                         </div>
@@ -431,7 +431,7 @@ export default function ServicesSection() {
                                 <li>Model training & optimization</li>
                             </ul>
 
-                            <Button asChild className="mt-4">
+                            <Button asChild className="hover:bg-red-700  mt-4">
                                 <a href="/services/ai-automation/data-analytics">Explore more</a>
                             </Button>
                         </div>
@@ -465,31 +465,29 @@ export default function ServicesSection() {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <div className="mt-4">
+                <div className="mt-4">
                 <section className="bg-gray-50 dark:bg-gray-900">
-                    <div className="container bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
+                    <div className="container dark:bg-gray-900 bg-gray-100 mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
                         {/* Left: Sticky Heading & CTA */}
                         <div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0">
-                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600 mt-6">
                                 SOLUTIONS INCLUDE
                             </h3>
-                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text_WHITE md:text-4xl">
+                            <h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                                 Unlock Advanced AI & ML Capabilities
                             </h3>
-                            <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-left mt-2 mb-4"></div>
+                            <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-left mt-2 mb-4"></div>
 
-                            <p className="text-gray-600 dark:text_WHITE mb-4" style={{ textAlign: "justify" }}>
+                            <p className="text-gray-600 dark:text-gray-300 mb-4" style={{ textAlign: "justify" }}>
                                 Unlock the true potential of AI & ML with innovations that go beyond the basics. Our advanced offerings are built to tackle complex business challenges, delivering intelligent, scalable, and secure solutions that drive meaningful transformation.
                             </p>
-                            <p className="text-gray-600 dark:text_WHITE mb-4" style={{ textAlign: "justify" }}>
+                            <p className="text-gray-600 dark:text-gray-300 mb-4" style={{ textAlign: "justify" }}>
                                 At Techbrill, we blend technical expertise with deep industry knowledge to create AI solutions that are practical yet transformative. By enabling smarter decisions, seamless automation, and future-ready capabilities, we empower businesses to stay competitive and lead with confidence.
                             </p>
                         </div>
 
                         {/* Right: Scrollable Tech Cards */}
-                        <div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
+                        <div className="md:w-1/2  md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
                             {[
                                 {
                                     title: "Natural Language Processing (NLP) Solutions",
@@ -522,20 +520,23 @@ export default function ServicesSection() {
                                     icon: CloudCog,
                                 },
                             ].map((card) => (
-                                <div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-8 00/80 cursor-pointer min-w-[280px] md:min-w-0">
-                                    <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                                <div key={card.title} className="flex items-start gap-4 border-b  border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-gray-200 dark:hover:bg-gray-700 00/80 cursor-pointer min-w-[280px] md:min-w-0">
+                                    <span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100  dark:hover:bg-gray-400 rounded-lg">
                                         <card.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                                     </span>
-                                    <div className="flex-1">
-                                        <h3 className="font-bold text-lg text-gray-900 dark:text_WHITE">{card.title}</h3>
-                                        <p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
-                                    </div>
+                                   <div className="flex-1">
+										<h3 className="font-bold text-lg text-gray-900 dark:text-white  flex items-center gap-2">{card.title}</h3>
+										<p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
+									</div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
             </div>
+            </section>
+
+            
         </>
     );
 }

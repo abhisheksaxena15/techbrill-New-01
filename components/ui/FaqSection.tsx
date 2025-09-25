@@ -34,16 +34,16 @@ const FaqSection: React.FC = () => {
     };
 
     return (
-        <section className="bg-gray-100 py-12 px-6">
+        <section className="bg-gray-100 dark:bg-gray-900 py-12 px-6">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-8 md:mb-12">
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+                    <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                         FAQS
                     </h3>
                     <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                         Frequently Asked, Clearly Answered
                     </h2>
-                    <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+                    <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
 
                     <div className="flex justify-center mt-4">
                         <h3 className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
@@ -55,11 +55,11 @@ const FaqSection: React.FC = () => {
                     {faqData.map((faq, index) => (
                         <div
                             key={index}
-                            className="border rounded-lg bg-white shadow-sm overflow-hidden"
+                            className="border rounded-lg dark:bg-gray-400 bg-white shadow-sm overflow-hidden"
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full flex justify-between items-center p-4 text-left font-semibold text-gray-800 hover:bg-gray-50 transition"
+                                className="w-full flex justify-between items-center p-4 text-left font-semibold hover:bg-gray-200 text-gray-800 dark:hover:bg-gray-500 transition"
                             >
                                 {faq.question}
                                 <span className="text-xl font-bold text-gray-600">

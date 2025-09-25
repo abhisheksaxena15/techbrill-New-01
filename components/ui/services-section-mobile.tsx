@@ -151,7 +151,7 @@ export default function ServicesSection() {
 	return (
 		<>
 			{/* 2. What We Do Section - matches the image layout */}
-			<section className="pt-16 bg-white dark:bg-gray-950">
+			<section className="pt-16 bg-white dark:bg-gray-900">
 				<div className="container mx-auto max-w-6xl">
 					<div className="flex flex-col md:flex-row items-center gap-9">
 						{/* Left: Code image with floating quote */}
@@ -252,7 +252,7 @@ export default function ServicesSection() {
 
 
 			{/* 3. Services Section - Using the custom dark theme from the image */}
-			<section className="pt-16 bg-white dark:bg-gray-950">
+			<section className="pt-16 bg-white dark:bg-gray-900">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
 						<h2 className="text-lg font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
@@ -509,6 +509,83 @@ export default function ServicesSection() {
 							</Carousel>
 						</div>
 					</div>
+					<section className=" bg-blue-50 dark:bg-gray-900">
+				<div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
+					{/* Left: Sticky Heading & CTA */}
+					<div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
+
+						<h3 className="dark:text-red-600 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
+							SERVICES INCLUDE
+						</h3>
+						<h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+							End-to-End Solutions for Growth and Scalability									</h3>
+						<div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-left mt-2 mb-4"></div>
+
+						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+                            Comprehensive Web Solutions for Your Business
+                        </h2> */}
+						<p
+							className="text-gray-600 dark:text-white mb-4"
+							style={{ textAlign: "justify" }}
+						>
+							Our services go beyond development to ensure your app performs seamlessly in the real world. From API integrations and backend connectivity to app store deployment and optimization, we cover every detail that strengthens functionality and visibility.									</p>
+						<p
+							className="text-gray-600 dark:text-white mb-4"
+							style={{ textAlign: "justify" }}
+						>
+							We also provide post-launch maintenance and support, keeping your app updated, secure, and performing at its best that ensure long-term scalability and business growth.									</p>
+
+						{/* <p className="text-gray-600 dark:text-white mb-2 ">
+                            Meanwhile, our  <span className="text-blue-800 font-semibold">Mobile App Development</span> & Integration capabilities fuse creativity, technology, and strategy to build scalable, stunning apps tailored for tomorrows users. Whether launching a product or optimizing legacy systems, we deliver results that exceed expectations—and industry-best timelines.
+                        </p> */}
+					</div>
+					{/* Right: Scrollable Tech Cards */}
+					<div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
+						{/* Card Example */}
+						{[
+							{
+								title: "Enterprise Mobile App Solutions",
+								desc: "Scalable, secure, and enterprise-grade—our apps empower businesses to streamline operations and engage stakeholders."
+							},
+							{
+								title: "App Integration with APIs",
+								desc: "We connect your apps with essential third-party services to boost functionality and deliver a seamless experience."
+							},
+							{
+								title: "App Integration with Backend Systems",
+								desc: "We synchronize your mobile front ends with existing backend ecosystems—whether cloud-native or on-premise."
+							},
+							{
+								title: "App Testing & Quality Assurance",
+								desc: "Rigorous end-to-end testing ensures your app launches polished, reliable, and high-performing from Day One."
+							},
+							{
+								title: "Advanced Security & Compliance",
+								desc: "We implement industry-leading security practices and compliance standards to protect sensitive data and build user trust."
+							},
+							{
+								title: "App Store Deployment & Optimization",
+								desc: "From submission to ranking, we ensure your app meets marketplace guidelines and gains maximum visibility."
+							},
+							{
+								title: "Post-Launch Maintenance & Support",
+								desc: "Our team provides continuous updates, bug fixes, and feature enhancements to keep your app performing at its best."
+							}
+						]
+							.map((card, idx) => (
+								<div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0">
+									<span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+										<Image src={`/images/icons/${ICONS[idx % ICONS.length]}`} alt={card.title + " icon"} width={40} height={40} />
+									</span>
+									<div className="flex-1">
+										<h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">{card.title}</h3>
+										<p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
+									</div>
+								</div>
+							))}
+					</div>
+				</div>
+			</section>
 					{/* AI, ML & Chatbot Solutions with carousel
 					<div className="flex flex-col md:flex-row-reverse items-start gap-10">
 						<div className="w-full md:w-1/2">
@@ -615,83 +692,7 @@ export default function ServicesSection() {
 				</div>
 			</section>
 			{/* Emerging Tech Solutions Section */}
-			<section className=" bg-blue-50 dark:bg-gray-900">
-				<div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-10 md:h-[500px]">
-					{/* Left: Sticky Heading & CTA */}
-					<div className="w-full md:w-1/2 flex flex-col justify-start md:h-full md:sticky md:top-0 md:self-start hide-scrollbar mb-2 md:mb-0  ">
-
-						<h3 className="dark:text-red-600 text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400 mt-6">
-							SERVICES INCLUDE
-						</h3>
-						<h3 className="mt-2 mb-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-							End-to-End Solutions for Growth and Scalability									</h3>
-						<div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-left mt-2 mb-4"></div>
-
-						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-                            Comprehensive Web Solutions for Your Business
-                        </h2> */}
-						<p
-							className="text-gray-600 dark:text-white mb-4"
-							style={{ textAlign: "justify" }}
-						>
-							Our services go beyond development to ensure your app performs seamlessly in the real world. From API integrations and backend connectivity to app store deployment and optimization, we cover every detail that strengthens functionality and visibility.									</p>
-						<p
-							className="text-gray-600 dark:text-white mb-4"
-							style={{ textAlign: "justify" }}
-						>
-							We also provide post-launch maintenance and support, keeping your app updated, secure, and performing at its best that ensure long-term scalability and business growth.									</p>
-
-						{/* <p className="text-gray-600 dark:text-white mb-2 ">
-                            Meanwhile, our  <span className="text-blue-800 font-semibold">Mobile App Development</span> & Integration capabilities fuse creativity, technology, and strategy to build scalable, stunning apps tailored for tomorrows users. Whether launching a product or optimizing legacy systems, we deliver results that exceed expectations—and industry-best timelines.
-                        </p> */}
-					</div>
-					{/* Right: Scrollable Tech Cards */}
-					<div className="md:w-1/2 md:h-full md:max-h-[600px] md:overflow-y-auto pr-2 overflow-hidden hide-scrollbar flex flex-row md:flex-col gap-4 md:gap-8 overflow-x-auto md:overflow-x-visible pl-4 pr-4 md:pl-0 md:pr-0 snap-x snap-mandatory">
-						{/* Card Example */}
-						{[
-							{
-								title: "Enterprise Mobile App Solutions",
-								desc: "Scalable, secure, and enterprise-grade—our apps empower businesses to streamline operations and engage stakeholders."
-							},
-							{
-								title: "App Integration with APIs",
-								desc: "We connect your apps with essential third-party services to boost functionality and deliver a seamless experience."
-							},
-							{
-								title: "App Integration with Backend Systems",
-								desc: "We synchronize your mobile front ends with existing backend ecosystems—whether cloud-native or on-premise."
-							},
-							{
-								title: "App Testing & Quality Assurance",
-								desc: "Rigorous end-to-end testing ensures your app launches polished, reliable, and high-performing from Day One."
-							},
-							{
-								title: "Advanced Security & Compliance",
-								desc: "We implement industry-leading security practices and compliance standards to protect sensitive data and build user trust."
-							},
-							{
-								title: "App Store Deployment & Optimization",
-								desc: "From submission to ranking, we ensure your app meets marketplace guidelines and gains maximum visibility."
-							},
-							{
-								title: "Post-Launch Maintenance & Support",
-								desc: "Our team provides continuous updates, bug fixes, and feature enhancements to keep your app performing at its best."
-							}
-						]
-							.map((card, idx) => (
-								<div key={card.title} className="flex items-start gap-4 border-b border-gray-200 dark:border-gray-700 pb-8 transition-all duration-300 rounded-xl p-4 hover:bg-blue-100 dark:hover:bg-gray-800/80 cursor-pointer min-w-[280px] md:min-w-0">
-									<span className="w-12 h-12 mt-1 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-										<Image src={`/images/icons/${ICONS[idx % ICONS.length]}`} alt={card.title + " icon"} width={40} height={40} />
-									</span>
-									<div className="flex-1">
-										<h3 className="font-bold text-lg text-gray-900 dark:text-white flex items-center gap-2">{card.title}</h3>
-										<p className="text-gray-600 dark:text-gray-300 mt-2">{card.desc}</p>
-									</div>
-								</div>
-							))}
-					</div>
-				</div>
-			</section>
+			
 		</>
 	);
 }
