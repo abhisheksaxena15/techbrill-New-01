@@ -148,10 +148,10 @@ import Autoplay from "embla-carousel-autoplay";
 export default function ServicesSection() {
 	return (
 		<>
-			<section className="py-16 bg-white dark:bg-gray-950">
+			<section className="py-16 bg-white dark:bg-gray-900">
 				<div className="container mx-auto px-4 max-w-6xl">
 					<div className="text-center mb-8 md:mb-12">
-						<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">Core QA services</h3>
+						<h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">Core QA services</h3>
 						<h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">Seamless QA Services for Every Development Stage</h2>
 						<div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
 						<p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base">
@@ -159,287 +159,99 @@ export default function ServicesSection() {
 						</p>
 					</div>
 
-					{/* Manual Functional Testing */}
-					<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Manual Functional Testing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Ensure core user journeys work flawlessly with requirement-driven functional validation across browsers, devices, and environments.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>Requirement-based test case design & execution</li>
-								<li>Smoke, sanity & regression testing</li>
-								<li>Cross-browser & cross-device validation</li>
-								<li>Exploratory & usability testing</li>
-								<li>Defect logging, triage & detailed reporting</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3500 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-												alt="Manual Functional Testing"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/annie-spratt-QckxruozjRg-unsplash.jpg"
-												alt="Test Case Execution"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
+					{/* Services Grid */}
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      {[
+        {
+          title: "Manual Functional Testing",
+          description:
+            "Ensure core user journeys work flawlessly with requirement-driven functional validation across browsers, devices, and environments.",
+          image: "/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg",
+        },
+        {
+          title: "Automation Testing",
+          description:
+            "Accelerate release cycles with robust automation that improves coverage, reliability, and repeatability across layers.",
+          image: "/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg",
+        },
+        {
+          title: "Mobile Application Testing",
+          description:
+            "Deliver flawless mobile experiences across devices, OS versions, and network conditions for both native and hybrid apps.",
+          image: "/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg",
+        },
+        {
+          title: "Performance & Load Testing",
+          description:
+            "Validate scalability and responsiveness under real-world and peak traffic to deliver consistently fast experiences.",
+          image: "/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg",
+        },
+        {
+          title: "Security Testing",
+          description:
+            "Identify and remediate vulnerabilities to protect sensitive data and harden applications against threats.",
+          image: "/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg",
+        },
+        {
+          title: "API Testing",
+          description:
+            "Ensure reliable integrations with comprehensive functional, security, and performance validation of your APIs and services.",
+          image: "/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg",
+        },
+      ].map((service, index) => (
+        <AnimatedSection key={index} animation="slide">
+          <motion.div
+            className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all h-full flex flex-col border border-blue-600 dark:border-blue-400"
+            initial={{ opacity: 0, y: 100, scale: 0.95 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              transition: { type: "spring", stiffness: 70, damping: 15, mass: 0.8, delay: index * 0.1 },
+            }}
+            viewport={{ once: true, margin: "-100px", amount: 0.3 }}
+            whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 17 } }}
+          >
+            <div className="relative h-48 md:h-64 w-full overflow-hidden">
+              <Image
+                src={service.image || "/images/services/web-design-hero.jpg"}
+                alt={service.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              <motion.h3
+                className="text-lg md:text-xl font-semibold mb-2 md:mb-3"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: index * 0.15 + 0.2, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+              >
+                <span className="text-gray-700 dark:text-gray-200">{service.title}</span>
+              </motion.h3>
+              <motion.p
+                className="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base flex-grow"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: index * 0.15 + 0.3, duration: 0.5 },
+                }}
+                viewport={{ once: true }}
+              >
+                {service.description}
+              </motion.p>
+            </div>
+          </motion.div>
+        </AnimatedSection>
+      ))}
+    </div>
 
-					{/* Automation Testing */}
-					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Automation Testing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Accelerate release cycles with robust automation that improves coverage, reliability, and repeatability across layers.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>End-to-end test automation frameworks</li>
-								<li>UI automation with Selenium, Cypress & Playwright</li>
-								<li>API & integration automation</li>
-								<li>Data-driven & keyword-driven suites</li>
-								<li>CI/CD integration & scheduled runs</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4000 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/christopher-gower-m_HRfLhgABo-unsplash.jpg"
-												alt="Automation Framework"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/web-design-hero.jpg"
-												alt="Automation Tools"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
-
-					{/* Mobile Application Testing */}
-					<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Mobile Application Testing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Deliver flawless mobile experiences across devices, OS versions, and network conditions for both native and hybrid apps.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>Native iOS & Android functional testing</li>
-								<li>Device & OS compatibility coverage</li>
-								<li>Real device & emulator test execution</li>
-								<li>Mobile performance & battery profiling</li>
-								<li>App store readiness & release validation</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-												alt="Mobile Testing"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
-												alt="Mobile Devices"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
-
-					{/* Performance & Load Testing */}
-					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Performance & Load Testing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Validate scalability and responsiveness under real-world and peak traffic to deliver consistently fast experiences.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>Load, stress, spike & endurance testing</li>
-								<li>Bottleneck identification & performance tuning</li>
-								<li>Server, database & network profiling</li>
-								<li>Real-user & synthetic monitoring insights</li>
-								<li>Capacity planning & scalability reports</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 3800 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/christina-wocintechchat-com-qZYNQp_Lm3o-unsplash.jpg"
-												alt="Performance Dashboard"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-												alt="Load Testing Tools"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
-
-					{/* Security Testing */}
-					<div className="flex flex-col md:flex-row items-start gap-10 mb-16">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								Security Testing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Identify and remediate vulnerabilities to protect sensitive data and harden applications against threats.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>Vulnerability assessment & penetration testing</li>
-								<li>OWASP Top 10 coverage</li>
-								<li>Auth, access control & session management testing</li>
-								<li>Static & dynamic security analysis</li>
-								<li>Compliance checks (GDPR, HIPAA, SOC 2)</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4200 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-												alt="Security Assessment"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/web-design-hero.jpg"
-												alt="Security Tools"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
-
-					{/* API Testing */}
-					<div className="flex flex-col md:flex-row-reverse items-start gap-10 mb-16">
-						<div className="w-full md:w-1/2">
-							<h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
-								API Testing
-							</h3>
-							<p className="text-gray-600 dark:text-white mb-4">
-								Ensure reliable integrations with comprehensive functional, security, and performance validation of your APIs and services.
-							</p>
-							<ul className="list-disc list-inside text-gray-500 dark:text-white space-y-2 ml-2">
-								<li>REST & SOAP functional testing</li>
-								<li>Contract & schema validation</li>
-								<li>Authentication, authorization & rate limit testing</li>
-								<li>Data integrity & error handling checks</li>
-								<li>Performance & reliability benchmarking</li>
-							</ul>
-						</div>
-						<div className="w-full md:w-1/2">
-							<Carousel opts={{ align: "start", loop: true }} plugins={[Autoplay({ delay: 4500 })]}>
-								<CarouselContent>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/campaign-creators-pypeCEaJeZY-unsplash.jpg"
-												alt="API Testing Process"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-									<CarouselItem>
-										<div className="rounded-md overflow-hidden">
-											<Image
-												src="/images/services/nubelson-fernandes-UcYBL5V0xWQ-unsplash.jpg"
-												alt="API Tools"
-												width={600}
-												height={400}
-												className="object-cover w-full h-[300px]"
-											/>
-										</div>
-									</CarouselItem>
-								</CarouselContent>
-							</Carousel>
-						</div>
-					</div>
 				</div>
 			</section>
 

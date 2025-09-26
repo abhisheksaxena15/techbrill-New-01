@@ -32,36 +32,61 @@ const staggerContainer = {
 
 const benefits = [
   {
-    icon: <Target className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    icon: (
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
+        <Target className="w-6 h-6 text-blue-700 dark:text-blue-300" />
+      </div>
+    ),
     title: "Proven Expertise",
     description: "Years of QA excellence across diverse industries."
   },
   {
-    icon: <Clock className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    icon: (
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
+        <Clock className="w-6 h-6 text-green-700 dark:text-green-300" />
+      </div>
+    ),
     title: "Faster Time-to-Market",
     description: "Accelerated delivery with automation and DevOps QA."
   },
   {
-    icon: <Users className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    icon: (
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/30">
+        <Users className="w-6 h-6 text-purple-700 dark:text-purple-300" />
+      </div>
+    ),
     title: "Dedicated QA Teams",
     description: "Skilled professionals tailored for your project needs."
   },
   {
-    icon: <Shield className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    icon: (
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
+        <Shield className="w-6 h-6 text-red-700 dark:text-red-300" />
+      </div>
+    ),
     title: "Robust Security Focus",
     description: "Ensuring applications remain secure and compliant."
   },
   {
-    icon: <Lightbulb className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    icon: (
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900/30">
+        <Lightbulb className="w-6 h-6 text-yellow-700 dark:text-yellow-300" />
+      </div>
+    ),
     title: "Cutting-Edge Innovation",
     description: "Adopting next-gen tools and methodologies for QA."
   },
   {
-    icon: <Headphones className="w-8 h-8 text-blue-700 dark:text-blue-300" />,
+    icon: (
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-pink-100 dark:bg-pink-900/30">
+        <Headphones className="w-6 h-6 text-pink-700 dark:text-pink-300" />
+      </div>
+    ),
     title: "Client-Centric Approach",
     description: "Tailored QA solutions aligned with business goals."
   }
 ];
+
 
 export default function SoftwareQATestingPage() {
   return (
@@ -112,68 +137,95 @@ export default function SoftwareQATestingPage() {
           </motion.div>
         </section>
 
-        <section className="py-12 md:py-16 px-4 bg-white dark:bg-gray-900">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <AnimatedSection animation="scale" delay={0.2}>
-                <div className="relative">
-                  <div className="relative h-64 md:h-80 lg:h-[400px] w-full rounded-xl overflow-hidden">
+        <section className="pt-16 bg-white dark:bg-gray-900">
+          <div className="container mx-auto max-w-6xl">
+            <div className="flex flex-col md:flex-row items-center gap-9">
+              {/* Left: Code image with floating quote */}
+              <motion.div
+                className="w-full md:w-1/2 flex items-center justify-center"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="relative w-full">
+                  {/* Image wrapper */}
+                  <div className="relative w-full h-[450px] rounded-xl overflow-hidden">
                     <Image
-                      src="/images/about/18771.jpg"
-                      alt="Team collaboration"
+                      src="/images/services/web-design-hero.jpg"
+                      alt="Code editor with web development code"
                       fill
                       className="object-cover"
+                      priority
                     />
                   </div>
+
+                  {/* Floating quote box */}
                   <motion.div
-                    className="absolute -bottom-4 md:-bottom-6 -right-4 md:-right-6 bg-white dark:bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg max-w-xs text-center md:text-left"
+                    className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg max-w-xs text-center"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                   >
                     <blockquote className="text-xs md:text-sm italic text-gray-700 dark:text-gray-300">
-                      &ldquo;Partnering with Techbrill means delivering quality with confidence and accelerating your digital journey.&rdquo;
+                      &ldquo;We Partnering with Techbrill means delivering quality with confidence and accelerating your digital journey.&rdquo;
                     </blockquote>
                   </motion.div>
                 </div>
-              </AnimatedSection>
+              </motion.div>
 
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">ENSURING EXCELLENCE</h3>
-                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+              {/* Right: Text content */}
+              <motion.div
+                className="w-full md:w-1/2"
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                {/* Section label */}
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600 mb-3">
+                  ENSURING EXCELLENCE
+                </h3>
+
+
+                {/* Main heading */}
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
                   Powering Digital Success Through Quality Assurance
                 </h2>
-                <br />
-                <div className="w-20 h-1 bg-red-600 mb-6"></div>
+                <div className="h-1 w-28 bg-red-600 dark:bg-red-600 mb-2" />
 
-
-                <AnimatedSection animation="fade" delay={0.5}>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                    Quality assurance has become a cornerstone of modern software delivery, ensuring reliability, security, and seamless user experiences in today’s fast-paced digital world. Robust QA practices not only reduce risks but also accelerate time-to-market and strengthen customer trust.
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-                    At Techbrill, we deliver end-to-end QA and Testing services tailored to your business goals. From functional, automation, and mobile testing to performance, security, and API validation, our solutions combine precision, scalability, and compliance to guarantee excellence.
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 mb-6 md:mb-8 text-sm md:text-base">
-                    Our expert QA engineers, automation specialists, and domain-focused professionals leverage next-gen tools and proven methodologies to deliver flawless, future-ready software.
-                  </p>
-                </AnimatedSection>
+                <p className="text-gray-600 dark:text-white mb-2">
+                  Quality assurance has become a cornerstone of modern software delivery, ensuring reliability, security, and seamless user experiences in today’s fast-paced digital world.
+                  Robust QA practices not only reduce risks but also accelerate time-to-market and strengthen customer trust.
+                </p>
+                <p className="text-gray-600 dark:text-white mb-2">
+                  At Techbrill, we deliver end-to-end QA and Testing services tailored to your business goals. From functional,
+                  automation, and mobile testing to performance,
+                  security, and API validation, our solutions combine precision, scalability, and compliance to guarantee excellence.
+                </p>
+                <p className="text-gray-600 dark:text-white mb-5">
+                  Our expert QA engineers, automation specialists, and domain-focused professionals leverage next-gen tools and proven methodologies to deliver flawless, future-ready software.
+                </p>
 
                 <AnimatedSection animation="fade" delay={0.6}>
-                  <Link href="/company">
-                    <Button className="group bg-blue-800 hover:bg-red-600 dark:bg-blue-700">
-                      Explore More{" "}
+                  <Link href="/contact">
+                    <Button className="group hover:bg-red-600 bg-blue-800 dark:bg-blue-800 dark:hover:bg-red-700 ">
+                      Consult with us{" "}
                       <motion.div
                         animate={{ x: [0, 5, 0] }}
-                        transition={{ repeat: Number.POSITIVE_INFINITY, repeatDelay: 3, duration: 0.8 }}
+                        transition={{
+                          repeat: Number.POSITIVE_INFINITY,
+                          repeatDelay: 3,
+                          duration: 0.8,
+                        }}
                       >
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </motion.div>
                     </Button>
                   </Link>
                 </AnimatedSection>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -183,132 +235,75 @@ export default function SoftwareQATestingPage() {
 
 
         {/* Advanced Technologies */}
-        <section className="py-16 bg-white dark:bg-gray-950 text-gray-900">
+        <section className="py-16 bg-white dark:bg-gray-900 text-gray-900">
           <div className="container mx-auto px-4">
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">ADVANCED QA SERVICES</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">ADVANCED QA SERVICES</h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Next-Level QA Expertise for Emerging Technologies
               </h2>
-              <div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
               <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base mt-4">
                 Our specialized QA services help businesses improve quality, optimize processes, and stay future-ready beyond standard testing.
               </p>
             </div>
 
             {/* Three Service Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* QA Audit & Process Improvement - Card with Image */}
-              <motion.div
-                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ y: -5 }}
-              >
-
-                <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-
-                {/* Image Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/services/it-consultancy-hero.jpg"
-                    alt="QA Audit & Process Improvement"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">AI & Emerging Tech Testing</h3>
+            {/* QA & AI Service Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Shield className="w-6 h-6 text-white" />,
+                  title: "AI & Emerging Tech Testing",
+                  desc: "Specialized testing for AI-powered applications, machine learning models, IoT devices, and blockchain solutions to ensure reliability in cutting-edge technologies.",
+                  bg: "bg-blue-600",
+                },
+                {
+                  icon: <FileCheck className="w-6 h-6 text-white" />,
+                  title: "AI-Powered Test Automation",
+                  desc: "Leverage artificial intelligence to create intelligent test automation that adapts, learns, and optimizes testing strategies for maximum efficiency and coverage.",
+                  bg: "bg-green-600",
+                },
+                {
+                  icon: <Users className="w-6 h-6 text-white" />,
+                  title: "Continuous Testing in DevOps",
+                  desc: "Seamlessly integrate testing into your DevOps pipeline with continuous testing strategies that provide instant feedback and accelerate delivery cycles.",
+                  bg: "bg-purple-600",
+                },
+              ].map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.02,
+                    boxShadow: "0 10px 36px rgba(59,130,246,0.25)",
+                    transition: { duration: 0.2 },
+                  }}
+                  className="relative flex flex-col items-center text-center gap-4 bg-white dark:bg-gray-800 rounded-xl 
+                 border border-blue-100 dark:border-gray-700 shadow-md p-6 transition-colors duration-300
+                 hover:bg-gradient-to-br hover:from-blue-50 hover:to-red-50 dark:hover:from-gray-800 dark:hover:to-gray-900"
+                >
+                  {/* Icon Circle */}
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-3 shadow-md ${item.bg} bg-gradient-to-r from-blue-500 to-red-500`}>
+                    {item.icon}
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Specialized testing for AI-powered applications, machine learning models, IoT devices, and blockchain solutions to ensure reliability in cutting-edge technologies.
+
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">{item.title}</h3>
+
+                  {/* Description */}
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                    {item.desc}
                   </p>
-                </div>
-              </motion.div>
-
-              {/* QA Documentation & Reporting */}
-              <motion.div
-                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-
-                {/* Image Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-                    alt="QA Documentation & Reporting"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                      <FileCheck className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">AI-Powered Test Automation</h3>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Leverage artificial intelligence to create intelligent test automation that adapts, learns, and optimizes testing strategies for maximum efficiency and coverage.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* On-Demand QA Staffing */}
-              <motion.div
-                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                whileHover={{ y: -5 }}
-              >
-
-                <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-
-                {/* Image Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-                    alt="On-Demand QA Staffing"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">Continuous Testing in DevOps</h3>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Seamlessly integrate testing into your DevOps pipeline with continuous testing strategies that provide instant feedback and accelerate delivery cycles.
-                  </p>
-                </div>
-              </motion.div>
+                </motion.div>
+              ))}
             </div>
+
           </div>
         </section>
 
@@ -316,132 +311,75 @@ export default function SoftwareQATestingPage() {
 
 
         {/*Specialized QA Services*/}
-        <section className="py-16 bg-white dark:bg-gray-950 text-gray-900">
+        <section className="py-16 bg-white dark:bg-gray-900 text-gray-900">
           <div className="container mx-auto px-4">
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">SPECIALIZED QA SERVICES</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">SPECIALIZED QA SERVICES</h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Specialized QA Solutions Beyond Standard Testing
               </h2>
-              <div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
               <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 text-base mt-4">
                 Targeted QA solutions to strengthen processes, compliance, and team scalability.
               </p>
             </div>
 
             {/* Three Service Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* QA Audit & Process Improvement - Card with Image */}
-              <motion.div
-                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                whileHover={{ y: -5 }}
-              >
-
-                <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-
-                {/* Image Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/services/it-consultancy-hero.jpg"
-                    alt="QA Audit & Process Improvement"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">QA Audit & Process Improvement</h3>
+            {/* QA & AI Service Cards with Icons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Shield className="w-9 h-9 text-blue-800" />,
+                  title: "QA Audit & Process Improvement",
+                  desc: "Comprehensive assessment of your current QA processes with actionable recommendations for optimization, compliance enhancement, and quality improvement.",
+                },
+                {
+                  icon: <FileCheck className="w-9 h-9 text-blue-800" />,
+                  title: "QA Documentation & Reporting",
+                  desc: "Professional documentation services including test plans, reports, compliance documentation, and comprehensive quality metrics for stakeholders.",
+                },
+                {
+                  icon: <Users className="w-9 h-9 text-blue-800" />,
+                  title: "On-Demand QA Staffing",
+                  desc: "Flexible QA talent solutions including dedicated QA engineers, automation specialists, and testing consultants to scale your team as needed.",
+                },
+              ].map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  whileHover={{
+                    y: -5, // lift immediately
+                    scale: 1.05,
+                    boxShadow: "0 6px 32px rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)",
+                    background: "linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))",
+                  }}
+                  className="flex flex-col items-center text-center gap-3 bg-white dark:bg-gray-800 rounded-2xl 
+                 border border-blue-100 dark:border-gray-700 shadow-md px-7 py-8 
+                 transition-transform duration-200 hover:scale-105 hover:bg-gradient-to-br 
+                 hover:from-blue-50 hover:to-red-50 dark:hover:from-gray-800 dark:hover:to-gray-900"
+                >
+                  {/* Icon */}
+                  <div className="flex items-center justify-center mb-2">
+                    {item.icon}
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Comprehensive assessment of your current QA processes with actionable recommendations for optimization, compliance enhancement, and quality improvement.
+
+                  {/* Title */}
+                  <h3 className="text-base md:text-lg font-semibold text-blue-900 dark:text-white mb-1">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {item.desc}
                   </p>
-                </div>
-              </motion.div>
-
-              {/* QA Documentation & Reporting */}
-              <motion.div
-                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-
-                {/* Image Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-                    alt="QA Documentation & Reporting"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                      <FileCheck className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">QA Documentation & Reporting</h3>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Professional documentation services including test plans, reports, compliance documentation, and comprehensive quality metrics for stakeholders.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* On-Demand QA Staffing */}
-              <motion.div
-                className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                whileHover={{ y: -5 }}
-              >
-
-                <div className="absolute inset-0 bg-white dark:bg-gray-800"></div>
-
-                {/* Image Section */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/services/austin-distel-gUIJ0YszPig-unsplash.jpg"
-                    alt="On-Demand QA Staffing"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="relative p-6 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">On-Demand QA Staffing</h3>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Flexible QA talent solutions including dedicated QA engineers, automation specialists, and testing consultants to scale your team as needed.
-                  </p>
-                </div>
-              </motion.div>
+                </motion.div>
+              ))}
             </div>
+
           </div>
         </section>
 
@@ -450,21 +388,21 @@ export default function SoftwareQATestingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Ensure Your Software Quality?</h2>
             <p className="mb-6">Let us help you deliver flawless, high-performing software.</p>
-            <Button size="lg" className="bg-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
+            <Button size="lg" className="bg-white dark:hover:bg-red-600 dark:hover:text-white text-blue-600 font-semibold hover:bg-blue-50">Contact Us</Button>
           </motion.div>
         </section>
 
         {/* Tech Stack Section */}
-        <section className="py-16 pb-24 md:pb-32">
+        <section className="py-16 md:pb-32">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-lg font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                 Tools & Technologies
               </h3>
               <h2 className=" text-xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Powered by Industry-Leading Tools & Frameworks
               </h2>
-              <div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
               <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-lg mt-2">
                 We leverage industry-leading QA tools and modern technologies to ensure accuracy, efficiency, and reliability across every stage of the software testing lifecycle.
               </p>
@@ -479,21 +417,21 @@ export default function SoftwareQATestingPage() {
 
         {/* How We Ensure Quality Section */}
         <AnimatedSection animation="fade" delay={0.2}>
-          <div className="mt-16 md:mt-20 bg-white dark:bg-gray-900">
+          <div className=" md:mt-20 bg-white dark:bg-gray-900">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <div className="text-center mb-8 md:mb-12">
+              <div className="text-center  md:mb-12">
                 <br />
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">HOW WE ENSURE QUALITY</h3>
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">HOW WE ENSURE QUALITY</h3>
                 <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-                Structured QA Process for Reliable Outcomes
+                  Structured QA Process for Reliable Outcomes
                 </h2>
-                <div className="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+                <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
                 <p className="max-w-4xl mx-auto text-gray-600 dark:text-gray-300 text-sm mt-2">
-                Our QA workflow follows a structured, transparent process designed to detect defects early, improve collaboration, and ensure every release meets the highest quality standards.
+                  Our QA workflow follows a structured, transparent process designed to detect defects early, improve collaboration, and ensure every release meets the highest quality standards.
                 </p>
               </div>
             </motion.div>
@@ -612,22 +550,22 @@ export default function SoftwareQATestingPage() {
 
 
 
-        
+
 
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-white dark:bg-gray-900">
+        <section className="pb-16 bg-white dark:bg-gray-900">
           <div className="container">
 
 
             <div className="text-center mb-12">
-              <h3 className="text-red-600 dark:text-blue-400 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+              <h3 className="text-red-600 dark:text-red-600 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
                 Why Choose Us
               </h3>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white">
                 Why Businesses Across Industries Trust Us
               </h2>
-              <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-6"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4 mb-6"></div>
               <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
                 We bring together domain expertise, cutting-edge technology, and proven delivery methods to provide IT solutions that create lasting value across diverse industries
               </p>
