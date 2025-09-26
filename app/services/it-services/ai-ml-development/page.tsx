@@ -346,7 +346,7 @@ export default function AIMlDevelopmentPage() {
                   return (
                     <div
                       key={idx}
-                      className="dark:bg-gray-400 min-w-[320px] max-w-[350px] bg-white rounded-2xl shadow-lg border-2 border-gray-100 dark:border-gray-400 overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-300 flex-shrink-0"
+                      className="dark:bg-gray-800 min-w-[320px] max-w-[350px] bg-white rounded-2xl shadow-lg border-2 border-gray-100 dark:border-gray-800 overflow-hidden hover:shadow-2xl hover:border-blue-200 transition-all duration-300 flex-shrink-0"
                     >
                       {/* Image Section */}
                       <div className="relative  h-48 overflow-hidden">
@@ -366,12 +366,12 @@ export default function AIMlDevelopmentPage() {
                           >
                             {IconComponent && <IconComponent className="w-5 h-5" />}
                           </div>
-                          <h3 className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                          <h3 className="text-xl dark:text-white font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300">
                             {industry.title}
                           </h3>
                         </div>
 
-                        <p className="text-gray-600 leading-relaxed text-sm">
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
                           {industry.description}
                         </p>
                       </div>

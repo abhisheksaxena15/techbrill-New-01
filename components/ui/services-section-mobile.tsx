@@ -585,7 +585,7 @@ export default function ServicesSection() {
 							))}
 					</div>
 				</div>
-			</section>
+			</section>d
 					{/* AI, ML & Chatbot Solutions with carousel
 					<div className="flex flex-col md:flex-row-reverse items-start gap-10">
 						<div className="w-full md:w-1/2">

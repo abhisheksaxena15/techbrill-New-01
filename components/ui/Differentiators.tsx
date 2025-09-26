@@ -55,7 +55,7 @@ const Differentiators: React.FC = () => {
             <div className="max-w-6xl mx-auto text-center">
                 <div className="text-center mb-8 md:mb-12">
                     <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
-                        WHY CHOSE US              </h3>
+                        WHY CHOOSE US              </h3>
                     <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                         Why Businesses Rely on Our Expertise              </h2>
                     <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
@@ -71,47 +71,42 @@ const Differentiators: React.FC = () => {
                 </div>
 
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {differentiators.map((item, idx) => (
-                        <motion.div
-                            key={item.title}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            // Snappy transition for scale/color changes to remove delay
-                            transition={{
-                                // Entry animation (opacity/y) transition
-                                opacity: { duration: 0.6, delay: idx * 0.08 },
-                                y: { duration: 0.6, delay: idx * 0.08 },
-                                // A snappy 0.01s transition for all other properties (scale, shadow, colors)
-                                default: { duration: 0.01, ease: "easeOut" }
-                            }}
-                            whileHover={{
-                                scale: 1.04,
-                                boxShadow: "0 4px 32px 0 rgba(30,64,175,0.10)",
-                                borderColor: "#1e40af",
-                                // NEW: Change background color to gray-300 (#d1d5db) on hover
-                                backgroundColor: "#d1d5db",
-                            }}
-                            whileTap={{ scale: 0.98 }}
-                            // UPDATED Tailwind Classes for default appearance
-                            className="flex  flex-col text-left rounded-2xl border border-gray-500 shadow-md overflow-hidden bg-white  text-white hover:text-gray-900 "
-                        >
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                                className="w-full  h-40 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                                    {item.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    {item.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+  {differentiators.map((item, idx) => (
+    <motion.div
+      key={item.title}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        opacity: { duration: 0.6, delay: idx * 0.08 },
+        y: { duration: 0.6, delay: idx * 0.08 },
+        default: { duration: 0.01, ease: "easeOut" },
+      }}
+      whileHover={{
+        scale: 1.04,
+        boxShadow: "0 4px 32px 0 rgba(30,64,175,0.10)",
+      }}
+      whileTap={{ scale: 0.98 }}
+      className="flex flex-col rounded-2xl border border-gray-300 dark:border-gray-600 shadow-md overflow-hidden 
+                 bg-white dark:bg-gray-800 transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+    >
+      <img
+        src={item.image}
+        alt={item.title}
+        className="w-full h-40 object-cover"
+      />
+      <div className="p-6 flex flex-col gap-2">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          {item.title}
+        </h3>
+        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+          {item.description}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
             </div>
         </section>
     );

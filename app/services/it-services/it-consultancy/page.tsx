@@ -117,7 +117,7 @@ export default function ITConsultancyPage() {
           {/* Centered Content */}
           <div className="relative z-20 flex flex-col items-center justify-center w-full px-4" style={{ marginTop: '-2rem' }}>
             <motion.h1
-              className="font-bold text-4xl sm:text-5xl text-white mb-4"
+              className="font-bold text-4xl sm:text-5xl  text-white mb-4"
               initial={{ opacity: 0, y: 32 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
@@ -170,170 +170,102 @@ export default function ITConsultancyPage() {
 
 
         {/* Key Benefits Section */}
-        <section className="pb-16 bg-slate-100">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-              
-            >
-              <div className="text-center mb-8 md:mb-12">
-                <h3 className="text-red-600 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
-                  KEY BENEFITS
-                </h3>
-                <h2 className="mx-auto text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white max-w-4xl">
-                  IT That Works for Your Business
-                </h2>
-                <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-3"></div>
-                <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                  Harness IT expertise to optimize operations, enhance efficiency, and unlock new pathways for business growth.
-                </p>
-              </div>
-            </motion.div>
+        <section className="pb-16 bg-slate-100 dark:bg-gray-900">
+  <div className="container mx-auto px-4">
+    {/* Section Header */}
+    <motion.div
+      className="text-center mb-12"
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+    >
+      <div className="text-center mb-8 md:mb-12">
+        <h3 className="text-red-600 dark:text-red-500 font-medium uppercase tracking-wide text-xs sm:text-sm block mb-2">
+          KEY BENEFITS
+        </h3>
+        <h2 className="mx-auto text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 text-gray-900 dark:text-white max-w-4xl">
+          IT That Works for Your Business
+        </h2>
+        <div className="h-1 w-20 bg-red-600 mx-auto mt-4 mb-3"></div>
+        <p className="max-w-xl mx-auto text-sm sm:text-base text-gray-700 dark:text-gray-300">
+          Harness IT expertise to optimize operations, enhance efficiency, and unlock new pathways for business growth.
+        </p>
+      </div>
+    </motion.div>
 
-
-
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              
-            >
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-                whileHover={{
-                    scale: 1.05,
-                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
-                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
-                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
-                  }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Lightbulb className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Strategic Planning</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Develop comprehensive technology strategies that align with your business goals and drive innovation across your organization.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-                whileHover={{
-                    scale: 1.05,
-                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
-                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
-                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
-                  }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <LineChart className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Cost Optimization</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Identify opportunities to reduce IT costs while improving efficiency and maximizing return on technology investments.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-                whileHover={{
-                    scale: 1.05,
-                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
-                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
-                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
-                  }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Expert Guidance</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Access experienced IT professionals and industry best practices to accelerate your digital transformation journey.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-                whileHover={{
-                    scale: 1.05,
-                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
-                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
-                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
-                  }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Risk Management</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Identify and mitigate technology-related risks to ensure business continuity and protect your digital assets.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-                whileHover={{
-                    scale: 1.05,
-                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
-                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
-                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
-                  }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Target className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Digital Transformation</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Guide your organization through successful digital transformation initiatives that modernize operations.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="bg-white hover:bg-blue-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md transition-all duration-300 group"
-                variants={fadeInUp}
-                whileHover={{
-                    scale: 1.05,
-                    background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(59,130,246,0.15))',
-                    boxShadow: '0 6px 32px 0 rgba(59,130,246,0.25), 0 0 14px rgba(239,68,68,0.45)',
-                    borderImage: 'border-rounded-2xl linear-gradient(90deg, #ef4444, #3b82f6) 1',
-                  }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Briefcase className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-600">Business Alignment</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Ensure your technology investments support your business objectives and drive measurable outcomes.
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {[
+        {
+          icon: <Lightbulb className="w-6 h-6 text-white" />,
+          title: "Strategic Planning",
+          desc: "Develop comprehensive technology strategies that align with your business goals and drive innovation across your organization.",
+        },
+        {
+          icon: <LineChart className="w-6 h-6 text-white" />,
+          title: "Cost Optimization",
+          desc: "Identify opportunities to reduce IT costs while improving efficiency and maximizing return on technology investments.",
+        },
+        {
+          icon: <Users className="w-6 h-6 text-white" />,
+          title: "Expert Guidance",
+          desc: "Access experienced IT professionals and industry best practices to accelerate your digital transformation journey.",
+        },
+        {
+          icon: <Shield className="w-6 h-6 text-white" />,
+          title: "Risk Management",
+          desc: "Identify and mitigate technology-related risks to ensure business continuity and protect your digital assets.",
+        },
+        {
+          icon: <Target className="w-6 h-6 text-white" />,
+          title: "Digital Transformation",
+          desc: "Guide your organization through successful digital transformation initiatives that modernize operations.",
+        },
+        {
+          icon: <Briefcase className="w-6 h-6 text-white" />,
+          title: "Business Alignment",
+          desc: "Ensure your technology investments support your business objectives and drive measurable outcomes.",
+        },
+      ].map((item, idx) => (
+        <motion.div
+          key={item.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: idx * 0.08 }}
+          whileHover={{
+            y: -8,
+            scale: 1.03,
+            boxShadow: "0 10px 36px rgba(59,130,246,0.25)",
+            borderColor: "#3B82F6",
+            transition: { duration: 0.2 },
+          }}
+          className="flex flex-col items-center text-center gap-3 bg-white dark:bg-gray-800 rounded-2xl border border-gray-800 dark:border-gray-700 shadow-md px-7 py-8 transition-colors duration-300 hover:bg-gradient-to-br hover:from-blue-50 hover:to-red-50 dark:hover:from-gray-800 dark:hover:to-gray-900"
+        >
+          {/* Gradient Icon Circle */}
+          <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-red-500 flex items-center justify-center mb-3 shadow-md group-hover:scale-110 transition-transform duration-300">
+            {item.icon}
           </div>
-        </section>
+
+          {/* Title */}
+          <h3 className="text-base md:text-lg font-semibold text-blue-800 dark:text-white group-hover:text-red-600 transition-colors duration-300 mb-1">
+            {item.title}
+          </h3>
+
+          {/* Description */}
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+            {item.desc}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
         {/* 8. Contact CTA Section */}
-        <section className=" py-10 bg-blue-800 text-white text-center mb-10">
+        <section className=" py-10 bg-blue-800 text-white text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="container mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Looking for the right IT strategy?</h2>
             <p className="mb-6">Let&#39;s align technology with your goals; Partner with us for end-to-end IT consultancy that drives measurable success.</p>
@@ -342,7 +274,7 @@ export default function ITConsultancyPage() {
           </motion.div>
         </section>
 
-        <section className="py-8"></section>
+        
 
 
         {/* 5. Industries Section */}
@@ -353,17 +285,17 @@ export default function ITConsultancyPage() {
           <div className="absolute inset-0 bg-black/60 z-0" />
           <div className="relative z-10 w-full w-full">
             <div className="text-center pt-24 pb-20 px-6">
-              <h2 className="text-xl font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">INDUSTRIES WE SERVE</h2>
+              <h2 className="text-xl font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">INDUSTRIES WE SERVE</h2>
               <h3 className="mt-2 mb-2 text-xl sm:text-3xl font-bold text-white dark:text-white md:text-4xl">
-Transforming Industries with Customized IT Consulting
+                Transforming Industries with Customized IT Consulting
               </h3>
-              <p className="text-base text-white font-medium max-w-2xl mx-auto">
+              <p className="text-base text-white  font-medium max-w-2xl mx-auto">
                 Delivering industry-focused consulting in cloud, AI, and cybersecurity to accelerate innovation and operational excellence.
               </p>
             </div>
 
             {/* White background wrapper */}
-            <div className="bg-white rounded-lg shadow-lg pb-16 p-6">
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg pb-16 p-6">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
                 {[
                   { label: 'Automotive', icon: <svg width="40" height="40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 17v-2a4 4 0 014-4h10a4 4 0 014 4v2" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="16.5" cy="17.5" r="2.5" /></svg> },
@@ -379,10 +311,10 @@ Transforming Industries with Customized IT Consulting
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
+                    className="flex dark:bg-gray-600 flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
                   >
                     <span className="mb-3 text-blue-500 group-hover:text-blue-400 transition-colors duration-300">{item.icon}</span>
-                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-700 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
+                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-900 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -394,15 +326,15 @@ Transforming Industries with Customized IT Consulting
         {/* <WorkProcess /> */}
 
         {/* techstack */}
-        <section className="py-10">
+        <section className="dark:bg-gray-900 py-10">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-red-600">
                 Technologies We Use
               </h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Innovation Delivered, Powered by Robust Tech Stacks              </h2>
-              <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
               {/* Change: Wrapped the h3 tag in a new flex container to control its width
       and ensure it stays centered while having a maximum width.
     */}
@@ -419,16 +351,16 @@ Transforming Industries with Customized IT Consulting
 
 
 
-        <section className="py-16">
+        <section className="dark:bg-gray-900 py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:text-blue-400">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-red-600 dark:red-600">
                 OUR CONSULTING PROCESS
               </h3>
               <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
                 Structured Approach to Building Digital Excellence
               </h2>
-              <div className="h-1 w-20 bg-red-600 dark:bg-blue-400 mx-auto mt-4"></div>
+              <div className="h-1 w-20 bg-red-600 dark:bg-red-600 mx-auto mt-4"></div>
               {/* Change: Wrapped the h3 tag in a new flex container to control its width
       and ensure it stays centered while having a maximum width.
     */}
@@ -442,176 +374,176 @@ Transforming Industries with Customized IT Consulting
 
 
 
-<section className="pt-10 bg-white dark:bg-gray-950">
-  <div className="container mx-auto px-4 max-w-6xl">
+            <section className="pt-10 bg-white dark:bg-gray-900">
+              <div className="container mx-auto px-4 max-w-6xl">
 
-    {/* ----------------------
+                {/* ----------------------
         MOBILE: stacked steps with downward arrows
         ---------------------- */}
-    <div className="md:hidden space-y-10">
-      {steps.map((s, i) => (
-        <motion.div
-          key={i}
-          className="flex flex-col items-center text-center relative"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: i * 0.2 }}
-        >
-          {/* Circle with hover glow */}
-          <motion.div
-            className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white z-10"
-            whileHover={{ scale: 1.07, boxShadow: "0 0 30px rgba(37,99,235,0.7)" }}
-            transition={{ type: "spring", stiffness: 250 }}
-          >
-            <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
-            {/* number badge */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 bg-blue-600 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-lg">
-              {String(i + 1).padStart(2, "0")}
-            </div>
-          </motion.div>
+                <div className="md:hidden space-y-10">
+                  {steps.map((s, i) => (
+                    <motion.div
+                      key={i}
+                      className="flex flex-col items-center text-center relative"
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.6, delay: i * 0.2 }}
+                    >
+                      {/* Circle with hover glow */}
+                      <motion.div
+                        className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white z-10"
+                        whileHover={{ scale: 1.07, boxShadow: "0 0 30px rgba(37,99,235,0.7)" }}
+                        transition={{ type: "spring", stiffness: 250 }}
+                      >
+                        <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+                        {/* number badge */}
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 bg-blue-600 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-lg">
+                          {String(i + 1).padStart(2, "0")}
+                        </div>
+                      </motion.div>
 
-          {/* Title & description */}
-          <motion.h3
-            className="mt-4 font-semibold text-lg text-gray-900 dark:text-white"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.25, duration: 0.4 }}
-          >
-            {s.title}
-          </motion.h3>
-          <motion.p
-            className="text-sm text-gray-600 dark:text-gray-300 mt-1 max-w-xs"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.3, duration: 0.5 }}
-          >
-            {s.desc}
-          </motion.p>
+                      {/* Title & description */}
+                      <motion.h3
+                        className="mt-4 font-semibold text-lg text-gray-900 dark:text-white"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.25, duration: 0.4 }}
+                      >
+                        {s.title}
+                      </motion.h3>
+                      <motion.p
+                        className="text-sm text-gray-600 dark:text-gray-300 mt-1 max-w-xs"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.3, duration: 0.5 }}
+                      >
+                        {s.desc}
+                      </motion.p>
 
-          {/* Downward arrow (only between steps) */}
-          {i < steps.length - 1 && (
-            <motion.svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-gray-400 mt-6"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.35, duration: 0.4 }}
-            >
-              <motion.path
-                d="M12 5v14"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 0.8, delay: i * 0.35 }}
-              />
-              <motion.path
-                d="M5 13l7 7 7-7"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 0.8, delay: i * 0.45 }}
-              />
-            </motion.svg>
-          )}
-        </motion.div>
-      ))}
-    </div>
+                      {/* Downward arrow (only between steps) */}
+                      {i < steps.length - 1 && (
+                        <motion.svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-gray-400 mt-6"
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: i * 0.35, duration: 0.4 }}
+                        >
+                          <motion.path
+                            d="M12 5v14"
+                            initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }}
+                            transition={{ duration: 0.8, delay: i * 0.35 }}
+                          />
+                          <motion.path
+                            d="M5 13l7 7 7-7"
+                            initial={{ pathLength: 0 }}
+                            animate={{ pathLength: 1 }}
+                            transition={{ duration: 0.8, delay: i * 0.45 }}
+                          />
+                        </motion.svg>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
 
-    {/* ----------------------
+                {/* ----------------------
         DESKTOP: circles row + arrows + captions
         ---------------------- */}
-    <div className="hidden md:block relative">
-      {/* Circles row */}
-      <div className="grid grid-cols-5 items-start gap-6 md:gap-8 relative">
-        {steps.map((s, i) => (
-          <motion.div
-            key={i}
-            className="flex justify-center relative"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: i * 0.2 }}
-          >
-            <motion.div
-              className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white z-10"
-              whileHover={{ scale: 1.08, boxShadow: "0 0 35px rgba(37,99,235,0.7)" }}
-              transition={{ type: "spring", stiffness: 250 }}
-            >
-              <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
-              {/* number badge */}
-              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 bg-blue-600 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-lg">
-                {String(i + 1).padStart(2, "0")}
+                <div className="hidden md:block relative">
+                  {/* Circles row */}
+                  <div className="grid grid-cols-5 items-start gap-6 md:gap-8 relative">
+                    {steps.map((s, i) => (
+                      <motion.div
+                        key={i}
+                        className="flex justify-center relative"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, delay: i * 0.2 }}
+                      >
+                        <motion.div
+                          className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white z-10"
+                          whileHover={{ scale: 1.08, boxShadow: "0 0 35px rgba(37,99,235,0.7)" }}
+                          transition={{ type: "spring", stiffness: 250 }}
+                        >
+                          <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+                          {/* number badge */}
+                          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 bg-blue-600 text-white text-sm font-semibold rounded-full px-3 py-1 shadow-lg">
+                            {String(i + 1).padStart(2, "0")}
+                          </div>
+                        </motion.div>
+
+                        {/* Arrow between circles (but not after last) */}
+                        {i < steps.length - 1 && (
+                          <motion.svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="text-gray-400 absolute top-1/2 right-[-18%] -translate-y-1/2"
+                            aria-hidden
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.25, duration: 0.4 }}
+                          >
+                            <motion.path
+                              d="M2 12h18"
+                              initial={{ pathLength: 0 }}
+                              animate={{ pathLength: 1 }}
+                              transition={{ duration: 0.8, delay: i * 0.25 }}
+                            />
+                            <motion.path
+                              d="M14 6l6 6-6 6"
+                              initial={{ pathLength: 0 }}
+                              animate={{ pathLength: 1 }}
+                              transition={{ duration: 0.8, delay: i * 0.35 }}
+                            />
+                          </motion.svg>
+                        )}
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Titles & descriptions row */}
+                  <div className="grid grid-cols-5 gap-6 md:gap-8 mt-10 text-center">
+                    {steps.map((s, i) => (
+                      <motion.div
+                        key={i}
+                        className="px-2"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, delay: i * 0.3 }}
+                      >
+                        <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                          {s.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                          {s.desc}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </motion.div>
-
-            {/* Arrow between circles (but not after last) */}
-            {i < steps.length - 1 && (
-              <motion.svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-gray-400 absolute top-1/2 right-[-18%] -translate-y-1/2"
-                aria-hidden
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.25, duration: 0.4 }}
-              >
-                <motion.path
-                  d="M2 12h18"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 0.8, delay: i * 0.25 }}
-                />
-                <motion.path
-                  d="M14 6l6 6-6 6"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 0.8, delay: i * 0.35 }}
-                />
-              </motion.svg>
-            )}
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Titles & descriptions row */}
-      <div className="grid grid-cols-5 gap-6 md:gap-8 mt-10 text-center">
-        {steps.map((s, i) => (
-          <motion.div
-            key={i}
-            className="px-2"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: i * 0.3 }}
-          >
-            <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
-              {s.title}
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-              {s.desc}
-            </p>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+            </section>
 
 
 

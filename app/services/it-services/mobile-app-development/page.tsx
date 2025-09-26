@@ -224,7 +224,7 @@ export default function MobileAppDevelopmentPage() {
                     className="flex dark:bg-gray-600 flex-col items-center justify-center p-6 rounded-lg bg-white shadow-md border border-blue-600 cursor-pointer transition-all duration-300 hover:bg-blue-50 group"
                   >
                     <span className="mb-3 text-blue-500 group-hover:text-blue-400 transition-colors duration-300">{item.icon}</span>
-                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-300 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
+                    <span className="font-extrabold text-base md:text-lg uppercase tracking-wide text-gray-900 group-hover:text-blue-400 transition-colors duration-300">{item.label}</span>
                   </div>
                 ))}
               </div>
